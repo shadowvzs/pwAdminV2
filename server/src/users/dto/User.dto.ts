@@ -17,6 +17,9 @@ export class UserDto {
   readonly username: string;
 
   @IsString()
+  readonly fullname: string;
+
+  @IsString()
   readonly access_token?: string;
 
   @IsString()
@@ -24,4 +27,10 @@ export class UserDto {
 
   @IsString()
   readonly role: Role;
+
+  @IsInt()
+  public online?: number;
+  
+  @IsInt()
+  public gm?: number;
 }

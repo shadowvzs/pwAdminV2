@@ -1,7 +1,12 @@
 import { EntityId } from "./BaseEntity";
 
 export class UserDto {
-
+    public id: EntityId;
+    public username: string;
+    public fullname: string;
+    public avatar: string;
+    public online?: number;
+    public gm?: number;
 }
 
 export interface ILoginDto {
@@ -47,8 +52,16 @@ export class User {
     public creatime: string;
     public qq: string;
     public role: Role;
-    public shoppoint: number;
+    public credit: number;
     public avatar: string;
     public access_token?: string;
     public refresh_token?: string;
+
+    // only for admins and only for advanced editing
+    public passwd?: string;
+    public passwd2?: string;
+
+    // virtual fields, from joins
+    public online?: number;
+    public gm?: number;
 }

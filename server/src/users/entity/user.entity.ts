@@ -28,11 +28,13 @@ export class User {
   public qq = '';
   public passwd2: string;
   public role: Role = Role.User;
-  public shoppoint = 0;
-  public avatar = '2000-01-01 00:00:00';
+  public credit = 0;
+  public avatar = '';
   public access_token?: string;
   public refresh_token?: string;
 
+  public online?: number;
+  public gm?: number;
 
   public async setPassword(rawPassword: string, username = this.name): Promise<string> {
     this.name = username;

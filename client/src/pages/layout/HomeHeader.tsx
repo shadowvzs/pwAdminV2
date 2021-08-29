@@ -22,12 +22,12 @@ export const HomeHeader = observer(() => {
     const { configStore, serverStatusStore } = React.useContext(RootStoreContext);
 
     return (
-        <Grid container direction='row' wrap='nowrap' justifyContent='center'>
+        <Grid container direction='row' justifyContent='center'>
             <Grid item className={classes.sidebar}>
                 <div style={{ color: '#ffff88' }}> { configStore.config.get('serverName') } </div> 
             </Grid>
             <Grid item>
-                <img src='/images/banner.jpg' alt={'Banner'} />
+                <img src='/images/banner.jpg' alt={'Banner'} style={{ maxWidth: '100%' }} />
             </Grid>
             <Grid item className={classes.sidebar}>
                 {serverStatusStore.items.map((item, idx) => (

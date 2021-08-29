@@ -22,7 +22,7 @@ export class AuthStore extends BaseStore<User> {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(data)
+                body: data
             });
             if (!result) { return; }
             const user = plainToClass(User, result.user);
@@ -32,7 +32,7 @@ export class AuthStore extends BaseStore<User> {
                 const result3 = await this.request<AuthUserTokenResponse>(this.endpoint + '/me');
                 console.log(result3);
             }, 3000);
-            this.rootStore.redirect('/');
+            this.rootStore.redirect('/user-settings');
         } catch(err) {
             console.error(err);
         }
@@ -51,12 +51,13 @@ export class AuthStore extends BaseStore<User> {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(data)
+                body: data
             });
             if (!result) { return; }
             const user = plainToClass(User, result.user);
             this.setCurrentUser(user);
-            this.setToken(result.payload);            
+            this.setToken(result.payload);
+            this.rootStore.redirect('/user-settings');
         } catch(err) {
             console.error(err);
         }
@@ -84,7 +85,7 @@ export class AuthStore extends BaseStore<User> {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ refresh_token: this.refreshToken })
+            body: { refresh_token: this.refreshToken }
         });
         this.setToken(result.payload);
         console.log(result);

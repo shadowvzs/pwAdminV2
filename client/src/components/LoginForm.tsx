@@ -35,8 +35,7 @@ class LoginStore {
     public get isDisabled() {
         return (
             this.username.trim().length < 1 ||
-            this.password.trim().length < 1||
-            Object.keys(this.errors).length > 0
+            this.password.trim().length < 1
         )
     }
 
@@ -52,7 +51,8 @@ class LoginStore {
             errors.password = 'Password must be alphanumeric letters (5-32 character)';
         }
         this.errors = errors;
-        this.authStore.login({ username: this.username, password: this.password });
+        // if (Object.keys(errors).length) { return false; }
+        this.authStore.login({ username: this.username, password: this.password });        
         return false;
     }
 

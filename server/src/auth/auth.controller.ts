@@ -1,24 +1,20 @@
-import { Body, Controller, Get, Ip, Post, Req, Request, UseGuards } from '@nestjs/common';
-import { AuthGuard } from '@nestjs/passport';
+import { Body, Controller, Get, Ip, Post, Req, UseGuards } from '@nestjs/common';
 
 import { Roles } from 'src/common/decorators/roles.decorator';
 import { CreateUserDto } from 'src/users/dto/CreateUser.dto';
 import { LoginDto } from 'src/users/dto/Login.dto';
-import { UserDto } from 'src/users/dto/User.dto';
 import { User } from 'src/users/entity/user.entity';
 import { UsersService } from 'src/users/users.service';
 import { AuthService } from './auth.service';
 import { RefreshRequest } from './dto/request-token.dto';
 import { JwtAuthGuard } from './guards/jwt-auth.guard';
-import { LocalAuthGuard } from './guards/local-auth.guard';
 import { RolesGuard } from './guards/roles.guard';
 import { Role } from './interfaces/role';
-import { AuthenticationPayload, GenericResponse } from './interfaces/token';
+import { AuthenticationPayload } from './interfaces/token';
 import { TokenService } from './tokens.service';
 
 
 @Controller('auth')
-@UseGuards(AuthGuard('jwt'), RolesGuard)
 export class AuthController {
   constructor(
     private readonly usersService: UsersService,
@@ -39,7 +35,6 @@ export class AuthController {
   // }
 
   @Post('login')
-  @UseGuards(LocalAuthGuard)
   async login(@Body() loginDto: LoginDto): Promise<AuthenticationPayload> {
     const user = await this.authService.login(loginDto);
     if (!user) { return null; }
@@ -50,7 +45,6 @@ export class AuthController {
   }
 
   @Post('register')
-  @UseGuards(LocalAuthGuard)
   async register(@Body() createUserDto: CreateUserDto, @Ip() ip: string): Promise<AuthenticationPayload> {
     const user = await this.authService.register(createUserDto, ip);
     const token = await this.tokenService.generateAccessToken(user)
@@ -68,17 +62,13 @@ export class AuthController {
   }
 
   @Get('/me')
-  @Roles(Role.User)
-  @UseGuards(JwtAuthGuard)
-  public async getUser (@Req() request: { user: { id: string }}): Promise<GenericResponse<User>> {
-    const userId = request.user.id
-
-    const user = await this.usersService.findOne(userId)
-
-    return {
-      status: 'success',
-      data: user,
-    }
+  @Roles(Role.User, Role.Moderator, Role.Admin)
+  @UseGuards(JwtAuthGuard, RolesGuard)
+  public async getUser (@Req() request: { user: User }): Promise<User> {
+    const user = request.user;
+    delete user.passwd;
+    delete user.passwd2;
+    return user;
   }
 
   private buildResponsePayload (user: User, accessToken: string, refreshToken?: string): AuthenticationPayload {

@@ -1,6 +1,6 @@
 import { Grid } from "@material-ui/core"
 import { HomeHeader } from "./layout/HomeHeader"
-import { HomeMenu } from "./layout/HomeMenu"
+import { PageMenu } from "./layout/PageMenu"
 
 const StoryBox = () => {
     return (
@@ -38,7 +38,7 @@ export const StoryPage = () => {
     return (
         <Grid container direction='column'>
             <Grid item> <HomeHeader /> </Grid>
-            <Grid item> <HomeMenu /> </Grid>
+            <Grid item> <PageMenu /> </Grid>
             <StoryBox />
         </Grid>
     )

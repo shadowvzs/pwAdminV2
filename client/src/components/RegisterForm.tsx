@@ -50,13 +50,13 @@ class RegisterStore {
         }
 
         if (this.password !== this.password2) {
-            errors.password2 = 'Passwords not match with eachother';
+            errors.password2 = 'Make sure yout passwords match';
         }
 
         this.errors = errors;
-
+        console.log(errors)
         if (Object.keys(errors).length) { return false; }
-        this.authStore.login({ username: this.username, password: this.password });
+        this.authStore.register({ username: this.username, password: this.password, email: this.email });
         return false;
     }
 
@@ -65,8 +65,7 @@ class RegisterStore {
             this.username.trim().length < 1 ||
             this.email.trim().length < 1 ||
             this.password.trim().length < 1||
-            this.password2.trim().length < 1 ||
-            Object.keys(this.errors).length > 0
+            this.password2.trim().length < 1
         )
     }
 
@@ -88,7 +87,7 @@ export const RegisterForm = observer(() => {
     const { authStore } = React.useContext(RootStoreContext);
     const store = React.useState(() => new RegisterStore(authStore))[0];
     const classes = useStyles();
-    const { username, password, errors, onChange, onSubmit } = store;
+    const { username, password, password2, email, errors, onChange, onSubmit } = store;
 
     return (
         <form className={classes.root} noValidate autoComplete='off' onSubmit={onSubmit}>
@@ -101,8 +100,8 @@ export const RegisterForm = observer(() => {
                         placeholder='Username'
                         value={username}
                         onChange={onChange}
-                        error={!!errors.password}
-                        helperText={errors.password}
+                        error={!!errors.username}
+                        helperText={errors.username}
                     />
                 </Grid>
                 <Grid item>
@@ -112,10 +111,10 @@ export const RegisterForm = observer(() => {
                         name='email'
                         type='email'
                         placeholder='Email'
-                        value={username}
+                        value={email}
                         onChange={onChange}
-                        error={!!errors.password}
-                        helperText={errors.password}                        
+                        error={!!errors.email}
+                        helperText={errors.email}                        
                     />
                 </Grid>
                 <Grid item>
@@ -140,10 +139,10 @@ export const RegisterForm = observer(() => {
                         name='password2'
                         placeholder='Password Again'
                         type='password'
-                        value={password}
+                        value={password2}
                         onChange={onChange}
-                        error={!!errors.password}
-                        helperText={errors.password}                        
+                        error={!!errors.password2}
+                        helperText={errors.password2}                        
                     />
                 </Grid>                
                 <Grid item style={{ marginTop: 16 }}>

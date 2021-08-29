@@ -1,6 +1,5 @@
 import { Injectable } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
-import mysql from 'mysql2/promise';
 import { UsersService } from '../users/users.service';
 import { UserDto } from 'src/users/dto/User.dto';
 import { CreateUserDto } from 'src/users/dto/CreateUser.dto';

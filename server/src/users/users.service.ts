@@ -14,6 +14,7 @@ export class UsersService {
 
   async create(user: User): Promise<User | undefined> {
     try {
+      // const query = await this.mysqlProvider.execute<User>(`call adduser(:name, :passwd, :prompt, :answer, :truename, :idnumber, :email, :mobilenumber, :province, :city, :phonenumber, :address, :postalcode, :gender, :birthday, :qq, :passwd2)`, user);
       const query = await this.mysqlProvider.query<User>(`call adduser(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`, [
         user.name,
         user.passwd,
@@ -41,7 +42,7 @@ export class UsersService {
     }
     throw new Error('Something went wrong');
   }
-
+ 
   async findOne(value: string | number, field = 'id'): Promise<User | undefined> {
     const dbUser = await this.mysqlProvider.findOne<User>(`SELECT * FROM users WHERE ${field}=?`, [value]);
     const user = dbUser ? Object.assign<User, User>(new User, dbUser) : dbUser;
@@ -49,7 +50,29 @@ export class UsersService {
   }
 
   async getList(): Promise<UserDto[]> {
-    const users = await this.mysqlProvider.findOne<User[]>(`SELECT * FROM users WHERE`);
-    return users.map(entity2Dto);
+    const users = await this.mysqlProvider.query<User>(`SELECT users.*, COUNT(auth.userid)>0 as gm,COUNT(point.zoneid) as online FROM users LEFT JOIN auth ON users.id=auth.userid AND auth.zoneid = 1 LEFT JOIN point ON users.id=point.uid AND point.zoneid IS NOT NULL GROUP BY users.id`);
+    return users[0].map(entity2Dto);
+  }
+
+  async getDetails(value: string | number): Promise<User | undefined> {
+    const dbUser = await this.mysqlProvider.findOne<User>(`SELECT users.*, COUNT(auth.userid)>0 as gm,COUNT(point.zoneid) as online FROM users LEFT JOIN auth ON users.id=auth.userid AND auth.zoneid = 1 LEFT JOIN point ON users.id=point.uid AND point.zoneid IS NOT NULL WHERE users.id=? GROUP BY users.id`, [value]);
+    const user = dbUser ? Object.assign<User, User>(new User, dbUser) : dbUser;
+    return user;
+  }
+
+  async updateUser(user: User): Promise<boolean> {
+    const newUser = Object.assign(new User(), user);
+    if (newUser.passwd) {
+      newUser.setPassword(newUser.passwd);
+    } else {
+      delete newUser.passwd;
+      delete newUser.passwd2;
+    }
+    delete newUser.online;
+    delete newUser.gm;
+    if (newUser.creatime) { newUser.creatime = newUser.creatime.replace('T', ' ').substr(0, 19); }
+    if (newUser.birthday) { newUser.birthday = newUser.birthday.replace('T', ' ').substr(0, 19); }
+    const req = this.mysqlProvider.update('users', newUser as Record<string, any>, [[user.id]]);
+    return req;
   }
 }

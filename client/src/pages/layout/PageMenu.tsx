@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import { RootStoreContext } from '../../contexts/RootStoreContext';
 import { observer } from 'mobx-react-lite';
+import { mainRoutes } from '../../Routes';
 
 const useStyles = makeStyles({
     button: {
@@ -38,40 +39,17 @@ const useStyles = makeStyles({
     }
 });
 
-export const HomeMenu = observer(() => {
-    const { authStore } = React.useContext(RootStoreContext);
+export const PageMenu = observer(() => {
+    const rootStore = React.useContext(RootStoreContext);
+    const user = rootStore.authStore.currentUser;
     const classes = useStyles();
     return (
-        <Grid container justifyContent='center'>
-            <Grid item>
-                <Link className={classes.button} to='/'>Home</Link>
-            </Grid>
-            <Grid item>
-                <Link className={classes.button} to='/info'>Server Info</Link>
-            </Grid>
-            <Grid item>
-                <Link className={classes.button} to='/story'>Story</Link>
-            </Grid>
-            <Grid item>
-                <Link className={classes.button} to='/downloads'>Download</Link>
-            </Grid>
-            <Grid item>
-                <Link className={classes.button} to='/guide'>Guide</Link>
-            </Grid>
-            {authStore.currentUser ? (
-                <Grid item>
-                    <Link className={classes.button} to='/logout'>Logout</Link>
+        <Grid container justifyContent='center' style={{ marginTop: 16 }}>
+            {mainRoutes.filter(x => !x.visible || x.visible(user!)).map((x, i) => (
+                <Grid item key={x.to + Boolean(user)}>
+                    <Link className={classes.button} to={x.to}>{x.label}</Link>
                 </Grid>
-            ) : (
-                <>
-                    <Grid item>
-                        <Link className={classes.button} to='/login'>Login</Link>
-                    </Grid>
-                    <Grid item>
-                        <Link className={classes.button} to='/register'>Registration</Link>
-                    </Grid>
-                </>            
-            )}
+            ))}
         </Grid>
     );
 });

@@ -3,6 +3,10 @@ import { action, makeObservable, observable } from "mobx";
 import { BACKEND_ADDRESS } from "../configs/constants";
 import { EntityId } from "../models/BaseEntity";
 
+export interface IFetchOptions extends RequestInit { 
+    body?: any
+};
+
 export abstract class BaseStore<T extends { id?: EntityId }> {
     protected backendAddress: string = BACKEND_ADDRESS;
     public endpoint: string = '';
@@ -34,14 +38,17 @@ export abstract class BaseStore<T extends { id?: EntityId }> {
         return fetch(url, init);
     }
 
-    public async request<R = T>(url: string, init: RequestInit = {} as RequestInit) {
+    public async request<R = T>(url: string, init: IFetchOptions = {} as IFetchOptions) {
+        if (typeof init.body === 'object') {
+            init.body = JSON.stringify(init.body) as any;
+        }
         const result = await this.fetch(url, init);
         const resultJson = await result.json() as ({ data: R } | R);
         const item = (resultJson as { data: R }).data || resultJson as (R);
         return item;
     }
 
-    public async get(id: string): Promise<T> {
+    public async get(id: EntityId): Promise<T> {
         try {
             const item = await this.request(`${this.endpoint}/${id}`);
             return item;
@@ -68,7 +75,7 @@ export abstract class BaseStore<T extends { id?: EntityId }> {
                 this.endpoint, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(data)
+                    body: data
                 }
             );
             this.setItems([ item, ...this.items ]);
@@ -85,10 +92,11 @@ export abstract class BaseStore<T extends { id?: EntityId }> {
                 `${this.endpoint}/${data.id}`, {
                     method: 'PUT',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(data)
+                    body: data
                 }
             );
-            this.setItems([ ...this.items ]);
+            console.log(item)
+            this.setItems(this.items.map(x => x.id === data.id ? item : x));
             return item;
         } catch(err) {
             console.error(err);
@@ -96,13 +104,11 @@ export abstract class BaseStore<T extends { id?: EntityId }> {
         }
     }
 
-    public onDelete = async (id: number): Promise<void> => {
+    public onDelete = async (id: EntityId): Promise<void> => {
         try {
-            await this.request(
-                `${this.endpoint}/${id}`, {
-                    method: 'DELETE',
-                }
-            );
+            await this.request(`${this.endpoint}/${id}`, {
+                method: 'DELETE',
+            });
             this.setItems(this.items.filter(item => item.id !== id));
         } catch(err) {
             console.error(err);
