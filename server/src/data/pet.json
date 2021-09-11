@@ -1,0 +1,198 @@
+{
+    "type": {
+        "Ride": 0,
+        "Battle": 1,
+        "AllClass": 2
+    },
+    "skills": [
+        {
+           "id":687,
+           "name":"Bashing",
+           "maxLv":5,
+           "color":0,
+           "description":"Single stronger physical attack"
+        },
+        {
+           "id":747,
+           "name":"Ripping Bite",
+           "maxLv":5,
+           "color":0,
+           "description":"Physical damage and extra bleed damage"
+        },
+        {
+           "id":748,
+           "name":"Flame Orb",
+           "maxLv":5,
+           "color":0,
+           "description":"Deal fire damage based on pet base damage"
+        },
+        {
+           "id":749,
+           "name":"Frost Sting",
+           "maxLv":5,
+           "color":0,
+           "description":"Deal water damage based on pet base damage"
+        },
+        {
+           "id":750,
+           "name":"Poison Mist",
+           "maxLv":5,
+           "color":0,
+           "description":"Deal wood damage based on pet base damage"
+        },
+        {
+           "id":751,
+           "name":"Summon Storm",
+           "maxLv":5,
+           "color":0,
+           "description":"Deal metal damage based on pet base damage"
+        },
+        {
+           "id":752,
+           "name":"Sand Raise",
+           "maxLv":5,
+           "color":0,
+           "description":"Deal earth damage based on pet base damage"
+        },
+        {
+           "id":753,
+           "name":"Bluster",
+           "maxLv":5,
+           "color":0,
+           "description":"Roar to attract enemies attacks"
+        },
+        {
+           "id":754,
+           "name":"Howling",
+           "maxLv":5,
+           "color":0,
+           "description":"Decrease enemy Mdef for 15 sec"
+        },
+        {
+           "id":755,
+           "name":"Armour Break",
+           "maxLv":5,
+           "color":0,
+           "description":"Decrease enemy Pdef for 15 sec"
+        },
+        {
+           "id":756,
+           "name":"Frighten",
+           "maxLv":5,
+           "color":0,
+           "description":"Decrease enemy Pattack for 15 sec"
+        },
+        {
+           "id":757,
+           "name":"ScreamShock",
+           "maxLv":5,
+           "color":0,
+           "description":"Chance for interrupt the opponent channeling"
+        },
+        {
+           "id":758,
+           "name":"Decelerate",
+           "maxLv":5,
+           "color":0,
+           "description":"Decrease enemy mov speed for 6 sec"
+        },
+        {
+           "id":759,
+           "name":"Crustaceous",
+           "maxLv":5,
+           "color":0,
+           "description":"Reduce damage take for 15 sec"
+        },
+        {
+           "id":795,
+           "name":"Blood Imbibe",
+           "maxLv":3,
+           "color":0,
+           "description":"Drain HP from enemy based on Pet Max HP"
+        },
+        {
+           "id":796,
+           "name":"Soul Imbibe",
+           "maxLv":3,
+           "color":0,
+           "description":"Drain MP from enemy based on Pet Max HP"
+        },
+        {
+           "id":797,
+           "name":"Life Seizure",
+           "maxLv":1,
+           "color":2,
+           "description":"Absorb enemy HP (half of missing HP), heal the Pet"
+        },
+        {
+           "id":798,
+           "name":"Spirit Seizure",
+           "maxLv":1,
+           "color":2,
+           "description":"Absorb enemy MP (half of missing HP), heal the Pet"
+        },
+        {
+           "id":760,
+           "name":"Embrave",
+           "maxLv":3,
+           "color":2,
+           "description":"Recover HP based on Max HP"
+        },
+        {
+           "id":761,
+           "name":"Doodoo",
+           "maxLv":2,
+           "color":2,
+           "description":"Chance for 3 sec Stun also increase self attack speed"
+        },
+        {
+           "id":799,
+           "name":"Sacrifice",
+           "maxLv":1,
+           "color":2,
+           "description":"Sacrifice 75% HP and deal 4x base damage"
+        },
+        {
+           "id":800,
+           "name":"Fordo Break",
+           "maxLv":5,
+           "color":2,
+           "description":"Deal physical damage, neglecting target defense"
+        },
+        {
+           "id":801,
+           "name":"Reversal Shock",
+           "maxLv":5,
+           "color":2,
+           "description":"Reflect melee damage for 1 hour"
+        },
+        {
+           "id":802,
+           "name":"Sharp Claw",
+           "maxLv":5,
+           "color":3,
+           "description":"Increase damage for 1 hour"
+        },
+        {
+           "id":803,
+           "name":"Exorcism",
+           "maxLv":5,
+           "color":3,
+           "description":"Increase Mdef for 1 hour"
+        },
+        {
+           "id":804,
+           "name":"Solidshell",
+           "maxLv":5,
+           "color":3,
+           "description":"Increase Pdef for 1 hour but reduce dodge to 0"
+        },
+        {
+           "id":805,
+           "name":"Bless",
+           "maxLv":5,
+           "color":3,
+           "description":"Increase Max HP for 1 hour"
+        }
+    ]
+}

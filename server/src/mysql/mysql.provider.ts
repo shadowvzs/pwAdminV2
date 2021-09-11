@@ -1,21 +1,24 @@
 import { Injectable } from '@nestjs/common';
+import { ConfigService } from '@nestjs/config';
 import mysql from 'mysql2/promise';
-import { SQLBindValue, SQLCondition } from './interfaces/common';
+import { SQLBindValue, SQLCondition, SQLCrendetials } from './interfaces/common';
 
 @Injectable()
 export class MySQLProvider {
-    private config = { 
-        host: 'localhost',
-        // port: 30006,
-        user: 'newuser',
-        password: 'passworD1!',
-        database: 'pw'
-    };
+    private config: SQLCrendetials;
 
     public connection: mysql.Pool;
     public isActive: boolean;
 
-    constructor() {
+    constructor(
+        private configService: ConfigService
+    ) {
+        this.config = {
+            host: this.configService.get('DB_HOST'),
+            user: this.configService.get('DB_USERNAME'),
+            password: this.configService.get('DB_PASSWORD'),
+            database: this.configService.get('DB_NAME')
+        };
         this.connect();
     }
 

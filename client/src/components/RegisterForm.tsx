@@ -54,7 +54,7 @@ class RegisterStore {
         }
 
         this.errors = errors;
-        console.log(errors)
+        console.warn(errors);
         if (Object.keys(errors).length) { return false; }
         this.authStore.register({ username: this.username, password: this.password, email: this.email });
         return false;

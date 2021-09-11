@@ -1,0 +1,2637 @@
+{
+   "version": 39,
+   "soulStoneType": [
+      "stat",
+      "elemental",
+      "rare"
+   ],
+   "statType": [
+      "flat",
+      "percentage",
+      "period",
+      "range",
+      "speed",
+      "interval",
+      "no-value"
+
+   ],
+   "stats": [
+      {
+         "id": 0,
+         "shortName": "STR",
+         "name": "Strength",
+         "type": 0
+      },
+      {
+         "id": 1,
+         "shortName": "DEX",
+         "name": "Dexterity",
+         "type": 0
+      },
+      {
+         "id": 2,
+         "shortName": "MAG",
+         "name": "Magic",
+         "type": 0
+      },
+      {
+         "id": 3,
+         "shortName": "CON",
+         "name": "Constitute",
+         "type": 0
+      },
+      {
+         "id": 4,
+         "shortName": "HP",
+         "name": "Hit Point",
+         "type": 0
+      },
+      {
+         "id": 5,
+         "shortName": "MP",
+         "name": "Mana Point",
+         "type": 0
+      },
+      {
+         "id": 6,
+         "shortName": "PAttack",
+         "name": "Physical Attack",
+         "type": 0
+      },
+      {
+         "id": 7,
+         "shortName": "Max PAttack",
+         "name": "Maximum Physical Attack",
+         "type": 0
+      },
+      {
+         "id": 8,
+         "shortName": "MAttack",
+         "name": "Magic Attack",
+         "type": 0
+      },
+      {
+         "id": 9,
+         "shortName": "Max MAttack",
+         "name": "Maximum Magic Attack",
+         "type": 0
+      },
+      {
+         "id": 10,
+         "shortName": "PDef",
+         "name": "Physical Defense",
+         "type": 0
+      },
+      {
+         "id": 11,
+         "shortName": "MDef",
+         "name": "Magic Defense",
+         "type": 0
+      },
+      {
+         "id": 12,
+         "shortName": "Acc",
+         "name": "Accurancy",
+         "type": 0
+      },
+      {
+         "id": 13,
+         "shortName": "Eva",
+         "name": "Evasion",
+         "type": 0
+      },
+      {
+         "id": 14,
+         "shortName": "Crit",
+         "name": "Critical Hit Rate",
+         "type": 1
+      },
+      {
+         "id": 15,
+         "shortName": "Metal Def.",
+         "name": "Metal Defense",
+         "type": 0
+      },
+      {
+         "id": 16,
+         "shortName": "Wood Def.",
+         "name": "Wood Defense",
+         "type": 0
+      },
+      {
+         "id": 17,
+         "shortName": "Water Def.",
+         "name": "Water Defense",
+         "type": 0
+      },
+      {
+         "id": 18,
+         "shortName": "Fire Def.",
+         "name": "Fire Defense",
+         "type": 0
+      },
+      {
+         "id": 19,
+         "shortName": "Earth Def.",
+         "name": "Earth Defense",
+         "type": 0
+      },
+      {
+         "id": 20,
+         "shortName": "HP Regen",
+         "name": "HP Regeneration",
+         "type": 2
+      },
+      {
+         "id": 21,
+         "shortName": "MP Regen",
+         "name": "MP Regeneration",
+         "type": 2
+      },
+      {
+         "id": 22,
+         "shortName": "Range",
+         "name": "Range",
+         "type": 3
+      },
+      {
+         "id": 23,
+         "shortName": "Phys. Harm Red.",
+         "name": "Physical Harm Reduction",
+         "type": 1
+      },
+      {
+         "id": 24,
+         "shortName": "Acc",
+         "name": "Accurancy",
+         "type": 1
+      },
+      {
+         "id": 25,
+         "shortName": "Eva",
+         "name": "Evasion",
+         "type": 1
+      },
+      {
+         "id": 26,
+         "shortName": "Mov. Speed",
+         "name": "Movement Speed",
+         "type": 4
+      },
+      {
+         "id": 27,
+         "shortName": "Mov. Speed",
+         "name": "Movement Speed",
+         "type": 1
+      },
+
+      {
+         "id": 28,
+         "shortName": "Int",
+         "name": "Interval",
+         "isNegative": true,
+         "type": 5
+      },
+      {
+         "id": 29,
+         "shortName": "Chan.",
+         "name": "Channeling",
+         "isNegative": true,
+         "type": 1
+      },
+      {
+         "id": 30,
+         "shortName": "Max Dur.",
+         "name": "Max Durability",
+         "type": 1
+      },
+      {
+         "id": 31,
+         "shortName": "Exp",
+         "name": "Experience",
+         "type": 1
+      },
+      {
+         "id": 32,
+         "shortName": "Max HP",
+         "name": "Maximum Hit Point",
+         "type": 1
+      },
+      {
+         "id": 33,
+         "shortName": "Max MP",
+         "name": "Maximum Mana Point",
+         "type": 1
+      },
+      {
+         "id": 34,
+         "shortName": "unknown",
+         "name": "reserved",
+         "type": 0
+      },
+
+      {
+         "id": 35,
+         "shortName": "Att. Lv",
+         "name": "Attack Level",
+         "type": 0,
+         "version": 39
+      },
+      {
+         "id": 36,
+         "shortName": "Def Lv",
+         "name": "Defense Level",
+         "type": 0,
+         "version": 39
+      },
+      {
+         "id": 37,
+         "shortName": "Pdef",
+         "name": "Physical Defense",
+         "type": 1
+      },
+      {
+         "id": 38,
+         "shortName": "Mdef",
+         "name": "Magic Defense",
+         "type": 1
+      },
+      {
+         "id": 39,
+         "shortName": "Stealth Lv",
+         "name": "Stealth Level",
+         "type": 0,
+         "version": 40
+      },
+      {
+         "id": 40,
+         "shortName": "Awarness Lv",
+         "name": "Awarness Level",
+         "type": 0,
+         "version": 40
+      },
+      {
+         "id": 41,
+         "shortName": "Sf",
+         "name": "Soulforce",
+         "type": 0,
+         "version": 40
+      },
+      {
+         "id": 42,
+         "shortName": "Metal Def.",
+         "name": "Metal Defense",
+         "type": 1
+      },
+      {
+         "id": 43,
+         "shortName": "Wood Def.",
+         "name": "Wood Defense",
+         "type": 1
+      },
+      {
+         "id": 44,
+         "shortName": "Water Def.",
+         "name": "Water Defense",
+         "type": 1
+      },
+      {
+         "id": 45,
+         "shortName": "Fire Def.",
+         "name": "Fire Defense",
+         "type": 1
+      },
+      {
+         "id": 46,
+         "shortName": "Earth Def.",
+         "name": "Earth Defense",
+         "type": 1
+      },
+      {
+         "id": 47,
+         "shortName": "Slay. Lv",
+         "name": "Slaying Level",
+         "type": 0,
+         "version": 69
+      },
+      {
+         "id": 48,
+         "shortName": "Ward. Lv",
+         "name": "Warding Level",
+         "type": 0,
+         "version": 69
+      },
+
+      {
+         "id": 49,
+         "shortName": "Red. MDmg.",
+         "name": "Reduce Magic Damage",
+         "type": 1
+      },
+      {
+         "id": 50,
+         "shortName": "Red. Metal Dmg.",
+         "name": "Reduce Metal Damage",
+         "type": 1
+      },
+      {
+         "id": 51,
+         "shortName": "Red. Wood Dmg.",
+         "name": "Reduce Wood Damage",
+         "type": 1
+      },
+      {
+         "id": 52,
+         "shortName": "Red. Water Dmg.",
+         "name": "Reduce Water Damage",
+         "type": 1
+      },
+      {
+         "id": 53,
+         "shortName": "Red. Fire Dmg.",
+         "name": "Reduce Fire Damage",
+         "type": 1
+      },
+      {
+         "id": 54,
+         "shortName": "Red. Earth Dmg.",
+         "name": "Reduce Earth Damage",
+         "type": 1
+      },
+      {
+         "id": 55,
+         "shortName": "Eye Obs.",
+         "name": "Eye Observation",
+         "type": 6,
+         "version": 40
+      },
+      {
+         "id": 56,
+         "shortName": "Spr.",
+         "name": "Spirit",
+         "type": 0,
+         "version": 89
+      },
+      {
+         "id": 57,
+         "shortName": "Phys. Penetr.",
+         "name": "Physical Penetration",
+         "type": 0,
+         "version": 89
+      },
+      {
+         "id": 58,
+         "shortName": "Mag. Penetr.",
+         "name": "Magic Penetration",
+         "type": 0,
+         "version": 89
+      },
+      {
+         "id": 59,
+         "shortName": "Metal Dmg",
+         "name": "Metal Damage",
+         "type": 0
+      },
+      {
+         "id": 60,
+         "shortName": "Wood Dmg",
+         "name": "Wood Damage",
+         "type": 0
+      },
+      {
+         "id": 61,
+         "shortName": "Water Dmg",
+         "name": "Water Damage",
+         "type": 0
+      },
+      {
+         "id": 62,
+         "shortName": "Fire Dmg",
+         "name": "Fire Damage",
+         "type": 0
+      },
+      {
+         "id": 63,
+         "shortName": "Earth Dmg",
+         "name": "Earth Damage",
+         "type": 0
+      },
+      {
+         "id": 64,
+         "shortName": "Ride Spd",
+         "name": "Ride Speed",
+         "type": 4
+      }
+   ],
+   "addons": [
+        {
+           "id":"1453",
+           "attributeId":0,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B",
+              "M"
+           ],
+           "name":"Strength"
+        },
+        {
+           "id":"1458",
+           "attributeId":1,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B",
+              "M"
+           ],
+           "name":"Agility"
+        },
+        {
+           "id":"1483",
+           "attributeId":2,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B",
+              "M"
+           ],
+           "name":"Intelligence"
+        },
+        {
+           "id":"1468",
+           "attributeId":3,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B",
+              "M"
+           ],
+           "name":"Constitution"
+        },
+        {
+           "id":"1384",
+           "attributeId":4,
+           "supportedEquipment":[
+              "W",
+              "J",
+              "M"
+           ],
+           "name":"Hit Point"
+        },
+        {
+           "id":"1364",
+           "attributeId":5,
+           "supportedEquipment":[
+              "W",
+              "J",
+              "M"
+           ],
+           "name":"Mana"
+        },
+        {
+           "id":"627",
+           "attributeId":4,
+           "supportedEquipment":[
+              "A",
+              "B"
+           ],
+           "name":"Hit Point"
+        },
+        {
+           "id":"276",
+           "attributeId":5,
+           "supportedEquipment":[
+              "A",
+              "B"
+           ],
+           "name":"Mana"
+        },
+        {
+           "id":"1008",
+           "attributeId":6,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B",
+              "M"
+           ],
+           "name":"Physical Attack"
+        },
+        {
+           "id":"1004",
+           "attributeId":7,
+           "supportedEquipment":[
+              "W"
+           ],
+           "name":"Max P.Attack"
+        },
+        {
+           "id":"1019",
+           "attributeId":8,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B",
+              "M"
+           ],
+           "name":"Magic Attack"
+        },
+        {
+           "id":"423",
+           "attributeId":9,
+           "supportedEquipment":[
+              "W"
+           ],
+           "name":"Max M.Attack"
+        },
+        {
+           "id":"1256",
+           "attributeId":10,
+           "supportedEquipment":[
+              "W"
+           ],
+           "name":"Physical defense"
+        },
+        {
+           "id":"219",
+           "attributeId":10,
+           "supportedEquipment":[
+              "A",
+              "J",
+              "B",
+              "M"
+           ],
+           "name":"Physical Def."
+        },
+        {
+           "id":"306",
+           "attributeId":11,
+           "supportedEquipment":[
+              "A",
+              "J",
+              "B",
+              "M"
+           ],
+           "name":"Magic Def."
+        },
+        {
+           "id":"2170",
+           "attributeId":37,
+           "supportedEquipment":[
+              "A",
+              "J",
+              "B",
+              "M"
+           ],
+           "name":"PDefense %"
+        },
+        {
+           "id":"2302",
+           "attributeId":38,
+           "supportedEquipment":[
+              "A",
+              "J",
+              "B",
+              "M"
+           ],
+           "name":"MDefense %"
+        },
+        {
+           "id":"2185",
+           "attributeId":42,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B",
+              "M"
+           ],
+           "name":"Metal Defense %"
+        },
+        {
+           "id":"2194",
+           "attributeId":43,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B",
+              "M"
+           ],
+           "name":"Wood Defense %"
+        },
+        {
+           "id":"2203",
+           "attributeId":44,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B",
+              "M"
+           ],
+           "name":"Water Defense %"
+        },
+        {
+           "id":"2176",
+           "attributeId":45,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B",
+              "M"
+           ],
+           "name":"Fire Defense %"
+        },
+        {
+           "id":"2212",
+           "attributeId":46,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B",
+              "M"
+           ],
+           "name":"Earth Defense %"
+        },
+        {
+           "id":"2487",
+           "attributeId":50,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B",
+              "M"
+           ],
+           "name":"Reduce Metal Dmg %"
+        },
+        {
+           "id":"2491",
+           "attributeId":51,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B",
+              "M"
+           ],
+           "name":"Reduce Wood Dmg %"
+        },
+        {
+           "id":"2495",
+           "attributeId":52,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B",
+              "M"
+           ],
+           "name":"Reduce Water Dmg %"
+        },
+        {
+           "id":"2483",
+           "attributeId":53,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B",
+              "M"
+           ],
+           "name":"Reduce Fire Dmg %"
+        },
+        {
+           "id":"2499",
+           "attributeId":54,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B",
+              "M"
+           ],
+           "name":"Reduce Earth Dmg %"
+        },
+        {
+           "id":"2503",
+           "attributeId":49,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B",
+              "M"
+           ],
+           "name":"Reduce Magic Dmg %"
+        },
+        {
+           "id":"311",
+           "attributeId":23,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B",
+              "M"
+           ],
+           "name":"Reduce P.Harm"
+        },
+        {
+           "id":"365",
+           "attributeId":15,
+           "supportedEquipment":[
+              "A",
+              "J",
+              "B",
+              "M"
+           ],
+           "name":"Metal Def."
+        },
+        {
+           "id":"368",
+           "attributeId":16,
+           "supportedEquipment":[
+              "A",
+              "J",
+              "B",
+              "M"
+           ],
+           "name":"Wood Def."
+        },
+        {
+           "id":"371",
+           "attributeId":17,
+           "supportedEquipment":[
+              "A",
+              "J",
+              "B",
+              "M"
+           ],
+           "name":"Water Def."
+        },
+        {
+           "id":"374",
+           "attributeId":18,
+           "supportedEquipment":[
+              "A",
+              "J",
+              "B",
+              "M"
+           ],
+           "name":"Fire Def."
+        },
+        {
+           "id":"377",
+           "attributeId":19,
+           "supportedEquipment":[
+              "A",
+              "J",
+              "B",
+              "M"
+           ],
+           "name":"Earth Def."
+        },
+        {
+           "id":"323",
+           "attributeId":20,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B",
+              "M"
+           ],
+           "name":"HP Recovery"
+        },
+        {
+           "id":"328",
+           "attributeId":21,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B",
+              "M"
+           ],
+           "name":"MP Recovery"
+        },
+        {
+           "id":"471",
+           "attributeId":22,
+           "isFloat":true,
+           "supportedEquipment":[
+              "W"
+           ],
+           "name":"Range"
+        },
+        {
+           "id":"490",
+           "attributeId":12,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B",
+              "M"
+           ],
+           "name":"Accurancy"
+        },
+        {
+           "id":"670",
+           "attributeId":13,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B",
+              "M"
+           ],
+           "name":"Dodge"
+        },
+        {
+           "id":"390",
+           "attributeId":24,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B",
+              "M"
+           ],
+           "name":"Accurancy %"
+        },
+        {
+           "id":"393",
+           "attributeId":25,
+           "supportedEquipment":[
+              "W",
+              "J",
+              "M"
+           ],
+           "name":"Dodge %"
+        },
+        {
+           "id":"585",
+           "attributeId":14,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B",
+              "M"
+           ],
+           "name":"Crit %"
+        },
+        {
+           "id":"2079",
+           "attributeId":35,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B",
+              "M"
+           ],
+           "name":"Attack Level"
+        },
+        {
+           "id":"2056",
+           "attributeId":36,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B",
+              "M"
+           ],
+           "name":"Defence Level"
+        },
+        {
+           "id":"2843",
+           "attributeId":47,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B",
+              "M"
+           ],
+           "name":"Slaying Level"
+        },
+        {
+           "id":"2850",
+           "attributeId":48,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B",
+              "M"
+           ],
+           "name":"Warding Level"
+        },
+        {
+           "id":"3193",
+           "attributeId":57,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B",
+              "M"
+           ],
+           "name":"Physical Penetration"
+        },
+        {
+           "id":"3194",
+           "attributeId":58,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B",
+              "M"
+           ],
+           "name":"Magic Penetration"
+        },
+        {
+           "id":"2362",
+           "attributeId":41,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B",
+              "M"
+           ],
+           "name":"Soulforce"
+        },
+        {
+           "id":"3043",
+           "attributeId":56,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B",
+              "M"
+           ],
+           "name":"Spirit"
+        },
+        {
+           "id":"337",
+           "attributeId":28,
+           "supportedEquipment":[
+              "W"
+           ],
+           "name":"Interval -0.05"
+        },
+        {
+           "id":"331",
+           "attributeId":28,
+           "supportedEquipment":[
+              "A",
+              "J",
+              "B",
+              "M"
+           ],
+           "name":"Interval -0.05"
+        },
+        {
+           "id":"595",
+           "attributeId":29,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B",
+              "M"
+           ],
+           "name":"Channeling %"
+        },
+        {
+           "id":"300",
+           "attributeId":30,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B"
+           ],
+           "name":"Max. Duratibility"
+        },
+        {
+           "id":"406",
+           "attributeId":31,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B",
+              "M"
+           ],
+           "name":"Experience %"
+        },
+        {
+           "id":"387",
+           "attributeId":32,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B",
+              "M"
+           ],
+           "name":"Max HP %"
+        },
+        {
+           "id":"388",
+           "attributeId":33,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B",
+              "M"
+           ],
+           "name":"Max MP %"
+        },
+        {
+           "id":"286",
+           "attributeId":27,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "M"
+           ],
+           "name":"Mov. Speed %"
+        },
+        {
+           "id":"636",
+           "attributeId":26,
+           "isFloat":true,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "M"
+           ],
+           "name":"Mov. Speed"
+        },
+        {
+           "id":"2311",
+           "attributeId":55,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B",
+              "M"
+           ],
+           "name":"Eye Observation"
+        },
+        {
+           "id":"2365",
+           "attributeId":4,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B"
+           ],
+           "name":"Rune: HP"
+        },
+        {
+           "id":"2366",
+           "attributeId":0,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B"
+           ],
+           "name":"Rune: Strength"
+        },
+        {
+           "id":"2367",
+           "attributeId":1,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B"
+           ],
+           "name":"Rune: Dexterity"
+        },
+        {
+           "id":"2368",
+           "attributeId":2,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B"
+           ],
+           "name":"Rune: Magic"
+        },
+        {
+           "id":"2363",
+           "attributeId":6,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B"
+           ],
+           "name":"Rune: PAttack"
+        },
+        {
+           "id":"2364",
+           "attributeId":8,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B"
+           ],
+           "name":"Rune: MAttack"
+        },
+        {
+           "id":"2370",
+           "attributeId":7,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B"
+           ],
+           "name":"Rune: Max PAttack"
+        },
+        {
+           "id":"2372",
+           "attributeId":9,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B"
+           ],
+           "name":"Rune: Max MAttack"
+        },
+        {
+           "id":"2382",
+           "attributeId":10,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B"
+           ],
+           "name":"Rune: Phys. Defence"
+        },
+        {
+           "id":"2391",
+           "attributeId":12,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B"
+           ],
+           "name":"Rune: Accurancy"
+        },
+        {
+           "id":"2402",
+           "attributeId":14,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B"
+           ],
+           "name":"Rune: Critical Strike"
+        },
+        {
+           "id":"2403",
+           "attributeId":35,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B"
+           ],
+           "name":"Rune: Attack Level"
+        },
+        {
+           "id":"2404",
+           "attributeId":36,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B"
+           ],
+           "name":"Rune: Defence Level"
+        },
+        {
+           "id":"2414",
+           "attributeId":29,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B"
+           ],
+           "name":"Rune: Channeling"
+        },
+        {
+           "id":"3133",
+           "attributeId":64,
+           "supportedEquipment":[
+              "W",
+              "A",
+              "J",
+              "B"
+           ],
+           "name":"Rune: Ride Speed"
+        }
+     ],
+     "weaponAddons": [
+        {
+           "id":450,
+           "description":"Stun: Chance for 3 sec stun",
+           "name":"Special: Stun",
+           "version":10,
+           "data":"140 1"
+        },
+        {
+           "id":453,
+           "description":"Devour: Chance for reduce target pdef",
+           "name":"Special: -Pdef",
+           "version":10,
+           "data":"141 1"
+        },
+        {
+           "id":451,
+           "description":"Slow: Chance for slow target",
+           "name":"Special: Slow",
+           "version":10,
+           "data":"142 1"
+        },
+        {
+           "id":452,
+           "description":"Paralyze: Chance for paralyze your opponent",
+           "name":"Special: Paralyze",
+           "version":10,
+           "data":"143 1"
+        },
+        {
+           "id":1276,
+           "description":"Weaken: Chance for weaken target mdef",
+           "name":"Special: -Mdef",
+           "version":10,
+           "data":"196 1"
+        },
+        {
+           "id":1277,
+           "description":"Fright: Chance for reduce target pattack",
+           "name":"Special: -Pattack",
+           "version":10,
+           "data":"197 1"
+        },
+        {
+           "id":1278,
+           "description":"Muddle: Chance for reduce target mattack",
+           "name":"Special: -Mattack",
+           "version":10,
+           "data":"198 1"
+        },
+        {
+           "id":1279,
+           "description":"Atrophy: Chance for reduce target attack speed",
+           "name":"Special: -AttSpd",
+           "version":10,
+           "data":"199 1"
+        },
+        {
+           "id":1280,
+           "description":"Stupefy: Chance for increase target channeling",
+           "name":"Special: +Channeling",
+           "version":10,
+           "data":"200 1"
+        },
+        {
+           "id":1281,
+           "description":"Blind: Chance for reduce target accurancy",
+           "name":"Special: -Acc",
+           "version":10,
+           "data":"201 1"
+        },
+        {
+           "id":1282,
+           "description":"Daze: Chance for reduce target dodge rate",
+           "name":"Special: -Dodge",
+           "version":10,
+           "data":"202 1"
+        },
+        {
+           "id":1283,
+           "description":"Thoughen: Chance for increase your pdef",
+           "name":"Special: +Pdef",
+           "version":10,
+           "data":"203 1"
+        },
+        {
+           "id":1284,
+           "description":"Wisen: Chance for increase your mdef",
+           "name":"Special: +Mdef",
+           "version":10,
+           "data":"204 1"
+        },
+        {
+           "id":1286,
+           "description":"Sharpen: Chance for increase your pattack",
+           "name":"Special: +Pattack",
+           "version":10,
+           "data":"205 1"
+        },
+        {
+           "id":1287,
+           "description":"Quicken: Chance for increase your attack speed",
+           "name":"Special: +AttSpd",
+           "version":10,
+           "data":"206 1"
+        },
+        {
+           "id":1288,
+           "description":"Nimble: Chance for increase your accurancy",
+           "name":"Special: +Acc",
+           "version":10,
+           "data":"207 1"
+        },
+        {
+           "id":1289,
+           "description":"Regen: Chance for heal self by 5% HP",
+           "name":"Special: +5% HP",
+           "version":10,
+           "data":"211 1"
+        },
+        {
+           "id":1290,
+           "description":"Enlighten: Chance for recover by 5% MP",
+           "name":"Special: +5% MP",
+           "version":10,
+           "data":"212 1"
+        },
+        {
+           "id":1291,
+           "description":"Gloom1: Chance for greatly increase pattack but lose 5% MP",
+           "name":"Special: +Patt -5% MP",
+           "version":10,
+           "data":"219 1"
+        },
+        {
+           "id":1292,
+           "description":"Gloom2: Chance for greatly increase pattack but decrease self pdef",
+           "name":"Special: +Patt -Pdef",
+           "version":10,
+           "data":"220 1"
+        },
+        {
+           "id":1293,
+           "description":"Hatred: Chance for increase your agro level",
+           "name":"Special: Hatred",
+           "version":10,
+           "data":"225 1"
+        },
+        {
+           "id":1296,
+           "description":"Seal: Chance for seal target",
+           "name":"Special: Seal",
+           "version":10,
+           "data":"144 1"
+        },
+        {
+           "id":1297,
+           "description":"Berserk: Chance for double damage (5% hp cost)",
+           "name":"Special: Berserk",
+           "version":10,
+           "data":"146 1"
+        },
+        {
+           "id":1298,
+           "description":"Frenzy: Chance for increase attack spd, dmg but suffer more dmg",
+           "name":"Special: +AttSpd,Patt +Dmg",
+           "version":10,
+           "data":"208 1"
+        },
+        {
+           "id":1299,
+           "description":"Meditation: Chance for recover 5% HP & MP",
+           "name":"Special: +5% HP & MP",
+           "version":10,
+           "data":"213 1"
+        },
+        {
+           "id":1300,
+           "description":"Blood Defect: Chance for heal back 10% HP",
+           "name":"Special: +10% HP",
+           "version":10,
+           "data":"214 1"
+        },
+        {
+           "id":1301,
+           "description":"Spirit Defect: Chance for recover back 10% MP",
+           "name":"Special: +10% MP",
+           "version":10,
+           "data":"215 1"
+        },
+        {
+           "id":1302,
+           "description":"Revenge1: Chance for recover 5% HP and increase pattack",
+           "name":"Special: +5%HP +Patt",
+           "version":10,
+           "data":"217 1"
+        },
+        {
+           "id":1303,
+           "description":"Revenge2: Chance for recover 5% MP and increase pattac",
+           "name":"Special: +5%MP +Patt",
+           "version":10,
+           "data":"218 1"
+        },
+        {
+           "id":1304,
+           "description":"Spikes: Chance for increase pattack and reflect 25% melee dmg",
+           "name":"Special: +Patt +25% Refl",
+           "version":10,
+           "data":"223 1"
+        },
+        {
+           "id":1305,
+           "description":"Shield: Chance for cast shield around you, reduce dmg by 20%",
+           "name":"Special: -20% Dmg",
+           "version":10,
+           "data":"224 1"
+        },
+        {
+           "id":1306,
+           "description":"Bless: Chance for increase pattack and pdef",
+           "name":"Special: +Patt +Pdef",
+           "version":10,
+           "data":"210 1"
+        },
+        {
+           "id":1307,
+           "description":"Faith: Chance for recover 5% HP and increase pdef, mdef",
+           "name":"Special: +5%HP+Pdef+Patt",
+           "version":10,
+           "data":"221 1"
+        },
+        {
+           "id":1308,
+           "description":"Stop: Chance for stun target for 5sec and paralyze self for 10sec",
+           "name":"Special: +5Stun -10Para",
+           "version":10,
+           "data":"209 1"
+        },
+        {
+           "id":1309,
+           "description":"Holy: Chance for recover 5% HP and remove debuffs",
+           "name":"Special: 5% HP +Purify",
+           "version":10,
+           "data":"216 1"
+        },
+        {
+           "id":1310,
+           "description":"Darken: Chance for seal and paralyze your target",
+           "name":"Special: Seal+Para",
+           "version":10,
+           "data":"222 1"
+        },
+        {
+           "id":445,
+           "description":"Rip: Chance for deal 5000 bleed damage for 15 sec",
+           "name":"Special: 5000 Bleed",
+           "version":10,
+           "data":"809 1"
+        },
+        {
+           "id":446,
+           "description":"Infect: Chance for reduce target max HP",
+           "name":"Special: -Max HP",
+           "version":10,
+           "data":"810 1"
+        },
+        {
+           "id":447,
+           "description":"Knock: Chance for interrupt target channeling and knockback 10 m",
+           "name":"Special: Knockback",
+           "version":10,
+           "data":"811 1"
+        },
+        {
+           "id":448,
+           "description":"Concentrate: Chance for gain 20 vigor",
+           "name":"Special: +20 Vigor",
+           "version":10,
+           "data":"812 1"
+        },
+        {
+           "id":449,
+           "description":"Purge: Chance for dispel target positive buffs",
+           "name":"Special: Purge",
+           "version":10,
+           "data":"813 1"
+        },
+        {
+           "id":2275,
+           "description":"Adv Berserk: Higher chance for deal double damage, cost 5% hp",
+           "name":"Special: Adv Berserk",
+           "version":38,
+           "data":"1168 1"
+        },
+        {
+           "id":2276,
+           "description":"Armor Crush: Higher chance for decrease target pdef",
+           "name":"Special: Adv -Pdef",
+           "version":38,
+           "data":"1169 1"
+        },
+        {
+           "id":2277,
+           "description":"Havoc: no info",
+           "name":"Special: Havoc",
+           "version":38,
+           "data":"1170 1"
+        },
+        {
+           "id":2278,
+           "description":"Determination: no info",
+           "name":"Special: Determ.",
+           "version":38,
+           "data":"1171 1"
+        },
+        {
+           "id":1279,
+           "description":"Interjection: no info",
+           "name":"Special: Interj.",
+           "version":38,
+           "data":"1172 1"
+        },
+        {
+           "id":2280,
+           "description":"Thunderbolt Shake: Higher chance or stun target for 3 sec",
+           "name":"Special: Stun+",
+           "version":38,
+           "data":"1173 1"
+        },
+        {
+           "id":2281,
+           "description":"ParaSeal: Higher chance or paralyze and seal the target",
+           "name":"Special: ParaSeal",
+           "version":38,
+           "data":"1174 1"
+        },
+        {
+           "id":2282,
+           "description":"Blood Feud: Higher chance for increase PAttack and recover 5% HP",
+           "name":"Special: Blood Feud",
+           "version":38,
+           "data":"1175 1"
+        },
+        {
+           "id":2283,
+           "description":"Frenzy: Higher chance for increase PAttack, AttSpd but get more dmg",
+           "name":"Special: Frenzy",
+           "version":38,
+           "data":"1176 1"
+        },
+        {
+           "id":2473,
+           "description":"Buddhas Strike: Has chance cast sleep on target for 2 sec, reduce targets pdef and speed for 5 sec",
+           "name":"Special: Buddhas Strike",
+           "version":70,
+           "data":"1569 1"
+        },
+        {
+           "id":2474,
+           "description":"Lord of War: Has chance recover 20% HP and increase accurancy and Max HP for 8 sec",
+           "name":"Special: Lord of War",
+           "version":70,
+           "data":"1570 1"
+        },
+        {
+           "id":2475,
+           "description":"Furious Dragon: Has chance recover 25% HP and increase dodge and chance for critical strike for 5 sec",
+           "name":"Special: Furious Dragon",
+           "version":70,
+           "data":"1571 1"
+        },
+        {
+           "id":2477,
+           "description":"Purify Spell: Has chance purify negative buffs on self, immune to movement debuffs and increase move speed by 200% for 5 sec",
+           "name":"Special: Purify Spell",
+           "version":70,
+           "data":"1573 1"
+        },
+        {
+           "id":2479,
+           "description":"Infinite: Has chance recover 2100 HP for 9 sec if attacked and increase MP by 50",
+           "name":"Special: Infinite",
+           "version":70,
+           "data":"1575 1"
+        },
+        {
+           "id":2482,
+           "description":"Reflect: Has 20% chance when attack to reflect back your damage, reduce your HP by 80% and increase damage on you by 100%",
+           "name":"Special: Reflect",
+           "version":70,
+           "data":"1742 1"
+        }
+    ],
+    "menu": [
+      {
+          "id":1,
+          "label":"Weapon",
+          "shortId":"W",
+          "subCategory":[
+              {
+                  "id":1,
+             "equipmentId": 1,
+                  "label":"Polehammer"
+              },
+              {
+                  "id":2,
+             "equipmentId": 1,
+                  "label":"Poleaxe"
+              },
+              {
+                  "id":3,
+             "equipmentId": 1,
+                  "label":"Dual Hammer"
+              },
+              {
+                  "id":4,
+             "equipmentId": 1,
+                  "label":"Dual Axe"
+              },
+              {
+                  "id":5,
+             "equipmentId": 1,
+                  "label":"Spear"
+              },
+              {
+                  "id":6,
+             "equipmentId": 1,
+                  "label":"Polearm"
+              },
+              {
+                  "id":7,
+             "equipmentId": 1,
+                  "label":"Staff"
+              },
+              {
+                  "id":8,
+             "equipmentId": 1,
+                  "label":"Mace"
+              },
+              {
+                  "id":9,
+             "equipmentId": 1,
+                  "label":"Blade"
+              },
+              {
+                  "id":10,
+             "equipmentId": 1,
+                  "label":"Sword"
+              },
+              {
+                  "id":11,
+             "equipmentId": 1,
+                  "label":"Dual Blade"
+              },
+              {
+                  "id":12,
+             "equipmentId": 1,
+                  "label":"Dual Sword"
+              },
+              {
+                  "id":13,
+             "equipmentId": 1,
+                  "label":"Fist"
+              },
+              {
+                  "id":14,
+             "equipmentId": 1,
+                  "label":"Claw"
+              },
+              {
+                  "id":15,
+             "equipmentId": 1,
+                  "label":"Bow"
+              },
+              {
+                  "id":16,
+             "equipmentId": 1,
+                  "label":"Crossbow"
+              },
+              {
+                  "id":17,
+             "equipmentId": 1,
+                  "label":"Slingshot"
+              },
+              {
+                  "id":18,
+             "equipmentId": 1,
+                  "label":"Magic Sword"
+              },
+              {
+                  "id":19,
+             "equipmentId": 1,
+                  "label":"Wand"
+              },
+              {
+                  "id":20,
+             "equipmentId": 1,
+                  "label":"Magic Quoit"
+              },
+              {
+                  "id":21,
+             "equipmentId": 1,
+                  "label":"Magic Staff"
+              }
+          ]
+      },
+      {
+          "id":2,
+          "label":"Armor",
+          "shortId":"A",
+          "subCategory":[
+              {
+                  "id":1,
+             "equipmentId": 2,
+                  "label":"Heavy Plate"
+              },
+              {
+                  "id":2,
+             "equipmentId": 2,
+                  "label":"Light Armor"
+              },
+              {
+                  "id":3,
+             "equipmentId": 2,
+                  "label":"Magic Robe"
+              },
+              {
+                  "id":4,
+             "equipmentId": 3,
+                  "label":"Heavy Leggings"
+              },
+              {
+                  "id":5,
+             "equipmentId": 3,
+                  "label":"Light Leggings"
+              },
+              {
+                  "id":6,
+             "equipmentId": 3,
+                  "label":"Magic Leggings"
+              },
+              {
+                  "id":7,
+             "equipmentId": 4,
+                  "label":"Heavy Footwear"
+              },
+              {
+                  "id":8,
+             "equipmentId": 4,
+                  "label":"Light Footwear"
+              },
+              {
+                  "id":9,
+             "equipmentId": 4,
+                  "label":"Magic Footwear"
+              },
+              {
+                  "id":10,
+             "equipmentId": 5,
+                  "label":"Heavy Wristguard"
+              },
+              {
+                  "id":11,
+             "equipmentId": 5,
+                  "label":"Light Wristguard"
+              },
+              {
+                  "id":12,
+             "equipmentId": 5,
+                  "label":"Magic Wristguard"
+              },
+              {
+                  "id":13,
+             "equipmentId": 6,
+                  "label":"Heavy Helmet"
+              },
+              {
+                  "id":14,
+             "equipmentId": 6,
+                  "label":"Magic Headgear"
+              },
+              {
+                  "id":15,
+             "equipmentId": 7,
+                  "label":"Cloack"
+              }
+          ]
+      },
+      {
+          "id":3,
+          "label":"Jewelry",
+          "shortId":"J",
+          "subCategory":[
+              {
+                  "id":1,
+             "equipmentId": 8,
+                  "label":"Physical Necklance"
+              },
+              {
+                  "id":2,
+             "equipmentId": 8,
+                  "label":"Dodge Necklance"
+              },
+              {
+                  "id":3,
+             "equipmentId": 8,
+                  "label":"Magical Necklance"
+              },
+              {
+                  "id":4,
+             "equipmentId": 9,
+                  "label":"Physical Waist Adorn"
+              },
+              {
+                  "id":5,
+             "equipmentId": 9,
+                  "label":"Dodge Waist Adorn"
+              },
+              {
+                  "id":6,
+             "equipmentId": 9,
+                  "label":"Magical Waist Adorn"
+              },
+              {
+                  "id":7,
+             "equipmentId": 10,
+                  "label":"Physical Ring"
+              },
+              {
+                  "id":8,
+             "equipmentId": 10,
+                  "label":"Magical Ring"
+              }
+          ]
+      },
+      {
+          "id":4,
+          "label":"Other Octet",
+          "shortId":"O",
+          "subCategory":[
+              {
+                  "id":1,
+             "equipmentId": 15,
+                  "label":"Flyer"
+              },
+              {
+                  "id":2,
+                  "label":"Pet Egg"
+              },
+              {
+                  "id":3,
+             "equipmentId": 14,
+                  "label":"Bless box",
+                  "shortId":"B",
+                  "version":30
+              },
+              {
+                  "id":4,
+             "equipmentId": 13,
+                  "label":"Elf",
+                  "version":38
+              },
+              {
+                "id":5,
+                "label":"Star Chart",
+            "equipmentId": 36,
+                "version":79
+             },
+              {
+                  "id":6,
+             "equipmentId": 24,
+                  "label":"Ammo",
+                  "shortId":"M"
+              },
+              {
+                  "id":7,
+                  "label":"Potion"
+              },
+              {
+                  "id":8,
+                  "label":"Task Dice"
+              },
+              {
+                  "id":9,
+                  "label":"Pet Food"
+              },
+              {
+                  "id":10,
+                  "label":"SoulStones"
+              },
+              {
+                  "id":11,
+                  "label":"Order",
+             "equipmentId": 28,
+                  "version":79
+              },
+              {
+                "id":12,
+            "equipmentId": 22,
+                "label":"HP Hiero"
+               },
+               {
+                "id":13,
+            "equipmentId": 23,
+                "label":"MP Hiero"
+               },
+               {
+                "id":14,
+            "equipmentId": 21,
+                "label":"Attack Charm"
+               },
+               {
+                "id":15,
+            "equipmentId": 31,
+                "label":"Defence Charm"
+               }
+          ]
+      },
+      {
+          "id":5,
+          "label":"Utility",
+          "shortId":"U",
+          "subCategory":[
+              {
+                  "id":1,
+             "equipmentId": 12,
+                  "label":"Tome"
+              },
+              {
+                  "id":2,
+                  "label":"Boost"
+              },
+              {
+                  "id":3,
+                  "label":"Util"
+              },
+              {
+                  "id":4,
+                  "label":"Chat"
+              },
+              {
+                  "id":5,
+                  "label":"Pages"
+              },
+              {
+                  "id":6,
+                  "label":"Dye"
+              },
+              {
+                  "id":7,
+                  "label":"Firework"
+              },
+              {
+                  "id":8,
+                  "label":"Dragon Quest"
+              },
+              {
+                  "id":9,
+                  "label":"Pack Reward"
+              },
+              {
+                  "id":10,
+                  "label":"Pet Scroll"
+              },
+              {
+                  "id":11,
+                  "label":"Funny"
+              },
+              {
+                  "id":12,
+                  "label":"Fuel"
+              },
+              {
+                  "id":13,
+                  "label":"Wine, Blood"
+              },
+              {
+                  "id":14,
+                  "label":"Elf Gear",
+                  "version":38
+              },
+              {
+                  "id":15,
+                  "label":"Runes",
+                  "version":50
+              },
+              {
+                  "id":16,
+             "equipmentId": 35,
+                  "label":"Mark of Might",
+                  "version":69
+              },
+              {
+                  "id":17,
+             "equipmentId": 20,
+                  "label":"Smiley set",
+                  "version":29
+              }
+          ]
+      },
+      {
+          "id":6,
+          "label":"Mats & Herbs",
+          "shortId":"M",
+          "subCategory":[
+              {
+                  "id":1,
+                  "label":"Normal Mats"
+              },
+              {
+                  "id":2,
+                  "label":"Jade"
+              },
+              {
+                  "id":3,
+                  "label":"Herbs"
+              },
+              {
+                  "id":4,
+                  "label":"Holy Hall of Dusk"
+              },
+              {
+                  "id":5,
+                  "label":"HH Souledges"
+              },
+              {
+                  "id":6,
+                  "label":"Frost Walk City"
+              },
+              {
+                  "id":7,
+                  "label":"Crescent Valley"
+              },
+              {
+                  "id":8,
+                  "label":"Molders"
+              },
+              {
+                  "id":9,
+                  "label":"Tear of Heaven"
+              },
+              {
+                  "id":10,
+                  "label":"Misc"
+              },
+              {
+                  "id":11,
+                  "label":"Pair Quest"
+              },
+              {
+                  "id":12,
+                  "label":"Event Reward"
+              }
+          ]
+      },
+      {
+          "id":7,
+          "label":"Fashion",
+          "shortId":"F",
+          "subCategory":[
+              {
+                  "id":1,
+             "equipmentId": 16,
+                  "label":"Top [Male]"
+              },
+              {
+                  "id":2,
+             "equipmentId": 16,
+                  "label":"Top [Female]"
+              },
+              {
+                  "id":3,
+             "equipmentId": 17,
+                  "label":"Pants [Male]"
+              },
+              {
+                  "id":4,
+             "equipmentId": 17,
+                  "label":"Skirt [Female]"
+              },
+              {
+                  "id":5,
+             "equipmentId": 18,
+                  "label":"Glove [Male]"
+              },
+              {
+                  "id":6,
+             "equipmentId": 18,
+                  "label":"Sleeves [Female]"
+              },
+              {
+                  "id":7,
+             "equipmentId": 19,
+                  "label":"Boots [Male]"
+              },
+              {
+                  "id":8,
+             "equipmentId": 19,
+                  "label":"Shoes [Female]"
+              },
+              {
+                  "id":9,
+             "equipmentId": 25,
+                  "label":"Hair Style [Male]",
+                  "version":39
+              },
+              {
+                  "id":10,
+             "equipmentId": 25,
+                  "label":"Hair Style [Female]",
+                  "version":39
+              },
+              {
+                  "id":11,
+             "equipmentId": 27,
+                  "label":"Weapon Style [Male]",
+                  "version":49
+              },
+              {
+                  "id":12,
+             "equipmentId": 27,
+                  "label":"Weapon Style [Female]",
+                  "version":49
+              }
+          ]
+      },
+      {
+          "id":8,
+          "label":"Cards",
+          "shortId":"C",
+          "subCategory":[
+              {
+                  "id":1,
+             "equipmentId": 30,
+                  "label":"Destroyer",
+                  "version":70
+              },
+              {
+                  "id":2,
+             "equipmentId": 29,
+                  "label":"Battle",
+                  "version":70
+              },
+              {
+                  "id":3,
+             "equipmentId": 32,
+                  "label":"Longevity",
+                  "version":70
+              },
+              {
+                  "id":4,
+             "equipmentId": 34,
+                  "label":"Duratibility",
+                  "version":70
+              },
+              {
+                  "id":5,
+             "equipmentId": 33,
+                  "label":"Soulprime",
+                  "version":70
+              },
+              {
+                  "id":6,
+             "equipmentId": 31,
+                  "label":"Lifeprime",
+                  "version":70
+              }
+          ],
+          "version":79
+      }
+  ],
+    "proctypes": [
+        {
+            "id": 1,
+            "name": "Cannot lose if die"
+        },
+        {
+            "id": 2,
+            "name": "Cannot drop"
+        },
+        {
+            "id": 4,
+            "name": "Cannot sell"
+        },
+        {
+            "id": 8,
+            "name": "Fashion & Flyer"
+        },
+        {
+            "id": 16,
+            "name": "Cannot trade"
+        },
+        {
+            "id": 32,
+            "name": "Cannot refine"
+        },
+        {
+            "id": 64,
+            "name": "Bind on gear"
+        },
+        {
+            "id": 128,
+            "name": "? [128]"
+        },
+        {
+            "id": 256,
+            "name": "Lose if leave area"
+        },
+        {
+            "id": 512,
+            "name": "Use if pick up"
+        },
+        {
+            "id": 1024,
+            "name": "Drop if die"
+        },
+        {
+            "id": 2048,
+            "name": "Lose if log off"
+        },
+        {
+            "id": 4096,
+            "name": "Cannot repair"
+        },
+        {
+            "id": 8192,
+            "name": "Damaged, (fuel?)"
+        },
+        {
+            "id": 16384,
+            "name": "No account stash?"
+        },
+        {
+            "id": 32768,
+            "name": "Soulbound"
+        },
+        {
+            "id": 65536,
+            "name": "? [65536]"
+        },
+        {
+            "id": 131072,
+            "name": "? [131072]"
+        }
+    ],
+    "mapQuests": [
+        [25656,25695,25696,25697,25698,25699,25700,25701,25702,25703,25704,25705,25706,25707,25708,25709,25710,25711,25712,25713],
+        [25714,25715,25716,25717,25718,25719,25720,25721,25722,25723,25724,25725,25726,25727,25728,25729,25730,25731,25732,25733],
+        [25734,25735,25736,25737,25738,25739,25740,25741,25742,25743,25744,25745,25746,25747,25748,25749,25750,25751,25752,25753],
+        [25754,25755,25756,25757,25758,25759,25760,25761,25762,25763,25764,25765,25766,25767,25768,25769,25770,25771,25772,25773],
+        [25774,25775,25776,25777,25778],
+        [25779,25780,25781,25782,25783],
+        [25784,25785,25786,25787,25788],
+        [25790,25791,25789,25792,25793]
+    ],
+    "itemColor": [
+        {
+            "id": 0,
+            "code": "#ffffff",
+            "label": "White"
+        },
+        {
+            "id": 1,
+            "code": "#ffffff",
+            "label": "White"
+        },
+        {
+            "id": 2,
+            "code": "#7777ff",
+            "label": "Blue"
+        },
+        {
+            "id": 3,
+            "code": "#00ff00",
+            "label": "Green"
+        },
+        {
+            "id": 4,
+            "code": "#ffff00",
+            "label": "Yellow"
+        },
+        {
+            "id": 5,
+            "code": "#ff0000",
+            "label": "Red"
+        }
+    ],
+    "fashionColors": [
+        "777#None",
+        "ff7f#White",
+        "0000#Black",
+        "007c#Red",
+        "1f00#Blue",
+        "e07f#Yellow",
+        "6055#Brown",
+        "2003#Green",
+        "137c#Pink",
+        "3f7f#Perfect Pink",
+        "0d7c#Violet Red",
+        "1f30#Purple",
+        "1f7c#Magenta",
+        "1264#Fuchsia",
+        "1f64#Violet",
+        "9f49#Lavander",
+        "3f1b#Light Blue",
+        "ff03#Aquamarine",
+        "7302#Aqua",
+        "fa03#Turquise",
+        "5f02#Saphire",
+        "7f66#Plum",
+        "f967#Jade",
+        "b77f#Cream",
+        "a07d#Copper",
+        "607e#Orange",
+        "e667#Lime",
+        "f37f#Light Yellow",
+        "f34f#Light Green",
+        "e003#Bright Green",
+        "007f#Mango",
+        "ff67#Grey",
+        "1f63#Smokey"
+    ],
+    "equipments": [
+        {
+            "id": 0,
+            "mask": 0,
+            "pos": 0,
+            "name": "Cannot Equip"
+        },
+        {
+            "id": 1,
+            "mask": 1,
+            "pos": 0,
+            "name": "Weapon"
+        },
+        {
+            "id": 2,
+            "mask": 16,
+            "pos": 4,
+            "name": "Chest [Armor]"
+        },
+        {
+            "id": 3,
+            "mask": 64,
+            "pos": 6,
+            "name": "Leg [Armor]"
+        },
+        {
+            "id": 4,
+            "mask": 128,
+            "pos": 7,
+            "name": "Foot [Armor]"
+        },
+        {
+            "id": 5,
+            "mask": 256,
+            "pos": 8,
+            "name": "Arm [Armor]"
+        },
+        {
+            "id": 6,
+            "mask": 2,
+            "pos": 1,
+            "name": "Helm [Armor]"
+        },
+        {
+            "id": 7,
+            "mask": 8,
+            "pos": 3,
+            "name": "Cloack [Armor]"
+        },
+        {
+            "id": 8,
+            "mask": 4,
+            "pos": 2,
+            "name": "Necklace"
+        },
+        {
+            "id": 9,
+            "mask": 32,
+            "pos": 5,
+            "name": "Belt"
+        },
+        {
+            "id": 10,
+            "mask": 1536,
+            "pos": 9,
+            "name": "Ring 1"
+        },
+        {
+            "id": 11,
+            "mask": 1536,
+            "pos": 10,
+            "name": "Ring 2"
+        },
+        {
+            "id": 12,
+            "mask": 262144,
+            "pos": 18,
+            "name": "Heaven Book"
+        },
+        {
+            "id": 13,
+            "mask": 8388608,
+            "pos": 23,
+            "name": "Elemental Elf",
+            "version": 38
+         },
+         {
+            "id": 14,
+            "mask": 1077936128,
+            "pos": 22,
+            "name": "Bless Box",
+            "version": 30
+         },
+
+        {
+            "id": 15,
+            "mask": 4096,
+            "pos": 12,
+            "name": "Flyer Mount"
+        },
+        {
+            "id": 16,
+            "mask": 8192,
+            "pos": 13,
+            "name": "Chest [Fashion]"
+        },
+        {
+            "id": 17,
+            "mask": 16384,
+            "pos": 14,
+            "name": "Leg [Fashion]"
+        },
+        {
+            "id": 18,
+            "mask": 65536,
+            "pos": 16,
+            "name": "Arm [Fashion]"
+        },
+        {
+            "id": 19,
+            "mask": 32768,
+            "pos": 15,
+            "name": "Foot [Fashion]"
+        },
+        {
+            "id": 20,
+            "mask": 524288,
+            "pos": 19,
+            "name": "Chat Smiley"
+        },
+        {
+            "id": 21,
+            "mask": 131072,
+            "pos": 17,
+            "name": "Att/Def Hiero"
+        },
+        {
+            "id": 22,
+            "mask": 1048576,
+            "pos": 20,
+            "name": "HP Hiero"
+        },
+        {
+            "id": 23,
+            "mask": 2097152,
+            "pos": 21,
+            "name": "MP Hiero"
+        },
+        {
+            "id": 24,
+            "mask": 2048,
+            "pos": 11,
+            "name": "Ammo"
+        },
+        {
+            "id": 25,
+            "mask": 33554432,
+            "pos": 25,
+            "version": 39,
+            "name": "Hair [Fashion]"
+        },
+        {
+            "id": 26,
+            "mask": 16777216,
+            "pos": 24,
+            "version": 39,
+            "name": "Vendor Shop"
+        },        
+        {
+            "id": 27,
+            "mask": 536870912,
+            "pos": 29,
+            "version": 49,
+            "name": "Weapon [Fashion]"
+        },
+        {
+            "id": 28,
+            "mask": 67108864,
+            "pos": 26,
+            "version": 49,
+            "name": "Order Badge"
+        },
+        {
+            "id": 29,
+            "mask": 2147483585,
+            "pos": 33,
+            "version": 79,
+            "name": "Battle Card"
+        },
+        {
+            "id": 30,
+            "mask": 2147483585,
+            "pos": 32,
+            "version": 79,
+            "name": "Destroyer Card"
+        },
+        {
+            "id": 31,
+            "mask": 2147483585,
+            "pos": 37,
+            "version": 79,
+            "name": "Lifeprime Card"
+        },
+        {
+            "id": 32,
+            "mask": 2147483585,
+            "pos": 34,
+            "version": 79,
+            "name": "Longevity Card"
+        },
+        {
+            "id": 33,
+            "mask": 2147483585,
+            "pos": 36,
+            "version": 79,
+            "name": "Soulprime Card"
+        },
+        {
+            "id": 34,
+            "mask": 2147483585,
+            "pos": 35,
+            "version": 79,
+            "name": "Duratibility Card"
+        },
+        {
+            "id": 35,
+            "mask": 402653184,
+            "pos": 27,
+            "version": 69,
+            "name": "Mark of Might"
+        },
+        {
+            "id": 36,
+            "mask": -2147483584,
+            "pos": 38,
+            "version": 79,
+            "name": "Star Chart"
+        }
+   ],
+   "soulStones": {
+      "stat": [3646,3647,3648,3649,2012,6384,6385,6386,6387,6388,2013,2014,3634,3635,3636,3637,1996,6369,6367,6368,6370,6371,1998,2000,3638,3639,3640,3641,2001,6374,6375,6376,6377,6378,2003,2004,3650,3651,3652,3653,2005,6379,6380,6381,6382,6383,2006,2007,3642,3643,3644,3645,2009,6389,6390,6391,6392,6393,2010,2011],
+      "element": [5292,5293,5294,5295,5296,6394,6395,6396,6397,6398,5297,5298,5299,5300,5301,5302,5303,6399,6400,6401,6402,6403,5304,5305,5306,5307,5308,5309,5310,6404,6405,6406,6407,6408,5311,5312,5313,5314,5315,5316,5317,6409,6410,6411,6412,6413,5318,5319,5320,5321,5322,5323,5324,6414,6415,6416,6417,6418,5325,5326],
+      "rare": [12637, 12638, 12639, 12640, 12641, 21377, 21378, 38154, 38155, 38153, 25154]
+   }
+}

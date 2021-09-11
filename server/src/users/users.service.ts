@@ -1,6 +1,8 @@
 import { Injectable } from '@nestjs/common';
+import { jsDate2MySqlDateTime } from 'src/common/helpers/dateConvert';
 import { MySQLProvider } from 'src/mysql/mysql.provider';
 import { entity2Dto } from './converters/entity2Dto';
+import { AddGoldDto } from './dto/AddGold.dto';
 import { UserDto } from './dto/User.dto';
 import { User } from './entity/user.entity';
 
@@ -43,6 +45,15 @@ export class UsersService {
     throw new Error('Something went wrong');
   }
  
+  async delete(id: number): Promise<void> {
+      await this.mysqlProvider.delete('users', [['id', id]]);
+      await this.mysqlProvider.delete('auth', [['userid', id]]);
+      await this.mysqlProvider.delete('point', [['uid', id]]);
+      await this.mysqlProvider.delete('usecashnow', [['userid', id]]);
+      await this.mysqlProvider.delete('usecashlog', [['userid', id]]);
+      await this.mysqlProvider.delete('forbid', [['userid', id]]);
+  }
+
   async findOne(value: string | number, field = 'id'): Promise<User | undefined> {
     const dbUser = await this.mysqlProvider.findOne<User>(`SELECT * FROM users WHERE ${field}=?`, [value]);
     const user = dbUser ? Object.assign<User, User>(new User, dbUser) : dbUser;
@@ -74,5 +85,59 @@ export class UsersService {
     if (newUser.birthday) { newUser.birthday = newUser.birthday.replace('T', ' ').substr(0, 19); }
     const req = this.mysqlProvider.update('users', newUser as Record<string, any>, [[user.id]]);
     return req;
+  }
+
+  public async addGoldToUser(addGoldDto: AddGoldDto): Promise<boolean> {
+    const data = {
+        ...addGoldDto,
+        zoneId: 1,
+        sn: 0,
+        aid: 1,
+        point: 0,
+        cash: addGoldDto.amount,
+        status: 1,
+        creatime: jsDate2MySqlDateTime()
+    };
+    try {
+        const query = await this.mysqlProvider.query(`INSERT INTO usecashnow (userid, zoneid, sn, aid, point, cash, status, creatime) VALUES (?, ?, ?, ?, ?, ?, ?, ?) ON DUPLICATE KEY UPDATE cash = cash + ?`, [
+            data.userId,
+            data.zoneId,
+            data.sn,
+            data.aid,
+            data.point,
+            data.cash,
+            data.status,
+            data.creatime,
+            data.amount,
+        ]);
+        return query[0].affectedRows > 0;
+    } catch (err) {
+        console.error(err);
+    }
+    return false;
+  }
+
+  public async promoteToGM(userId: number): Promise<User> {
+      try {
+          const query = await this.mysqlProvider.query(`call addGM(?, 1)`, [userId]);
+          if (query) {
+              return await this.getDetails(userId);
+          }
+      } catch (err) {
+          throw new Error(err?.sqlMessage);
+      }
+      throw new Error('Something went wrong');
+  }
+
+  public async demoteFromGM(userId: number): Promise<User> {
+      try {
+          const query = await this.mysqlProvider.delete('auth',[['userid', userId]]);
+          if (query) {
+            return await this.getDetails(userId);
+          }
+      } catch (err) {
+          throw new Error(err?.sqlMessage);
+      }
+      throw new Error('Something went wrong');
   }
 }

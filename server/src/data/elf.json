@@ -1,0 +1,1411 @@
+{
+   "color": [
+      {
+         "id": 0,
+         "code": "#eeeeee",
+         "label": "Starter"
+     },
+     {
+         "id": 1,
+         "code": "#aaaaff",
+         "label": "Normal"
+     },
+     {
+         "id": 2,
+         "code": "#ffdd77",
+         "label": "Advanced"
+     }
+   ],
+   "skills": [
+        {
+           "id":1000,
+           "skillGrade":0,
+           "color":0,
+           "requiredTalents":{
+              "metal":0,
+              "wood":0,
+              "water":0,
+              "fire":0,
+              "earth":0
+           },
+           "name":"Venom Stinger",
+           "description":"Starter Skill: Decrease target and increase your mov. speed a lil"
+        },
+        {
+           "id":1024,
+           "skillGrade":0,
+           "color":0,
+           "requiredTalents":{
+              "metal":0,
+              "wood":0,
+              "water":0,
+              "fire":0,
+              "earth":0
+           },
+           "name":"Eruption Fist",
+           "description":"Starter Skill: Reduce target magic defence, 10% chance for purge the target"
+        },
+        {
+           "id":1015,
+           "skillGrade":0,
+           "color":0,
+           "requiredTalents":{
+              "metal":0,
+              "wood":0,
+              "water":0,
+              "fire":0,
+              "earth":0
+           },
+           "name":"Earthflame",
+           "description":"Starter Skill: Reduce target attack, defense and target increase the mov. speed"
+        },
+        {
+           "id":1014,
+           "skillGrade":0,
+           "color":0,
+           "requiredTalents":{
+              "metal":0,
+              "wood":0,
+              "water":0,
+              "fire":0,
+              "earth":0
+           },
+           "name":"Wind Force",
+           "description":"Starter Skill: Increase flying speed by 50% [AIR]"
+        },
+        {
+           "id":968,
+           "skillGrade":1,
+           "color":1,
+           "requiredTalents":{
+              "metal":1,
+              "wood":0,
+              "water":0,
+              "fire":0,
+              "earth":0
+           },
+           "name":"Adrenaline Surge",
+           "description":"Sleep immunity"
+        },
+        {
+           "id":975,
+           "skillGrade":1,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":1,
+              "water":0,
+              "fire":0,
+              "earth":0
+           },
+           "name":"Qi Manipulation",
+           "description":"Reduce target mana over 15 sec"
+        },
+        {
+           "id":979,
+           "skillGrade":1,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":0,
+              "water":0,
+              "fire":0,
+              "earth":1
+           },
+           "name":"Blinding Sand",
+           "description":"Decrease target accurancy and channeling [GROUND]"
+        },
+        {
+           "id":987,
+           "skillGrade":1,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":0,
+              "water":1,
+              "fire":0,
+              "earth":0
+           },
+           "name":"Healing Ripple of Rebirth",
+           "description":"Increase HP and MP regeneration in 15m area [WATER]"
+        },
+        {
+           "id":994,
+           "skillGrade":1,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":0,
+              "water":0,
+              "fire":1,
+              "earth":0
+           },
+           "name":"Explosion",
+           "description":"Consume all vigor and deal fire damage based on consumed vigor"
+        },
+        {
+           "id":958,
+           "skillGrade":1,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":0,
+              "water":1,
+              "fire":0,
+              "earth":0
+           },
+           "name":"Cauterize",
+           "description":"Chance for purify negative buffs"
+        },
+        {
+           "id":960,
+           "skillGrade":1,
+           "color":1,
+           "requiredTalents":{
+              "metal":1,
+              "wood":0,
+              "water":0,
+              "fire":0,
+              "earth":0
+           },
+           "name":"Blood Clot",
+           "description":"Bleed damage immunity"
+        },
+        {
+           "id":962,
+           "skillGrade":2,
+           "color":1,
+           "requiredTalents":{
+              "metal":2,
+              "wood":0,
+              "water":0,
+              "fire":0,
+              "earth":0
+           },
+           "name":"Gale",
+           "description":"AoE physical damage slow flying speed too [AIR]"
+        },
+        {
+           "id":974,
+           "skillGrade":2,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":2,
+              "water":0,
+              "fire":0,
+              "earth":0
+           },
+           "name":"Virulent Poison",
+           "description":"Reduce target vigor and deal wood damage depend on drained vigor over 3 sec"
+        },
+        {
+           "id":984,
+           "skillGrade":2,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":0,
+              "water":0,
+              "fire":0,
+              "earth":2
+           },
+           "name":"Earthquake",
+           "description":"10m AoE earth damage, knockback monsters and 10% chance for interrupt skills [GROUND]"
+        },
+        {
+           "id":991,
+           "skillGrade":2,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":0,
+              "water":2,
+              "fire":0,
+              "earth":0
+           },
+           "name":"Aiding Ripple of Luck",
+           "description":"Increase critical strike chance to you and allies in 15m [WATER]"
+        },
+        {
+           "id":993,
+           "skillGrade":2,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":0,
+              "water":0,
+              "fire":2,
+              "earth":0
+           },
+           "name":"Spark",
+           "description":"Reduce target fire defense for 6 sec"
+        },
+        {
+           "id":995,
+           "skillGrade":2,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":0,
+              "water":0,
+              "fire":2,
+              "earth":0
+           },
+           "name":"Searing Heat",
+           "description":"Deal fire damage and decrease target attack and channeling speed"
+        },
+        {
+           "id":1001,
+           "skillGrade":2,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":1,
+              "water":0,
+              "fire":0,
+              "earth":1
+           },
+           "name":"Solid Shield",
+           "description":"Reduce incoming damage [Werebeast]"
+        },
+        {
+           "id":1002,
+           "skillGrade":2,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":0,
+              "water":1,
+              "fire":0,
+              "earth":1
+           },
+           "name":"Mud",
+           "description":"AoE Pdef and mov. speed reduction"
+        },
+        {
+           "id":1004,
+           "skillGrade":2,
+           "color":1,
+           "requiredTalents":{
+              "metal":1,
+              "wood":0,
+              "water":0,
+              "fire":1,
+              "earth":0
+           },
+           "name":"Blade of Supreme Heat",
+           "description":"Deal Fire and Physical damage to target"
+        },
+        {
+           "id":963,
+           "skillGrade":3,
+           "color":1,
+           "requiredTalents":{
+              "metal":3,
+              "wood":0,
+              "water":0,
+              "fire":0,
+              "earth":0
+           },
+           "name":"Wind Shield",
+           "description":"Reduce reicived damage, increase attack speed and dodge [GROUND]"
+        },
+        {
+           "id":973,
+           "skillGrade":3,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":3,
+              "water":0,
+              "fire":0,
+              "earth":0
+           },
+           "name":"Nullify Poison",
+           "description":"Wood damage immunity"
+        },
+        {
+           "id":982,
+           "skillGrade":3,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":0,
+              "water":0,
+              "fire":0,
+              "earth":3
+           },
+           "name":"Sand Shield",
+           "description":"Earth damage immunity"
+        },
+        {
+           "id":985,
+           "skillGrade":3,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":0,
+              "water":3,
+              "fire":0,
+              "earth":0
+           },
+           "name":"Dissolve",
+           "description":"Reduce your vigor and greater reduce target vigor [Warrior, Werebeast]"
+        },
+        {
+           "id":997,
+           "skillGrade":3,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":0,
+              "water":0,
+              "fire":3,
+              "earth":0
+           },
+           "name":"Smoldering Burst",
+           "description":"Deal fire damage and decrease target fire defense, increase target water defense"
+        },
+        {
+           "id":1005,
+           "skillGrade":3,
+           "color":1,
+           "requiredTalents":{
+              "metal":1,
+              "wood":1,
+              "water":0,
+              "fire":1,
+              "earth":0
+           },
+           "name":"Leaf Dance",
+           "description":"Increase critical strike chance by 2% [NOT STACKABLE]"
+        },
+        {
+           "id":1027,
+           "skillGrade":3,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":1,
+              "water":1,
+              "fire":0,
+              "earth":1
+           },
+           "name":"Second Wind",
+           "description":"Instantly heal self"
+        },
+        {
+           "id":1007,
+           "skillGrade":3,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":0,
+              "water":1,
+              "fire":1,
+              "earth":1
+           },
+           "name":"Soul of Fire",
+           "description":"Fire damage immunity"
+        },
+        {
+           "id":965,
+           "skillGrade":4,
+           "color":1,
+           "requiredTalents":{
+              "metal":4,
+              "wood":0,
+              "water":0,
+              "fire":0,
+              "earth":0
+           },
+           "name":"Heart of Steel",
+           "description":"Metal damage immunity"
+        },
+        {
+           "id":972,
+           "skillGrade":4,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":4,
+              "water":0,
+              "fire":0,
+              "earth":0
+           },
+           "name":"Extreme Poison",
+           "description":"Increase damage dealt on target by 20%"
+        },
+        {
+           "id":981,
+           "skillGrade":4,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":0,
+              "water":0,
+              "fire":0,
+              "earth":4
+           },
+           "name":"Tai Chi",
+           "description":"Increase mov. speed, HP recovery rate to nearby allies"
+        },
+        {
+           "id":992,
+           "skillGrade":4,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":0,
+              "water":4,
+              "fire":0,
+              "earth":0
+           },
+           "name":"Impact",
+           "description":"Reduce target gear pdef a bit for 10 sec"
+        },
+        {
+           "id":996,
+           "skillGrade":4,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":0,
+              "water":0,
+              "fire":4,
+              "earth":0
+           },
+           "name":"Yin Yang Seal",
+           "description":"Deal fire damage to target and enemies aournd the target, reduce their Attack Level by 5"
+        },
+        {
+           "id":1010,
+           "skillGrade":4,
+           "color":1,
+           "requiredTalents":{
+              "metal":2,
+              "wood":0,
+              "water":0,
+              "fire":2,
+              "earth":0
+           },
+           "name":"Celestial Sword",
+           "description":"Every physical damage for each 100 Vigor"
+        },
+        {
+           "id":1011,
+           "skillGrade":4,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":2,
+              "water":2,
+              "fire":0,
+              "earth":0
+           },
+           "name":"Acidic Ripple of Poison",
+           "description":"Reduce target Max HP and chance for interrupt [WATER]"
+        },
+        {
+           "id":1012,
+           "skillGrade":4,
+           "color":1,
+           "requiredTalents":{
+              "metal":1,
+              "wood":0,
+              "water":2,
+              "fire":0,
+              "earth":1
+           },
+           "name":"Great Cyclone",
+           "description":"18m cone in front of you mov. speed recution and little metal damage"
+        },
+        {
+           "id":1013,
+           "skillGrade":4,
+           "color":1,
+           "requiredTalents":{
+              "metal":1,
+              "wood":0,
+              "water":1,
+              "fire":2,
+              "earth":0
+           },
+           "name":"Remove Paralysis",
+           "description":"Chance for remove the paralyze on self"
+        },
+        {
+           "id":1016,
+           "skillGrade":5,
+           "color":1,
+           "requiredTalents":{
+              "metal":2,
+              "wood":0,
+              "water":2,
+              "fire":0,
+              "earth":1
+           },
+           "name":"Wind Prison",
+           "description":"Chance for seal the target for 4 sec"
+        },
+        {
+           "id":976,
+           "skillGrade":5,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":5,
+              "water":0,
+              "fire":0,
+              "earth":0
+           },
+           "name":"Fortify",
+           "description":"Stun immunity but chance for decrease your mdef"
+        },
+        {
+           "id":977,
+           "skillGrade":5,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":0,
+              "water":0,
+              "fire":0,
+              "earth":5
+           },
+           "name":"Evil Ward",
+           "description":"Damage amplifier debuff immunity"
+        },
+        {
+           "id":1019,
+           "skillGrade":5,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":2,
+              "water":0,
+              "fire":1,
+              "earth":2
+           },
+           "name":"Relentless Courage",
+           "description":"Increase attack speed, channeling and mov. speed"
+        },
+        {
+           "id":1051,
+           "skillGrade":5,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":0,
+              "water":0,
+              "fire":5,
+              "earth":0
+           },
+           "name":"Piercing Flames",
+           "description":"Physical damage, chance for paralyze (depend on accurancy)"
+        },
+        {
+           "id":961,
+           "skillGrade":5,
+           "color":1,
+           "requiredTalents":{
+              "metal":5,
+              "wood":0,
+              "water":0,
+              "fire":0,
+              "earth":0
+           },
+           "name":"Lightning Chaser",
+           "description":"Metal damage and skill interrupt"
+        },
+        {
+           "id":1017,
+           "skillGrade":5,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":0,
+              "water":2,
+              "fire":2,
+              "earth":1
+           },
+           "name":"Mantle Ripple of Death",
+           "description":"Chance for reduce target vigor by 20 constantly [GROUND]"
+        },
+        {
+           "id":1018,
+           "skillGrade":5,
+           "color":1,
+           "requiredTalents":{
+              "metal":1,
+              "wood":0,
+              "water":2,
+              "fire":2,
+              "earth":0
+           },
+           "name":"Rainbow Blessing",
+           "description":"Chance for minor Pattack or Mattack or Critical or Faster channeling time"
+        },
+        {
+           "id":959,
+           "skillGrade":5,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":0,
+              "water":0,
+              "fire":0,
+              "earth":5
+           },
+           "name":"Oxygen Bubble",
+           "description":"Water damage immunity"
+        },
+        {
+           "id":964,
+           "skillGrade":6,
+           "color":1,
+           "requiredTalents":{
+              "metal":6,
+              "wood":0,
+              "water":0,
+              "fire":0,
+              "earth":0
+           },
+           "name":"Air Strand",
+           "description":"Chance seal target, paralyze self [Beastkind, Wing Elf] [AIR]"
+        },
+        {
+           "id":970,
+           "skillGrade":6,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":6,
+              "water":0,
+              "fire":0,
+              "earth":0
+           },
+           "name":"Will Surge",
+           "description":"Seal immunity"
+        },
+        {
+           "id":978,
+           "skillGrade":6,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":0,
+              "water":0,
+              "fire":0,
+              "earth":6
+           },
+           "name":"Frenzy",
+           "description":"Decrease self Pdef and Mdef but increase Attack Level by 20"
+        },
+        {
+           "id":988,
+           "skillGrade":6,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":0,
+              "water":6,
+              "fire":0,
+              "earth":0
+           },
+           "name":"Life Drain",
+           "description":"Drain HP from enemies in 15m area, and deal water damage"
+        },
+        {
+           "id":998,
+           "skillGrade":6,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":0,
+              "water":0,
+              "fire":6,
+              "earth":0
+           },
+           "name":"Earthblaze",
+           "description":"Deal AoE fire damage to target and around target, also decrease fire defense"
+        },
+        {
+           "id":1020,
+           "skillGrade":6,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":0,
+              "water":0,
+              "fire":3,
+              "earth":3
+           },
+           "name":"Mantle Ripple of Rage",
+           "description":"Increase vigor for self and allies in 15m when get attacked [Werebeast] [GROUND]"
+        },
+        {
+           "id":1021,
+           "skillGrade":6,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":0,
+              "water":3,
+              "fire":0,
+              "earth":3
+           },
+           "name":"Stunning Blast",
+           "description":"Paralyze nearby enemies and chance for make you immune to immobilization [Archer]"
+        },
+        {
+           "id":1022,
+           "skillGrade":6,
+           "color":1,
+           "requiredTalents":{
+              "metal":2,
+              "wood":2,
+              "water":0,
+              "fire":0,
+              "earth":2
+           },
+           "name":"Holy Path",
+           "description":"Increase your mov. speed to max"
+        },
+        {
+           "id":1023,
+           "skillGrade":6,
+           "color":1,
+           "requiredTalents":{
+              "metal":3,
+              "wood":0,
+              "water":3,
+              "fire":0,
+              "earth":0
+           },
+           "name":"True Emptiness",
+           "description":"Consume all energy and cause 12x more damage than consumed energy and chance for spell shield [Warrior, Werebeast]"
+        },
+        {
+           "id":966,
+           "skillGrade":7,
+           "color":1,
+           "requiredTalents":{
+              "metal":7,
+              "wood":0,
+              "water":0,
+              "fire":0,
+              "earth":0
+           },
+           "name":"Rumbling Thunder",
+           "description":"Metal damage, hit chance depend on your accurancy [Beastkind, Wing Elf, Magician][AIR]"
+        },
+        {
+           "id":969,
+           "skillGrade":7,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":7,
+              "water":0,
+              "fire":0,
+              "earth":0
+           },
+           "name":"Poisonous Swarm",
+           "description":"Mov. speed reduce and randomly drain HP, MP or Vigor"
+        },
+        {
+           "id":983,
+           "skillGrade":7,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":0,
+              "water":0,
+              "fire":0,
+              "earth":7
+           },
+           "name":"Earth Strand",
+           "description":"Physical damage and 2 sec paralyze [GROUND]"
+        },
+        {
+           "id":986,
+           "skillGrade":7,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":0,
+              "water":7,
+              "fire":0,
+              "earth":0
+           },
+           "name":"Occult Ice",
+           "description":"Freeze target"
+        },
+        {
+           "id":999,
+           "skillGrade":7,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":0,
+              "water":0,
+              "fire":7,
+              "earth":0
+           },
+           "name":"Thunderstorm",
+           "description":"Deal metal damage to target, higher damage to close and ground target"
+        },
+        {
+           "id":1026,
+           "skillGrade":7,
+           "color":1,
+           "requiredTalents":{
+              "metal":3,
+              "wood":0,
+              "water":0,
+              "fire":0,
+              "earth":4
+           },
+           "name":"Lawbreaker",
+           "description":"Chance for remove seal from self"
+        },
+        {
+           "id":1006,
+           "skillGrade":7,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":3,
+              "water":4,
+              "fire":0,
+              "earth":0
+           },
+           "name":"Tree of Protection",
+           "description":"Increase Max HP and restore your HP depend on Max HP"
+        },
+        {
+           "id":1028,
+           "skillGrade":7,
+           "color":1,
+           "requiredTalents":{
+              "metal":4,
+              "wood":0,
+              "water":0,
+              "fire":3,
+              "earth":0
+           },
+           "name":"Badge of Courage",
+           "description":"Chance for remove stun"
+        },
+        {
+           "id":1029,
+           "skillGrade":7,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":0,
+              "water":0,
+              "fire":4,
+              "earth":3
+           },
+           "name":"Earth Claw",
+           "description":"Earth damage to 12m around target, hit depend on self accurancy [GROUND]"
+        },
+        {
+           "id":967,
+           "skillGrade":8,
+           "color":1,
+           "requiredTalents":{
+              "metal":8,
+              "wood":0,
+              "water":0,
+              "fire":0,
+              "earth":0
+           },
+           "name":"Electro Dance",
+           "description":"12m AoE Metal damage, 20% chance for stun [AIR]"
+        },
+        {
+           "id":971,
+           "skillGrade":8,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":8,
+              "water":0,
+              "fire":0,
+              "earth":0
+           },
+           "name":"Elemental Weakness",
+           "description":"Increase target gear pdef, decrease gear mdef and slow target by 30%"
+        },
+        {
+           "id":980,
+           "skillGrade":8,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":0,
+              "water":0,
+              "fire":0,
+              "earth":8
+           },
+           "name":"Dust Storm",
+           "description":"Earth damage and mov. speed reduction to nearby enemies"
+        },
+        {
+           "id":989,
+           "skillGrade":8,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":0,
+              "water":8,
+              "fire":0,
+              "earth":0
+           },
+           "name":"Battle Ripple of Oblivion",
+           "description":"Reduce gear water defense on you and enemies in 15m area [WATER]"
+        },
+        {
+           "id":1030,
+           "skillGrade":8,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":0,
+              "water":4,
+              "fire":4,
+              "earth":0
+           },
+           "name":"Aquaflame Armor",
+           "description":"Reduce reicived damage on self, after expire then increase reicived damage"
+        },
+        {
+           "id":1031,
+           "skillGrade":8,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":4,
+              "water":0,
+              "fire":0,
+              "earth":4
+           },
+           "name":"Seal",
+           "description":"Chance for seal the target [Beastkind, Wing Elf]"
+        },
+        {
+           "id":1050,
+           "skillGrade":8,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":4,
+              "water":0,
+              "fire":0,
+              "earth":4
+           },
+           "name":"Hollow Fist",
+           "description":"Physical and Metal damage, reduce gear pdef and 9 sec bleed [GROUND]"
+        },
+        {
+           "id":1084,
+           "skillGrade":9,
+           "color":1,
+           "requiredTalents":{
+              "metal":4,
+              "wood":0,
+              "water":0,
+              "fire":5,
+              "earth":0
+           },
+           "name":"Balance",
+           "description":"Create magic shield if pdef higher, physical shield if mdef higher, amount same than the difference between mdef and pdef [Warrior]"
+        },
+        {
+           "id":1032,
+           "skillGrade":9,
+           "color":1,
+           "requiredTalents":{
+              "metal":5,
+              "wood":0,
+              "water":0,
+              "fire":0,
+              "earth":4
+           },
+           "name":"Alpha Male",
+           "description":"20m AoE agro and a very short time reflect back the damage"
+        },
+        {
+           "id":1033,
+           "skillGrade":9,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":3,
+              "water":0,
+              "fire":3,
+              "earth":3
+           },
+           "name":"Mage Star",
+           "description":"Increase HP and MP regeneration and absorb 1000 magic damage [Magician]"
+        },
+        {
+           "id":1052,
+           "skillGrade":9,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":5,
+              "water":3,
+              "fire":1,
+              "earth":0
+           },
+           "name":"Reflective Aura",
+           "description":"Reflect magic damage [Warrior, Werebeast]"
+        },
+        {
+           "id":1034,
+           "skillGrade":10,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":0,
+              "water":0,
+              "fire":5,
+              "earth":5
+           },
+           "name":"Blazing Shield",
+           "description":"Randomly make you immune to: Seal, Sleep, Paralyze, Stun or Amplify damage debuffs"
+        },
+        {
+           "id":1035,
+           "skillGrade":10,
+           "color":1,
+           "requiredTalents":{
+              "metal":5,
+              "wood":0,
+              "water":5,
+              "fire":0,
+              "earth":0
+           },
+           "name":"Weakness",
+           "description":"Reduce the target attack speed"
+        },
+        {
+           "id":1044,
+           "skillGrade":10,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":0,
+              "water":5,
+              "fire":5,
+              "earth":0
+           },
+           "name":"Aquaflame Shot",
+           "description":"Deal Fire and Water damage and chance for recover 20% Max HP"
+        },
+        {
+           "id":1036,
+           "skillGrade":11,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":0,
+              "water":6,
+              "fire":0,
+              "earth":5
+           },
+           "name":"Frozen Domain",
+           "description":"Deal damage in 18m around you, reduce attack speed, channeling and chance for paralyze the targets [WATER]"
+        },
+        {
+           "id":1037,
+           "skillGrade":11,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":6,
+              "water":0,
+              "fire":5,
+              "earth":0
+           },
+           "name":"Dampen Magic Curse",
+           "description":"Constantly decrease target MP and chance for recover 30% self MP in last 15 sec"
+        },
+        {
+           "id":1048,
+           "skillGrade":11,
+           "color":1,
+           "requiredTalents":{
+              "metal":5,
+              "wood":0,
+              "water":6,
+              "fire":0,
+              "earth":0
+           },
+           "name":"Expel",
+           "description":"Immune to physical damage but also seal yourself"
+        },
+        {
+           "id":1038,
+           "skillGrade":12,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":4,
+              "water":4,
+              "fire":4,
+              "earth":0
+           },
+           "name":"Phoenix Dance",
+           "description":"12m AoE Metal damage and decrease Attack Level by 5"
+        },
+        {
+           "id":1039,
+           "skillGrade":12,
+           "color":1,
+           "requiredTalents":{
+              "metal":4,
+              "wood":0,
+              "water":4,
+              "fire":0,
+              "earth":4
+           },
+           "name":"Absolute Domain",
+           "description":"5 sec damage immunity and 2 immobilization immunity"
+        },
+        {
+           "id":1047,
+           "skillGrade":12,
+           "color":1,
+           "requiredTalents":{
+              "metal":7,
+              "wood":0,
+              "water":0,
+              "fire":0,
+              "earth":5
+           },
+           "name":"Cloud Eruption",
+           "description":"Refill a fury and vigors"
+        },
+        {
+           "id":1040,
+           "skillGrade":13,
+           "color":1,
+           "requiredTalents":{
+              "metal":6,
+              "wood":0,
+              "water":0,
+              "fire":0,
+              "earth":7
+           },
+           "name":"Bramble Rage",
+           "description":"15m AoE Wood damage and skill interruption [GROUND]"
+        },
+        {
+           "id":1041,
+           "skillGrade":13,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":0,
+              "water":6,
+              "fire":7,
+              "earth":0
+           },
+           "name":"Dragonfire",
+           "description":"Deal Physical and Fire damage also reduce target Defence Level [GROUND]"
+        },
+        {
+           "id":1046,
+           "skillGrade":13,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":0,
+              "water":0,
+              "fire":6,
+              "earth":7
+           },
+           "name":"Inflame",
+           "description":"8m AoE Fire damage to targets and chance for confuse them [GROUND]"
+        },
+        {
+           "id":1042,
+           "skillGrade":14,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":0,
+              "water":7,
+              "fire":0,
+              "earth":7
+           },
+           "name":"Vigor Siphon",
+           "description":"Drain vigor from target then slowly regenerate vigor to target"
+        },
+        {
+           "id":1043,
+           "skillGrade":14,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":7,
+              "water":0,
+              "fire":7,
+              "earth":0
+           },
+           "name":"Ice Blast",
+           "description":"Decrease target and nearby enemies Max HP"
+        },
+        {
+           "id":1045,
+           "skillGrade":14,
+           "color":1,
+           "requiredTalents":{
+              "metal":7,
+              "wood":7,
+              "water":0,
+              "fire":0,
+              "earth":0
+           },
+           "name":"Chaotic Spirit",
+           "description":"Chance for swap target HP and MP pool [Werefox]"
+        },
+        {
+           "id":1049,
+           "skillGrade":14,
+           "color":1,
+           "requiredTalents":{
+              "metal":0,
+              "wood":7,
+              "water":0,
+              "fire":7,
+              "earth":0
+           },
+           "name":"Faith",
+           "description":"Debuff immunity"
+        },
+        {
+           "id":990,
+           "skillGrade":15,
+           "color":2,
+           "requiredTalents":{
+              "metal":0,
+              "wood":0,
+              "water":5,
+              "fire":0,
+              "earth":0
+           },
+           "name":"Battle Ripple of Fate",
+           "description":"Deal water damage 15m, chance for minor HP reduce buff or 3 sec paralyze [WATER]"
+        },
+        {
+           "id":1003,
+           "skillGrade":15,
+           "color":2,
+           "requiredTalents":{
+              "metal":0,
+              "wood":0,
+              "water":1,
+              "fire":1,
+              "earth":0
+           },
+           "name":"Maze Fog",
+           "description":"Reduce target accurancy and Attack Level [AIR]"
+        },
+        {
+           "id":1008,
+           "skillGrade":15,
+           "color":2,
+           "requiredTalents":{
+              "metal":1,
+              "wood":0,
+              "water":0,
+              "fire":1,
+              "earth":1
+           },
+           "name":"Blue Fire",
+           "description":"12m AoE fire damage over 15sec to self and your target"
+        },
+        {
+           "id":1009,
+           "skillGrade":15,
+           "color":2,
+           "requiredTalents":{
+              "metal":1,
+              "wood":1,
+              "water":0,
+              "fire":1,
+              "earth":0
+           },
+           "name":"Thunder Fire",
+           "description":"Deal Metal and Fire damage in 8m area and reduce mov. speed"
+        },
+        {
+           "id":1025,
+           "skillGrade":15,
+           "color":2,
+           "requiredTalents":{
+              "metal":2,
+              "wood":0,
+              "water":0,
+              "fire":1,
+              "earth":4
+           },
+           "name":"Wrath of wind",
+           "description":"Deal Metal and Physical damage to targets to frontal enemies, knockback monster by 8m"
+        }
+    ],
+    "gear": [24154,24155,24156,24157,24158,24159,24160,24161,24162,24163,24164,24165,24166,24167,24168,24169,24170,24171,24172,24173,24174,24175,24176,24177,24178,24179,24180,24181,24182,24183,24185,24186,24242,24189,24243,24244,24191,24192,24193,24194,24195,24196,24197,24198,24199,24200,24201,24202,24203,24204,24245,24206,24207,24208,24209,24210,24211,24212,24213,24214,24215,24216,24217,24218,24219,24220,24221,24222,24223,24224,24225,24226,24233,24234,24235,24236,24237,24238,24227,24228,24229,24230,24231,24232,24184,24187,24068,24069,24070,24071,24072,24073,24074,24075,24076,24077,24078,24079,24080,24081,24082,24083,24084,24085,24086,24087,24088,24089,24090,24091,24092,24093,24094,24095,24096,24097,24098,24099,24100,24101,24102,24103,24104,24105,24106,24107,24108,24109,24110,24111,24112,24113,24114,24115,24116,24117,24118,24119,24120,24121,24122,24123,24124,24125,24126,24127,24128,24129,24130,24131,24132,24133,24134,24135,24136,24137,24138,24139,24146,24147,24148,24149,24150,24151,24140,24141,24142,24143,24144,24145,22180,24152,24153,24246,24247,24248,24249,24250,24251,24252,24253,24254,24255,24256,24257,24258,24259,24260,24261,24262,24263,24264,24265,24266,24267,24268,24269,24270,24271,24272,24273,24274,24275,24276,24277,24278,24279,24280,24281,24282,24283,24284,24285,24286,24287,24288,24289,24290,24291,24292,24293,24294,24295,24296,24297,24298,24299,24300,24301,24302,24303,24304,24305,24306,24307,24308,24309,24310,24311,24312,24313,24314,24315,24316,24317,24324,24325,24326,24327,24328,24329,24318,24319,24320,24321,24322,24323,24190,24336,23984,23985,23986,23987,23988,23989,23990,23991,23992,23993,23994,23995,23996,23997,23998,23999,24000,24001,24002,24003,24004,24005,24006,24007,24008,24009,24010,24011,24012,24013,24014,24015,24016,24017,24018,24019,24020,24021,24022,24023,24024,24025,24026,24027,24028,24029,24030,24031,24032,24033,24034,24035,24036,24037,24038,24039,24040,24041,24042,24043,24044,24045,24046,24047,24048,24049,24050,24051,24052,24053,24054,24055,24062,24063,24064,24065,24066,24067,24056,24057,24058,24059,24060,24061,24188,24335],
+    "attributeMap": [
+        "STR", "DEX", "MAG", "CON", "HP", "MP", "Phys. Attack", "Max. PAttack", "Mag. Attack", "Max. MAttack", "Phys. Def", "Mag. Def", "Accurancy", "Evasion", "%Crit. Hit Rate", "Metal Def.", "Wood Def.", "Water Def.", "Fire Def.", "Earth Def.", "^HP Regen", "^MP Regen", "Range", "%Phys. Harm Red.", "%Accurancy", "%Dodge", ">Mov. Speed", "%Mov. Speed", "-.Interval", "-%Channeling", "%Max Dur.", "%Exp", "%Max HP", "%Max MP", "reserved", "Att. Level", "Def. Level", "%Pdef", "%Mdef", "Stealth Level", "Awarness Level", "Soulforce", "%Metal Def.", "%Wood Def.", "%Water Def.", "%Fire Def.", "%Earth Def.", "Slaying Level", "Warding Level", "%Red. Magic Dmg.", "%Red. Metal Dmg.", "%Red. Wood Dmg.", "%Red. Water Dmg.", "%Red. Fire Dmg.", "%Red. Earth Dmg.", "?Eye Observation", "Spirit", "Phys. Penetr.", "Magic Penetr.", "Metal Damage", "Wood Damage", "Water Damage", "Fire Damage", "Earth Damage", ">Ride Speed"
+    ],
+    "elfs": [
+        {
+            "id": 22181,
+            "name": "Infliction",
+            "attributes": {
+                "0": 15,
+                "1": 5,
+                "2": 3,
+                "3": 5
+            }
+        },
+        {
+            "id": 23752,
+            "name": "Longevity",
+            "attributes": {
+                "0": 5,
+                "1": 15,
+                "2": 5,
+                "3": 3
+            }
+        },
+        {
+            "id": 23753,
+            "name": "Zeal",
+            "attributes": {
+                "0": 5,
+                "1": 3,
+                "2": 15,
+                "3": 5
+            }
+        },
+        {
+            "id": 23754,
+            "name": "Discipline",
+            "attributes": {
+                "0": 3,
+                "1": 5,
+                "2": 5,
+                "3": 15
+            }
+        }                        
+    ]
+}

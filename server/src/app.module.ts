@@ -1,14 +1,17 @@
 import { Module } from '@nestjs/common';
-import {  ServeStaticModule } from '@nestjs/serve-static';
+import { ConfigModule } from '@nestjs/config';
+import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
 
-import { CoreModule } from './core/core.module';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
+import { RolesModule } from './roles/roles.module';
 import { MySQLModule } from './mysql/mysql.module';
 import { PwServerModule } from './pwServer/pwserver.module';
+import { PwServerClientModule } from './pwServerClient/pwserverclient.module';
+import configs from './configs/core';
 
 @Module({
   imports: [  
@@ -16,11 +19,16 @@ import { PwServerModule } from './pwServer/pwserver.module';
       rootPath: join(__dirname, '..', '..', 'client/dist'),
       exclude: ['/api*'],
     }),
-    CoreModule, 
+    ConfigModule.forRoot({
+      isGlobal: true,
+      load: [configs]
+    }),
     MySQLModule,
     AuthModule, 
-    UsersModule,
     PwServerModule,
+    UsersModule,
+    RolesModule,
+    PwServerClientModule,
   ],
   controllers: [AppController],
   providers: [AppService],

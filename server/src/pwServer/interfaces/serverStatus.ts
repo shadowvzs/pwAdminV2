@@ -7,5 +7,6 @@ export interface ServerStatus {
 
 export interface Config {
     id: string;
+    type?: 'string' | 'json';
     content: string;
 }

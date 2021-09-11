@@ -1,0 +1,2 @@
+maxMask = 219;  // v141 219, 255 if v142, 1023 if v146, 4095 if v153
+maxClass = 6;   // v141 6, 8 if v142, 10 if v146, 12 if v153

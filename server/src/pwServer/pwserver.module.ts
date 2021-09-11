@@ -1,23 +1,21 @@
 import { Module } from '@nestjs/common';
 import { MySQLModule } from 'src/mysql/mysql.module';
+import { PwServerClientModule } from 'src/pwServerClient/pwserverclient.module';
 import { UsersModule } from 'src/users/users.module';
-import { PwServerActionController } from './pwserver-actions.controller';
-import { PwServerActionService } from './pwserver-actions.service';
-import { PwServerUtilityController } from './pwserver-utility.controller';
-import { PwServerUtilityService } from './pwserver-utility.service';
+import { PwServerController } from './pwserver.controller';
+import { PwServerService } from './pwserver.service';
 
 @Module({
   imports: [
     UsersModule,
     MySQLModule,
+    PwServerClientModule
   ],
   controllers: [
-    PwServerActionController, 
-    PwServerUtilityController
+    PwServerController
   ],
   providers: [
-    PwServerActionService,
-    PwServerUtilityService
+    PwServerService
   ],
 })
 export class PwServerModule {}

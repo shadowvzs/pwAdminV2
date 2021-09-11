@@ -9,15 +9,15 @@ import { RegisterPage } from "./pages/RegisterPage";
 import { ServerInfoPage } from "./pages/ServerInfoPage";
 import { StoryPage } from "./pages/StoryPage";
 import { RootStore } from "./stores/RootStore";
-import { ServerSettingsPage } from "./pages/ServerSettingsPage";
-import { RoleSettingsPage } from "./pages/RoleSettingsPage";
+import { ServerPage } from "./pages/ServerPage";
 import { ItemBuilderPage } from "./pages/ItemBuilderPage";
+import { RolePage } from "./pages/RolePage";
 
 interface IMainRoute {
     to: string;
     label: string;
     visible?: (user?: User) => boolean;
-    PageCmp?: () => JSX.Element;
+    PageCmp?: (props?: any) => JSX.Element;
     render?: (rootStore: RootStore) => false;
 }
 
@@ -56,9 +56,9 @@ export const mainRoutes: IMainRoute[] = [
     },
     {
         to: '/server-settings',
-        label: 'Server Settings',
+        label: 'Server',
         visible: (user?: User) => Boolean(user && user.role === Role.Admin),
-        PageCmp: ServerSettingsPage
+        PageCmp: ServerPage
     },
     {
         to: '/item-builder',
@@ -67,16 +67,16 @@ export const mainRoutes: IMainRoute[] = [
         PageCmp: ItemBuilderPage
     },    
     {
-        to: '/role-settings/:id',
-        label: 'Role Settings',
+        to: '/role/:id',
+        label: 'Role',
         visible: (user?: User) => Boolean(user && user.role === Role.Admin),
-        PageCmp: RoleSettingsPage
+        PageCmp: RolePage
     },
     {
         to: '/shop',
         label: 'Web Shop',
         visible: (user?: User) => Boolean(user),
-        PageCmp: RoleSettingsPage
+        PageCmp: RolePage
     },
     {
         to: '/logout',

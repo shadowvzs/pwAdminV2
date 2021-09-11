@@ -1,11 +1,14 @@
 import { Controller, Get } from '@nestjs/common';
+import { ConfigService } from '@nestjs/config';
 
 @Controller()
 export class AppController {
 
-  @Get('test')
-  public test(): string {
-    return 'rest';
+  constructor(private configService: ConfigService) {}
+
+  @Get('runtime')
+  public runtime(): void {
+    return this.configService.get('WEB_VERSION');
   }
 
 }

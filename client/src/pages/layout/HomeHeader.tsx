@@ -19,18 +19,18 @@ const useStyles = makeStyles({
 
 export const HomeHeader = observer(() => {
     const classes = useStyles();
-    const { configStore, serverStatusStore } = React.useContext(RootStoreContext);
+    const { pwServerStore } = React.useContext(RootStoreContext);
 
     return (
         <Grid container direction='row' justifyContent='center'>
             <Grid item className={classes.sidebar}>
-                <div style={{ color: '#ffff88' }}> { configStore.config.get('serverName') } </div> 
+                <div style={{ color: '#ffff88' }}> { pwServerStore.config.get('serverName') } </div> 
             </Grid>
             <Grid item>
                 <img src='/images/banner.jpg' alt={'Banner'} style={{ maxWidth: '100%' }} />
             </Grid>
             <Grid item className={classes.sidebar}>
-                {serverStatusStore.items.map((item, idx) => (
+                {pwServerStore.serverStatuses.map((item, idx) => (
                     <div key={idx}>
                         <div style={{ color: '#ffffcc' }}>{item.name}</div>
                         {item.status && <div style={{ color: 'lightgreen' }}>Online</div>}

@@ -1,6 +1,6 @@
 import { plainToClass } from "class-transformer";
 import { action, makeObservable, observable } from "mobx";
-import { AuthTokenPayload, AuthUserTokenResponse } from "../interfaces/Response";
+import { AuthTokenPayload, AuthUserTokenResponse } from "../interfaces/responses";
 
 import { ILoginDto, IRegisterDto, User } from "../models/User";
 import { BaseStore } from "./BaseStore";
@@ -26,12 +26,8 @@ export class AuthStore extends BaseStore<User> {
             });
             if (!result) { return; }
             const user = plainToClass(User, result.user);
-            this.setCurrentUser(user);
             this.setToken(result.payload);
-            setTimeout( async () => {
-                const result3 = await this.request<AuthUserTokenResponse>(this.endpoint + '/me');
-                console.log(result3);
-            }, 3000);
+            this.setCurrentUser(user);
             this.rootStore.redirect('/user-settings');
         } catch(err) {
             console.error(err);
@@ -88,7 +84,6 @@ export class AuthStore extends BaseStore<User> {
             body: { refresh_token: this.refreshToken }
         });
         this.setToken(result.payload);
-        console.log(result);
     }
 
     private startRefreshTokenTimer() {

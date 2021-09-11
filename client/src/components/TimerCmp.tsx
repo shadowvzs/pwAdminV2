@@ -15,8 +15,8 @@ interface TimerCmpProps {
 }
 
 export const TimerCmp = (props: TimerCmpProps) => {
-    const { configStore } = React.useContext(RootStoreContext);
-    const [time, setTime] = React.useState<string>(getTimeStr(configStore.config.get('serverTimeZone') || 0));
+    const { pwServerStore } = React.useContext(RootStoreContext);
+    const [time, setTime] = React.useState<string>(getTimeStr(pwServerStore.config.get('serverTimeZone') || 0));
 
     React.useEffect(() => {
         const int = window.setInterval(() => {

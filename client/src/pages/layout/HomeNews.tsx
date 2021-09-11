@@ -41,8 +41,8 @@ const useStyles = makeStyles({
 export const HomeNews = () => {
     const classes = useStyles();
     
-    const { configStore } = React.useContext(RootStoreContext);
-    configStore.config.get('serverName');
+    const { pwServerStore } = React.useContext(RootStoreContext);
+    pwServerStore.config.get('serverName');
 
     return (
         <Grid container direction='column' className={classes.box}>

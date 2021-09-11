@@ -1,7 +1,7 @@
 import { Grid } from "@material-ui/core"
 import React from "react";
 import { Redirect } from "react-router-dom";
-import { UserManagement } from "../components/UserManagement";
+import { UserManagement } from "../components/Users/UserManagement";
 import { RootStoreContext } from "../contexts/RootStoreContext";
 import { HomeHeader } from "./layout/HomeHeader"
 import { PageMenu } from "./layout/PageMenu"

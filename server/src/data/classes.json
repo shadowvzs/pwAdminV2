@@ -1,0 +1,2876 @@
+{
+   "maxMask": 219,
+   "maxClass": 6,
+   "race":[
+       {
+          "id":1,
+          "name":"Human",
+          "color":"fddcbb"
+       },
+       {
+          "id":2,
+          "name":"Beastkind",
+          "color":"bbffbb"
+       },
+       {
+          "id":3,
+          "name":"WingedElf",
+          "color":"cacaff"
+       },
+       {
+          "id":4,
+          "name":"Tideborn",
+          "color":"aaaaff"
+       },
+       {
+          "id":5,
+          "name":"Earthguard",
+          "color":"#fada77"
+       },
+       {
+          "id":6,
+          "name":"Nightshade",
+          "color":"#dddddd"
+       }
+    ],
+    "cultivations": [
+      {
+         "id": 1,
+         "name": "Autoscopy",
+         "lvReq": 9
+      },
+      {
+         "id": 2,
+         "name": "Transform",
+         "lvReq": 19
+      },
+      {
+         "id": 3,
+         "name": "Naissance",
+         "lvReq": 29
+      },
+      {
+         "id": 4,
+         "name": "Reborn",
+         "lvReq": 39
+      },
+      {
+         "id": 5,
+         "name": "Vigilance",
+         "lvReq": 49
+      },
+      {
+         "id": 6,
+         "name": "Doom",
+         "lvReq": 59
+      },
+      {
+         "id": 7,
+         "name": "Disengage",
+         "lvReq": 69
+      },
+      {
+         "id": 8,
+         "name": "Nirvana",
+         "lvReq": 79
+      },
+      {
+         "id": 20,
+         "name": "Prime Immortal",
+         "lvReq": 89,
+         "path": "holy"
+      },
+      {
+         "id": 21,
+         "name": "Pure immortal",
+         "lvReq": 99,
+         "path": "holy"
+      },
+      {
+         "id": 22,
+         "name": "Ether Immortal",
+         "lvReq": 109,
+         "path": "holy"
+      },
+      {
+         "id": 30,
+         "name": "Daimon Baresark",
+         "lvReq": 89,
+         "path":"dark"
+      },
+      {
+         "id": 31,
+         "name": "Daimon Saint",
+         "lvReq": 99,
+         "path":"dark"
+      },
+      {
+         "id": 32,
+         "name": "Demon",
+         "lvReq": 109,
+         "path":"Daimon Elder"
+      }
+    ],
+    "classes":[
+       {
+          "id":0,
+          "mask":1,
+          "race":1,
+          "name":"Warrior",
+          "shortName":"wr",
+          "icon":"wr-0.png",
+          "template": 17,
+          "stats":{
+             
+          },
+          "version":0,
+          "skills":[
+             {
+                "id":1,
+                "name":"Tiger Strike",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":374,
+                   "dark":375
+                },
+                "icon":"18x28"
+             },
+             {
+                "id":2,
+                "name":"Short Burst",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":376,
+                   "dark":377
+                },
+                "icon":"23x11"
+             },
+             {
+                "id":3,
+                "name":"Aeolian Blade",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":380,
+                   "dark":381
+                },
+                "icon":"5x3"
+             },
+             {
+                "id":4,
+                "name":"Lion Roar",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":424,
+                   "dark":425
+                },
+                "icon":"18x22"
+             },
+             {
+                "id":5,
+                "name":"Dragon Emerge",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":382,
+                   "dark":383
+                },
+                "icon":"16x33"
+             },
+             {
+                "id":54,
+                "name":"Stream Strike",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":378,
+                   "dark":379
+                },
+                "icon":"3x19"
+             },
+             {
+                "id":55,
+                "name":"Frantic Draco Slash",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":386,
+                   "dark":387
+                },
+                "icon":"15x22"
+             },
+             {
+                "id":56,
+                "name":"Cleaving Splash",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":388,
+                   "dark":389
+                },
+                "icon":"28x16"
+             },
+             {
+                "id":57,
+                "name":"RockRive Slash",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":384,
+                   "dark":385
+                },
+                "icon":"12x15"
+             },
+             {
+                "id":58,
+                "name":"Dragon Soar",
+                "maxLv":10,
+                "icon":"19x33"
+             },
+             {
+                "id":59,
+                "name":"Tiger Leap",
+                "maxLv":10,
+                "icon":"17x27"
+             },
+             {
+                "id":60,
+                "name":"AirSlicer Palm",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":390,
+                   "dark":391
+                },
+                "icon":"27x4"
+             },
+             {
+                "id":61,
+                "name":"Shadowless Kick",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":392,
+                   "dark":393
+                },
+                "icon":"26x15"
+             },
+             {
+                "id":62,
+                "name":"Cyclone Kick",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":394,
+                   "dark":395
+                },
+                "icon":"8x32"
+             },
+             {
+                "id":63,
+                "name":"Dragon Thruster Bash",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":396,
+                   "dark":397
+                },
+                "icon":"24x0"
+             },
+             {
+                "id":64,
+                "name":"Whisk Stab",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":398,
+                   "dark":399
+                },
+                "icon":"15x23"
+             },
+             {
+                "id":65,
+                "name":"Back Thrust",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":400,
+                   "dark":401
+                },
+                "icon":"2x7"
+             },
+             {
+                "id":66,
+                "name":"Meteor Rush",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":402,
+                   "dark":403
+                },
+                "icon":"31x18"
+             },
+             {
+                "id":67,
+                "name":"Frost Glacier",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":404,
+                   "dark":405
+                },
+                "icon":"22x3"
+             },
+             {
+                "id":68,
+                "name":"DrakeSwift Strike",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":406,
+                   "dark":407
+                },
+                "icon":"4x32"
+             },
+             {
+                "id":69,
+                "name":"Heaven FlameDragon",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":412,
+                   "dark":413
+                },
+                "icon":"4x9"
+             },
+             {
+                "id":70,
+                "name":"Mountsever Sweep",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":408,
+                   "dark":409
+                },
+                "icon":"0x32"
+             },
+             {
+                "id":71,
+                "name":"Volcanic Stunner",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":410,
+                   "dark":411
+                },
+                "icon":"2x32"
+             },
+             {
+                "id":72,
+                "name":"Lethe Stance",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":414,
+                   "dark":415
+                },
+                "icon":"20x13"
+             },
+             {
+                "id":73,
+                "name":"Spirit Chaser Knack",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":416,
+                   "dark":417
+                },
+                "icon":"22x29"
+             },
+             {
+                "id":74,
+                "name":"Atmos Sword Strike",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":418,
+                   "dark":419
+                },
+                "icon":"19x4"
+             },
+             {
+                "id":75,
+                "name":"Myriad Sword Stance",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":420,
+                   "dark":421
+                },
+                "icon":"2x0"
+             },
+             {
+                "id":76,
+                "name":"Cloud Sprint",
+                "maxLv":10,
+                "icon":"12x23"
+             },
+             {
+                "id":77,
+                "name":"Auric Shell Barrier",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":422,
+                   "dark":423
+                },
+                "icon":"21x30"
+             },
+             {
+                "id":176,
+                "name":"Striding Stroll Sprint",
+                "maxLv":1,
+                "icon":"31x2"
+             },
+             {
+                "id":177,
+                "name":"Muscle Alter Sutra",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":426,
+                   "dark":427
+                },
+                "icon":"31x15"
+             },
+             {
+                "id":178,
+                "name":"Marrow Alter Sutra",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":428,
+                   "dark":429
+                },
+                "icon":"2x16"
+             },
+             {
+                "id":179,
+                "name":"Diamond Sutra",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":430,
+                   "dark":431
+                },
+                "icon":"15x30"
+             },
+             {
+                "id":6,
+                "name":"Blade & Sword Mastery",
+                "maxLv":10,
+                "isMastery":true,
+                "pathBased":{
+                   "holy":432,
+                   "dark":433
+                },
+                "icon":"19x3"
+             },
+             {
+                "id":78,
+                "name":"Polearm Mastery",
+                "maxLv":10,
+                "isMastery":true,
+                "pathBased":{
+                   "holy":434,
+                   "dark":435
+                },
+                "icon":"4x31"
+             },
+             {
+                "id":79,
+                "name":"Axe & Mace Mastery",
+                "maxLv":10,
+                "isMastery":true,
+                "pathBased":{
+                   "holy":436,
+                   "dark":439
+                },
+                "icon":"9x15"
+             },
+             {
+                "id":80,
+                "name":"Fist Feat Mastery",
+                "maxLv":10,
+                "isMastery":true,
+                "pathBased":{
+                   "holy":437,
+                   "dark":438
+                },
+                "icon":"19x14"
+             },
+             {
+                "id":896,
+                "name":"Frantic Draco Power",
+                "maxLv":1,
+                "icon":"14x22"
+             },
+             {
+                "id":897,
+                "name":"Thunderbolt Shake Strike",
+                "maxLv":1,
+                "icon":"22x31"
+             },
+             {
+                "id":898,
+                "name":"Spatial Break",
+                "maxLv":1,
+                "icon":"17x4"
+             },
+             {
+                "id":899,
+                "name":"Single Slash",
+                "maxLv":1,
+                "icon":"1x0"
+             },
+             {
+                "id":900,
+                "name":"Mana of Diamond",
+                "maxLv":1,
+                "icon":"14x30"
+             },
+             {
+                "id":923,
+                "name":"Single Slash",
+                "maxLv":1,
+                "icon":"1x0"
+             },
+             {
+                "id":924,
+                "name":"Mana of Diamond",
+                "maxLv":1,
+                "icon":"14x30"
+             },
+             {
+                "id":187,
+                "name":"Fury Burst",
+                "maxLv":1,
+                "furyBurstLv":1,
+                "icon":"0x22"
+             },
+             {
+                "id":227,
+                "name":"Advanced Fury Burst",
+                "maxLv":1,
+                "furyBurstLv":2,
+                "icon":"1x22"
+             },
+             {
+                "id":362,
+                "name":"Ether Fury Burst",
+                "maxLv":1,
+                "path":"holy",
+                "furyBurstLv":3,
+                "icon":"11x1"
+             },
+             {
+                "id":363,
+                "name":"Dark Fury Burst",
+                "maxLv":1,
+                "path":"dark",
+                "furyBurstLv":3,
+                "icon":"5x33"
+             }
+          ]
+       },
+       {
+          "id":1,
+          "mask":2,
+          "race":1,
+          "name":"Magician",
+          "shortName":"mg",
+          "template": 16,
+          "icon":"mg-0.png",
+          "stats":{
+             
+          },
+          "version":0,
+          "skills":[
+             {
+                "id":81,
+                "name":"Blazing Hierogram",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":440,
+                   "dark":441
+                },
+                "icon":"13x21"
+             },
+             {
+                "id":7,
+                "name":"Flaming Torch",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":444,
+                   "dark":445
+                },
+                "icon":"7x20"
+             },
+             {
+                "id":8,
+                "name":"Sacrificial Fire-Storm",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":452,
+                   "dark":453
+                },
+                "icon":"29x28"
+             },
+             {
+                "id":10,
+                "name":"Sand Vortex",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":476,
+                   "dark":477
+                },
+                "icon":"15x18"
+             },
+             {
+                "id":84,
+                "name":"Phoenix's FireWings",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":450,
+                   "dark":451
+                },
+                "icon":"9x21"
+             },
+             {
+                "id":85,
+                "name":"Divine Pyro-Hierogram",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":446,
+                   "dark":447
+                },
+                "icon":"11x25"
+             },
+             {
+                "id":86,
+                "name":"Roasting FireArray",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":448,
+                   "dark":449
+                },
+                "icon":"0x21"
+             },
+             {
+                "id":87,
+                "name":"Pyro-Edge Tempest",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":454,
+                   "dark":455
+                },
+                "icon":"2x20"
+             },
+             {
+                "id":88,
+                "name":"Spring Gush",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":456,
+                   "dark":457
+                },
+                "icon":"11x19"
+             },
+             {
+                "id":89,
+                "name":"Moistcuring",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":464,
+                   "dark":465
+                },
+                "icon":"14x19"
+             },
+             {
+                "id":91,
+                "name":"Frost-Enchanted Blade",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":466,
+                   "dark":467
+                },
+                "icon":"29x31"
+             },
+             {
+                "id":90,
+                "name":"Cold Dew",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":462,
+                   "dark":463
+                },
+                "icon":"20x11"
+             },
+             {
+                "id":92,
+                "name":"Blizzard Blast",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":468,
+                   "dark":469
+                },
+                "icon":"28x2"
+             },
+             {
+                "id":93,
+                "name":"Cryonite Dragon",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":470,
+                   "dark":471
+                },
+                "icon":"25x22"
+             },
+             {
+                "id":96,
+                "name":"Intensive Pyro-Armor",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":442,
+                   "dark":443
+                },
+                "icon":"20x21"
+             },
+             {
+                "id":97,
+                "name":"Rock Fall Spell",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":472,
+                   "dark":473
+                },
+                "icon":"10x28"
+             },
+             {
+                "id":98,
+                "name":"Arenaceous Wave",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":480,
+                   "dark":481
+                },
+                "icon":"21x32"
+             },
+             {
+                "id":99,
+                "name":"Mountain Press",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":484,
+                   "dark":485
+                },
+                "icon":"27x18"
+             },
+             {
+                "id":100,
+                "name":"Distance Shrink",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":478,
+                   "dark":479
+                },
+                "icon":"15x26"
+             },
+             {
+                "id":180,
+                "name":"Frost Armor",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":458,
+                   "dark":459
+                },
+                "icon":"12x11"
+             },
+             {
+                "id":181,
+                "name":"Stone Barrier",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":474,
+                   "dark":475
+                },
+                "icon":"12x9"
+             },
+             {
+                "id":182,
+                "name":"Hailstorm",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":460,
+                   "dark":461
+                },
+                "icon":"22x2"
+             },
+             {
+                "id":183,
+                "name":"Essence of Wisdom Sutra",
+                "maxLv":1,
+                "icon":"24x27"
+             },
+             {
+                "id":184,
+                "name":"Blasting Point",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":482,
+                   "dark":483
+                },
+                "icon":"6x24"
+             },
+             {
+                "id":101,
+                "name":"Earth Element Mastery",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":490,
+                   "dark":491
+                },
+                "icon":"16x7"
+             },
+             {
+                "id":53,
+                "name":"Fire Element Mastery",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":486,
+                   "dark":487
+                },
+                "icon":"13x20"
+             },
+             {
+                "id":9,
+                "name":"Water Element Mastery",
+                "maxLv":10,
+                "isMastery":true,
+                "pathBased":{
+                   "holy":488,
+                   "dark":489
+                },
+                "icon":"4x18"
+             },
+             {
+                "id":901,
+                "name":"Hydro Blast",
+                "maxLv":1,
+                "icon":"22x17"
+             },
+             {
+                "id":902,
+                "name":"Earth Strike",
+                "maxLv":1,
+                "icon":"14x7"
+             },
+             {
+                "id":903,
+                "name":"Soulingest Power",
+                "maxLv":1,
+                "icon":"31x14"
+             },
+             {
+                "id":904,
+                "name":"Fury Protection",
+                "maxLv":1,
+                "icon":"28x23"
+             },
+             {
+                "id":905,
+                "name":"Spiritualism Eruption",
+                "maxLv":1,
+                "icon":"22x20"
+             },
+             {
+                "id":925,
+                "name":"Hydro Blast",
+                "maxLv":1,
+                "icon":"22x17"
+             },
+             {
+                "id":926,
+                "name":"Spiritualism Eruption",
+                "maxLv":1,
+                "icon":"22x20"
+             },
+             {
+                "id":228,
+                "name":"Fury Burst",
+                "maxLv":1,
+                "furyBurstLv":1,
+                "icon":"0x22"
+             },
+             {
+                "id":229,
+                "name":"Advanced Fury Burst",
+                "maxLv":1,
+                "furyBurstLv":2,
+                "icon":"1x22"
+             },
+             {
+                "id":364,
+                "name":"Ether Fury Burst",
+                "maxLv":1,
+                "path":"holy",
+                "furyBurstLv":3,
+                "icon":"11x1"
+             },
+             {
+                "id":365,
+                "name":"Dark Fury Burst",
+                "maxLv":1,
+                "path":"dark",
+                "furyBurstLv":3,
+                "icon":"5x33"
+             }
+          ]
+       },
+       {
+          "id":4,
+          "mask":16,
+          "race":2,
+          "name":"Werebeast",
+          "shortName":"wb",
+          "template": 23,
+          "icon":"wb-0.png",
+          "stats":{
+             
+          },
+          "version":0,
+          "skills":[
+             {
+                "id":12,
+                "name":"Billow",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":496,
+                   "dark":497
+                },
+                "icon":"5x12"
+             },
+             {
+                "id":195,
+                "name":"Garrotte",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":494,
+                   "dark":495
+                },
+                "icon":"12x26"
+             },
+             {
+                "id":13,
+                "name":"Perdition",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":508,
+                   "dark":509
+                },
+                "icon":"10x17"
+             },
+             {
+                "id":82,
+                "name":"Beast King Reanimate",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":512,
+                   "dark":513
+                },
+                "icon":"11x2"
+             },
+             {
+                "id":83,
+                "name":"Titan's Strength",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":516,
+                   "dark":517
+                },
+                "icon":"9x12"
+             },
+             {
+                "id":102,
+                "name":"Beast Lord Whomp",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":492,
+                   "dark":493
+                },
+                "icon":"8x2"
+             },
+             {
+                "id":104,
+                "name":"Gravitation Stonker",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":498,
+                   "dark":499
+                },
+                "icon":"14x5"
+             },
+             {
+                "id":105,
+                "name":"Firestorm Wielder",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":502,
+                   "dark":503
+                },
+                "icon":"13x32"
+             },
+             {
+                "id":106,
+                "name":"Anti-Armor Batter",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":500,
+                   "dark":501
+                },
+                "icon":"11x24"
+             },
+             {
+                "id":107,
+                "name":"Ground Rending",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":504,
+                   "dark":505
+                },
+                "icon":"29x7"
+             },
+             {
+                "id":108,
+                "name":"Beast King Onslaught",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":506,
+                   "dark":507
+                },
+                "icon":"5x2"
+             },
+             {
+                "id":109,
+                "name":"Ferity Restoration",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":510,
+                   "dark":511
+                },
+                "isPasive":true,
+                "icon":"6x30"
+             },
+             {
+                "id":111,
+                "name":"Blood Bath",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":514,
+                   "dark":515
+                },
+                "icon":"8x5"
+             },
+             {
+                "id":112,
+                "name":"WhiteTiger Transform",
+                "maxLv":2,
+                "pathBased":{
+                   "holy":518,
+                   "dark":519
+                },
+                "icon":"17x23"
+             },
+             {
+                "id":149,
+                "name":"Raging Pounce",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":522,
+                   "dark":523
+                },
+                "icon":"21x28"
+             },
+             {
+                "id":150,
+                "name":"Ripping Bite",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":520,
+                   "dark":521
+                },
+                "icon":"2x15"
+             },
+             {
+                "id":151,
+                "name":"Devour",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":524,
+                   "dark":525
+                },
+                "icon":"8x6"
+             },
+             {
+                "id":152,
+                "name":"Surf Impact",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":526,
+                   "dark":527
+                },
+                "icon":"25x14"
+             },
+             {
+                "id":153,
+                "name":"Swing Smack",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":528,
+                   "dark":529
+                },
+                "icon":"1x2"
+             },
+             {
+                "id":154,
+                "name":"ShapeShifting Intensify",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":538,
+                   "dark":539
+                },
+                "icon":"1x6"
+             },
+             {
+                "id":155,
+                "name":"Poison Fang",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":532,
+                   "dark":533
+                },
+                "icon":"14x17"
+             },
+             {
+                "id":156,
+                "name":"Frighten",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":536,
+                   "dark":537
+                },
+                "icon":"23x31"
+             },
+             {
+                "id":185,
+                "name":"Bluster",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":534,
+                   "dark":535
+                },
+                "icon":"14x6"
+             },
+             {
+                "id":186,
+                "name":"Black Tortlen Possess",
+                "maxLv":1,
+                "icon":"1x23"
+             },
+             {
+                "id":188,
+                "name":"Rage of Beast King",
+                "maxLv":1,
+                "pathBased":{
+                   "holy":530,
+                   "dark":531
+                },
+                "icon":"4x2"
+             },
+             {
+                "id":162,
+                "name":"Axe & Hammer Mastery",
+                "maxLv":10,
+                "isMastery":true,
+                "pathBased":{
+                   "holy":540,
+                   "dark":541
+                },
+                "icon":"9x15"
+             },
+             {
+                "id":103,
+                "name":"Watercraft Mastery",
+                "maxLv":1,
+                "isMastery":true,
+                "icon":"24x17"
+             },
+             {
+                "id":906,
+                "name":"Ferity Bluster Rave",
+                "maxLv":1,
+                "icon":"5x30"
+             },
+             {
+                "id":907,
+                "name":"Titan's Rage",
+                "maxLv":1,
+                "icon":"8x12"
+             },
+             {
+                "id":908,
+                "name":"Frenzy",
+                "maxLv":1,
+                "icon":"6x22"
+             },
+             {
+                "id":909,
+                "name":"Rage of BeastGod",
+                "maxLv":1,
+                "icon":"14x2"
+             },
+             {
+                "id":929,
+                "name":"Frenzy",
+                "maxLv":1,
+                "icon":"6x22"
+             },
+             {
+                "id":935,
+                "name":"Rage of BeastGod",
+                "maxLv":1,
+                "icon":"14x2"
+             },
+             {
+                "id":230,
+                "name":"Fury Burst",
+                "maxLv":1,
+                "furyBurstLv":1,
+                "icon":"0x22"
+             },
+             {
+                "id":231,
+                "name":"Advanced Fury Burst",
+                "maxLv":1,
+                "furyBurstLv":2,
+                "icon":"1x22"
+             },
+             {
+                "id":366,
+                "name":"Ether Fury Burst",
+                "maxLv":1,
+                "path":"holy",
+                "furyBurstLv":3,
+                "icon":"11x1"
+             },
+             {
+                "id":367,
+                "name":"Dark Fury Burst",
+                "maxLv":1,
+                "path":"dark",
+                "furyBurstLv":3,
+                "icon":"5x33"
+             }
+          ]
+       },
+       {
+          "id":3,
+          "mask":8,
+          "race":2,
+          "name":"Werefox",
+          "shortName":"wf",
+          "template": 24,
+          "icon":"wf-0.png",
+          "stats":{
+             
+          },
+          "version":0,
+          "skills":[
+             {
+                "id":299,
+                "name":"Envenom Parasite",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":634,
+                   "dark":635
+                },
+                "icon":"24x4"
+             },
+             {
+                "id":300,
+                "name":"IronRock Parasite",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":636,
+                   "dark":637
+                },
+                "icon":"26x30"
+             },
+             {
+                "id":301,
+                "name":"Blazing Parasite",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":638,
+                   "dark":639
+                },
+                "icon":"27x20"
+             },
+             {
+                "id":302,
+                "name":"Frostbolt Parasite",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":640,
+                   "dark":641
+                },
+                "icon":"2x3"
+             },
+             {
+                "id":303,
+                "name":"Mass Parasite",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":642,
+                   "dark":643
+                },
+                "icon":"17x5"
+             },
+             {
+                "id":304,
+                "name":"Megalith Parasite",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":644,
+                   "dark":645
+                },
+                "icon":"12x12"
+             },
+             {
+                "id":305,
+                "name":"Parasite Nova",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":646,
+                   "dark":647
+                },
+                "icon":"6x0"
+             },
+             {
+                "id":306,
+                "name":"Bramble Guard",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":648,
+                   "dark":649
+                },
+                "icon":"28x27"
+             },
+             {
+                "id":307,
+                "name":"Metabolic Boost",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":650,
+                   "dark":651
+                },
+                "icon":"13x13"
+             },
+             {
+                "id":308,
+                "name":"Divine Supplements",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":652,
+                   "dark":653
+                },
+                "icon":"15x25"
+             },
+             {
+                "id":309,
+                "name":"Vigor Switch",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":654,
+                   "dark":655
+                },
+                "icon":"26x25"
+             },
+             {
+                "id":310,
+                "name":"Bramble Array",
+                "maxLv":1,
+                "icon":"0x28"
+             },
+             {
+                "id":311,
+                "name":"Intersoul Switch",
+                "maxLv":1,
+                "icon":"20x0"
+             },
+             {
+                "id":312,
+                "name":"Fox Change",
+                "maxLv":2,
+                "pathBased":{
+                   "holy":656,
+                   "dark":657
+                },
+                "icon":"23x20"
+             },
+             {
+                "id":313,
+                "name":"Foxy Drub",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":658,
+                   "dark":659
+                },
+                "icon":"22x9"
+             },
+             {
+                "id":314,
+                "name":"HexMist Attack",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":660,
+                   "dark":661
+                },
+                "icon":"31x9"
+             },
+             {
+                "id":315,
+                "name":"Enlace Drub",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":662,
+                   "dark":663
+                },
+                "icon":"28x9"
+             },
+             {
+                "id":316,
+                "name":"Live Depriver",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":664,
+                   "dark":665
+                },
+                "icon":"2x10"
+             },
+             {
+                "id":317,
+                "name":"Spirit Consume",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":666,
+                   "dark":667
+                },
+                "icon":"16x9"
+             },
+             {
+                "id":318,
+                "name":"Hexmalefic Crush",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":668,
+                   "dark":669
+                },
+                "icon":"19x9"
+             },
+             {
+                "id":319,
+                "name":"Banish malediction",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":670,
+                   "dark":671
+                },
+                "icon":"27x32"
+             },
+             {
+                "id":320,
+                "name":"Amplify Maim",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":672,
+                   "dark":673
+                },
+                "icon":"3x17"
+             },
+             {
+                "id":321,
+                "name":"Soul Degeneration",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":674,
+                   "dark":675
+                },
+                "icon":"10x13"
+             },
+             {
+                "id":322,
+                "name":"Vigor Crush",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":676,
+                   "dark":677
+                },
+                "icon":"20x24"
+             },
+             {
+                "id":328,
+                "name":"Pet Taming",
+                "maxLv":10,
+                "icon":"26x32"
+             },
+             {
+                "id":329,
+                "name":"Revive Pet",
+                "maxLv":10,
+                "icon":"17x8"
+             },
+             {
+                "id":330,
+                "name":"Heal Pet",
+                "maxLv":10,
+                "icon":"18x18"
+             },
+             {
+                "id":762,
+                "name":"Celerity Wind Walk",
+                "maxLv":2,
+                "pathBased":{
+                   "holy":763,
+                   "dark":764
+                },
+                "icon":"25x9"
+             },
+             {
+                "id":323,
+                "name":"Watercraft Mastery",
+                "maxLv":1,
+                "isMastery":true,
+                "icon":"24x17"
+             },
+             {
+                "id":324,
+                "name":"Melee Feat Mastery",
+                "maxLv":10,
+                "isMastery":true,
+                "pathBased":{
+                   "holy":678,
+                   "dark":679
+                },
+                "icon":"19x14"
+             },
+             {
+                "id":325,
+                "name":"Wood Element Mastery",
+                "maxLv":10,
+                "isMastery":true,
+                "pathBased":{
+                   "holy":680,
+                   "dark":681
+                },
+                "icon":"11x16"
+             },
+             {
+                "id":910,
+                "name":"Rainbow Parasite (Fox Change)",
+                "maxLv":1,
+                "icon":"17x13"
+             },
+             {
+                "id":911,
+                "name":"Rainbow Parasite",
+                "maxLv":1,
+                "icon":"17x13"
+             },
+             {
+                "id":912,
+                "name":"Stilled Spell",
+                "maxLv":1,
+                "icon":"11x0"
+             },
+             {
+                "id":913,
+                "name":"Enchanting Spells",
+                "maxLv":1,
+                "icon":"5x10"
+             },
+             {
+                "id":914,
+                "name":"Petrifaction Spell",
+                "maxLv":1,
+                "icon":"7x5"
+             },
+             {
+                "id":927,
+                "name":"Enchanting Spells",
+                "maxLv":1,
+                "icon":"5x10"
+             },
+             {
+                "id":928,
+                "name":"Petrifaction Spell",
+                "maxLv":1,
+                "icon":"7x5"
+             },
+             {
+                "id":326,
+                "name":"Fury Burst",
+                "maxLv":1,
+                "furyBurstLv":1,
+                "icon":"0x22"
+             },
+             {
+                "id":327,
+                "name":"Advanced Fury Burst",
+                "maxLv":1,
+                "furyBurstLv":2,
+                "icon":"1x22"
+             },
+             {
+                "id":368,
+                "name":"Ether Fury Burst",
+                "maxLv":1,
+                "path":"holy",
+                "furyBurstLv":3,
+                "icon":"11x1"
+             },
+             {
+                "id":369,
+                "name":"Dark Fury Burst",
+                "maxLv":1,
+                "path":"dark",
+                "furyBurstLv":3,
+                "icon":"5x33"
+             }
+          ]
+       },
+       {
+          "id":7,
+          "mask":64,
+          "race":3,
+          "name":"Priest",
+          "shortName":"ep",
+          "template": 28,
+          "icon":"ep-0.png",
+          "stats":{
+             
+          },
+          "version":0,
+          "skills":[
+             {
+                "id":15,
+                "name":"Chromatic Healing Beam",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":552,
+                   "dark":553
+                },
+                "icon":"30x0"
+             },
+             {
+                "id":16,
+                "name":"Extremity Recovery Array",
+                "maxLv":1,
+                "icon":"19x16"
+             },
+             {
+                "id":17,
+                "name":"Five Element Hierogram",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":556,
+                   "dark":557
+                },
+                "icon":"4x1"
+             },
+             {
+                "id":18,
+                "name":"Resurrection",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":548,
+                   "dark":549
+                },
+                "icon":"11x29"
+             },
+             {
+                "id":19,
+                "name":"Plume Barrier",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":574,
+                   "dark":575
+                },
+                "icon":"26x26"
+             },
+             {
+                "id":113,
+                "name":"Pure Heart Spell",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":542,
+                   "dark":543
+                },
+                "icon":"25x19"
+             },
+             {
+                "id":114,
+                "name":"Whisht Heart Spell",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":544,
+                   "dark":545
+                },
+                "icon":"5x32"
+             },
+             {
+                "id":115,
+                "name":"Sapience Poure",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":546,
+                   "dark":547
+                },
+                "icon":"1x30"
+             },
+             {
+                "id":116,
+                "name":"River of Rejuvenation",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":554,
+                   "dark":555
+                },
+                "icon":"6x19"
+             },
+             {
+                "id":117,
+                "name":"Five Corporeity Hierogram",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":558,
+                   "dark":559
+                },
+                "icon":"27x0"
+             },
+             {
+                "id":118,
+                "name":"Five Tone Hierogram",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":560,
+                   "dark":561
+                },
+                "icon":"7x1"
+             },
+             {
+                "id":119,
+                "name":"Five Hue Hierogram",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":562,
+                   "dark":563
+                },
+                "icon":"1x1"
+             },
+             {
+                "id":120,
+                "name":"Solid Shell Hierogram",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":564,
+                   "dark":565
+                },
+                "icon":"1x8"
+             },
+             {
+                "id":121,
+                "name":"Aegis's Spirit",
+                "maxLv":1,
+                "icon":"29x23"
+             },
+             {
+                "id":122,
+                "name":"Rimption Soul Exaltation",
+                "maxLv":1,
+                "icon":"23x0"
+             },
+             {
+                "id":123,
+                "name":"Heaven's Array",
+                "maxLv":1,
+                "icon":"24x8"
+             },
+             {
+                "id":124,
+                "name":"Divine Weapons",
+                "maxLv":1,
+                "icon":"6x25"
+             },
+             {
+                "id":125,
+                "name":"Plume Quill",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":572,
+                   "dark":573
+                },
+                "icon":"29x26"
+             },
+             {
+                "id":126,
+                "name":"Feather Razors",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":576,
+                   "dark":577
+                },
+                "icon":"23x26"
+             },
+             {
+                "id":127,
+                "name":"Great Cyclone",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":578,
+                   "dark":579
+                },
+                "icon":"13x33"
+             },
+             {
+                "id":128,
+                "name":"Thunder Sphere",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":580,
+                   "dark":581
+                },
+                "icon":"18x25"
+             },
+             {
+                "id":129,
+                "name":"Hurricane Blast",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":582,
+                   "dark":583
+                },
+                "icon":"17x6"
+             },
+             {
+                "id":130,
+                "name":"Galactic Storm",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":585,
+                   "dark":587
+                },
+                "icon":"8x22"
+             },
+             {
+                "id":163,
+                "name":"Thunder Wield",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":584,
+                   "dark":586
+                },
+                "icon":"19x31"
+             },
+             {
+                "id":189,
+                "name":"Purify Spell",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":550,
+                   "dark":551
+                },
+                "icon":"28x22"
+             },
+             {
+                "id":191,
+                "name":"Spirit Gather Hierogram",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":566,
+                   "dark":567
+                },
+                "icon":"10x27"
+             },
+             {
+                "id":192,
+                "name":"Celestial Guard Hierogram",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":568,
+                   "dark":569
+                },
+                "icon":"12x1"
+             },
+             {
+                "id":193,
+                "name":"Nimbus-Aid Hierogram",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":570,
+                   "dark":571
+                },
+                "icon":"18x20"
+             },
+             {
+                "id":194,
+                "name":"Grand Protector",
+                "maxLv":1,
+                "icon":"31x8"
+             },
+             {
+                "id":11,
+                "name":"Metal Element Mastery",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":588,
+                   "dark":589
+                },
+                "isMastery":true,
+                "icon":"18x30"
+             },
+             {
+                "id":190,
+                "name":"Flying Mastery",
+                "maxLv":10,
+                "isMastery":true,
+                "icon":"24x32"
+             },
+             {
+                "id":919,
+                "name":"Protective Divinity Light",
+                "maxLv":1,
+                "icon":"14x14"
+             },
+             {
+                "id":920,
+                "name":"Wings of Protection",
+                "maxLv":1,
+                "icon":"20x26"
+             },
+             {
+                "id":921,
+                "name":"Wind Elf",
+                "maxLv":1,
+                "icon":"3x31"
+             },
+             {
+                "id":922,
+                "name":"God's Seal",
+                "maxLv":1,
+                "icon":"5x25"
+             },
+             {
+                "id":933,
+                "name":"Wind Elf",
+                "maxLv":1,
+                "icon":"3x31"
+             },
+             {
+                "id":934,
+                "name":"God's Seal",
+                "maxLv":1,
+                "icon":"5x25"
+             },
+             {
+                "id":232,
+                "name":"Fury Burst",
+                "maxLv":1,
+                "furyBurstLv":1,
+                "icon":"0x22"
+             },
+             {
+                "id":233,
+                "name":"Advanced Fury Burst",
+                "maxLv":1,
+                "furyBurstLv":2,
+                "icon":"1x22"
+             },
+             {
+                "id":372,
+                "name":"Ether Fury Burst",
+                "maxLv":1,
+                "path":"holy",
+                "furyBurstLv":3,
+                "icon":"11x1"
+             },
+             {
+                "id":373,
+                "name":"Dark Fury Burst",
+                "maxLv":1,
+                "path":"dark",
+                "furyBurstLv":3,
+                "icon":"5x33"
+             }
+          ]
+       },
+       {
+          "id":6,
+          "mask":128,
+          "race":3,
+          "name":"Archer",
+          "shortName":"ea",
+          "template": 31,
+          "icon":"ea-0.png",
+          "stats":{
+             
+          },
+          "version":0,
+          "skills":[
+             {
+                "id":234,
+                "name":"Charged Blast",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":590,
+                   "dark":591
+                },
+                "icon":"6x13"
+             },
+             {
+                "id":235,
+                "name":"Dartle Shot",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":592,
+                   "dark":593
+                },
+                "icon":"17x29"
+             },
+             {
+                "id":236,
+                "name":"Repulsing Arrow",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":594,
+                   "dark":595
+                },
+                "icon":"16x3"
+             },
+             {
+                "id":237,
+                "name":"Colligation Bolt",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":596,
+                   "dark":597
+                },
+                "icon":"20x19"
+             },
+             {
+                "id":238,
+                "name":"Outcold Blast",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":598,
+                   "dark":599
+                },
+                "icon":"13x3"
+             },
+             {
+                "id":239,
+                "name":"Deadly Shot",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":600,
+                   "dark":601
+                },
+                "icon":"18x27"
+             },
+             {
+                "id":240,
+                "name":"Arrows Bombard",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":602,
+                   "dark":603
+                },
+                "icon":"1x26"
+             },
+             {
+                "id":241,
+                "name":"Thunder Bolt",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":604,
+                   "dark":605
+                },
+                "icon":"13x28"
+             },
+             {
+                "id":242,
+                "name":"Thunder Shock",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":606,
+                   "dark":607
+                },
+                "icon":"29x13"
+             },
+             {
+                "id":243,
+                "name":"Lightning Blaster",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":608,
+                   "dark":609
+                },
+                "icon":"3x21"
+             },
+             {
+                "id":244,
+                "name":"Blazing Arrow",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":612,
+                   "dark":613
+                },
+                "icon":"16x21"
+             },
+             {
+                "id":245,
+                "name":"Frost Arrow",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":614,
+                   "dark":615
+                },
+                "icon":"7x11"
+             },
+             {
+                "id":246,
+                "name":"Bane Arrow",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":616,
+                   "dark":617
+                },
+                "icon":"25x28"
+             },
+             {
+                "id":247,
+                "name":"Fanged Arrow",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":618,
+                   "dark":619
+                },
+                "icon":"30x11"
+             },
+             {
+                "id":248,
+                "name":"Sharptooth Arrow",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":620,
+                   "dark":621
+                },
+                "icon":"23x3"
+             },
+             {
+                "id":249,
+                "name":"Wing Barrier",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":622,
+                   "dark":623
+                },
+                "icon":"6x27"
+             },
+             {
+                "id":250,
+                "name":"Wing Attack",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":624,
+                   "dark":625
+                },
+                "icon":"0x27"
+             },
+             {
+                "id":251,
+                "name":"Wingspan",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":626,
+                   "dark":627
+                },
+                "icon":"3x27"
+             },
+             {
+                "id":252,
+                "name":"DeityHawk WingRise",
+                "maxLv":1,
+                "icon":"24x25"
+             },
+             {
+                "id":253,
+                "name":"Stormrage Eagleon",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":610,
+                   "dark":611
+                },
+                "icon":"11x22"
+             },
+             {
+                "id":254,
+                "name":"Wings of Protection",
+                "maxLv":10,
+                "pathBased":{
+                   "holy":628,
+                   "dark":629
+                },
+                "icon":"19x26"
+             },
+             {
+                "id":255,
+                "name":"Great Precision",
+                "maxLv":10,
+                "isMastery":true,
+                "pathBased":{
+                   "holy":630,
+                   "dark":631
+                },
+                "icon":"20x23"
+             },
+             {
+                "id":256,
+                "name":"Bow & Arbalest Mastery",
+                "maxLv":10,
+                "isMastery":true,
+                "pathBased":{
+                   "holy":632,
+                   "dark":633
+                },
+                "icon":"3x13"
+             },
+             {
+                "id":274,
+                "name":"Flying Mastery",
+                "maxLv":10,
+                "isMastery":true,
+                "icon":"24x32"
+             },
+             {
+                "id":915,
+                "name":"Windpinna",
+                "maxLv":1,
+                "icon":"9x27"
+             },
+             {
+                "id":916,
+                "name":"Bless of HolyEagle",
+                "maxLv":1,
+                "icon":"23x25"
+             },
+             {
+                "id":917,
+                "name":"Soul Torrent",
+                "maxLv":1,
+                "icon":"26x1"
+             },
+             {
+                "id":918,
+                "name":"Blood Arrow",
+                "maxLv":1,
+                "icon":"28x28"
+             },
+             {
+                "id":931,
+                "name":"Soul Torrent",
+                "maxLv":1,
+                "icon":"26x1"
+             },
+             {
+                "id":932,
+                "name":"Blood Arrow",
+                "maxLv":1,
+                "icon":"28x28"
+             },
+             {
+                "id":257,
+                "name":"Fury Burst",
+                "maxLv":1,
+                "furyBurstLv":1,
+                "icon":"0x22"
+             },
+             {
+                "id":258,
+                "name":"Advanced Fury Burst",
+                "maxLv":1,
+                "furyBurstLv":2,
+                "icon":"1x22"
+             },
+             {
+                "id":370,
+                "name":"Ether Fury Burst",
+                "maxLv":1,
+                "path":"holy",
+                "furyBurstLv":3,
+                "icon":"11x1"
+             },
+             {
+                "id":371,
+                "name":"Dark Fury Burst",
+                "maxLv":1,
+                "path":"dark",
+                "furyBurstLv":3,
+                "icon":"5x33"
+             }
+          ]
+       },
+       {
+          "id":2,
+          "mask":32,
+          "race":4,
+          "name":"Psychick",
+          "shortName":"psy",
+          "template": 0,
+          "icon":"psy-0.png",
+          "stats":{
+             
+          },
+          "version":40,
+          "skills":[
+             {
+                "id":1100,
+                "name":"Soul of Vengeance",
+                "maxLv":10,
+                "icon":"24x5"
+             },
+             {
+                "id":1101,
+                "name":"Soul of Silence",
+                "maxLv":10,
+                "icon":"27x11"
+             },
+             {
+                "id":1102,
+                "name":"Soul of Retaliation",
+                "maxLv":10,
+                "icon":"21x5"
+             },
+             {
+                "id":1103,
+                "name":"Soul of Stunning",
+                "maxLv":10,
+                "icon":"10x3"
+             },
+             {
+                "id":1104,
+                "name":"Empowered Vigor",
+                "maxLv":10,
+                "icon":"2x25"
+             },
+             {
+                "id":1105,
+                "name":"Diminished Vigor",
+                "maxLv":10,
+                "icon":"31x24"
+             },
+             {
+                "id":1106,
+                "name":"Disturb Soul",
+                "maxLv":10,
+                "icon":"10x14"
+             },
+             {
+                "id":1107,
+                "name":"Soulburn",
+                "maxLv":10,
+                "icon":"7x14"
+             },
+             {
+                "id":1108,
+                "name":"Black Voodoo",
+                "maxLv":10,
+                "icon":"4x8"
+             },
+             {
+                "id":1109,
+                "name":"White Voodoo",
+                "maxLv":10,
+                "icon":"7x8"
+             },
+             {
+                "id":1125,
+                "name":"Spirit Blast",
+                "maxLv":10,
+                "icon":"30x4"
+             },
+             {
+                "id":1126,
+                "name":"Aqua Impact",
+                "maxLv":10,
+                "icon":"20x18"
+             },
+             {
+                "id":1127,
+                "name":"Torrent",
+                "maxLv":10,
+                "icon":"31x19"
+             },
+             {
+                "id":1128,
+                "name":"Aqua Cannon",
+                "maxLv":10,
+                "icon":"17x17"
+             },
+             {
+                "id":1129,
+                "name":"Glacial Shards",
+                "maxLv":10,
+                "icon":"25x2"
+             },
+             {
+                "id":1130,
+                "name":"Landslide",
+                "maxLv":10,
+                "icon":"9x7"
+             },
+             {
+                "id":1131,
+                "name":"Sand Trap",
+                "maxLv":10,
+                "icon":"21x22"
+             },
+             {
+                "id":1132,
+                "name":"Sandburst Blast",
+                "maxLv":10,
+                "icon":"4x14"
+             },
+             {
+                "id":1133,
+                "name":"Earth Vector",
+                "maxLv":10,
+                "icon":"12x7"
+             },
+             {
+                "id":1134,
+                "name":"Red Tide",
+                "maxLv":10,
+                "icon":"27x17"
+             },
+             {
+                "id":1135,
+                "name":"Bubble of Life",
+                "maxLv":10,
+                "icon":"6x33"
+             },
+             {
+                "id":1136,
+                "name":"Detonate Magic",
+                "maxLv":10,
+                "icon":"10x25"
+             },
+             {
+                "id":1140,
+                "name":"Tide Spirit",
+                "maxLv":10,
+                "icon":"1x18"
+             },
+             {
+                "id":1141,
+                "name":"Shaman Will",
+                "maxLv":10,
+                "icon":"16x16"
+             },
+             {
+                "id":1149,
+                "name":"Oxygen Void",
+                "maxLv":10,
+                "icon":"26x3"
+             },
+             {
+                "id":1152,
+                "name":"Waterfall Explosion",
+                "maxLv":10,
+                "icon":"16x32"
+             },
+             {
+                "id":1153,
+                "name":"Soulsphere Expertise",
+                "isMastery":true,
+                "maxLv":10,
+                "icon":"17x32"
+             },
+             {
+                "id":1184,
+                "name":"Aqua Spirit",
+                "isMastery":true,
+                "maxLv":10,
+                "icon":"7x18"
+             },
+             {
+                "id":1185,
+                "name":"Earthen Spirit",
+                "isMastery":true,
+                "maxLv":10,
+                "icon":"19x7"
+             },
+             {
+                "id":1137,
+                "name":"Tide Form",
+                "maxLv":1,
+                "icon":"10x1"
+             },
+             {
+                "id":1186,
+                "name":"Fury Burst",
+                "maxLv":1,
+                "furyBurstLv":1,
+                "icon":"0x22"
+             },
+             {
+                "id":1187,
+                "name":"Advanced Fury Burst",
+                "maxLv":1,
+                "furyBurstLv":2,
+                "icon":"1x22"
+             },
+             {
+                "id":1198,
+                "name":"Ether Fury Burst",
+                "maxLv":1,
+                "path":"holy",
+                "furyBurstLv":3,
+                "icon":"11x1"
+             },
+             {
+                "id":1199,
+                "name":"Dark Fury Burst",
+                "maxLv":1,
+                "path":"dark",
+                "furyBurstLv":3,
+                "icon":"5x33"
+             }
+          ]
+       },
+       {
+          "id":5,
+          "mask":4,
+          "race":4,
+          "name":"Assassin",
+          "shortName":"ass",
+          "template": 0,
+          "icon":"ass-0.png",
+          "stats":{
+             
+          },
+          "version":40,
+          "skills":[
+             {
+                "id":1077,
+                "name":"Earthen Rift",
+                "maxLv":10,
+                "icon":"29x21"
+             },
+             {
+                "id":1080,
+                "name":"Dagger Devotion",
+                "maxLv":10,
+                "isMastery":true,
+                "icon":"4x5"
+             },
+             {
+                "id":1181,
+                "name":"Cat-Like Tread",
+                "maxLv":10,
+                "isMastery":true,
+                "icon":"27x1"
+             },
+             {
+                "id":1182,
+                "name":"Sharp Observer",
+                "maxLv":10,
+                "isMastery":true,
+                "icon":"0x24"
+             },
+             {
+                "id":1083,
+                "name":"Subsea Strike",
+                "maxLv":10,
+                "icon":"20x1"
+             },
+             {
+                "id":1093,
+                "name":"Shadow Walk",
+                "maxLv":10,
+                "icon":"12x31"
+             },
+             {
+                "id":1094,
+                "name":"Bloodpaint",
+                "maxLv":10,
+                "icon":"11x6"
+             },
+             {
+                "id":1095,
+                "name":"Shadow Jump",
+                "maxLv":10,
+                "icon":"3x24"
+             },
+             {
+                "id":1096,
+                "name":"Deaden Nerves",
+                "maxLv":10,
+                "icon":"23x6"
+             },
+             {
+                "id":1097,
+                "name":"Wolf Emblem",
+                "maxLv":10,
+                "icon":"6x16"
+             },
+             {
+                "id":1098,
+                "name":"Focused Mind",
+                "maxLv":10,
+                "icon":"16x1"
+             },
+             {
+                "id":1099,
+                "name":"Tidal Protection",
+                "maxLv":10,
+                "icon":"3x22"
+             },
+             {
+                "id":1111,
+                "name":"Twin Strike",
+                "maxLv":10,
+                "icon":"14x29"
+             },
+             {
+                "id":1112,
+                "name":"Headhunt",
+                "maxLv":10,
+                "icon":"11x5"
+             },
+             {
+                "id":1113,
+                "name":"Chill of the Deep",
+                "maxLv":10,
+                "icon":"15x2"
+             },
+             {
+                "id":1114,
+                "name":"Puncture Wound",
+                "maxLv":10,
+                "icon":"5x15"
+             },
+             {
+                "id":1115,
+                "name":"Throatcut",
+                "maxLv":10,
+                "icon":"22x15"
+             },
+             {
+                "id":1118,
+                "name":"Slipstream Strike",
+                "maxLv":10,
+                "icon":"26x29"
+             },
+             {
+                "id":1119,
+                "name":"Knife Throw",
+                "maxLv":10,
+                "icon":"15x0"
+             },
+             {
+                "id":1120,
+                "name":"Inner Harmony",
+                "maxLv":10,
+                "icon":"8x10"
+             },
+             {
+                "id":1121,
+                "name":"Raving Slash",
+                "maxLv":10,
+                "icon":"18x15"
+             },
+             {
+                "id":1122,
+                "name":"Rib Strike",
+                "maxLv":10,
+                "icon":"14x4"
+             },
+             {
+                "id":1123,
+                "name":"Deep Sting",
+                "maxLv":10,
+                "icon":"17x19"
+             },
+             {
+                "id":1124,
+                "name":"Windpush",
+                "maxLv":10,
+                "icon":"27x3"
+             },
+             {
+                "id":1138,
+                "name":"Tide Form",
+                "maxLv":10,
+                "icon":"10x1"
+             },
+             {
+                "id":1145,
+                "name":"Shadow Teleport",
+                "maxLv":10,
+                "icon":"30x32"
+             },
+             {
+                "id":1148,
+                "name":"Power Dash",
+                "maxLv":10,
+                "icon":"21x27"
+             },
+             {
+                "id":1180,
+                "name":"Tackling Slash",
+                "maxLv":10,
+                "icon":"4x26"
+             },
+             {
+                "id":1181,
+                "name":"Rising Dragon Strike",
+                "maxLv":10,
+                "icon":"27x1"
+             },
+             {
+                "id":1189,
+                "name":"Maze Steps",
+                "maxLv":10,
+                "icon":"31x2"
+             },
+             {
+                "id":1178,
+                "name":"Fury Burst",
+                "maxLv":1,
+                "furyBurstLv":1,
+                "icon":"0x22"
+             },
+             {
+                "id":1179,
+                "name":"Advanced Fury Burst",
+                "maxLv":1,
+                "furyBurstLv":2,
+                "icon":"1x22"
+             },
+             {
+                "id":1197,
+                "name":"Ether Fury Burst",
+                "maxLv":1,
+                "path":"holy",
+                "furyBurstLv":3,
+                "icon":"11x1"
+             },
+             {
+                "id":1196,
+                "name":"Dark Fury Burst",
+                "maxLv":1,
+                "path":"dark",
+                "furyBurstLv":3,
+                "icon":"5x33"
+             }
+          ]
+       },
+       {
+          "id":100,
+          "mask":256,
+          "race":5,
+          "name":"Seeker",
+          "shortName":"skr",
+          "template": 0,
+          "icon":"skr-0.png",
+          "stats":{},
+          "version":60,
+          "skills":[]
+       },
+       {
+          "id":101,
+          "mask":512,
+          "race":5,
+          "name":"Mystic",
+          "shortName":"mys",
+          "template": 0,
+          "icon":"mys-0.png",
+          "stats":{},
+          "version":60,
+          "skills":[]
+       },
+       {
+          "id":200,
+          "mask":1024,
+          "race":6,
+          "name":"Duskblade",
+          "shortName":"dkb",
+          "template": 0,
+          "icon":"dkb-0.png",
+          "stats":{},
+          "version":80,
+          "skills":[]
+       },
+       {
+          "id":201,
+          "mask":2048,
+          "race":6,
+          "name":"StormBringer",
+          "template": 0,
+          "shortName":"stb",
+          "icon":"stb-0.png",
+          "stats":{},
+          "version":80,
+          "skills":[]
+       }
+    ],
+    "productionSkills":[
+       {
+          "id":158,
+          "maxLv":10,
+          "name":"Blacksmith",
+          "icon":"19x32"
+       },
+       {
+          "id":159,
+          "maxLv":10,
+          "name":"Tailor",
+          "icon":"0x29"
+       },
+       {
+          "id":160,
+          "maxLv":10,
+          "name":"Jeweller",
+          "icon":"4x12"
+       },
+       {
+          "id":161,
+          "maxLv":10,
+          "name":"Pharmacist",
+          "icon":"3x28"
+       }
+    ],
+    "commonSkills":[
+        {
+            "id":0,
+            "maxLv":1,
+            "name":"None",
+            "icon":"0x0"
+        },
+        {
+            "id":167,
+            "maxLv":1,
+            "name":"Town Portal",
+            "icon":"0x18"
+        },
+        {
+            "id": 9998,
+            "maxLv": 1,
+            "name": "holy 50 vigor skill",
+            "path": "holy",
+            "icon":"16x28"
+        },
+        {
+            "id": 9999,
+            "maxLv": 1,
+            "name": "dark 50 vigor skill",
+            "path": "dark",
+            "icon":"22x14"
+        }
+    ]
+}

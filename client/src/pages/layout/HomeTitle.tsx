@@ -15,11 +15,11 @@ const useStyles = makeStyles({
 
 export const HomeTitle = observer(() => {
     const classes = useStyles();
-    const { configStore } = React.useContext(RootStoreContext);
+    const { pwServerStore } = React.useContext(RootStoreContext);
     return (
         <Grid container justifyContent='center'>
             <Grid item>
-                <Typography className={classes.root}> Welcome on, {configStore.config.get('serverName')} </Typography>
+                <Typography className={classes.root}> Welcome on, {pwServerStore.config.get('serverName')} </Typography>
             </Grid>
         </Grid>
     );
