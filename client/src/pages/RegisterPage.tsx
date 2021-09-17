@@ -1,4 +1,4 @@
-import { Grid } from "@material-ui/core"
+import { Grid } from "@mui/material";
 import { RegisterForm } from "../components/RegisterForm"
 import { HomeHeader } from "./layout/HomeHeader"
 import { PageMenu } from "./layout/PageMenu"

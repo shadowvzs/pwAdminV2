@@ -1,7 +1,5 @@
 import { makeAutoObservable } from "mobx";
-import { IItem } from "../interfaces/common";
-
-type ItemKey = keyof IItem;
+import { IItem, ItemKey } from "../interfaces/common";
 
 export class Item implements IItem {
     public id: number;

@@ -28449,9 +28449,17 @@
       "grade":7,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"6,42",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":6,
+            "value":42
+         }
+      ],
+      "gradeReq":7,
+      "runeIds":[
+         2363
+      ],
+      "duration":30
    },
    {
       "id":28678,
@@ -28459,9 +28467,17 @@
       "grade":7,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"8,42",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":8,
+            "value":42
+         }
+      ],
+      "gradeReq":7,
+      "runeIds":[
+         2364
+      ],
+      "duration":30
    },
    {
       "id":28679,
@@ -28469,9 +28485,17 @@
       "grade":7,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"4,145",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":4,
+            "value":145
+         }
+      ],
+      "gradeReq":7,
+      "runeIds":[
+         2365
+      ],
+      "duration":30
    },
    {
       "id":28680,
@@ -28479,9 +28503,17 @@
       "grade":7,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"0,5",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":0,
+            "value":5
+         }
+      ],
+      "gradeReq":7,
+      "runeIds":[
+         2366
+      ],
+      "duration":30
    },
    {
       "id":28681,
@@ -28489,9 +28521,17 @@
       "grade":7,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"1,5",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":1,
+            "value":5
+         }
+      ],
+      "gradeReq":7,
+      "runeIds":[
+         2367
+      ],
+      "duration":30
    },
    {
       "id":28682,
@@ -28499,9 +28539,17 @@
       "grade":7,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"2,5",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":2,
+            "value":5
+         }
+      ],
+      "gradeReq":7,
+      "runeIds":[
+         2368
+      ],
+      "duration":30
    },
    {
       "id":28683,
@@ -28509,9 +28557,17 @@
       "grade":8,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"6,49",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":6,
+            "value":49
+         }
+      ],
+      "gradeReq":8,
+      "runeIds":[
+         2369
+      ],
+      "duration":30
    },
    {
       "id":28684,
@@ -28519,9 +28575,17 @@
       "grade":8,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"7,83",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":7,
+            "value":83
+         }
+      ],
+      "gradeReq":8,
+      "runeIds":[
+         2370
+      ],
+      "duration":30
    },
    {
       "id":28685,
@@ -28529,9 +28593,17 @@
       "grade":8,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"8,49",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":8,
+            "value":49
+         }
+      ],
+      "gradeReq":8,
+      "runeIds":[
+         2371
+      ],
+      "duration":30
    },
    {
       "id":28686,
@@ -28539,9 +28611,17 @@
       "grade":8,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"9,83",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":9,
+            "value":83
+         }
+      ],
+      "gradeReq":8,
+      "runeIds":[
+         2372
+      ],
+      "duration":30
    },
    {
       "id":28687,
@@ -28549,9 +28629,17 @@
       "grade":8,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"4,165",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":4,
+            "value":165
+         }
+      ],
+      "gradeReq":8,
+      "runeIds":[
+         2373
+      ],
+      "duration":30
    },
    {
       "id":28688,
@@ -28559,9 +28647,17 @@
       "grade":8,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"0,7",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":0,
+            "value":7
+         }
+      ],
+      "gradeReq":8,
+      "runeIds":[
+         2374
+      ],
+      "duration":30
    },
    {
       "id":28689,
@@ -28569,9 +28665,17 @@
       "grade":8,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"1,7",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":1,
+            "value":7
+         }
+      ],
+      "gradeReq":8,
+      "runeIds":[
+         2375
+      ],
+      "duration":30
    },
    {
       "id":28690,
@@ -28579,9 +28683,17 @@
       "grade":8,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"2,7",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":2,
+            "value":7
+         }
+      ],
+      "gradeReq":8,
+      "runeIds":[
+         2376
+      ],
+      "duration":30
    },
    {
       "id":28691,
@@ -28589,9 +28701,17 @@
       "grade":9,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"6,56",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":6,
+            "value":56
+         }
+      ],
+      "gradeReq":9,
+      "runeIds":[
+         2377
+      ],
+      "duration":30
    },
    {
       "id":28692,
@@ -28599,9 +28719,17 @@
       "grade":9,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"7,94",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":7,
+            "value":94
+         }
+      ],
+      "gradeReq":9,
+      "runeIds":[
+         2378
+      ],
+      "duration":30
    },
    {
       "id":28693,
@@ -28609,9 +28737,17 @@
       "grade":9,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"8,56",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":8,
+            "value":56
+         }
+      ],
+      "gradeReq":9,
+      "runeIds":[
+         2379
+      ],
+      "duration":30
    },
    {
       "id":28694,
@@ -28619,9 +28755,17 @@
       "grade":9,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"9,94",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":9,
+            "value":94
+         }
+      ],
+      "gradeReq":9,
+      "runeIds":[
+         2380
+      ],
+      "duration":30
    },
    {
       "id":28695,
@@ -28629,9 +28773,17 @@
       "grade":9,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"4,185",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":4,
+            "value":185
+         }
+      ],
+      "gradeReq":9,
+      "runeIds":[
+         2381
+      ],
+      "duration":30
    },
    {
       "id":28696,
@@ -28639,9 +28791,17 @@
       "grade":9,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"10,191",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":10,
+            "value":191
+         }
+      ],
+      "gradeReq":9,
+      "runeIds":[
+         2382
+      ],
+      "duration":30
    },
    {
       "id":28697,
@@ -28649,9 +28809,17 @@
       "grade":9,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"0,9",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":0,
+            "value":9
+         }
+      ],
+      "gradeReq":9,
+      "runeIds":[
+         2383
+      ],
+      "duration":30
    },
    {
       "id":28698,
@@ -28659,9 +28827,17 @@
       "grade":9,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"1,9",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":1,
+            "value":9
+         }
+      ],
+      "gradeReq":9,
+      "runeIds":[
+         2384
+      ],
+      "duration":30
    },
    {
       "id":28699,
@@ -28669,9 +28845,17 @@
       "grade":9,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"2,9",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":2,
+            "value":9
+         }
+      ],
+      "gradeReq":9,
+      "runeIds":[
+         2385
+      ],
+      "duration":30
    },
    {
       "id":28700,
@@ -28679,9 +28863,17 @@
       "grade":10,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"6,63",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":6,
+            "value":63
+         }
+      ],
+      "gradeReq":10,
+      "runeIds":[
+         2386
+      ],
+      "duration":30
    },
    {
       "id":28701,
@@ -28689,9 +28881,17 @@
       "grade":10,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"7,106",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":7,
+            "value":106
+         }
+      ],
+      "gradeReq":10,
+      "runeIds":[
+         2387
+      ],
+      "duration":30
    },
    {
       "id":28702,
@@ -28699,9 +28899,17 @@
       "grade":10,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"8,63",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":8,
+            "value":63
+         }
+      ],
+      "gradeReq":10,
+      "runeIds":[
+         2388
+      ],
+      "duration":30
    },
    {
       "id":28703,
@@ -28709,9 +28917,17 @@
       "grade":10,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"9,106",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":9,
+            "value":106
+         }
+      ],
+      "gradeReq":10,
+      "runeIds":[
+         2389
+      ],
+      "duration":30
    },
    {
       "id":28704,
@@ -28719,9 +28935,17 @@
       "grade":10,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"10,240",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":10,
+            "value":240
+         }
+      ],
+      "gradeReq":10,
+      "runeIds":[
+         2434
+      ],
+      "duration":30
    },
    {
       "id":28705,
@@ -28729,9 +28953,17 @@
       "grade":10,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"4,405",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":4,
+            "value":405
+         }
+      ],
+      "gradeReq":10,
+      "runeIds":[
+         2390
+      ],
+      "duration":30
    },
    {
       "id":28706,
@@ -28739,9 +28971,17 @@
       "grade":10,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"12,178",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":12,
+            "value":178
+         }
+      ],
+      "gradeReq":10,
+      "runeIds":[
+         2391
+      ],
+      "duration":30
    },
    {
       "id":28707,
@@ -28749,9 +28989,17 @@
       "grade":10,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"0,11",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":0,
+            "value":11
+         }
+      ],
+      "gradeReq":10,
+      "runeIds":[
+         2392
+      ],
+      "duration":30
    },
    {
       "id":28708,
@@ -28759,9 +29007,17 @@
       "grade":10,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"1,11",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":1,
+            "value":11
+         }
+      ],
+      "gradeReq":10,
+      "runeIds":[
+         2393
+      ],
+      "duration":30
    },
    {
       "id":28709,
@@ -28769,9 +29025,17 @@
       "grade":10,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"2,11",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":2,
+            "value":11
+         }
+      ],
+      "gradeReq":10,
+      "runeIds":[
+         2394
+      ],
+      "duration":30
    },
    {
       "id":28710,
@@ -28779,9 +29043,17 @@
       "grade":11,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"6,70",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":6,
+            "value":70
+         }
+      ],
+      "gradeReq":11,
+      "runeIds":[
+         2395
+      ],
+      "duration":30
    },
    {
       "id":28711,
@@ -28789,9 +29061,17 @@
       "grade":11,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"7,118",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":7,
+            "value":118
+         }
+      ],
+      "gradeReq":11,
+      "runeIds":[
+         2396
+      ],
+      "duration":30
    },
    {
       "id":28712,
@@ -28799,9 +29079,17 @@
       "grade":11,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"8,70",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":8,
+            "value":70
+         }
+      ],
+      "gradeReq":11,
+      "runeIds":[
+         2397
+      ],
+      "duration":30
    },
    {
       "id":28713,
@@ -28809,9 +29097,17 @@
       "grade":11,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"9,118",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":9,
+            "value":118
+         }
+      ],
+      "gradeReq":11,
+      "runeIds":[
+         2398
+      ],
+      "duration":30
    },
    {
       "id":28714,
@@ -28819,9 +29115,17 @@
       "grade":11,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"4,225",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":4,
+            "value":225
+         }
+      ],
+      "gradeReq":11,
+      "runeIds":[
+         2399
+      ],
+      "duration":30
    },
    {
       "id":28715,
@@ -28829,9 +29133,17 @@
       "grade":11,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"10,240",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":10,
+            "value":240
+         }
+      ],
+      "gradeReq":11,
+      "runeIds":[
+         2400
+      ],
+      "duration":30
    },
    {
       "id":28716,
@@ -28839,9 +29151,17 @@
       "grade":11,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"12,198",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":12,
+            "value":198
+         }
+      ],
+      "gradeReq":11,
+      "runeIds":[
+         2401
+      ],
+      "duration":30
    },
    {
       "id":28717,
@@ -28849,9 +29169,17 @@
       "grade":11,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"14,1",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":14,
+            "value":1
+         }
+      ],
+      "gradeReq":11,
+      "runeIds":[
+         2402
+      ],
+      "duration":30
    },
    {
       "id":28718,
@@ -28859,9 +29187,17 @@
       "grade":11,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"35,1",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":35,
+            "value":1
+         }
+      ],
+      "gradeReq":11,
+      "runeIds":[
+         2403
+      ],
+      "duration":30
    },
    {
       "id":28719,
@@ -28869,9 +29205,17 @@
       "grade":11,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"36,1",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":36,
+            "value":1
+         }
+      ],
+      "gradeReq":11,
+      "runeIds":[
+         2404
+      ],
+      "duration":30
    },
    {
       "id":28720,
@@ -28879,9 +29223,17 @@
       "grade":11,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"0,13",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":0,
+            "value":13
+         }
+      ],
+      "gradeReq":11,
+      "runeIds":[
+         2433
+      ],
+      "duration":30
    },
    {
       "id":28721,
@@ -28889,9 +29241,17 @@
       "grade":11,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"1,13",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":1,
+            "value":13
+         }
+      ],
+      "gradeReq":11,
+      "runeIds":[
+         2405
+      ],
+      "duration":30
    },
    {
       "id":28722,
@@ -28899,9 +29259,17 @@
       "grade":11,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"2,13",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":2,
+            "value":13
+         }
+      ],
+      "gradeReq":11,
+      "runeIds":[
+         2406
+      ],
+      "duration":30
    },
    {
       "id":28723,
@@ -28909,9 +29277,17 @@
       "grade":11,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"6,77",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":6,
+            "value":77
+         }
+      ],
+      "gradeReq":11,
+      "runeIds":[
+         2407
+      ],
+      "duration":30
    },
    {
       "id":28724,
@@ -28919,9 +29295,17 @@
       "grade":11,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"7,130",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":7,
+            "value":130
+         }
+      ],
+      "gradeReq":11,
+      "runeIds":[
+         2408
+      ],
+      "duration":30
    },
    {
       "id":28725,
@@ -28929,9 +29313,17 @@
       "grade":11,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"8,77",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":8,
+            "value":77
+         }
+      ],
+      "gradeReq":11,
+      "runeIds":[
+         2409
+      ],
+      "duration":30
    },
    {
       "id":28726,
@@ -28939,9 +29331,17 @@
       "grade":11,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"9,130",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":9,
+            "value":130
+         }
+      ],
+      "gradeReq":11,
+      "runeIds":[
+         2410
+      ],
+      "duration":30
    },
    {
       "id":28727,
@@ -28949,9 +29349,17 @@
       "grade":11,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"4,245",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":4,
+            "value":245
+         }
+      ],
+      "gradeReq":11,
+      "runeIds":[
+         2411
+      ],
+      "duration":30
    },
    {
       "id":28728,
@@ -28959,9 +29367,17 @@
       "grade":11,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"10,264",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":10,
+            "value":264
+         }
+      ],
+      "gradeReq":11,
+      "runeIds":[
+         2412
+      ],
+      "duration":30
    },
    {
       "id":28729,
@@ -28969,9 +29385,17 @@
       "grade":11,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"12,218",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":12,
+            "value":218
+         }
+      ],
+      "gradeReq":11,
+      "runeIds":[
+         2413
+      ],
+      "duration":30
    },
    {
       "id":28730,
@@ -28979,9 +29403,17 @@
       "grade":11,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"29,3",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":29,
+            "value":3
+         }
+      ],
+      "gradeReq":11,
+      "runeIds":[
+         2414
+      ],
+      "duration":30
    },
    {
       "id":28731,
@@ -28989,9 +29421,17 @@
       "grade":11,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"35,2",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":35,
+            "value":2
+         }
+      ],
+      "gradeReq":11,
+      "runeIds":[
+         2415
+      ],
+      "duration":30
    },
    {
       "id":28732,
@@ -28999,9 +29439,17 @@
       "grade":11,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"36,2",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":36,
+            "value":2
+         }
+      ],
+      "gradeReq":11,
+      "runeIds":[
+         2416
+      ],
+      "duration":30
    },
    {
       "id":28733,
@@ -29009,9 +29457,17 @@
       "grade":11,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"0,15",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":0,
+            "value":15
+         }
+      ],
+      "gradeReq":11,
+      "runeIds":[
+         2417
+      ],
+      "duration":30
    },
    {
       "id":28734,
@@ -29019,9 +29475,17 @@
       "grade":11,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"1,15",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":1,
+            "value":15
+         }
+      ],
+      "gradeReq":11,
+      "runeIds":[
+         2418
+      ],
+      "duration":30
    },
    {
       "id":28735,
@@ -29029,9 +29493,17 @@
       "grade":11,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"2,15",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":2,
+            "value":15
+         }
+      ],
+      "gradeReq":11,
+      "runeIds":[
+         2419
+      ],
+      "duration":30
    },
    {
       "id":28746,
@@ -29039,9 +29511,17 @@
       "grade":12,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"0,17",
-      "data3":"60"
+      "attributes":[
+         {
+            "attributeId":0,
+            "value":17
+         }
+      ],
+      "gradeReq":12,
+      "runeIds":[
+         2430
+      ],
+      "duration":60
    },
    {
       "id":28747,
@@ -29049,9 +29529,17 @@
       "grade":12,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"1,17",
-      "data3":"60"
+      "attributes":[
+         {
+            "attributeId":1,
+            "value":17
+         }
+      ],
+      "gradeReq":12,
+      "runeIds":[
+         2431
+      ],
+      "duration":60
    },
    {
       "id":28748,
@@ -29059,9 +29547,17 @@
       "grade":12,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"2,17",
-      "data3":"60"
+      "attributes":[
+         {
+            "attributeId":2,
+            "value":17
+         }
+      ],
+      "gradeReq":12,
+      "runeIds":[
+         2432
+      ],
+      "duration":60
    },
    {
       "id":28745,
@@ -29069,9 +29565,17 @@
       "grade":12,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"36,3",
-      "data3":"60"
+      "attributes":[
+         {
+            "attributeId":36,
+            "value":3
+         }
+      ],
+      "gradeReq":12,
+      "runeIds":[
+         2429
+      ],
+      "duration":60
    },
    {
       "id":28744,
@@ -29079,9 +29583,17 @@
       "grade":12,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"35,3",
-      "data3":"60"
+      "attributes":[
+         {
+            "attributeId":35,
+            "value":3
+         }
+      ],
+      "gradeReq":12,
+      "runeIds":[
+         2428
+      ],
+      "duration":60
    },
    {
       "id":28743,
@@ -29089,9 +29601,17 @@
       "grade":12,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"14,2",
-      "data3":"60"
+      "attributes":[
+         {
+            "attributeId":14,
+            "value":2
+         }
+      ],
+      "gradeReq":12,
+      "runeIds":[
+         2427
+      ],
+      "duration":60
    },
    {
       "id":28736,
@@ -29099,9 +29619,17 @@
       "grade":12,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"6,84",
-      "data3":"60"
+      "attributes":[
+         {
+            "attributeId":6,
+            "value":84
+         }
+      ],
+      "gradeReq":12,
+      "runeIds":[
+         2420
+      ],
+      "duration":60
    },
    {
       "id":28737,
@@ -29109,9 +29637,17 @@
       "grade":12,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"7,142",
-      "data3":"60"
+      "attributes":[
+         {
+            "attributeId":7,
+            "value":142
+         }
+      ],
+      "gradeReq":12,
+      "runeIds":[
+         2421
+      ],
+      "duration":60
    },
    {
       "id":28738,
@@ -29119,9 +29655,17 @@
       "grade":12,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"8,84",
-      "data3":"60"
+      "attributes":[
+         {
+            "attributeId":8,
+            "value":84
+         }
+      ],
+      "gradeReq":12,
+      "runeIds":[
+         2422
+      ],
+      "duration":60
    },
    {
       "id":28739,
@@ -29129,9 +29673,17 @@
       "grade":12,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"9,142",
-      "data3":"60"
+      "attributes":[
+         {
+            "attributeId":9,
+            "value":142
+         }
+      ],
+      "gradeReq":12,
+      "runeIds":[
+         2423
+      ],
+      "duration":60
    },
    {
       "id":28740,
@@ -29139,9 +29691,17 @@
       "grade":12,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"4,265",
-      "data3":"60"
+      "attributes":[
+         {
+            "attributeId":4,
+            "value":265
+         }
+      ],
+      "gradeReq":12,
+      "runeIds":[
+         2424
+      ],
+      "duration":60
    },
    {
       "id":28741,
@@ -29149,9 +29709,17 @@
       "grade":12,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"10,289",
-      "data3":"60"
+      "attributes":[
+         {
+            "attributeId":10,
+            "value":289
+         }
+      ],
+      "gradeReq":12,
+      "runeIds":[
+         2425
+      ],
+      "duration":60
    },
    {
       "id":28742,
@@ -29159,9 +29727,17 @@
       "grade":12,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"12,238",
-      "data3":"60"
+      "attributes":[
+         {
+            "attributeId":12,
+            "value":238
+         }
+      ],
+      "gradeReq":12,
+      "runeIds":[
+         2426
+      ],
+      "duration":60
    },
    {
       "id":33945,
@@ -29169,9 +29745,17 @@
       "grade":3,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"4,245",
-      "data3":"60"
+      "attributes":[
+         {
+            "attributeId":4,
+            "value":245
+         }
+      ],
+      "gradeReq":3,
+      "runeIds":[
+         2411
+      ],
+      "duration":60
    },
    {
       "id":33943,
@@ -29179,9 +29763,17 @@
       "grade":11,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"7,130",
-      "data3":"60"
+      "attributes":[
+         {
+            "attributeId":7,
+            "value":130
+         }
+      ],
+      "gradeReq":11,
+      "runeIds":[
+         2429
+      ],
+      "duration":60
    },
    {
       "id":33944,
@@ -29189,9 +29781,17 @@
       "grade":11,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"9,130",
-      "data3":"60"
+      "attributes":[
+         {
+            "attributeId":9,
+            "value":130
+         }
+      ],
+      "gradeReq":11,
+      "runeIds":[
+         2410
+      ],
+      "duration":60
    },
    {
       "id":41152,
@@ -29199,9 +29799,17 @@
       "grade":3,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"4,65",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":4,
+            "value":65
+         }
+      ],
+      "gradeReq":3,
+      "runeIds":[
+         3006
+      ],
+      "duration":30
    },
    {
       "id":41151,
@@ -29209,9 +29817,17 @@
       "grade":3,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"8,21",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":8,
+            "value":21
+         }
+      ],
+      "gradeReq":3,
+      "runeIds":[
+         3005
+      ],
+      "duration":30
    },
    {
       "id":41150,
@@ -29219,9 +29835,17 @@
       "grade":3,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"6,21",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":6,
+            "value":21
+         }
+      ],
+      "gradeReq":3,
+      "runeIds":[
+         3004
+      ],
+      "duration":30
    },
    {
       "id":43720,
@@ -29229,9 +29853,23 @@
       "grade":7,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"10,191*4,145",
-      "data3":"60"
+      "attributes":[
+         {
+            "attributeId":10,
+            "value":191
+         },
+         {
+            "attributeId":4,
+            "value":145
+         }
+      ],
+      "gradeReq":7,
+      "runeIds":[
+         2365,
+         2382,
+         3045
+      ],
+      "duration":60
    },
    {
       "id":45975,
@@ -29239,9 +29877,22 @@
       "grade":4,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"6,21*4,65",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":6,
+            "value":21
+         },
+         {
+            "attributeId":4,
+            "value":65
+         }
+      ],
+      "gradeReq":4,
+      "runeIds":[
+         3004,
+         3006
+      ],
+      "duration":30
    },
    {
       "id":45976,
@@ -29249,9 +29900,22 @@
       "grade":4,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"8,21*4,65",
-      "data3":"30"
+      "attributes":[
+         {
+            "attributeId":8,
+            "value":21
+         },
+         {
+            "attributeId":4,
+            "value":65
+         }
+      ],
+      "gradeReq":4,
+      "runeIds":[
+         3005,
+         3006
+      ],
+      "duration":30
    },
    {
       "id":46510,
@@ -29259,9 +29923,17 @@
       "grade":1,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"64,1",
-      "data3":"10080"
+      "attributes":[
+         {
+            "attributeId":64,
+            "value":1
+         }
+      ],
+      "gradeReq":1,
+      "runeIds":[
+         3133
+      ],
+      "duration":10080
    },
    {
       "id":46590,
@@ -29269,9 +29941,17 @@
       "grade":1,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"64,1",
-      "data3":"10080"
+      "attributes":[
+         {
+            "attributeId":64,
+            "value":1
+         }
+      ],
+      "gradeReq":1,
+      "runeIds":[
+         3134
+      ],
+      "duration":10080
    },
    {
       "id":46591,
@@ -29279,9 +29959,17 @@
       "grade":1,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"64,1",
-      "data3":"10080"
+      "attributes":[
+         {
+            "attributeId":64,
+            "value":1
+         }
+      ],
+      "gradeReq":1,
+      "runeIds":[
+         3135
+      ],
+      "duration":10080
    },
    {
       "id":46592,
@@ -29289,9 +29977,17 @@
       "grade":1,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"64,1",
-      "data3":"40320"
+      "attributes":[
+         {
+            "attributeId":64,
+            "value":1
+         }
+      ],
+      "gradeReq":1,
+      "runeIds":[
+         3133
+      ],
+      "duration":40320
    },
    {
       "id":46593,
@@ -29299,9 +29995,17 @@
       "grade":1,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"64,1",
-      "data3":"40320"
+      "attributes":[
+         {
+            "attributeId":64,
+            "value":1
+         }
+      ],
+      "gradeReq":1,
+      "runeIds":[
+         3134
+      ],
+      "duration":40320
    },
    {
       "id":46594,
@@ -29309,9 +30013,17 @@
       "grade":1,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"64,1",
-      "data3":"40320"
+      "attributes":[
+         {
+            "attributeId":64,
+            "value":1
+         }
+      ],
+      "gradeReq":1,
+      "runeIds":[
+         3135
+      ],
+      "duration":40320
    },
    {
       "id":50029,
@@ -29319,9 +30031,27 @@
       "grade":12,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"6,77*8,77*35,2",
-      "data3":"60"
+      "attributes":[
+         {
+            "attributeId":6,
+            "value":77
+         },
+         {
+            "attributeId":8,
+            "value":77
+         },
+         {
+            "attributeId":35,
+            "value":2
+         }
+      ],
+      "gradeReq":12,
+      "runeIds":[
+         2363,
+         2364,
+         2403
+      ],
+      "duration":60
    },
    {
       "id":50030,
@@ -29329,9 +30059,22 @@
       "grade":12,
       "color":2,
       "category":"U15",
-      "data1":"100 0 0",
-      "data2":"10,191*36,2",
-      "data3":"60"
+      "attributes":[
+         {
+            "attributeId":10,
+            "value":191
+         },
+         {
+            "attributeId":36,
+            "value":2
+         }
+      ],
+      "gradeReq":12,
+      "runeIds":[
+         2382,
+         2404
+      ],
+      "duration":60
    },
    {
       "id":34733,
@@ -44452,4 +45195,4 @@
       "data1":"100",
       "data2":"224"
    }
- ]
+]

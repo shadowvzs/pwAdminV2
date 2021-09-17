@@ -1,5 +1,5 @@
-import { Grid } from "@material-ui/core"
 import React from "react";
+import { Grid } from "@mui/material";
 import { Redirect, useParams } from "react-router-dom";
 import { RootStoreContext } from "../contexts/RootStoreContext";
 import { HomeHeader } from "./layout/HomeHeader"

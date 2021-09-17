@@ -59,7 +59,7 @@ export abstract class BaseStore<T extends { id?: EntityId }> {
             return item;
         } catch (err) {
             console.error(err);
-            throw new Error(err);
+            throw new Error(err as string);
         }
     }
 
@@ -70,7 +70,7 @@ export abstract class BaseStore<T extends { id?: EntityId }> {
             return items;
         } catch (err) {
             console.error(err);
-            throw new Error(err);
+            throw new Error(err as string);
         }
     }
 
@@ -87,7 +87,7 @@ export abstract class BaseStore<T extends { id?: EntityId }> {
             return item;
         } catch(err) {
             console.error(err);
-            throw new Error(err);
+            throw new Error(err as string);
         }
     }
 
@@ -109,7 +109,7 @@ export abstract class BaseStore<T extends { id?: EntityId }> {
             return item;
         } catch(err) {
             console.error(err);
-            throw new Error(err);
+            throw new Error(err as string);
         }
     }
 
@@ -121,7 +121,7 @@ export abstract class BaseStore<T extends { id?: EntityId }> {
             this.setItems(this.items.filter(item => item.id !== id));
         } catch(err) {
             console.error(err);
-            throw new Error(err);
+            throw new Error(err as string);
         }
     }
 

@@ -1,5 +1,7 @@
 import { IArrayValueMap } from "../helpers/arrayValueMap";
+import { Addon } from "../models/Addon";
 import { User } from "../models/User";
+import { IOctetKeys } from "./builder";
 
 export interface AuthTokenPayload {
     type: 'bearer';
@@ -35,7 +37,9 @@ export interface IMenuSubCategoryData {
     id: number;
     label: string;
     shortId?: 'B';
+    octetBuilderId?: number;
     equipmentId?: number;
+    refineBaseId?: number;
     version?: number;
 }
 
@@ -51,19 +55,36 @@ export interface IMenuCategoryValueMapData extends IMenuCategoryData {
     subCategory: IArrayValueMap<IMenuSubCategoryData>;
 }
 
-export interface IWeaponAddonData {
+export interface IAddonTypes {
     id: number;
     description: string;
     name: string;
-    version: number;
-    data: string;
+}
+
+
+export type IComplexOctetCategories = 'W' | 'A' | 'J' | 'B' | 'M';
+
+export enum AddonType {
+    Normal = 1,
+    Skill = 2,
+    Rune = 3
 }
 
 export interface IAddonData {
     id: number;
-    attributeId: number;
-    supportedEquipment: ('W' | 'A' | 'J' | 'B' | 'M')[];
-    name: string;
+    name?: string;
+    version: number;
+    type: number;
+    isHidden?: boolean;
+
+    // for skills
+    data?: string;
+    stat?: IStatData;
+    description?: string;
+
+    // for others: normal addon, runes
+    attributeId?: number;
+    supportedEquipment: IComplexOctetCategories[];
 }
 
 export interface IStatData {
@@ -75,15 +96,63 @@ export interface IStatData {
     isNegative?: boolean;
 }
 
+export interface IOctetBuilderConfigsData {
+    id: number;
+    uiOrder: string[];
+    octetOrder: string[];
+}
+
+export interface IOctetBuilderFieldsData {
+    id: IOctetKeys;
+    label: string;
+    type: 'int8' | 'int16' | 'int32' | 'text' | 'float';
+    isRange?: boolean;
+    isConstant?: boolean;
+    isVirtual?: boolean;
+    fields: string[];
+    multiplier?: number;
+    conditionalValue?: Record<string, any>;
+    defaultValue?: (number | string) | (number | string)[];
+    showInput?: boolean;
+    options?: [string, number, number][];
+    render?: string;
+}
+export interface IOctetBuilderData {
+    fields: IOctetBuilderFieldsData[];
+    profiles: IOctetBuilderConfigsData[];
+}
+
+export interface IOctetBuilderValueMapData extends IOctetBuilderData {
+    fields: IArrayValueMap<IOctetBuilderFieldsData>;
+    profiles: IArrayValueMap<IOctetBuilderConfigsData>;
+}
+
+export interface IRefineBaseData { 
+    id: number;
+    grade: { value: number; addonId: number; }[]; // 0-20 (gr0-20)
+}
+
+export interface IRefineData {
+    levelMultiplier: number; // 0-12 index
+    base: IRefineBaseData[];
+}
+
+export interface IRefineValueMapData {
+    levelMultiplier: number; // 0-12 index
+    base: IArrayValueMap<IRefineBaseData>;
+}
+
 export interface IItemExtraData {
     version: number;
     soulStoneType: string[];
     statType: string[];
     stats: IStatData[];
     addons: IAddonData[];
-    weaponAddons: IWeaponAddonData[];
+    addonTypes: IAddonTypes[];
+    octetBuilder: IOctetBuilderData;
     proctypes: IProctypeData[];
     menu: IMenuCategoryData[];
+    refine: IRefineData;
     mapQuests: number[][];
     itemColor: IItemColorData[];
     fashionColors: string[];
@@ -100,10 +169,12 @@ export interface IItemExtraValueMapData extends IItemExtraData {
     soulStoneType: string[];
     statType: string[];
     stats: IArrayValueMap<IStatData>;
-    addons: IArrayValueMap<IAddonData>;
-    weaponAddons: IArrayValueMap<IWeaponAddonData>;
+    addons: IArrayValueMap<Addon>;
+    addonTypes: IArrayValueMap<IAddonTypes>;
+    octetBuilder: IOctetBuilderValueMapData;
     proctypes: IArrayValueMap<IProctypeData>;
     menu: IArrayValueMap<IMenuCategoryValueMapData>;
+    refine: IRefineValueMapData;
     mapQuests: number[][];
     itemColor: IArrayValueMap<IItemColorData>;
     fashionColors: string[];
@@ -123,7 +194,10 @@ export interface IItemData {
     grade: number;
     name: string;
     lvReq?: number;
+    gradeReq?: number;
+    duration?: number;
     version?: number;
+    runeIds?: number[];
     category: string;
     attributes?: { attributeId: number; value: number }[];
 }

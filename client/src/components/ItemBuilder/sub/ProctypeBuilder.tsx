@@ -1,9 +1,9 @@
 import React from "react";
-import { Checkbox, FormControlLabel, Grid, NativeSelect, Typography } from "@material-ui/core"
-import { makeStyles } from "@material-ui/styles";
+import { makeStyles } from "@mui/styles";
+import { Checkbox, FormControlLabel, Grid, NativeSelect, Typography } from "@mui/material";
 import { observer } from "mobx-react-lite";
-import { PopoverWrapper } from "../PopoverWrapper";
-import { RootStoreContext } from "../../contexts/RootStoreContext";
+import { PopoverWrapper } from "./PopoverWrapper";
+import { RootStoreContext } from "../../../contexts/RootStoreContext";
 
 const useStyles = makeStyles({
     root: {
@@ -108,7 +108,7 @@ export const ProctypeBuilder = observer((props: ProctypeProps) => {
 export const ProctypeBuilderPopover = (props: ProctypeProps) => {
     return (
         <PopoverWrapper
-            editableInput 
+            editable 
             Cmp={ProctypeBuilder} 
             {...props} 
             boxStyle={{ width: 320 }} 

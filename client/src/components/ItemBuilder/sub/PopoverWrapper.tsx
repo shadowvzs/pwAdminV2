@@ -1,6 +1,7 @@
+import { Settings } from "@mui/icons-material";
+import { Grid, IconButton, Popover, Typography } from "@mui/material";
 import React from "react";
-import { Grid, IconButton, Popover, Typography } from "@material-ui/core";
-import SettingsIcon from '@material-ui/icons/Settings';
+
 
 export interface PopoverWrapperProps<T> {
     value: T;
@@ -8,22 +9,24 @@ export interface PopoverWrapperProps<T> {
     hideTitle?: boolean;
     title?: string;
 
-    Cmp: (props: Omit<PopoverWrapperProps<T>, 'Cmp'>) => JSX.Element;
+    BaseCmp?: () => JSX.Element;
+    Cmp: (props: Pick<PopoverWrapperProps<T>, 'value' | 'onChange' | 'hideTitle'>) => JSX.Element;
     inputStyle?: React.CSSProperties;
     boxStyle?: React.CSSProperties;
     tooltip?: string;
-    editableInput?: boolean;
+    editable?: boolean;
 }
 
 export const PopoverWrapper = (props: PopoverWrapperProps<any>) => {
     const [anchorEl, setAnchorEl] = React.useState<Element | null>(null);
     const { 
+        BaseCmp,
         Cmp,
         inputStyle,
         boxStyle,
         tooltip,
         title,
-        editableInput,
+        editable,
         ...rest 
     } = props;
 
@@ -57,21 +60,30 @@ export const PopoverWrapper = (props: PopoverWrapperProps<any>) => {
                 <Grid item>
                     <Grid container alignItems='center' wrap='nowrap'>
                         <Grid item>
-                            <input 
-                                disabled={!editableInput}
-                                onChange={onChange}
-                                value={props.value} 
-                                style={{ 
-                                    textAlign: 'right', 
-                                    padding: '2px 4px', 
-                                    width: 70, 
-                                    ...inputStyle 
-                                }} 
-                            />
+                            { BaseCmp ? (
+                                <BaseCmp />
+                            ) : (
+                                <input 
+                                    disabled={!editable}
+                                    onChange={onChange}
+                                    value={props.value} 
+                                    style={{ 
+                                        textAlign: 'right', 
+                                        padding: '2px 4px', 
+                                        width: 70, 
+                                        ...inputStyle 
+                                    }} 
+                                />
+                            )}
                         </Grid>
                         <Grid item>
-                            <IconButton size='small' onClick={handleClick} title={tooltip}>
-                                <SettingsIcon />
+                            <IconButton 
+                                size='small' 
+                                onClick={handleClick} 
+                                title={tooltip}
+                                disabled={!editable}
+                            >
+                                <Settings />
                             </IconButton>                        
                         </Grid>
                     </Grid>

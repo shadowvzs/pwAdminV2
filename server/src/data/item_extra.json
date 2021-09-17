@@ -15,6 +15,285 @@
       "no-value"
 
    ],
+   "refine": {
+      "levelMultiplier": [
+         0,
+         1,
+         2,
+         3.05,
+         4.3,
+         5.75,
+         7.55,
+         9.95,
+         13,
+         17.05,
+         22.03,
+         29,
+         37.5
+      ],
+      "base": [
+         {
+            "id": 1,
+            "grade": [
+               { "value": 0,  "addonId": 0 },
+               { "value": 7,  "addonId": 1712 },
+               { "value": 8,  "addonId": 1713 },
+               { "value": 9,  "addonId": 1714 },
+               { "value": 10, "addonId": 1715 },
+               { "value": 11, "addonId": 1716 },
+               { "value": 12, "addonId": 1717 },
+               { "value": 13, "addonId": 1718 },
+               { "value": 14, "addonId": 1719 },
+               { "value": 16, "addonId": 1720 },
+               { "value": 18, "addonId": 1721 },
+               { "value": 20, "addonId": 1722 },
+               { "value": 22, "addonId": 1723 },
+               { "value": 24, "addonId": 1724 },
+               { "value": 26, "addonId": 1725 },
+               { "value": 28, "addonId": 1726 },
+               { "value": 30, "addonId": 1727 },
+               { "value": 32, "addonId": 1728 },
+               { "value": 34, "addonId": 1729 },
+               { "value": 36, "addonId": 1730 },
+               { "value": 38, "addonId": 1731 }
+            ]
+         },
+         {
+            "id": 2,
+            "grade": [
+               { "value": 0,  "addonId": 0 },
+               { "value": 5,  "addonId": 1692 },
+               { "value": 6,  "addonId": 1693 },
+               { "value": 6,  "addonId": 1694 },
+               { "value": 7,  "addonId": 1695 },
+               { "value": 8,  "addonId": 1696 },
+               { "value": 9,  "addonId": 1697 },
+               { "value": 9,  "addonId": 1698 },
+               { "value": 10, "addonId": 1701 },
+               { "value": 12, "addonId": 1699 },
+               { "value": 13, "addonId": 1700 },
+               { "value": 15, "addonId": 1702 },
+               { "value": 16, "addonId": 1703 },
+               { "value": 18, "addonId": 1704 },
+               { "value": 19, "addonId": 1705 },
+               { "value": 21, "addonId": 1706 },
+               { "value": 22, "addonId": 1707 },
+               { "value": 24, "addonId": 1708 },
+               { "value": 25, "addonId": 1709 },
+               { "value": 27, "addonId": 1710 },
+               { "value": 28, "addonId": 1711 }
+            ]
+         },
+         {
+            "id": 3,
+            "grade": [
+               { "value": 0,  "addonId": 0 },
+               { "value": 8,  "addonId": 1732 },
+               { "value": 10, "addonId": 1733 },
+               { "value": 11, "addonId": 1734 },
+               { "value": 12, "addonId": 1735 },
+               { "value": 13, "addonId": 1736 },
+               { "value": 15, "addonId": 1737 },
+               { "value": 16, "addonId": 1738 },
+               { "value": 17, "addonId": 1739 },
+               { "value": 20, "addonId": 1740 },
+               { "value": 22, "addonId": 1741 },
+               { "value": 25, "addonId": 1742 },
+               { "value": 27, "addonId": 1743 },
+               { "value": 30, "addonId": 1744 },
+               { "value": 32, "addonId": 1745 },
+               { "value": 35, "addonId": 1746 },
+               { "value": 37, "addonId": 1747 },
+               { "value": 40, "addonId": 1748 },
+               { "value": 42, "addonId": 1749 },
+               { "value": 45, "addonId": 1750 },
+               { "value": 47, "addonId": 1751 }
+            ]
+         },
+         {
+            "id": 4,
+            "grade": [
+               { "value": 0,  "addonId": 0 },
+               { "value": 7,  "addonId": 1752 },
+               { "value": 8,  "addonId": 1753 },
+               { "value": 9,  "addonId": 1754 },
+               { "value": 10, "addonId": 1755 },
+               { "value": 11, "addonId": 1756 },
+               { "value": 12, "addonId": 1757 },
+               { "value": 13, "addonId": 1758 },
+               { "value": 14, "addonId": 1759 },
+               { "value": 16, "addonId": 1760 },
+               { "value": 18, "addonId": 1761 },
+               { "value": 20, "addonId": 1762 },
+               { "value": 22, "addonId": 1763 },
+               { "value": 24, "addonId": 1764 },
+               { "value": 26, "addonId": 1765 },
+               { "value": 28, "addonId": 1766 },
+               { "value": 30, "addonId": 1767 },
+               { "value": 32, "addonId": 1768 },
+               { "value": 34, "addonId": 1769 },
+               { "value": 36, "addonId": 1770 },
+               { "value": 38, "addonId": 1771 }
+            ]
+         },
+         {
+            "id": 5,
+            "grade": [
+               { "value": 0,  "addonId": 0 },
+               { "value": 14, "addonId": 1772 },
+               { "value": 16, "addonId": 1773 },
+               { "value": 18, "addonId": 1774 },
+               { "value": 20, "addonId": 1775 },
+               { "value": 22, "addonId": 1776 },
+               { "value": 24, "addonId": 1777 },
+               { "value": 26, "addonId": 1778 },
+               { "value": 28, "addonId": 1779 },
+               { "value": 32, "addonId": 1780 },
+               { "value": 36, "addonId": 1781 },
+               { "value": 40, "addonId": 1782 },
+               { "value": 44, "addonId": 1783 },
+               { "value": 48, "addonId": 1784 },
+               { "value": 52, "addonId": 1785 },
+               { "value": 56, "addonId": 1786 },
+               { "value": 60, "addonId": 1787 },
+               { "value": 64, "addonId": 1788 },
+               { "value": 68, "addonId": 1789 },
+               { "value": 72, "addonId": 1790 },
+               { "value": 76, "addonId": 1791 }
+            ]
+         },
+         {
+            "id": 6,
+            "grade": [
+               { "value": 0,  "addonId": 0 },
+               { "value": 10, "addonId": 1792 },
+               { "value": 12, "addonId": 1793 },
+               { "value": 13, "addonId": 1794 },
+               { "value": 15, "addonId": 1795 },
+               { "value": 16, "addonId": 1796 },
+               { "value": 18, "addonId": 1797 },
+               { "value": 19, "addonId": 1798 },
+               { "value": 21, "addonId": 1799 },
+               { "value": 24, "addonId": 1800 },
+               { "value": 27, "addonId": 1801 },
+               { "value": 30, "addonId": 1802 },
+               { "value": 33, "addonId": 1803 },
+               { "value": 36, "addonId": 1804 },
+               { "value": 39, "addonId": 1805 },
+               { "value": 42, "addonId": 1806 },
+               { "value": 45, "addonId": 1807 },
+               { "value": 48, "addonId": 1808 },
+               { "value": 51, "addonId": 1809 },
+               { "value": 54, "addonId": 1810 },
+               { "value": 57, "addonId": 1811 }
+            ]
+         },
+         {
+            "id": 7,
+            "grade": [
+               { "value": 0,  "addonId": 0 },
+               { "value": 8,  "addonId": 1812 },
+               { "value": 10, "addonId": 1813 },
+               { "value": 11, "addonId": 1814 },
+               { "value": 12, "addonId": 1815 },
+               { "value": 13, "addonId": 1816 },
+               { "value": 15, "addonId": 1817 },
+               { "value": 16, "addonId": 1818 },
+               { "value": 17, "addonId": 1819 },
+               { "value": 20, "addonId": 1820 },
+               { "value": 22, "addonId": 1821 },
+               { "value": 25, "addonId": 1822 },
+               { "value": 27, "addonId": 1823 },
+               { "value": 30, "addonId": 1824 },
+               { "value": 32, "addonId": 1825 },
+               { "value": 35, "addonId": 1826 },
+               { "value": 37, "addonId": 1827 },
+               { "value": 40, "addonId": 1828 },
+               { "value": 42, "addonId": 1829 },
+               { "value": 45, "addonId": 1830 },
+               { "value": 47, "addonId": 1831 }
+            ]
+         },
+         {
+            "id": 8,
+            "grade": [
+               { "value": 0,  "addonId": 0 },
+               { "value": 10, "addonId": 1832 },
+               { "value": 12, "addonId": 1833 },
+               { "value": 13, "addonId": 1834 },
+               { "value": 15, "addonId": 1835 },
+               { "value": 16, "addonId": 1836 },
+               { "value": 18, "addonId": 1837 },
+               { "value": 19, "addonId": 1838 },
+               { "value": 21, "addonId": 1839 },
+               { "value": 24, "addonId": 1840 },
+               { "value": 27, "addonId": 1841 },
+               { "value": 30, "addonId": 1842 },
+               { "value": 33, "addonId": 1843 },
+               { "value": 36, "addonId": 1844 },
+               { "value": 39, "addonId": 1845 },
+               { "value": 42, "addonId": 1846 },
+               { "value": 45, "addonId": 1847 },
+               { "value": 48, "addonId": 1848 },
+               { "value": 51, "addonId": 1849 },
+               { "value": 54, "addonId": 1850 },
+               { "value": 57, "addonId": 1851 }
+            ]
+         },
+         {
+            "id": 9,
+            "grade": [
+               { "value": 0,  "addonId": 0 },
+               { "value": 8,  "addonId": 1852 },
+               { "value": 10, "addonId": 1853 },
+               { "value": 11, "addonId": 1854 },
+               { "value": 12, "addonId": 1855 },
+               { "value": 13, "addonId": 1856 },
+               { "value": 15, "addonId": 1857 },
+               { "value": 16, "addonId": 1858 },
+               { "value": 17, "addonId": 1859 },
+               { "value": 20, "addonId": 1860 },
+               { "value": 22, "addonId": 1861 },
+               { "value": 25, "addonId": 1862 },
+               { "value": 27, "addonId": 1863 },
+               { "value": 30, "addonId": 1864 },
+               { "value": 32, "addonId": 1865 },
+               { "value": 35, "addonId": 1866 },
+               { "value": 37, "addonId": 1867 },
+               { "value": 40, "addonId": 1868 },
+               { "value": 42, "addonId": 1869 },
+               { "value": 45, "addonId": 1870 },
+               { "value": 47, "addonId": 1871 }
+            ]
+         },
+         {
+            "id": 10,
+            "grade": [
+               { "value": 0,  "addonId": 0 },
+               { "value": 10, "addonId": 1872 },
+               { "value": 12, "addonId": 1873 },
+               { "value": 13, "addonId": 1874 },
+               { "value": 15, "addonId": 1875 },
+               { "value": 16, "addonId": 1876 },
+               { "value": 18, "addonId": 1877 },
+               { "value": 19, "addonId": 1878 },
+               { "value": 21, "addonId": 1879 },
+               { "value": 24, "addonId": 1880 },
+               { "value": 27, "addonId": 1881 },
+               { "value": 30, "addonId": 1882 },
+               { "value": 33, "addonId": 1883 },
+               { "value": 36, "addonId": 1884 },
+               { "value": 39, "addonId": 1885 },
+               { "value": 42, "addonId": 1886 },
+               { "value": 45, "addonId": 1887 },
+               { "value": 48, "addonId": 1888 },
+               { "value": 51, "addonId": 1889 },
+               { "value": 54, "addonId": 1890 },
+               { "value": 57, "addonId": 1891 }
+            ]
+         }           
+      ]
+   },
    "stats": [
       {
          "id": 0,
@@ -321,7 +600,6 @@
          "type": 0,
          "version": 69
       },
-
       {
          "id": 49,
          "shortName": "Red. MDmg.",
@@ -423,856 +701,1062 @@
          "type": 4
       }
    ],
+   "addonTypes": [
+      {
+         "id": 1,
+         "name": "normal",
+         "description": "Normal addons with single input value"
+      },
+      {
+         "id": 2,
+         "name": "skill",
+         "description": "Weapon skill addon without input value"
+      },
+      {
+         "id": 3,
+         "name": "rune",
+         "description": "Timed rune addons with two input value, value and duration"
+      }
+   ],
    "addons": [
         {
-           "id":"1453",
+           "id":1453,
            "attributeId":0,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B",
-              "M"
-           ],
-           "name":"Strength"
+           "supportedEquipment":["W","A","J","B","M"],
+           "type": 1
         },
         {
-           "id":"1458",
+           "id":1458,
            "attributeId":1,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B",
-              "M"
-           ],
-           "name":"Agility"
+           "supportedEquipment":["W","A","J","B","M"],
+           "type": 1
         },
         {
-           "id":"1483",
+           "id":1483,
            "attributeId":2,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B",
-              "M"
-           ],
-           "name":"Intelligence"
+           "supportedEquipment":["W","A","J","B","M"],
+           "type": 1
         },
         {
-           "id":"1468",
+           "id":1468,
            "attributeId":3,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B",
-              "M"
-           ],
-           "name":"Constitution"
+           "supportedEquipment":["W","A","J","B","M"],
+           "type": 1
         },
         {
-           "id":"1384",
+           "id":1384,
            "attributeId":4,
-           "supportedEquipment":[
-              "W",
-              "J",
-              "M"
-           ],
-           "name":"Hit Point"
+           "supportedEquipment":["W","J","M"],
+           "type": 1
         },
         {
-           "id":"1364",
+           "id":1364,
            "attributeId":5,
-           "supportedEquipment":[
-              "W",
-              "J",
-              "M"
-           ],
-           "name":"Mana"
+           "supportedEquipment":["W","J","M"],
+           "type": 1
         },
         {
-           "id":"627",
+           "id":627,
            "attributeId":4,
-           "supportedEquipment":[
-              "A",
-              "B"
-           ],
-           "name":"Hit Point"
+           "supportedEquipment":["A","B"],
+           "type": 1
         },
         {
-           "id":"276",
+           "id":276,
            "attributeId":5,
-           "supportedEquipment":[
-              "A",
-              "B"
-           ],
-           "name":"Mana"
+           "supportedEquipment":["A","B"],
+           "type": 1
         },
         {
-           "id":"1008",
+           "id":1008,
            "attributeId":6,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B",
-              "M"
-           ],
-           "name":"Physical Attack"
+           "supportedEquipment":["W","A","J","B","M"],
+           "type": 1
         },
         {
-           "id":"1004",
+           "id":1004,
            "attributeId":7,
-           "supportedEquipment":[
-              "W"
-           ],
-           "name":"Max P.Attack"
+           "supportedEquipment":["W"],
+           "type": 1
         },
         {
-           "id":"1019",
+           "id":1019,
            "attributeId":8,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B",
-              "M"
-           ],
-           "name":"Magic Attack"
+           "supportedEquipment":["W","A","J","B","M"],
+           "type": 1
         },
         {
-           "id":"423",
+           "id":423,
            "attributeId":9,
-           "supportedEquipment":[
-              "W"
-           ],
-           "name":"Max M.Attack"
+           "supportedEquipment":["W"],
+           "type": 1
         },
         {
-           "id":"1256",
+           "id":1256,
            "attributeId":10,
-           "supportedEquipment":[
-              "W"
-           ],
-           "name":"Physical defense"
+           "supportedEquipment":["W"],
+           "type": 1
         },
         {
-           "id":"219",
+           "id":219,
            "attributeId":10,
-           "supportedEquipment":[
-              "A",
-              "J",
-              "B",
-              "M"
-           ],
-           "name":"Physical Def."
+           "supportedEquipment":["A","J","B","M"],
+           "type": 1
         },
         {
-           "id":"306",
+           "id":306,
            "attributeId":11,
-           "supportedEquipment":[
-              "A",
-              "J",
-              "B",
-              "M"
-           ],
-           "name":"Magic Def."
+           "supportedEquipment":["A","J","B","M"],
+           "type": 1
         },
         {
-           "id":"2170",
+           "id":2170,
            "attributeId":37,
-           "supportedEquipment":[
-              "A",
-              "J",
-              "B",
-              "M"
-           ],
-           "name":"PDefense %"
+           "supportedEquipment":["A","J","B","M"],
+           "type": 1
         },
         {
-           "id":"2302",
+           "id":2302,
            "attributeId":38,
-           "supportedEquipment":[
-              "A",
-              "J",
-              "B",
-              "M"
-           ],
-           "name":"MDefense %"
+           "supportedEquipment":["A","J","B","M"],
+           "type": 1
         },
         {
-           "id":"2185",
+           "id":2185,
            "attributeId":42,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B",
-              "M"
-           ],
-           "name":"Metal Defense %"
+           "supportedEquipment":["W","A","J","B","M"],
+           "type": 1,
+           "version": 39
         },
         {
-           "id":"2194",
+           "id":2194,
            "attributeId":43,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B",
-              "M"
-           ],
-           "name":"Wood Defense %"
+           "supportedEquipment":["W","A","J","B","M"],
+           "type": 1,
+           "version": 39
         },
         {
-           "id":"2203",
+           "id":2203,
            "attributeId":44,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B",
-              "M"
-           ],
-           "name":"Water Defense %"
+           "supportedEquipment":["W","A","J","B","M"],
+           "type": 1,
+           "version": 39
         },
         {
-           "id":"2176",
+           "id":2176,
            "attributeId":45,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B",
-              "M"
-           ],
-           "name":"Fire Defense %"
+           "supportedEquipment":["W","A","J","B","M"],
+           "type": 1,
+           "version": 39
         },
         {
-           "id":"2212",
+           "id":2212,
            "attributeId":46,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B",
-              "M"
-           ],
-           "name":"Earth Defense %"
+           "supportedEquipment":["W","A","J","B","M"],
+           "type": 1,
+           "version": 39
         },
         {
-           "id":"2487",
+           "id":2487,
            "attributeId":50,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B",
-              "M"
-           ],
-           "name":"Reduce Metal Dmg %"
+           "supportedEquipment":["W","A","J","B","M"],
+           "type": 1,
+           "version": 39
         },
         {
-           "id":"2491",
+           "id":2491,
            "attributeId":51,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B",
-              "M"
-           ],
-           "name":"Reduce Wood Dmg %"
+           "supportedEquipment":["W","A","J","B","M"],
+           "type": 1,
+           "version": 39
         },
         {
-           "id":"2495",
+           "id":2495,
            "attributeId":52,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B",
-              "M"
-           ],
-           "name":"Reduce Water Dmg %"
+           "supportedEquipment":["W","A","J","B","M"],
+           "type": 1,
+           "version": 39
         },
         {
-           "id":"2483",
+           "id":2483,
            "attributeId":53,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B",
-              "M"
-           ],
-           "name":"Reduce Fire Dmg %"
+           "supportedEquipment":["W","A","J","B","M"],
+           "type": 1,
+           "version": 39
         },
         {
-           "id":"2499",
+           "id":2499,
            "attributeId":54,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B",
-              "M"
-           ],
-           "name":"Reduce Earth Dmg %"
+           "supportedEquipment":["W","A","J","B","M"],
+           "type": 1,
+           "version": 39
         },
         {
-           "id":"2503",
+           "id":2503,
            "attributeId":49,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B",
-              "M"
-           ],
-           "name":"Reduce Magic Dmg %"
+           "supportedEquipment":["W","A","J","B","M"],
+           "type": 1,
+           "version": 39
         },
         {
-           "id":"311",
+           "id":311,
            "attributeId":23,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B",
-              "M"
-           ],
-           "name":"Reduce P.Harm"
+           "supportedEquipment":["W","A","J","B","M"],
+           "type": 1
         },
         {
-           "id":"365",
+           "id":365,
            "attributeId":15,
-           "supportedEquipment":[
-              "A",
-              "J",
-              "B",
-              "M"
-           ],
-           "name":"Metal Def."
+           "supportedEquipment":["A","J","B","M"],
+           "type": 1
         },
         {
-           "id":"368",
+           "id":368,
            "attributeId":16,
-           "supportedEquipment":[
-              "A",
-              "J",
-              "B",
-              "M"
-           ],
-           "name":"Wood Def."
+           "supportedEquipment":["A","J","B","M"],
+           "type": 1
         },
         {
-           "id":"371",
+           "id":371,
            "attributeId":17,
-           "supportedEquipment":[
-              "A",
-              "J",
-              "B",
-              "M"
-           ],
-           "name":"Water Def."
+           "supportedEquipment":["A","J","B","M"],
+           "type": 1
         },
         {
-           "id":"374",
+           "id":374,
            "attributeId":18,
-           "supportedEquipment":[
-              "A",
-              "J",
-              "B",
-              "M"
-           ],
-           "name":"Fire Def."
+           "supportedEquipment":["A","J","B","M"],
+           "type": 1
         },
         {
-           "id":"377",
+           "id":377,
            "attributeId":19,
-           "supportedEquipment":[
-              "A",
-              "J",
-              "B",
-              "M"
-           ],
-           "name":"Earth Def."
+           "supportedEquipment":["A","J","B","M"],
+           "type": 1
         },
         {
-           "id":"323",
+           "id":323,
            "attributeId":20,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B",
-              "M"
-           ],
-           "name":"HP Recovery"
+           "supportedEquipment":["W","A","J","B","M"],
+           "type": 1
         },
         {
-           "id":"328",
+           "id":328,
            "attributeId":21,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B",
-              "M"
-           ],
-           "name":"MP Recovery"
+           "supportedEquipment":["W","A","J","B","M"],
+           "type": 1
         },
         {
-           "id":"471",
+           "id":471,
            "attributeId":22,
            "isFloat":true,
-           "supportedEquipment":[
-              "W"
-           ],
-           "name":"Range"
+           "supportedEquipment":["W"],
+           "type": 1
         },
         {
-           "id":"490",
+           "id":490,
            "attributeId":12,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B",
-              "M"
-           ],
-           "name":"Accurancy"
+           "supportedEquipment":["W","A","J","B","M"],
+           "type": 1
         },
         {
-           "id":"670",
+           "id":670,
            "attributeId":13,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B",
-              "M"
-           ],
-           "name":"Dodge"
+           "supportedEquipment":["W","A","J","B","M"],
+           "type": 1
         },
         {
-           "id":"390",
+           "id":390,
            "attributeId":24,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B",
-              "M"
-           ],
-           "name":"Accurancy %"
+           "supportedEquipment":["W","A","J","B","M"],
+           "type": 1
         },
         {
-           "id":"393",
+           "id":393,
            "attributeId":25,
-           "supportedEquipment":[
-              "W",
-              "J",
-              "M"
-           ],
-           "name":"Dodge %"
+           "supportedEquipment":["W","J","M"],
+           "type": 1
         },
         {
-           "id":"585",
+           "id":585,
            "attributeId":14,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B",
-              "M"
-           ],
-           "name":"Crit %"
+           "supportedEquipment":["W","A","J","B","M"],
+           "type": 1
         },
         {
-           "id":"2079",
+           "id":2079,
            "attributeId":35,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B",
-              "M"
-           ],
-           "name":"Attack Level"
+           "supportedEquipment":["W","A","J","B","M"],
+           "type": 1,
+           "version": 39
         },
         {
-           "id":"2056",
+           "id":2056,
            "attributeId":36,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B",
-              "M"
-           ],
-           "name":"Defence Level"
+           "supportedEquipment":["W","A","J","B","M"],
+           "type": 1,
+           "version": 39
         },
         {
-           "id":"2843",
+           "id":2843,
            "attributeId":47,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B",
-              "M"
-           ],
-           "name":"Slaying Level"
+           "supportedEquipment":["W","A","J","B","M"],
+           "type": 1,
+           "version": 59
         },
         {
-           "id":"2850",
+           "id":2850,
            "attributeId":48,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B",
-              "M"
-           ],
-           "name":"Warding Level"
+           "supportedEquipment":["W","A","J","B","M"],
+           "type": 1,
+           "version": 59
         },
         {
-           "id":"3193",
+           "id":3193,
            "attributeId":57,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B",
-              "M"
-           ],
-           "name":"Physical Penetration"
+           "supportedEquipment":["W","A","J","B","M"],
+           "type": 1,
+           "version": 79
         },
         {
-           "id":"3194",
+           "id":3194,
            "attributeId":58,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B",
-              "M"
-           ],
-           "name":"Magic Penetration"
+           "supportedEquipment":["W","A","J","B","M"],
+           "type": 1,
+           "version": 79
         },
         {
-           "id":"2362",
+           "id":2362,
            "attributeId":41,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B",
-              "M"
-           ],
-           "name":"Soulforce"
+           "supportedEquipment":["W","A","J","B","M"],
+           "type": 1,
+           "version": 40
         },
         {
-           "id":"3043",
+           "id":3043,
            "attributeId":56,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B",
-              "M"
-           ],
-           "name":"Spirit"
+           "supportedEquipment":["W","A","J","B","M"],
+           "type": 1,
+           "version": 79
         },
         {
-           "id":"337",
+           "id":337,
            "attributeId":28,
-           "supportedEquipment":[
-              "W"
-           ],
-           "name":"Interval -0.05"
+           "supportedEquipment":["W"],
+           "type": 1
         },
         {
-           "id":"331",
+           "id":331,
            "attributeId":28,
-           "supportedEquipment":[
-              "A",
-              "J",
-              "B",
-              "M"
-           ],
-           "name":"Interval -0.05"
+           "supportedEquipment":["A","J","B","M"],
+           "type": 1
         },
         {
-           "id":"595",
+           "id":595,
            "attributeId":29,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B",
-              "M"
-           ],
-           "name":"Channeling %"
+           "supportedEquipment":["W","A","J","B","M"],
+           "type": 1
         },
         {
-           "id":"300",
+           "id":300,
            "attributeId":30,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B"
-           ],
-           "name":"Max. Duratibility"
+           "supportedEquipment":["W","A","J","B"],
+           "type": 1
         },
         {
-           "id":"406",
+           "id":406,
            "attributeId":31,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B",
-              "M"
-           ],
-           "name":"Experience %"
+           "supportedEquipment":["W","A","J","B","M"],
+           "type": 1
         },
         {
-           "id":"387",
+           "id":387,
            "attributeId":32,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B",
-              "M"
-           ],
-           "name":"Max HP %"
+           "supportedEquipment":["W","A","J","B","M"],
+           "type": 1
         },
         {
-           "id":"388",
+           "id":388,
            "attributeId":33,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B",
-              "M"
-           ],
-           "name":"Max MP %"
+           "supportedEquipment":["W","A","J","B","M"],
+           "type": 1
         },
         {
-           "id":"286",
+           "id":286,
            "attributeId":27,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "M"
-           ],
-           "name":"Mov. Speed %"
+           "supportedEquipment":["W","A","J","M"],
+           "type": 1
         },
         {
-           "id":"636",
+           "id":636,
            "attributeId":26,
            "isFloat":true,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "M"
-           ],
-           "name":"Mov. Speed"
+           "supportedEquipment":["W","A","J","M"],
+           "type": 1
         },
         {
-           "id":"2311",
+           "id":2311,
            "attributeId":55,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B",
-              "M"
-           ],
-           "name":"Eye Observation"
+           "supportedEquipment":["W","A","J","B","M"],
+           "type": 1,
+           "version": 39
         },
         {
-           "id":"2365",
+           "id":2365,
            "attributeId":4,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B"
-           ],
-           "name":"Rune: HP"
+           "supportedEquipment":["W","A","J","B"],
+           "type": 3,
+           "version": 69
         },
         {
-           "id":"2366",
+           "id":2366,
            "attributeId":0,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B"
-           ],
-           "name":"Rune: Strength"
+           "supportedEquipment":["W","A","J","B"],
+           "type": 3,
+           "version": 69
         },
         {
-           "id":"2367",
+           "id":2367,
            "attributeId":1,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B"
-           ],
-           "name":"Rune: Dexterity"
+           "supportedEquipment":["W","A","J","B"],
+           "type": 3,
+           "version": 69
         },
         {
-           "id":"2368",
+           "id":2368,
            "attributeId":2,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B"
-           ],
-           "name":"Rune: Magic"
+           "supportedEquipment":["W","A","J","B"],
+           "type": 3,
+           "version": 69
         },
         {
-           "id":"2363",
+           "id":2363,
            "attributeId":6,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B"
-           ],
-           "name":"Rune: PAttack"
+           "supportedEquipment":["W","A","J","B"],
+           "type": 3,
+           "version": 69
         },
         {
-           "id":"2364",
+           "id":2364,
            "attributeId":8,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B"
-           ],
-           "name":"Rune: MAttack"
+           "supportedEquipment":["W","A","J","B"],
+           "type": 3,
+           "version": 69
         },
         {
-           "id":"2370",
+            "id":2365,
+            "attributeId":4,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "isHidden": true,
+            "version": 69
+         },
+         {
+            "id":2366,
+            "attributeId":0,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "isHidden": true,
+            "version": 69
+         },
+         {
+            "id":2367,
+            "attributeId":1,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "isHidden": true,
+            "version": 69
+         },
+         {
+            "id":2368,
+            "attributeId":2,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "isHidden": true,
+            "version": 69
+         },
+         {
+            "id":2369,
+            "attributeId":6,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "isHidden": true,
+            "version": 69
+         },
+        {
+           "id":2370,
            "attributeId":7,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B"
-           ],
-           "name":"Rune: Max PAttack"
+           "supportedEquipment":["W","A","J","B"],
+           "type": 3,
+           "version": 69
         },
         {
-           "id":"2372",
-           "attributeId":9,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B"
-           ],
-           "name":"Rune: Max MAttack"
-        },
+            "id":2371,
+            "attributeId":8,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "isHidden": true,
+            "version": 69
+         },
+         {
+            "id":2372,
+            "attributeId":9,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "version": 69
+         },
+         {
+            "id":2373,
+            "attributeId":4,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "isHidden": true,
+            "version": 69
+         },
+         {
+            "id":2374,
+            "attributeId":0,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "isHidden": true,
+            "version": 69
+         },
+         {
+            "id":2375,
+            "attributeId":1,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "isHidden": true,
+            "version": 69
+         },
+         {
+            "id":2376,
+            "attributeId":2,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "isHidden": true,
+            "version": 69
+         },
+         {
+            "id":2377,
+            "attributeId":6,
+            "isHidden": true,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "version": 69
+         },
+         {
+            "id":2378,
+            "attributeId":7,
+            "isHidden": true,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "version": 69
+         },
+         {
+            "id":2379,
+            "attributeId":8,
+            "isHidden": true,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "version": 69
+         },
+         {
+            "id":2380,
+            "attributeId":9,
+            "isHidden": true,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "version": 69
+         },
+         {
+            "id":2381,
+            "attributeId":4,
+            "isHidden": true,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "version": 69
+         },
         {
-           "id":"2382",
+           "id":2382,
            "attributeId":10,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B"
-           ],
-           "name":"Rune: Phys. Defence"
+           "supportedEquipment":["W","A","J","B"],
+           "type": 3,
+           "version": 69
         },
         {
-           "id":"2391",
-           "attributeId":12,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B"
-           ],
-           "name":"Rune: Accurancy"
-        },
+            "id":2383,
+            "attributeId":0,
+            "isHidden": true,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "version": 69
+         },
+         {
+            "id":2384,
+            "attributeId":1,
+            "isHidden": true,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "version": 69
+         },
+         {
+            "id":2385,
+            "attributeId":2,
+            "isHidden": true,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "version": 69
+         },
+         {
+            "id":2386,
+            "attributeId":6,
+            "isHidden": true,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "version": 69
+         },
+         {
+            "id":2387,
+            "attributeId":7,
+            "isHidden": true,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "version": 69
+         },
+         {
+            "id":2388,
+            "attributeId":8,
+            "isHidden": true,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "version": 69
+         },
+         {
+            "id":2389,
+            "attributeId":9,
+            "isHidden": true,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "version": 69
+         },
+         {
+            "id":2390,
+            "attributeId":10,
+            "isHidden": true,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "version": 69
+         },
+         {
+            "id":2391,
+            "attributeId":12,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "version": 69
+         },
+         {
+            "id":2392,
+            "attributeId":0,
+            "isHidden": true,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "version": 69
+         },
+         {
+            "id":2393,
+            "attributeId":1,
+            "isHidden": true,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "version": 69
+         },
+         {
+            "id":2394,
+            "attributeId":2,
+            "isHidden": true,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "version": 69
+         },
+         {
+            "id":2395,
+            "attributeId":6,
+            "isHidden": true,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "version": 69
+         },
+         {
+            "id":2396,
+            "attributeId":7,
+            "isHidden": true,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "version": 69
+         },
+         {
+            "id":2397,
+            "attributeId":8,
+            "isHidden": true,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "version": 69
+         },
+         {
+            "id":2398,
+            "attributeId":9,
+            "isHidden": true,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "version": 69
+         },
+         {
+            "id":2399,
+            "attributeId":4,
+            "isHidden": true,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "version": 69
+         },
+         {
+            "id":2400,
+            "attributeId":10,
+            "isHidden": true,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "version": 69
+         },
+         {
+            "id":2401,
+            "attributeId":12,
+            "isHidden": true,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "version": 69
+         },
+         {
+            "id":2402,
+            "attributeId":14,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "version": 69
+         },
+         {
+            "id":2403,
+            "attributeId":35,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "version": 69
+         },
+         {
+            "id":2404,
+            "attributeId":36,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "version": 69
+         },
+         {
+            "id":2405,
+            "attributeId":1,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "isHidden": true,
+            "version": 69
+         },
+         {
+            "id":2406,
+            "attributeId":2,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "isHidden": true,
+            "version": 69
+         },
+         {
+            "id":2407,
+            "attributeId":6,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "isHidden": true,
+            "version": 69
+         },
+         {
+            "id":2408,
+            "attributeId":7,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "isHidden": true,
+            "version": 69
+         },
+         {
+            "id":2409,
+            "attributeId":8,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "isHidden": true,
+            "version": 69
+         },
+         {
+            "id":2410,
+            "attributeId":9,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "isHidden": true,
+            "version": 69
+         },
+         {
+            "id":2411,
+            "attributeId":4,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "isHidden": true,
+            "version": 69
+         },
+         {
+            "id":2412,
+            "attributeId":10,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "isHidden": true,
+            "version": 69
+         },
+         {
+            "id":2413,
+            "attributeId":12,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "isHidden": true,
+            "version": 69
+         },
+         {
+            "id":2414,
+            "attributeId":29,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "version": 69
+         },
+         {
+            "id":2415,
+            "attributeId":35,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+             "isHidden": true,
+            "version": 69
+         },
+         {
+            "id":2416,
+            "attributeId":36,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "isHidden": true,
+            "version": 69
+         },
+         {
+            "id":2417,
+            "attributeId":0,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "isHidden": true,
+            "version": 69
+         },
+         {
+            "id":2418,
+            "attributeId":1,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "isHidden": true,
+            "version": 69
+         },
+         {
+            "id":2419,
+            "attributeId":2,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "isHidden": true,
+            "version": 69
+         },
+         {
+            "id":2420,
+            "attributeId":6,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "isHidden": true,
+            "version": 69
+         },
+         {
+            "id":2421,
+            "attributeId":7,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "isHidden": true,
+            "version": 69
+         },
+         {
+            "id":2422,
+            "attributeId":8,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "isHidden": true,
+            "version": 69
+         },
+         {
+            "id":2423,
+            "attributeId":9,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "isHidden": true,
+            "version": 69
+         },
+         {
+            "id":2424,
+            "attributeId":4,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "isHidden": true,
+            "version": 69
+         },
+         {
+            "id":2425,
+            "attributeId":10,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "isHidden": true,
+            "version": 69
+         },
+         {
+            "id":2426,
+            "attributeId":12,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "isHidden": true,
+            "version": 69
+         },
+         {
+            "id":2427,
+            "attributeId":14,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "isHidden": true,
+            "version": 69
+         },
+         {
+            "id":2428,
+            "attributeId":35,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "isHidden": true,
+            "version": 69
+         },
+         {
+            "id":2429,
+            "attributeId":36,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "isHidden": true,
+            "version": 69
+         },
+         {
+            "id":2430,
+            "attributeId":0,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "isHidden": true,
+            "version": 69
+         },
+         {
+            "id":2431,
+            "attributeId":1,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "isHidden": true,
+            "version": 69
+         },
+         {
+            "id":2432,
+            "attributeId":2,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "isHidden": true,
+            "version": 69
+         },
+         {
+            "id":2433,
+            "attributeId":0,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "isHidden": true,
+            "version": 69
+         },
+         {
+            "id":2434,
+            "attributeId":4,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "isHidden": true,
+            "version": 69
+         },
+         {
+            "id":3004,
+            "attributeId":6,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "isHidden": true,
+            "version": 69
+         },
+         {
+            "id":3005,
+            "attributeId":8,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "isHidden": true,
+            "version": 69
+         },
+         {
+            "id":3006,
+            "attributeId":4,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "isHidden": true,
+            "version": 69
+         },
+         {
+            "id":3045,
+            "attributeId":11,
+            "supportedEquipment":["W","A","J","B"],
+            "type": 3,
+            "isHidden": true,
+            "version": 69
+         },
         {
-           "id":"2402",
-           "attributeId":14,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B"
-           ],
-           "name":"Rune: Critical Strike"
-        },
-        {
-           "id":"2403",
-           "attributeId":35,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B"
-           ],
-           "name":"Rune: Attack Level"
-        },
-        {
-           "id":"2404",
-           "attributeId":36,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B"
-           ],
-           "name":"Rune: Defence Level"
-        },
-        {
-           "id":"2414",
-           "attributeId":29,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B"
-           ],
-           "name":"Rune: Channeling"
-        },
-        {
-           "id":"3133",
+           "id":3133,
            "attributeId":64,
-           "supportedEquipment":[
-              "W",
-              "A",
-              "J",
-              "B"
-           ],
-           "name":"Rune: Ride Speed"
-        }
-     ],
-     "weaponAddons": [
+           "supportedEquipment":["W","A","J","B"],
+           "type": 3,
+           "version": 69
+        },
+        {
+         "id":3134,
+         "attributeId":64,
+         "supportedEquipment":["W","A","J","B"],
+         "type": 3,
+         "isHidden": true,
+         "version": 69
+      },
+      {
+         "id":3135,
+         "attributeId":64,
+         "supportedEquipment":["W","A","J","B"],
+         "type": 3,
+         "isHidden": true,
+         "version": 69
+      },
         {
            "id":450,
            "description":"Stun: Chance for 3 sec stun",
            "name":"Special: Stun",
            "version":10,
+           "type": 2,
+           "supportedEquipment":["W"],
            "data":"140 1"
         },
         {
@@ -1280,6 +1764,8 @@
            "description":"Devour: Chance for reduce target pdef",
            "name":"Special: -Pdef",
            "version":10,
+           "type": 2,
+           "supportedEquipment":["W"],
            "data":"141 1"
         },
         {
@@ -1287,6 +1773,8 @@
            "description":"Slow: Chance for slow target",
            "name":"Special: Slow",
            "version":10,
+           "type": 2,
+           "supportedEquipment":["W"],
            "data":"142 1"
         },
         {
@@ -1294,27 +1782,35 @@
            "description":"Paralyze: Chance for paralyze your opponent",
            "name":"Special: Paralyze",
            "version":10,
+           "type": 2,
+           "supportedEquipment":["W"],
            "data":"143 1"
         },
         {
            "id":1276,
            "description":"Weaken: Chance for weaken target mdef",
            "name":"Special: -Mdef",
+           "type": 2,
            "version":10,
+           "supportedEquipment":["W"],
            "data":"196 1"
         },
         {
            "id":1277,
            "description":"Fright: Chance for reduce target pattack",
            "name":"Special: -Pattack",
+           "type": 2,
            "version":10,
+           "supportedEquipment":["W"],
            "data":"197 1"
         },
         {
            "id":1278,
            "description":"Muddle: Chance for reduce target mattack",
            "name":"Special: -Mattack",
+           "type": 2,
            "version":10,
+           "supportedEquipment":["W"],
            "data":"198 1"
         },
         {
@@ -1322,6 +1818,8 @@
            "description":"Atrophy: Chance for reduce target attack speed",
            "name":"Special: -AttSpd",
            "version":10,
+           "type": 2,
+           "supportedEquipment":["W"],
            "data":"199 1"
         },
         {
@@ -1329,20 +1827,26 @@
            "description":"Stupefy: Chance for increase target channeling",
            "name":"Special: +Channeling",
            "version":10,
+           "type": 2,
+           "supportedEquipment":["W"],
            "data":"200 1"
         },
         {
            "id":1281,
            "description":"Blind: Chance for reduce target accurancy",
            "name":"Special: -Acc",
+           "type": 2,
            "version":10,
+           "supportedEquipment":["W"],
            "data":"201 1"
         },
         {
            "id":1282,
            "description":"Daze: Chance for reduce target dodge rate",
            "name":"Special: -Dodge",
+           "type": 2,
            "version":10,
+           "supportedEquipment":["W"],
            "data":"202 1"
         },
         {
@@ -1350,6 +1854,8 @@
            "description":"Thoughen: Chance for increase your pdef",
            "name":"Special: +Pdef",
            "version":10,
+           "supportedEquipment":["W"],
+           "type": 2,
            "data":"203 1"
         },
         {
@@ -1357,6 +1863,8 @@
            "description":"Wisen: Chance for increase your mdef",
            "name":"Special: +Mdef",
            "version":10,
+           "type": 2,
+           "supportedEquipment":["W"],
            "data":"204 1"
         },
         {
@@ -1364,6 +1872,8 @@
            "description":"Sharpen: Chance for increase your pattack",
            "name":"Special: +Pattack",
            "version":10,
+           "type": 2,
+           "supportedEquipment":["W"],
            "data":"205 1"
         },
         {
@@ -1371,6 +1881,8 @@
            "description":"Quicken: Chance for increase your attack speed",
            "name":"Special: +AttSpd",
            "version":10,
+           "type": 2,
+           "supportedEquipment":["W"],
            "data":"206 1"
         },
         {
@@ -1378,125 +1890,161 @@
            "description":"Nimble: Chance for increase your accurancy",
            "name":"Special: +Acc",
            "version":10,
+           "type": 2,
+           "supportedEquipment":["W"],
            "data":"207 1"
         },
         {
            "id":1289,
            "description":"Regen: Chance for heal self by 5% HP",
+           "type": 2,
            "name":"Special: +5% HP",
            "version":10,
+           "supportedEquipment":["W"],
            "data":"211 1"
         },
         {
            "id":1290,
            "description":"Enlighten: Chance for recover by 5% MP",
+           "type": 2,
            "name":"Special: +5% MP",
            "version":10,
+           "supportedEquipment":["W"],
            "data":"212 1"
         },
         {
            "id":1291,
            "description":"Gloom1: Chance for greatly increase pattack but lose 5% MP",
            "name":"Special: +Patt -5% MP",
+           "type": 2,
            "version":10,
+           "supportedEquipment":["W"],
            "data":"219 1"
         },
         {
            "id":1292,
            "description":"Gloom2: Chance for greatly increase pattack but decrease self pdef",
+           "type": 2,
            "name":"Special: +Patt -Pdef",
            "version":10,
+           "supportedEquipment":["W"],
            "data":"220 1"
         },
         {
            "id":1293,
            "description":"Hatred: Chance for increase your agro level",
            "name":"Special: Hatred",
+           "type": 2,
            "version":10,
+           "supportedEquipment":["W"],
            "data":"225 1"
         },
         {
            "id":1296,
            "description":"Seal: Chance for seal target",
+           "type": 2,
            "name":"Special: Seal",
            "version":10,
+           "supportedEquipment":["W"],
            "data":"144 1"
         },
         {
            "id":1297,
            "description":"Berserk: Chance for double damage (5% hp cost)",
+           "type": 2,
            "name":"Special: Berserk",
            "version":10,
+           "supportedEquipment":["W"],
            "data":"146 1"
         },
         {
            "id":1298,
            "description":"Frenzy: Chance for increase attack spd, dmg but suffer more dmg",
+           "type": 2,
            "name":"Special: +AttSpd,Patt +Dmg",
            "version":10,
+           "supportedEquipment":["W"],
            "data":"208 1"
         },
         {
            "id":1299,
            "description":"Meditation: Chance for recover 5% HP & MP",
+           "type": 2,
            "name":"Special: +5% HP & MP",
            "version":10,
+           "supportedEquipment":["W"],
            "data":"213 1"
         },
         {
            "id":1300,
            "description":"Blood Defect: Chance for heal back 10% HP",
            "name":"Special: +10% HP",
+           "type": 2,
            "version":10,
+           "supportedEquipment":["W"],
            "data":"214 1"
         },
         {
            "id":1301,
+           "type": 2,
            "description":"Spirit Defect: Chance for recover back 10% MP",
            "name":"Special: +10% MP",
            "version":10,
+           "supportedEquipment":["W"],
            "data":"215 1"
         },
         {
            "id":1302,
            "description":"Revenge1: Chance for recover 5% HP and increase pattack",
+           "type": 2,
            "name":"Special: +5%HP +Patt",
            "version":10,
+           "supportedEquipment":["W"],
            "data":"217 1"
         },
         {
            "id":1303,
            "description":"Revenge2: Chance for recover 5% MP and increase pattac",
+           "type": 2,
            "name":"Special: +5%MP +Patt",
            "version":10,
+           "supportedEquipment":["W"],
            "data":"218 1"
         },
         {
            "id":1304,
            "description":"Spikes: Chance for increase pattack and reflect 25% melee dmg",
            "name":"Special: +Patt +25% Refl",
+           "type": 2,
            "version":10,
+           "supportedEquipment":["W"],
            "data":"223 1"
         },
         {
            "id":1305,
+           "type": 2,
            "description":"Shield: Chance for cast shield around you, reduce dmg by 20%",
            "name":"Special: -20% Dmg",
            "version":10,
+           "supportedEquipment":["W"],
            "data":"224 1"
         },
         {
            "id":1306,
            "description":"Bless: Chance for increase pattack and pdef",
+           "type": 2,
            "name":"Special: +Patt +Pdef",
            "version":10,
+           "supportedEquipment":["W"],
            "data":"210 1"
         },
         {
            "id":1307,
            "description":"Faith: Chance for recover 5% HP and increase pdef, mdef",
+           "type": 2,
            "name":"Special: +5%HP+Pdef+Patt",
            "version":10,
+           "supportedEquipment":["W"],
            "data":"221 1"
         },
         {
@@ -1504,164 +2052,688 @@
            "description":"Stop: Chance for stun target for 5sec and paralyze self for 10sec",
            "name":"Special: +5Stun -10Para",
            "version":10,
+           "supportedEquipment":["W"],
+           "type": 2,
            "data":"209 1"
         },
         {
            "id":1309,
            "description":"Holy: Chance for recover 5% HP and remove debuffs",
            "name":"Special: 5% HP +Purify",
+           "type": 2,
            "version":10,
+           "supportedEquipment":["W"],
            "data":"216 1"
         },
         {
            "id":1310,
            "description":"Darken: Chance for seal and paralyze your target",
+           "type": 2,
            "name":"Special: Seal+Para",
            "version":10,
+           "supportedEquipment":["W"],
            "data":"222 1"
         },
         {
            "id":445,
            "description":"Rip: Chance for deal 5000 bleed damage for 15 sec",
+           "type": 2,
            "name":"Special: 5000 Bleed",
            "version":10,
+           "supportedEquipment":["W"],
            "data":"809 1"
         },
         {
            "id":446,
            "description":"Infect: Chance for reduce target max HP",
            "name":"Special: -Max HP",
+           "type": 2,
            "version":10,
+           "supportedEquipment":["W"],
            "data":"810 1"
         },
         {
            "id":447,
            "description":"Knock: Chance for interrupt target channeling and knockback 10 m",
+           "type": 2,
            "name":"Special: Knockback",
            "version":10,
+           "supportedEquipment":["W"],
            "data":"811 1"
         },
         {
            "id":448,
            "description":"Concentrate: Chance for gain 20 vigor",
            "name":"Special: +20 Vigor",
+           "type": 2,
            "version":10,
+           "supportedEquipment":["W"],
            "data":"812 1"
         },
         {
            "id":449,
            "description":"Purge: Chance for dispel target positive buffs",
+           "type": 2,
            "name":"Special: Purge",
            "version":10,
+           "supportedEquipment":["W"],
            "data":"813 1"
         },
         {
            "id":2275,
            "description":"Adv Berserk: Higher chance for deal double damage, cost 5% hp",
            "name":"Special: Adv Berserk",
+           "type": 2,
            "version":38,
+           "supportedEquipment":["W"],
            "data":"1168 1"
         },
         {
            "id":2276,
            "description":"Armor Crush: Higher chance for decrease target pdef",
+           "type": 2,
            "name":"Special: Adv -Pdef",
            "version":38,
+           "supportedEquipment":["W"],
            "data":"1169 1"
         },
         {
            "id":2277,
            "description":"Havoc: no info",
            "name":"Special: Havoc",
+           "type": 2,
            "version":38,
+           "supportedEquipment":["W"],
            "data":"1170 1"
         },
         {
            "id":2278,
            "description":"Determination: no info",
            "name":"Special: Determ.",
+           "type": 2,
            "version":38,
+           "supportedEquipment":["W"],
            "data":"1171 1"
         },
         {
-           "id":1279,
+           "id":2279,
            "description":"Interjection: no info",
            "name":"Special: Interj.",
+           "type": 2,
            "version":38,
+           "supportedEquipment":["W"],
            "data":"1172 1"
         },
         {
            "id":2280,
            "description":"Thunderbolt Shake: Higher chance or stun target for 3 sec",
            "name":"Special: Stun+",
+           "type": 2,
            "version":38,
+           "supportedEquipment":["W"],
            "data":"1173 1"
         },
         {
            "id":2281,
            "description":"ParaSeal: Higher chance or paralyze and seal the target",
            "name":"Special: ParaSeal",
+           "type": 2,
            "version":38,
+           "supportedEquipment":["W"],
            "data":"1174 1"
         },
         {
            "id":2282,
            "description":"Blood Feud: Higher chance for increase PAttack and recover 5% HP",
            "name":"Special: Blood Feud",
+           "type": 2,
            "version":38,
+           "supportedEquipment":["W"],
            "data":"1175 1"
         },
         {
            "id":2283,
            "description":"Frenzy: Higher chance for increase PAttack, AttSpd but get more dmg",
            "name":"Special: Frenzy",
+           "type": 2,
            "version":38,
+           "supportedEquipment":["W"],
            "data":"1176 1"
         },
         {
            "id":2473,
            "description":"Buddhas Strike: Has chance cast sleep on target for 2 sec, reduce targets pdef and speed for 5 sec",
+           "type": 2,
            "name":"Special: Buddhas Strike",
            "version":70,
+           "supportedEquipment":["W"],
            "data":"1569 1"
         },
         {
            "id":2474,
            "description":"Lord of War: Has chance recover 20% HP and increase accurancy and Max HP for 8 sec",
+           "type": 2,
            "name":"Special: Lord of War",
            "version":70,
+           "supportedEquipment":["W"],
            "data":"1570 1"
         },
         {
            "id":2475,
            "description":"Furious Dragon: Has chance recover 25% HP and increase dodge and chance for critical strike for 5 sec",
            "name":"Special: Furious Dragon",
+           "type": 2,
            "version":70,
+           "supportedEquipment":["W"],
            "data":"1571 1"
         },
         {
            "id":2477,
            "description":"Purify Spell: Has chance purify negative buffs on self, immune to movement debuffs and increase move speed by 200% for 5 sec",
            "name":"Special: Purify Spell",
+           "type": 2,
            "version":70,
+           "supportedEquipment":["W"],
            "data":"1573 1"
         },
         {
            "id":2479,
            "description":"Infinite: Has chance recover 2100 HP for 9 sec if attacked and increase MP by 50",
            "name":"Special: Infinite",
+           "type": 2,
            "version":70,
+           "supportedEquipment":["W"],
            "data":"1575 1"
         },
         {
            "id":2482,
            "description":"Reflect: Has 20% chance when attack to reflect back your damage, reduce your HP by 80% and increase damage on you by 100%",
            "name":"Special: Reflect",
+           "type": 2,
            "version":70,
+           "supportedEquipment":["W"],
            "data":"1742 1"
         }
     ],
-    "menu": [
+    "octetBuilder": {
+      "fields": [
+         {
+            "id": "lvReq",
+            "label": "Level Req.:",
+            "type": "int16",
+            "defaultValue": 1,
+            "render": "NumberSelect"
+         },
+         {
+            "id": "classReq",
+            "label": "Grade:",
+            "type": "int16",
+            "render": "ClassMaskSelect",
+            "defaultValue": 219
+         },
+         {
+            "id": "grade",
+            "label": "Grade:",
+            "type": "int32",
+            "defaultValue": 1,
+            "render": "NumberSelect"
+         },
+         {
+            "id": "pDmg",
+            "label": "PDmg:",
+            "type": "int32",
+            "isRange": true,
+            "render": "NumberSelect",
+            "defaultValue": [0,0]
+         },
+         {
+            "id": "mDmg",
+            "label": "MDmg:",
+            "type": "int32",
+            "isRange": true,
+            "render": "NumberSelect",
+            "defaultValue": [0,0]
+         },
+         {
+            "id": "pAttack",
+            "label": "PAttack:",
+            "type": "int32",
+            "render": "NumberSelect",
+            "defaultValue": 0
+         },
+         {
+            "id": "mAttack",
+            "label": "MAttack:",
+            "type": "int32",
+            "render": "NumberSelect",
+            "defaultValue": 0
+         },
+         {
+            "id": "strReq",
+            "label": "STR Req.:",
+            "type": "int16",
+            "render": "NumberSelect",
+            "defaultValue": 5
+         },
+         {
+            "id": "agiReq",
+            "label": "AGI Req.:",
+            "type": "int16",
+            "render": "NumberSelect",
+            "defaultValue": 5
+         },
+         {
+            "id": "intReq",
+            "label": "INT Req.:",
+            "type": "int16",
+            "render": "NumberSelect",
+            "defaultValue": 0
+         },
+         {
+            "id": "conReq",
+            "label": "CON Req.:",
+            "type": "int16",
+            "render": "NumberSelect",
+            "defaultValue": 0
+         },
+         {
+            "id": "durability",
+            "label": "Durability:",
+            "type": "int32",
+            "isRange": true,
+            "render": "NumberSelect",
+            "multiplier": 100,
+            "defaultValue": [100, 200]
+         },
+         {
+            "id": "wType",
+            "label": "W. Type:",
+            "type": "int32",
+            "defaultValue": 0,
+            "render": "ComboSelect",
+            "showInput": true,
+            "options": [
+               ["Melee [STR]", 0],
+               ["Ranged [AGI]", 1],
+               ["Melee [AGI]", 2]
+            ]
+         },
+         {
+            "id": "ammo",
+            "label": "Ammo:",
+            "type": "int32",
+            "defaultValue": 0,
+            "render": "ComboSelect",
+            "showInput": true,
+            "options": [
+               ["No ammo", 0],
+               ["Arrow", 8546],
+               ["Bolt", 8547],
+               ["Bullet", 8548],
+               ["Snowball", 13700]
+            ]
+         },
+         {
+            "id": "aSpeed",
+            "label": "ASpeed:",
+            "type": "int32",
+            "showInput": true,
+            "defaultValue": 22,
+            "render": "ComboSelect",
+            "options": [
+               ["0.91 Poleaxe & Hammer", 22],
+               ["0.83 Dual Axe & Hammer", 24],
+               ["1.00 Pike & Spear", 20],
+               ["1.11 Sword & Blade", 18],
+               ["0.91 Dual Sword & Blade", 22],
+               ["1.43 Glove and Claw", 14],
+               ["0.67 Bow", 30],
+               ["0.62 Crossbow", 32],
+               ["0.71 Slingshot", 28],
+               ["1.25 Magic Sword, Wand", 16],
+               ["1.00 Magic Staff", 20],
+               ["1.25 Dagger", 16, 40],
+               ["0.91 Sphere", 22, 40],
+               ["1.11 Sabre", 18, 60],
+               ["1.00 Schythe", 20, 79]
+            ]
+         },
+         {
+            "id": "range",
+            "label": "Range:",
+            "type": "float",
+            "defaultValue": 3.5,
+            "showInput": true,
+            "render": "ComboSelect",
+            "options": [
+               ["3.5 Axe & Hammer", 3.5],
+               ["5 Pike & Spear", 5],
+               ["4.5 Poleblade", 4.5],
+               ["3 Sword and Blade", 3],
+               ["2.5 Glove and Claw", 2.5],
+               ["20 Bow, Xbox, Sling", 20],
+               ["2.5 Dagger", 2.5, 40],
+               ["3 Sphere", 3, 40],
+               ["3 Sabre", 3, 60],
+               ["3 Schythe", 3]
+            ]
+         },
+         {
+            "id": "minRange",
+            "label": "Min. Range:",
+            "type": "float",
+            "defaultValue": 0,
+            "showInput": true,
+            "render": "ComboSelect",
+            "options": [
+               ["No Min. Range", 0],
+               ["5 Bow", 5],
+               ["5.5 Crossbow", 5.5],
+               ["4.5 Slingshot", 4.5]           
+            ]
+         },
+         {
+            "id": "socket",
+            "label": "Socket:",
+            "type": "int32",
+            "isArray": true,
+            "render": "SocketSelect",
+            "defaultValue": []
+         },
+         {
+            "id": "addon",
+            "label": "Addons:",
+            "type": "int32",
+            "isArray": true,
+            "render": "AddonSelect",
+            "defaultValue": []
+         },
+         {
+            "id": "refine",
+            "label": "Refine:",
+            "type": "int32",
+            "defaultValue": 0,
+            "isVirtual": true,
+            "render": "ComboSelect",
+            "options": [
+               ["Not refined", 0],
+               ["+1", 1],
+               ["+2", 2],
+               ["+3", 3],
+               ["+4", 4],
+               ["+5", 5],
+               ["+6", 6],
+               ["+7", 7],
+               ["+8", 8],
+               ["+9", 9],
+               ["+10", 10],
+               ["+11", 11],
+               ["+12", 12]
+            ]
+         },
+         {
+            "id": "crafter",
+            "label": "Crafter:",
+            "type": "text",
+            "render": "TextSelect",
+            "defaultValue": ""
+         },
+         {
+            "id": "hp",
+            "label": "HP:",
+            "type": "int32",
+            "render": "NumberSelect",
+            "defaultValue": 0
+         },
+         {
+            "id": "mp",
+            "label": "MP:",
+            "type": "int32",
+            "render": "NumberSelect",
+            "defaultValue": 0
+         },
+         {
+            "id": "dodge",
+            "label": "Dodge:",
+            "type": "int32",
+            "render": "NumberSelect",
+            "defaultValue": 0
+         },
+         {
+            "id": "pDef",
+            "label": "Phys. Def:",
+            "type": "int32",
+            "render": "NumberSelect",
+            "defaultValue": 0
+         },
+         {
+            "id": "metalDef",
+            "label": "Metal Def:",
+            "type": "int32",
+            "render": "NumberSelect",
+            "defaultValue": 0
+         },
+         {
+            "id": "woodDef",
+            "label": "Wood Def:",
+            "type": "int32",
+            "render": "NumberSelect",
+            "defaultValue": 0
+         },
+         {
+            "id": "waterDef",
+            "label": "Water Def:",
+            "type": "int32",
+            "render": "NumberSelect",
+            "defaultValue": 0
+         },
+         {
+            "id": "fireDef",
+            "label": "Fire Def:",
+            "type": "int32",
+            "render": "NumberSelect",
+            "defaultValue": 0
+         },
+         {
+            "id": "earthDef",
+            "label": "Earth Def:",
+            "type": "int32",
+            "render": "NumberSelect",
+            "defaultValue": 0
+         },
+         {
+            "id": "itemType",
+            "label": "Item Type:",
+            "type": "int16",
+            "isConstant": true,
+            "conditionalValue": {
+               "W": 36,
+               "A": 44,
+               "J": 44,
+               "B": 44
+            }
+         },
+         {
+            "id": "itemFlag",
+            "label": "Item Flag:",
+            "type": "int8",
+            "defaultValue": 3,
+            "isConstant": true
+         },
+         {
+            "id": "emptyInt32",
+            "label": "Reserved:",
+            "type": "int32",
+            "defaultValue": 0,
+            "isConstant": true
+         },
+         {
+            "id": "emptyInt16",
+            "label": "Reserved:",
+            "type": "int16",
+            "defaultValue": 0,
+            "isConstant": true
+         },
+         {
+            "id": "emptyInt8",
+            "label": "Reserved:",
+            "type": "int8",
+            "defaultValue": 0,
+            "isConstant": true
+         }
+      ],
+      "profiles": [
+         {
+            "id": 1,
+            "uiOrder": [
+               "classReq",
+               "lvReq",
+               "grade",
+               "strReq",
+               "conReq",
+               "agiReq",
+               "intReq",
+               "pDmg",
+               "mDmg",
+               "durability",
+               "itemType",
+               "itemFlag",
+               "wType",
+               "aSpeed",
+               "range",
+               "minRange",
+               "ammo",
+               "socket",
+               "addon",
+               "refine",
+               "crafter"
+            ],
+            "octetOrder": [
+               "lvReq",
+               "classReq",
+               "strReq",
+               "conReq",
+               "agiReq",
+               "intReq",
+               "durability",
+               "itemType",
+               "itemFlag",
+               "crafter",
+               "wType",
+               "grade",
+               "ammo",               
+               "pDmg",
+               "mDmg",
+               "aSpeed",
+               "range",
+               "minRange",
+               "socket",
+               "addon"
+            ]
+         },
+         {
+            "id": 2,
+            "uiOrder": [
+               "lvReq",
+               "classReq",
+               "strReq",
+               "conReq",
+               "agiReq",
+               "intReq",
+               "durability",
+               "itemType",
+               "itemFlag",
+               "crafter",
+               "pDef",
+               "dodge",
+               "hp",
+               "mp",
+               "metalDef",
+               "woodDef",
+               "waterDef",
+               "fireDef",
+               "earthDef",
+               "refine",
+               "socket",
+               "addon"
+            ],
+            "octetOrder": [
+               "lvReq",
+               "classReq",
+               "strReq",
+               "conReq",
+               "agiReq",
+               "intReq",
+               "durability",
+               "itemType",
+               "itemFlag",
+               "crafter",
+               "pDef",
+               "dodge",
+               "hp",
+               "mp",
+               "metalDef",
+               "woodDef",
+               "waterDef",
+               "fireDef",
+               "earthDef",
+               "socket",
+               "addon"
+            ]
+         },
+         {
+            "id": 3,
+            "uiOrder": [
+               "lvReq",
+               "classReq",
+               "strReq",
+               "agiReq",
+               "conReq",
+               "intReq",
+               "durability",
+               "itemType",
+               "itemFlag",
+               "crafter",
+               "pAttack",
+               "mAttack",
+               "pDef",
+               "dodge",               
+               "metalDef",
+               "woodDef",
+               "waterDef",
+               "fireDef",
+               "earthDef",
+               "refine",               
+               "emptyInt32",
+               "addon"           
+            ],
+            "octetOrder": [
+               "lvReq",
+               "classReq",
+               "strReq",
+               "agiReq",
+               "conReq",
+               "intReq",
+               "durability",
+               "itemType",
+               "itemFlag",
+               "crafter",
+               "pAttack",
+               "mAttack",
+               "pDef",
+               "dodge",               
+               "metalDef",
+               "woodDef",
+               "waterDef",
+               "fireDef",
+               "earthDef",         
+               "emptyInt32",
+               "addon"           
+            ]
+         }    
+      ]
+   },
+   "menu": [
       {
           "id":1,
           "label":"Weapon",
@@ -1669,108 +2741,151 @@
           "subCategory":[
               {
                   "id":1,
-             "equipmentId": 1,
-                  "label":"Polehammer"
+                  "equipmentId": 1,
+                  "label":"Polehammer",
+                  "octetBuilderId": 1,
+                  "refineBaseId": 1
               },
               {
                   "id":2,
-             "equipmentId": 1,
-                  "label":"Poleaxe"
+                  "equipmentId": 1,
+                  "label":"Poleaxe",
+                  "octetBuilderId": 1,
+                  "refineBaseId": 1
               },
               {
                   "id":3,
-             "equipmentId": 1,
-                  "label":"Dual Hammer"
+                  "equipmentId": 1,
+                  "label":"Dual Hammer",
+                  "octetBuilderId": 1,
+                  "refineBaseId": 1
               },
               {
                   "id":4,
-             "equipmentId": 1,
-                  "label":"Dual Axe"
+                  "equipmentId": 1,
+                  "label":"Dual Axe",
+                  "octetBuilderId": 1,
+                  "refineBaseId": 1
               },
               {
                   "id":5,
-             "equipmentId": 1,
-                  "label":"Spear"
-              },
-              {
+                  "equipmentId": 1,
+                  "label":"Spear",
+                  "octetBuilderId": 1,
+                  "refineBaseId": 1
+               },
+               {
                   "id":6,
-             "equipmentId": 1,
-                  "label":"Polearm"
+                  "equipmentId": 1,
+                  "label":"Polearm",
+                  "octetBuilderId": 1,
+                  "refineBaseId": 1
               },
               {
                   "id":7,
-             "equipmentId": 1,
-                  "label":"Staff"
+                  "equipmentId": 1,
+                  "label":"Staff",
+                  "octetBuilderId": 1,
+                  "refineBaseId": 1
+
               },
               {
                   "id":8,
-             "equipmentId": 1,
-                  "label":"Mace"
+                  "equipmentId": 1,
+                  "label":"Mace",
+                  "octetBuilderId": 1,
+                  "refineBaseId": 1
               },
               {
                   "id":9,
-             "equipmentId": 1,
-                  "label":"Blade"
+                  "equipmentId": 1,
+                  "label":"Blade",
+                  "octetBuilderId": 1,
+                  "refineBaseId": 1
               },
               {
                   "id":10,
-             "equipmentId": 1,
-                  "label":"Sword"
+                  "equipmentId": 1,
+                  "label":"Sword",
+                  "octetBuilderId": 1,
+                  "refineBaseId": 1
               },
               {
                   "id":11,
-             "equipmentId": 1,
-                  "label":"Dual Blade"
+                  "equipmentId": 1,
+                  "label":"Dual Blade",
+                  "octetBuilderId": 1,
+                  "refineBaseId": 1
               },
               {
                   "id":12,
-             "equipmentId": 1,
-                  "label":"Dual Sword"
+                  "equipmentId": 1,
+                  "label":"Dual Sword",
+                  "octetBuilderId": 1,
+                  "refineBaseId": 1
               },
               {
                   "id":13,
-             "equipmentId": 1,
-                  "label":"Fist"
+                  "equipmentId": 1,
+                  "label":"Fist",
+                  "octetBuilderId": 1,
+                  "refineBaseId": 2
               },
               {
                   "id":14,
-             "equipmentId": 1,
-                  "label":"Claw"
+                  "equipmentId": 1,
+                  "label":"Claw",
+                  "octetBuilderId": 1,
+                  "refineBaseId": 2
               },
               {
                   "id":15,
-             "equipmentId": 1,
-                  "label":"Bow"
+                  "equipmentId": 1,
+                  "label":"Bow",
+                  "octetBuilderId": 1,
+                  "refineBaseId": 3
               },
               {
                   "id":16,
-             "equipmentId": 1,
-                  "label":"Crossbow"
+                  "equipmentId": 1,
+                  "label":"Crossbow",
+                  "octetBuilderId": 1,
+                  "refineBaseId": 3
               },
               {
                   "id":17,
-             "equipmentId": 1,
-                  "label":"Slingshot"
+                  "equipmentId": 1,
+                  "label":"Slingshot",
+                  "octetBuilderId": 1,
+                  "refineBaseId": 3
               },
               {
                   "id":18,
-             "equipmentId": 1,
-                  "label":"Magic Sword"
+                  "equipmentId": 1,
+                  "label":"Magic Sword",
+                  "octetBuilderId": 1,
+                  "refineBaseId": 4
               },
               {
                   "id":19,
-             "equipmentId": 1,
-                  "label":"Wand"
+                  "equipmentId": 1,
+                  "label":"Wand",
+                  "octetBuilderId": 1,
+                  "refineBaseId": 4
               },
               {
                   "id":20,
-             "equipmentId": 1,
-                  "label":"Magic Quoit"
+                  "equipmentId": 1,
+                  "label":"Magic Quoit",
+                  "octetBuilderId": 1,
+                  "refineBaseId": 4
               },
               {
                   "id":21,
-             "equipmentId": 1,
-                  "label":"Magic Staff"
+                  "equipmentId": 1,
+                  "label":"Magic Staff",
+                  "octetBuilderId": 1,
+                  "refineBaseId": 4
               }
           ]
       },
@@ -1781,78 +2896,108 @@
           "subCategory":[
               {
                   "id":1,
-             "equipmentId": 2,
-                  "label":"Heavy Plate"
+                  "equipmentId": 2,
+                  "octetBuilderId": 2,
+                  "label":"Heavy Plate",
+                  "refineBaseId": 5
               },
               {
                   "id":2,
-             "equipmentId": 2,
-                  "label":"Light Armor"
+                  "equipmentId": 2,
+                  "octetBuilderId": 2,
+                  "label":"Light Armor",
+                  "refineBaseId": 6
               },
               {
                   "id":3,
-             "equipmentId": 2,
-                  "label":"Magic Robe"
+                  "equipmentId": 2,
+                  "octetBuilderId": 2,
+                  "label":"Magic Robe",
+                  "refineBaseId": 7
               },
               {
                   "id":4,
-             "equipmentId": 3,
-                  "label":"Heavy Leggings"
+                  "equipmentId": 3,
+                  "octetBuilderId": 2,
+                  "label":"Heavy Leggings",
+                  "refineBaseId": 5
               },
               {
                   "id":5,
-             "equipmentId": 3,
-                  "label":"Light Leggings"
+                  "equipmentId": 3,
+                  "octetBuilderId": 2,
+                  "label":"Light Leggings",
+                  "refineBaseId": 6
               },
               {
                   "id":6,
-             "equipmentId": 3,
-                  "label":"Magic Leggings"
+                  "equipmentId": 3,
+                  "octetBuilderId": 2,
+                  "label":"Magic Leggings",
+                  "refineBaseId": 7
               },
               {
                   "id":7,
-             "equipmentId": 4,
-                  "label":"Heavy Footwear"
+                  "equipmentId": 4,
+                  "octetBuilderId": 2,
+                  "label":"Heavy Footwear",
+                  "refineBaseId": 5
               },
               {
                   "id":8,
-             "equipmentId": 4,
-                  "label":"Light Footwear"
+                  "equipmentId": 4,
+                  "octetBuilderId": 2,
+                  "label":"Light Footwear",
+                  "refineBaseId": 6
               },
               {
                   "id":9,
-             "equipmentId": 4,
-                  "label":"Magic Footwear"
+                  "equipmentId": 4,
+                  "octetBuilderId": 2,
+                  "label":"Magic Footwear",
+                  "refineBaseId": 7
               },
               {
                   "id":10,
-             "equipmentId": 5,
-                  "label":"Heavy Wristguard"
+                  "equipmentId": 5,
+                  "octetBuilderId": 2,
+                  "label":"Heavy Wristguard",
+                  "refineBaseId": 5
               },
               {
                   "id":11,
-             "equipmentId": 5,
-                  "label":"Light Wristguard"
+                  "equipmentId": 5,
+                  "octetBuilderId": 2,
+                  "label":"Light Wristguard",
+                  "refineBaseId": 6
               },
               {
                   "id":12,
-             "equipmentId": 5,
-                  "label":"Magic Wristguard"
+                  "equipmentId": 5,
+                  "octetBuilderId": 2,
+                  "label":"Magic Wristguard",
+                  "refineBaseId": 7
               },
               {
                   "id":13,
-             "equipmentId": 6,
-                  "label":"Heavy Helmet"
+                  "equipmentId": 6,
+                  "octetBuilderId": 2,
+                  "label":"Heavy Helmet",
+                  "refineBaseId": 5
               },
               {
                   "id":14,
-             "equipmentId": 6,
-                  "label":"Magic Headgear"
+                  "equipmentId": 6,
+                  "octetBuilderId": 2,
+                  "label":"Magic Headgear",
+                  "refineBaseId": 7
               },
               {
                   "id":15,
-             "equipmentId": 7,
-                  "label":"Cloack"
+                  "equipmentId": 7,
+                  "octetBuilderId": 2,
+                  "label":"Cloack",
+                  "refineBaseId": 6
               }
           ]
       },
@@ -1863,43 +3008,59 @@
           "subCategory":[
               {
                   "id":1,
-             "equipmentId": 8,
-                  "label":"Physical Necklance"
+                  "octetBuilderId": 3,
+                  "equipmentId": 8,
+                  "label":"Physical Necklance",
+                  "refineBaseId": 8
               },
               {
                   "id":2,
-             "equipmentId": 8,
-                  "label":"Dodge Necklance"
+                  "octetBuilderId": 3,
+                  "equipmentId": 8,
+                  "label":"Dodge Necklance",
+                  "refineBaseId": 10
               },
               {
                   "id":3,
-             "equipmentId": 8,
-                  "label":"Magical Necklance"
+                  "octetBuilderId": 3,
+                  "equipmentId": 8,
+                  "label":"Magical Necklance",
+                  "refineBaseId": 9
               },
               {
                   "id":4,
-             "equipmentId": 9,
-                  "label":"Physical Waist Adorn"
+                  "octetBuilderId": 3,
+                  "equipmentId": 9,
+                  "label":"Physical Waist Adorn",
+                  "refineBaseId": 8
               },
               {
                   "id":5,
-             "equipmentId": 9,
-                  "label":"Dodge Waist Adorn"
+                  "octetBuilderId": 3,
+                  "equipmentId": 9,
+                  "label":"Dodge Waist Adorn",
+                  "refineBaseId": 10
               },
               {
                   "id":6,
-             "equipmentId": 9,
-                  "label":"Magical Waist Adorn"
+                  "octetBuilderId": 3,
+                  "equipmentId": 9,
+                  "label":"Magical Waist Adorn",
+                  "refineBaseId": 9
               },
               {
                   "id":7,
-             "equipmentId": 10,
-                  "label":"Physical Ring"
+                  "octetBuilderId": 3,
+                  "equipmentId": 10,
+                  "label":"Physical Ring",
+                  "refineBaseId": 8
               },
               {
                   "id":8,
-             "equipmentId": 10,
-                  "label":"Magical Ring"
+                  "octetBuilderId": 3,
+                  "equipmentId": 10,
+                  "label":"Magical Ring",
+                  "refineBaseId": 9
               }
           ]
       },
@@ -1919,26 +3080,27 @@
               },
               {
                   "id":3,
-             "equipmentId": 14,
+                  "equipmentId": 14,
+                  "octetBuilderId": 2,
                   "label":"Bless box",
                   "shortId":"B",
                   "version":30
               },
               {
                   "id":4,
-             "equipmentId": 13,
+                  "equipmentId": 13,
                   "label":"Elf",
                   "version":38
               },
               {
-                "id":5,
-                "label":"Star Chart",
-            "equipmentId": 36,
-                "version":79
+                  "id":5,
+                  "label":"Star Chart",
+                  "equipmentId": 36,
+                  "version":79
              },
               {
                   "id":6,
-             "equipmentId": 24,
+                  "equipmentId": 24,
                   "label":"Ammo",
                   "shortId":"M"
               },
@@ -2394,92 +3556,92 @@
         {
             "id": 0,
             "mask": 0,
-            "pos": 0,
+            "slot": 0,
             "name": "Cannot Equip"
         },
         {
             "id": 1,
             "mask": 1,
-            "pos": 0,
+            "slot": 0,
             "name": "Weapon"
         },
         {
             "id": 2,
             "mask": 16,
-            "pos": 4,
+            "slot": 4,
             "name": "Chest [Armor]"
         },
         {
             "id": 3,
             "mask": 64,
-            "pos": 6,
+            "slot": 6,
             "name": "Leg [Armor]"
         },
         {
             "id": 4,
             "mask": 128,
-            "pos": 7,
+            "slot": 7,
             "name": "Foot [Armor]"
         },
         {
             "id": 5,
             "mask": 256,
-            "pos": 8,
+            "slot": 8,
             "name": "Arm [Armor]"
         },
         {
             "id": 6,
             "mask": 2,
-            "pos": 1,
+            "slot": 1,
             "name": "Helm [Armor]"
         },
         {
             "id": 7,
             "mask": 8,
-            "pos": 3,
+            "slot": 3,
             "name": "Cloack [Armor]"
         },
         {
             "id": 8,
             "mask": 4,
-            "pos": 2,
+            "slot": 2,
             "name": "Necklace"
         },
         {
             "id": 9,
             "mask": 32,
-            "pos": 5,
+            "slot": 5,
             "name": "Belt"
         },
         {
             "id": 10,
             "mask": 1536,
-            "pos": 9,
+            "slot": 9,
             "name": "Ring 1"
         },
         {
             "id": 11,
             "mask": 1536,
-            "pos": 10,
+            "slot": 10,
             "name": "Ring 2"
         },
         {
             "id": 12,
             "mask": 262144,
-            "pos": 18,
+            "slot": 18,
             "name": "Heaven Book"
         },
         {
-            "id": 13,
-            "mask": 8388608,
-            "pos": 23,
-            "name": "Elemental Elf",
-            "version": 38
+         "id": 13,
+         "mask": 8388608,
+         "slot": 23,
+         "name": "Elemental Elf",
+         "version": 38
          },
          {
             "id": 14,
             "mask": 1077936128,
-            "pos": 22,
+            "slot": 22,
             "name": "Bless Box",
             "version": 30
          },
@@ -2487,144 +3649,144 @@
         {
             "id": 15,
             "mask": 4096,
-            "pos": 12,
+            "slot": 12,
             "name": "Flyer Mount"
         },
         {
             "id": 16,
             "mask": 8192,
-            "pos": 13,
+            "slot": 13,
             "name": "Chest [Fashion]"
         },
         {
             "id": 17,
             "mask": 16384,
-            "pos": 14,
+            "slot": 14,
             "name": "Leg [Fashion]"
         },
         {
             "id": 18,
             "mask": 65536,
-            "pos": 16,
+            "slot": 16,
             "name": "Arm [Fashion]"
         },
         {
             "id": 19,
             "mask": 32768,
-            "pos": 15,
+            "slot": 15,
             "name": "Foot [Fashion]"
         },
         {
             "id": 20,
             "mask": 524288,
-            "pos": 19,
+            "slot": 19,
             "name": "Chat Smiley"
         },
         {
             "id": 21,
             "mask": 131072,
-            "pos": 17,
+            "slot": 17,
             "name": "Att/Def Hiero"
         },
         {
             "id": 22,
             "mask": 1048576,
-            "pos": 20,
+            "slot": 20,
             "name": "HP Hiero"
         },
         {
             "id": 23,
             "mask": 2097152,
-            "pos": 21,
+            "slot": 21,
             "name": "MP Hiero"
         },
         {
             "id": 24,
             "mask": 2048,
-            "pos": 11,
+            "slot": 11,
             "name": "Ammo"
         },
         {
             "id": 25,
             "mask": 33554432,
-            "pos": 25,
+            "slot": 25,
             "version": 39,
             "name": "Hair [Fashion]"
         },
         {
             "id": 26,
             "mask": 16777216,
-            "pos": 24,
+            "slot": 24,
             "version": 39,
             "name": "Vendor Shop"
         },        
         {
             "id": 27,
             "mask": 536870912,
-            "pos": 29,
+            "slot": 29,
             "version": 49,
             "name": "Weapon [Fashion]"
         },
         {
             "id": 28,
             "mask": 67108864,
-            "pos": 26,
+            "slot": 26,
             "version": 49,
             "name": "Order Badge"
         },
         {
             "id": 29,
             "mask": 2147483585,
-            "pos": 33,
+            "slot": 33,
             "version": 79,
             "name": "Battle Card"
         },
         {
             "id": 30,
             "mask": 2147483585,
-            "pos": 32,
+            "slot": 32,
             "version": 79,
             "name": "Destroyer Card"
         },
         {
             "id": 31,
             "mask": 2147483585,
-            "pos": 37,
+            "slot": 37,
             "version": 79,
             "name": "Lifeprime Card"
         },
         {
             "id": 32,
             "mask": 2147483585,
-            "pos": 34,
+            "slot": 34,
             "version": 79,
             "name": "Longevity Card"
         },
         {
             "id": 33,
             "mask": 2147483585,
-            "pos": 36,
+            "slot": 36,
             "version": 79,
             "name": "Soulprime Card"
         },
         {
             "id": 34,
             "mask": 2147483585,
-            "pos": 35,
+            "slot": 35,
             "version": 79,
             "name": "Duratibility Card"
         },
         {
             "id": 35,
             "mask": 402653184,
-            "pos": 27,
+            "slot": 27,
             "version": 69,
             "name": "Mark of Might"
         },
         {
             "id": 36,
             "mask": -2147483584,
-            "pos": 38,
+            "slot": 38,
             "version": 79,
             "name": "Star Chart"
         }

@@ -1,5 +1,4 @@
-import { Button, Checkbox, Divider, FormControlLabel, Grid, NativeSelect, TextField, Typography } from "@material-ui/core"
-import { makeStyles } from "@material-ui/styles";
+
 import { action, computed, makeObservable, observable } from "mobx"
 import { observer } from "mobx-react-lite";
 import React from "react";
@@ -9,6 +8,8 @@ import { AuthStore } from "../../stores/AuthStore";
 import { IErrorMap, validateEmail, validatePassword, validateUsername } from "../../helpers/validations";
 import { UserStore } from "../../stores/UserStore";
 import { EntityId } from "../../models/BaseEntity";
+import { makeStyles } from "@mui/styles";
+import { Button, Checkbox, Divider, FormControlLabel, Grid, NativeSelect, TextField, Typography } from "@mui/material";
 
 const useStyles = makeStyles({
     root: {
@@ -441,7 +442,10 @@ export const UserForm = observer((props: UserFormProps) => {
                                     type='file'
                                 />
                                 <label htmlFor='raised-button-file'>
-                                    <Button variant='contained' color='default' style={{ fontSize: 10, marginTop: 4 }}>
+                                    <Button 
+                                        variant='contained' 
+                                        style={{ fontSize: 10, marginTop: 4 }}
+                                    >
                                         Upload
                                     </Button>
                                 </label> 

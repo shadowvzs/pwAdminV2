@@ -1,5 +1,5 @@
-import { Grid } from "@material-ui/core"
-import { makeStyles } from "@material-ui/styles";
+import { Grid } from "@mui/material";
+import { makeStyles } from "@mui/styles";
 import { observer } from "mobx-react-lite";
 import React from "react";
 import { TimerCmp } from "../../components/TimerCmp";

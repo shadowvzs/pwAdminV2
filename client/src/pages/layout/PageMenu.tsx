@@ -1,7 +1,8 @@
+
 import React from 'react';
-import { Grid } from "@material-ui/core";
+import { Grid } from '@mui/material';
+import { makeStyles } from "@mui/styles";
 import { Link } from 'react-router-dom';
-import { makeStyles } from '@material-ui/core/styles';
 import { RootStoreContext } from '../../contexts/RootStoreContext';
 import { observer } from 'mobx-react-lite';
 import { mainRoutes } from '../../Routes';

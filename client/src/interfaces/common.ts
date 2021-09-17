@@ -72,6 +72,8 @@ export interface IItem {
 	mask: number;
 }
 
+export type ItemKey = keyof IItem;
+
 export enum Equipmentslots {
     Weapon           = 0,
     Helm             = 1,

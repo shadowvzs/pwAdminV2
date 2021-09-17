@@ -1,8 +1,8 @@
+
 import React from "react";
-import { Button, Divider, Grid, Table, TableBody, TableCell, TableHead, TableRow, TextField, Typography } from "@material-ui/core"
-import { makeStyles } from "@material-ui/styles";
+import { makeStyles } from "@mui/styles";
+
 import { action, computed, makeObservable, observable } from "mobx";
-import VisibilityIcon from '@material-ui/icons/Visibility';
 import { observer } from "mobx-react-lite";
 import { RootStoreContext } from "../../contexts/RootStoreContext";
 import { EntityId } from "../../models/BaseEntity";
@@ -10,6 +10,8 @@ import { Role } from "../../models/User";
 import { RootStore } from "../../stores/RootStore";
 import { UserRoleItem } from "../../models/RoleBean";
 import { Link } from "react-router-dom";
+import { Button, Divider, Grid, Table, TableBody, TableCell, TableHead, TableRow, TextField, Typography } from "@mui/material";
+import { Visibility } from "@mui/icons-material";
 
 const useStyles = makeStyles({
     root: {
@@ -132,7 +134,13 @@ export const UserAction = observer((props: UserActionProps) => {
                             />
                         </Grid>
                         <Grid item>
-                            <Button variant='contained' color='primary' size='small'>Add</Button>
+                            <Button 
+                                variant='contained' 
+                                color='primary' 
+                                size='small'
+                            >
+                                    Add
+                            </Button>
                         </Grid>
                     </Grid>
                 </Grid>
@@ -221,7 +229,7 @@ export const UserAction = observer((props: UserActionProps) => {
                                             <TableCell align='right'>{role.name}</TableCell>
                                             <TableCell align='right'>
                                                 <Link className={classes.roleItem} to={`/role/${role.id}`}>
-                                                    <VisibilityIcon />
+                                                    <Visibility />
                                                 </Link>
                                             </TableCell>                                     
                                         </TableRow>

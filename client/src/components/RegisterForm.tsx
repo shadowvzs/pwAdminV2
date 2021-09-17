@@ -1,5 +1,5 @@
-import { Button, Grid, TextField } from "@material-ui/core"
-import { makeStyles } from "@material-ui/styles";
+import { makeStyles } from "@mui/styles";
+import { Button, Grid, TextField } from "@mui/material";
 import { action, computed, makeObservable, observable } from "mobx"
 import { observer } from "mobx-react-lite";
 import React from "react";

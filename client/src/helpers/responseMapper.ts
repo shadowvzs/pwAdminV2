@@ -1,4 +1,6 @@
+import { PW_STORE_DATA } from "../constants/core";
 import { IClassStaticData, IClassStaticDataWithValueMap, IElfStaticData, IElfStaticValueMapData, IItemData, IItemExtraData, IItemExtraValueMapData, IMenuCategoryValueMapData, IPetStaticData, IPetStaticValueMapData, ISkillTextData } from "../interfaces/responses";
+import { Addon } from "../models/Addon";
 import { ArrayValueMap, IArrayValueMap } from "./arrayValueMap";
 
 export const responseMappers = {
@@ -16,12 +18,19 @@ export const responseMappers = {
     item_db: (data: IItemData[]): IArrayValueMap<IItemData> => ArrayValueMap.create(data),
     item_extra: (data: IItemExtraData): IItemExtraValueMapData => {
         const newData = JSON.parse(JSON.stringify(data)) as IItemExtraValueMapData;
+        PW_STORE_DATA.item_extra = newData;
         newData.stats = ArrayValueMap.create(data.stats);
-        newData.addons = ArrayValueMap.create(data.addons);
-        newData.weaponAddons = ArrayValueMap.create(data.weaponAddons);
+        newData.addons = ArrayValueMap.create(data.addons as Addon[]);
+        newData.addonTypes = ArrayValueMap.create(data.addonTypes);
         newData.proctypes = ArrayValueMap.create(data.proctypes);
         newData.itemColor = ArrayValueMap.create(data.itemColor);
         newData.equipments = ArrayValueMap.create(data.equipments);
+        newData.refine = {...data.refine, base: ArrayValueMap.create(data.refine.base)};
+        newData.octetBuilder = { 
+            fields: ArrayValueMap.create(data.octetBuilder.fields), 
+            profiles: ArrayValueMap.create(data.octetBuilder.profiles), 
+        };
+        
         newData.menu = ArrayValueMap.create(
             data.menu.map(x => ({...x, subCategory: ArrayValueMap.create(x.subCategory) } as IMenuCategoryValueMapData)), 
             'shortId'
@@ -38,31 +47,11 @@ export const responseMappers = {
     },
 };
 
-export type IMappableTypes = keyof typeof responseMappers;
+export const afterResponseMapping = {
+    item_extra: (data: IItemExtraValueMapData): void => {
+        data.addons = ArrayValueMap.create(data.addons.map(Addon.create));
+    }
+};
 
-// export interface IItemExtraValueMapData extends IItemExtraData {
-//     version: number;
-//     soulStoneType: string[];
-//     statType: string[];
-//     stats: IArrayValueMap<IStatData>;
-//     addons: IArrayValueMap<IAddonData>;
-//     weaponAddons: IArrayValueMap<IWeaponAddonData>;
-//     proctypes: IArrayValueMap<IProctypeData>;
-//     menu: IMenuCategoryData[];
-//     mapQuests: number[][];
-//     itemColor: IArrayValueMap<IItemColorData>;
-//     fashionColors: string[];
-//     equipments: IArrayValueMap<IEquipmentData>;
-//     soulStones: {
-//         stat: number[];
-//         element: number[];
-//         rare: number[];
-//     }
-// export interface IPwStoreData {
-//     classes: IClassStaticDataWithValueMap;
-//     item_db: IArrayValueMap<IItemData>;
-//     item_extra: IItemExtraData;
-//     elf: IElfStaticData;
-//     pet: IPetStaticData;
-//     skills_text: IArrayValueMap<ISkillTextData>;
-// }
+export type IMappableTypes = keyof typeof responseMappers;
+export type IPostMappableTypes = keyof typeof afterResponseMapping;

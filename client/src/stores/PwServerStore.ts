@@ -1,5 +1,6 @@
 import { action, makeObservable, observable, runInAction } from "mobx";
-import { IMappableTypes, responseMappers } from "../helpers/responseMapper";
+import { PW_STORE_DATA } from "../constants/core";
+import { afterResponseMapping, IMappableTypes, IPostMappableTypes, responseMappers } from "../helpers/responseMapper";
 import { IPwStoreData } from "../interfaces/responses";
 import { Config } from "../models/Config";
 import { ServerStatus } from "../models/Status";
@@ -60,6 +61,13 @@ export class PwServerStore extends BaseStore<any> {
             }
             this.data[key] = data;
         });
+        Object.assign(PW_STORE_DATA, this.data);
+        Object.entries(this.data)
+            .filter(([key]) => afterResponseMapping
+            .hasOwnProperty(key)).forEach(([key, data]) => {
+                afterResponseMapping[key as IPostMappableTypes](data);
+            }
+        );
     }
 
     public async init() {

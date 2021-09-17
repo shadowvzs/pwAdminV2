@@ -1,6 +1,6 @@
 import React from "react";
-import { Avatar, Divider, Grid, List, ListItem, ListItemAvatar, ListItemText, TextField, Typography } from "@material-ui/core"
-import { makeStyles } from "@material-ui/styles";
+import { makeStyles } from "@mui/styles";
+import { Avatar, Divider, Grid, List, ListItem, ListItemAvatar, ListItemText, TextField, Typography } from "@mui/material";
 import { action, computed, makeObservable, observable } from "mobx";
 import cn from 'classnames';
 import { observer } from "mobx-react-lite";

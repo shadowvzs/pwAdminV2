@@ -1,5 +1,5 @@
-import { Grid } from "@material-ui/core";
-import { makeStyles } from "@material-ui/styles";
+import { makeStyles } from "@mui/styles";
+import { Grid } from "@mui/material";
 import { action, makeObservable, observable, runInAction, toJS } from "mobx";
 import { observer } from "mobx-react-lite";
 import React from "react";

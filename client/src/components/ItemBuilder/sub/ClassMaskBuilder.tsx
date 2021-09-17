@@ -1,8 +1,9 @@
 import React from "react";
-import { Checkbox, FormControlLabel, Grid, Typography } from "@material-ui/core"
-import { makeStyles } from "@material-ui/styles";
-import { PopoverWrapper } from "../PopoverWrapper";
-import { RootStoreContext } from "../../contexts/RootStoreContext";
+import { makeStyles } from "@mui/styles";
+
+import { PopoverWrapper } from "./PopoverWrapper";
+import { RootStoreContext } from "../../../contexts/RootStoreContext";
+import { Checkbox, FormControlLabel, Grid, Typography } from "@mui/material";
 
 const useStyles = makeStyles({
     root: {
@@ -96,7 +97,7 @@ export const ClassMaskBuilder = (props: ClassMaskProps) => {
 export const ClassMaskBuilderPopover = (props: ClassMaskProps) => {
     return (
         <PopoverWrapper 
-            editableInput
+            editable
             Cmp={ClassMaskBuilder} 
             {...props}
             title='Class Mask: '
