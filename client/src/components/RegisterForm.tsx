@@ -96,6 +96,7 @@ export const RegisterForm = observer(() => {
                     <TextField 
                         fullWidth
                         required
+                        size='small'
                         name='username'
                         placeholder='Username'
                         value={username}
@@ -108,6 +109,7 @@ export const RegisterForm = observer(() => {
                     <TextField 
                         fullWidth
                         required
+                        size='small'
                         name='email'
                         type='email'
                         placeholder='Email'
@@ -121,6 +123,7 @@ export const RegisterForm = observer(() => {
                     <TextField 
                         fullWidth
                         required
+                        size='small'
                         autoComplete='off'
                         name='password'
                         placeholder='Password'
@@ -135,6 +138,7 @@ export const RegisterForm = observer(() => {
                     <TextField 
                         fullWidth
                         required
+                        size='small'
                         autoComplete='off'
                         name='password2'
                         placeholder='Password Again'

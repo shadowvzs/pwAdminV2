@@ -22,8 +22,9 @@ export const ComboSelect = (props: RenderComponentProps<number>) => {
 
     const onChangeHandler = React.useCallback((ev: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         const { value } = ev.currentTarget
-        onChange(parseInt(value, 10));
-    }, [onChange]);
+        onChange(config.type.includes('float') ? parseFloat(value) : parseInt(value, 10));
+        console.log(config.type, value, config.type === 'float' ? parseFloat(value) : parseInt(value, 10))
+    }, [onChange, config]);
 
     return (
         <Grid container className={classes.root} spacing={1} alignItems='center' justifyContent='space-between' wrap='nowrap'>
@@ -38,6 +39,7 @@ export const ComboSelect = (props: RenderComponentProps<number>) => {
                     {Boolean(config.options) && (
                         <Grid item>
                             <NativeSelect 
+                                size='small'
                                 value={props.value}
                                 onChange={onChangeHandler}
                                 style={{ fontSize: 12, maxWidth: 100 }}
@@ -56,6 +58,8 @@ export const ComboSelect = (props: RenderComponentProps<number>) => {
                                 value={props.value}
                                 onChange={onChangeHandler}
                                 className={classes.input}
+                                min='0'
+                                step={config.type.includes('float') ? 0.01 : 1}
                             />
                         </Grid>
                     )}

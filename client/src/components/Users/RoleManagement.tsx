@@ -74,7 +74,9 @@ export const RoleManagement = observer(() => {
     return (
         <Grid container className={classes.root}>
             <Grid item xs={12} style={{ maxWidth: '100vw' }}>
-                <pre style={{ overflowX: 'auto', wordBreak: 'break-all' }}>{JSON.stringify(toJS(store.roleBean), null, 4)}</pre>
+                <pre style={{ overflowX: 'auto', wordBreak: 'break-all' }}>
+                    {JSON.stringify(toJS(store.roleBean), null, 4)}
+                </pre>
             </Grid>
         </Grid>
     );

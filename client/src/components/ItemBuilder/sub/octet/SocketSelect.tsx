@@ -34,6 +34,7 @@ export const SocketSelect = (props: RenderComponentProps<number[]>) => {
                         </Grid>
                         <Grid item>
                             <NativeSelect
+                                size='small'
                                 value={socket || 0}
                                 onChange={ev => onChangeSocketItem(ev.currentTarget.value, idx)}
                                 style={{ fontSize: 12 }}
@@ -83,6 +84,7 @@ export const SocketSelectBase = (props: RenderComponentProps<number[]>) => {
             </Grid>
             <Grid item>
                 <NativeSelect
+                    size='small'
                     value={value.length}
                     onChange={onChangeSocketAmount}
                     style={{ fontSize: 12 }}

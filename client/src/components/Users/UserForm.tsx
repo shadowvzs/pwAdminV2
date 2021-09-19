@@ -152,6 +152,7 @@ export const UserForm = observer((props: UserFormProps) => {
                                 <TextField 
                                     fullWidth
                                     required
+                                    size='small'
                                     name='id'
                                     placeholder='Id'
                                     value={user.id}
@@ -163,6 +164,7 @@ export const UserForm = observer((props: UserFormProps) => {
                             <Grid item xs>
                                 <NativeSelect
                                     fullWidth
+                                    size='small'
                                     value={user.role}
                                     name='role'
                                     onChange={onSelect}
@@ -181,6 +183,7 @@ export const UserForm = observer((props: UserFormProps) => {
                             <TextField 
                                 fullWidth
                                 required
+                                size='small'
                                 autoComplete='off'
                                 name='name'
                                 placeholder='Username'
@@ -195,6 +198,7 @@ export const UserForm = observer((props: UserFormProps) => {
                             <TextField 
                                 fullWidth
                                 required
+                                size='small'
                                 autoComplete='off'
                                 name='truename'
                                 placeholder='Real Name'
@@ -212,6 +216,7 @@ export const UserForm = observer((props: UserFormProps) => {
                             <TextField 
                                 fullWidth
                                 required
+                                size='small'
                                 autoComplete='off'
                                 type='email'
                                 name='email'
@@ -226,6 +231,7 @@ export const UserForm = observer((props: UserFormProps) => {
                         <Grid item xs>
                             <NativeSelect
                                 fullWidth
+                                size='small'
                                 value={String(user.gender) || '0'}
                                 name='gender'
                                 autoComplete='off'
@@ -244,6 +250,7 @@ export const UserForm = observer((props: UserFormProps) => {
                                 <TextField 
                                     fullWidth
                                     required
+                                    size='small'
                                     autoComplete='new-password'
                                     type='password'
                                     name='passwd'
@@ -258,6 +265,7 @@ export const UserForm = observer((props: UserFormProps) => {
                                 <TextField 
                                     fullWidth
                                     required
+                                    size='small'
                                     autoComplete='new-password'
                                     type='password'
                                     name='passwd2'
@@ -277,6 +285,7 @@ export const UserForm = observer((props: UserFormProps) => {
                             <TextField 
                                 fullWidth
                                 required
+                                size='small'
                                 name='phonenumber'
                                 placeholder='Phone number'
                                 value={user.phonenumber}
@@ -289,6 +298,7 @@ export const UserForm = observer((props: UserFormProps) => {
                             <TextField 
                                 fullWidth
                                 required
+                                size='small'
                                 name='mobilenumber'
                                 placeholder='Mobile number'
                                 value={user.mobilenumber}
@@ -305,6 +315,7 @@ export const UserForm = observer((props: UserFormProps) => {
                             <TextField 
                                 fullWidth
                                 required
+                                size='small'
                                 name='province'
                                 placeholder='Province'
                                 value={user.province}
@@ -317,6 +328,7 @@ export const UserForm = observer((props: UserFormProps) => {
                             <TextField 
                                 fullWidth
                                 required
+                                size='small'
                                 name='city'
                                 placeholder='City'
                                 value={user.city}
@@ -333,6 +345,7 @@ export const UserForm = observer((props: UserFormProps) => {
                             <TextField 
                                 fullWidth
                                 required
+                                size='small'
                                 name='address'
                                 placeholder='Address'
                                 value={user.address}
@@ -346,6 +359,7 @@ export const UserForm = observer((props: UserFormProps) => {
                                 <TextField 
                                     fullWidth
                                     required
+                                    size='small'
                                     type='number'
                                     name='credit'
                                     placeholder='Shop Point'
@@ -364,6 +378,7 @@ export const UserForm = observer((props: UserFormProps) => {
                             <TextField 
                                 fullWidth
                                 required
+                                size='small'
                                 name='prompt'
                                 placeholder='Prompt'
                                 value={user.prompt}
@@ -376,6 +391,7 @@ export const UserForm = observer((props: UserFormProps) => {
                             <TextField 
                                 fullWidth
                                 required
+                                size='small'
                                 name='answer'
                                 placeholder='Answer'
                                 value={user.answer}
@@ -392,6 +408,7 @@ export const UserForm = observer((props: UserFormProps) => {
                             <TextField 
                                 fullWidth
                                 required
+                                size='small'
                                 type='datetime-local'
                                 name='birthday'
                                 placeholder='Birthday'
@@ -406,6 +423,7 @@ export const UserForm = observer((props: UserFormProps) => {
                                 <TextField 
                                     fullWidth
                                     required
+                                    size='small'
                                     type='datetime-local'
                                     name='creatime'
                                     placeholder='Create Time'

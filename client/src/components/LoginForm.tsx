@@ -81,6 +81,7 @@ export const LoginForm = observer(() => {
                     <TextField 
                         fullWidth
                         required
+                        size='small'
                         name='username'
                         placeholder='Username'
                         value={username}
@@ -93,6 +94,7 @@ export const LoginForm = observer(() => {
                     <TextField 
                         fullWidth
                         required
+                        size='small'
                         autoComplete='off'
                         name='password'
                         placeholder='Password'

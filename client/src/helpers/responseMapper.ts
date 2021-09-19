@@ -26,8 +26,16 @@ export const responseMappers = {
         newData.itemColor = ArrayValueMap.create(data.itemColor);
         newData.equipments = ArrayValueMap.create(data.equipments);
         newData.refine = {...data.refine, base: ArrayValueMap.create(data.refine.base)};
+        const flags = data.octetBuilder.flags;
         newData.octetBuilder = { 
-            fields: ArrayValueMap.create(data.octetBuilder.fields), 
+            addonIdModifier: data.octetBuilder.addonIdModifier,
+            flags: data.octetBuilder.flags,
+            fields: ArrayValueMap.create(
+                data.octetBuilder.fields.map(x => ({
+                    ...x, 
+                    flag: flags[x.flag as number || 0] 
+                }))
+            ), 
             profiles: ArrayValueMap.create(data.octetBuilder.profiles), 
         };
         

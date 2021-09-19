@@ -55,9 +55,8 @@ export class Addon implements IAddonData {
 
     public setId(id: number, setValueToo?: boolean): void { 
         this.id = id; 
-        const currentStatType = this.stat?.type;
+        // const currentStatType = this.stat?.type;
         Object.assign(this, {...this.addons.valueMap[id]});
-        console.log(currentStatType !== this.stat?.type)
         if (!setValueToo) { return; }
         if (this.isSkill) {
             const [v1, v2] = this.data?.split(' ')!;

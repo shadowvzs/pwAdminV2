@@ -4,6 +4,7 @@ import { Grid, NativeSelect } from "@mui/material";
 
 import { observer } from "mobx-react-lite";
 import { ItemBuilderStore } from "../ItemBuilderStore";
+import { RootStoreContext } from "../../../contexts/RootStoreContext";
 
 const useStyles = makeStyles({
     root: {
@@ -62,7 +63,8 @@ class ItemSelectStore {
 export const ItemSelect = observer((props: ItemSelectProps) => {
 
     const iBStore = props.store;
-    // const { pwServerStore } = React.useContext(RootStoreContext);
+    const { pwServerStore } = React.useContext(RootStoreContext);
+    const version = pwServerStore.data.item_extra.version;
     const classes = useStyles();
     const store = React.useState(() => new ItemSelectStore(v => iBStore.set('id', v), ))[0];
     const menu = iBStore.category;
@@ -71,15 +73,15 @@ export const ItemSelect = observer((props: ItemSelectProps) => {
     return (
         <Grid className={classes.root}>
            <Grid container direction='column' spacing={1}>
-                <Grid item>
-                    <Grid container spacing={2} wrap='nowrap'>
+                <Grid item xs={12}>
+                    <Grid container spacing={2} wrap='nowrap' justifyContent='space-between'>
                         <Grid item>
                             <NativeSelect 
+                                size='small'
                                 variant='filled'
                                 value={iBStore.categoryId} 
                                 onChange={iBStore.onSelectCategory}
                             >
-                                <option key={'none'} value={''}>{'None'}</option>
                                 {iBStore.menuCategories.map(menu => (
                                     <option key={menu.id} value={menu.shortId}>{menu.label}</option>
                                 ))}
@@ -87,20 +89,21 @@ export const ItemSelect = observer((props: ItemSelectProps) => {
                         </Grid>
                         <Grid item>
                             <NativeSelect 
+                                size='small'
                                 variant='standard'
                                 value={iBStore.subCategoryId} 
                                 onChange={iBStore.onSelectSubCategory}
                             >
-                                <option key={'none'} value={0}>{'None'}</option>
-                                {menu.subCategory.map(menu => (
+                                {menu.subCategory.filter(x => !x.version || x.version <= version).map(menu => (
                                     <option key={menu.id} value={menu.id}>{menu.label}</option>
                                 ))}
                             </NativeSelect>
                         </Grid>
                     </Grid>
                 </Grid>
-                <Grid item>
+                <Grid item xs={12}>
                     <NativeSelect 
+                        size='small'
                         value={props.value} 
                         onChange={store.onSelectItem}
                         fullWidth
@@ -120,8 +123,8 @@ export const ItemSelect = observer((props: ItemSelectProps) => {
                         ))}
                     </NativeSelect>
                 </Grid>
-               <Grid item>
-                    <Grid container spacing={2} wrap='nowrap' alignItems='center'>
+               <Grid item xs={12}>
+                    <Grid container spacing={2} wrap='nowrap' alignItems='center' justifyContent='space-between'>
                         <Grid item>
                             <img 
                                 src={store.getIconPath(props.value)} 
@@ -133,8 +136,7 @@ export const ItemSelect = observer((props: ItemSelectProps) => {
                         <Grid item>
                             <input 
                                 type='number'
-                                value={props.value}
-
+                                value={props.value}                                
                                 style={{ fontSize: 12, textAlign:'right', padding: '2px 4px', width: '100%' }}
                                 onChange={store.onChangeInput}
                             />

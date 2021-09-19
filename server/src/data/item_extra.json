@@ -13,7 +13,6 @@
       "speed",
       "interval",
       "no-value"
-
    ],
    "refine": {
       "levelMultiplier": [
@@ -2256,112 +2255,246 @@
         }
     ],
     "octetBuilder": {
+      "addonIdModifier": {
+         "normal": 2,
+         "skill": 4,
+         "rune": 2,
+         "socket": 10,
+         "refine": 4
+      },
+      "flags": [
+         "normal",
+         "pair",
+         "array",
+         "virtual",
+         "constant",
+         "special",
+         "advanced"
+      ],
       "fields": [
          {
             "id": "lvReq",
             "label": "Level Req.:",
-            "type": "int16",
+            "type": "int16LE",
             "defaultValue": 1,
             "render": "NumberSelect"
          },
          {
             "id": "classReq",
             "label": "Grade:",
-            "type": "int16",
+            "type": "int16LE",
             "render": "ClassMaskSelect",
             "defaultValue": 219
          },
          {
             "id": "grade",
             "label": "Grade:",
-            "type": "int32",
+            "type": "int32LE",
             "defaultValue": 1,
             "render": "NumberSelect"
          },
          {
             "id": "pDmg",
             "label": "PDmg:",
-            "type": "int32",
-            "isRange": true,
+            "type": "int32LE",
+            "flag": 1,
             "render": "NumberSelect",
+            "conditionalValue": {
+               "W1":  [35,65],
+               "W2":  [22,64],
+               "W3":  [38, 87],
+               "W4":  [56, 84],
+               "W5":  [25,52],
+               "W6":  [6,9],
+               "W7":  [40,74],
+               "W8":  [32,59],
+               "W9":  [41,61],
+               "W10": [37,49],
+               "W11": [37,62],
+               "W12": [25,27],
+               "W13": [25,27],
+               "W14": [29,39],
+               "W15": [36,67],
+               "W16": [43,100],
+               "W17": [58,86],
+               "W18": [23,35],
+               "W19": [18,22],
+               "W20": [30,40],
+               "W21": [31,38],
+               "W22": [38,56],
+               "W23": [42,52],
+               "W24": [56,94],
+               "W25": [27,45]
+            },
             "defaultValue": [0,0]
          },
          {
             "id": "mDmg",
             "label": "MDmg:",
-            "type": "int32",
-            "isRange": true,
+            "type": "int32LE",
+            "flag": 1,
             "render": "NumberSelect",
-            "defaultValue": [0,0]
+            "defaultValue": [0,0],
+            "conditionalValue": {
+               "W18": [23,35],
+               "W19": [39,40],
+               "W20": [47,70],
+               "W21": [37,68],
+               "W23": [55,75],
+               "W25": [49,71]
+            }
          },
          {
             "id": "pAttack",
             "label": "PAttack:",
-            "type": "int32",
+            "type": "int32LE",
             "render": "NumberSelect",
             "defaultValue": 0
          },
          {
             "id": "mAttack",
             "label": "MAttack:",
-            "type": "int32",
+            "type": "int32LE",
             "render": "NumberSelect",
             "defaultValue": 0
          },
          {
             "id": "strReq",
             "label": "STR Req.:",
-            "type": "int16",
+            "type": "int16LE",
             "render": "NumberSelect",
             "defaultValue": 5
          },
          {
             "id": "agiReq",
             "label": "AGI Req.:",
-            "type": "int16",
+            "type": "int16LE",
             "render": "NumberSelect",
+            "conditionalValue": {
+               "W18": 0,
+               "W19": 0,
+               "W20": 0,
+               "W21": 0,
+               "W23": 0,
+               "W25": 0,
+               "A3": 0,
+               "A6": 0,
+               "A9": 0,
+               "A12": 0,
+               "A14": 0
+            },
             "defaultValue": 5
          },
          {
             "id": "intReq",
             "label": "INT Req.:",
-            "type": "int16",
+            "type": "int16LE",
             "render": "NumberSelect",
+            "conditionalValue": {
+               "W18": 5,
+               "W19": 5,
+               "W20": 5,
+               "W21": 5,
+               "W23": 5,
+               "W25": 5,
+               "A3": 5,
+               "A6": 5,
+               "A9": 5,
+               "A12": 5,
+               "A14": 5               
+            },
             "defaultValue": 0
          },
          {
             "id": "conReq",
             "label": "CON Req.:",
-            "type": "int16",
+            "type": "int16LE",
+            "flag": 6,
             "render": "NumberSelect",
             "defaultValue": 0
          },
          {
             "id": "durability",
             "label": "Durability:",
-            "type": "int32",
-            "isRange": true,
+            "type": "int32LE",
+            "flag": 1,
             "render": "NumberSelect",
             "multiplier": 100,
             "defaultValue": [100, 200]
          },
          {
-            "id": "wType",
-            "label": "W. Type:",
-            "type": "int32",
+            "id": "wStat",
+            "label": "W. Stat:",
+            "type": "int32LE",
             "defaultValue": 0,
             "render": "ComboSelect",
+            "flag": 6,
             "showInput": true,
             "options": [
                ["Melee [STR]", 0],
                ["Ranged [AGI]", 1],
                ["Melee [AGI]", 2]
-            ]
+            ],
+            "conditionalValue": {
+               "W15": 1,
+               "W16": 1,
+               "W17": 1,
+               "W22": 2,
+               "W24": 2
+            }
+         },
+         {
+            "id": "wType",
+            "label": "W. Type:",
+            "type": "int32LE",
+            "render": "ComboSelect",
+            "flag": 6,
+            "showInput": true,
+            "options": [
+               ["Axe & Hammer", 9],
+               ["Spear & PoleArm", 5],
+               ["Blade & Sword", 1],
+               ["Claw & Fist", 182],
+               ["XBow, Box, Slingshot", 13],
+               ["Magic Instruments", 292],
+               ["Dagger", 23749],
+               ["Sphere", 25333],
+               ["Sabre", 44878],
+               ["Schyte", 44967]
+            ],
+            "conditionalValue": {
+               "W1":  9,
+               "W2":  9,
+               "W3":  9,
+               "W4":  9,
+               "W5":  5,
+               "W6":  5,
+               "W7":  5,
+               "W8":  5,
+               "W9":  1,
+               "W10": 1,
+               "W11": 1,
+               "W12": 1,
+               "W13": 182,
+               "W14": 182,
+               "W15": 13,
+               "W16": 13,
+               "W17": 13,
+               "W18": 292,
+               "W19": 292,
+               "W20": 292,
+               "W21": 292,
+               "W22": 23749,
+               "W23": 25333,
+               "W24": 44878,
+               "W25": 44967
+            }
          },
          {
             "id": "ammo",
             "label": "Ammo:",
-            "type": "int32",
+            "type": "int32LE",
+            "flag": 6,
             "defaultValue": 0,
             "render": "ComboSelect",
             "showInput": true,
@@ -2371,13 +2504,19 @@
                ["Bolt", 8547],
                ["Bullet", 8548],
                ["Snowball", 13700]
-            ]
+            ],
+            "conditionalValue": {
+               "W15": 8546,
+               "W16": 8547,
+               "W17": 8548
+            }
          },
          {
             "id": "aSpeed",
             "label": "ASpeed:",
-            "type": "int32",
+            "type": "int32LE",
             "showInput": true,
+            "flag": 6,
             "defaultValue": 22,
             "render": "ComboSelect",
             "options": [
@@ -2396,12 +2535,40 @@
                ["0.91 Sphere", 22, 40],
                ["1.11 Sabre", 18, 60],
                ["1.00 Schythe", 20, 79]
-            ]
+            ],
+            "conditionalValue": {
+               "W1":  22,
+               "W2":  22,
+               "W3":  24,
+               "W4":  24,
+               "W5":  20,
+               "W6":  20,
+               "W7":  20,
+               "W8":  20,
+               "W9":  18,
+               "W10": 18,
+               "W11": 22,
+               "W12": 22,
+               "W13": 14,
+               "W14": 14,
+               "W15": 30,
+               "W16": 32,
+               "W17": 28,
+               "W18": 16,
+               "W19": 16,
+               "W20": 20,
+               "W21": 20,
+               "W22": 16,
+               "W23": 22,
+               "W24": 18,
+               "W25": 20
+            }
          },
          {
             "id": "range",
             "label": "Range:",
-            "type": "float",
+            "type": "floatLE",
+            "flag": 6,
             "defaultValue": 3.5,
             "showInput": true,
             "render": "ComboSelect",
@@ -2416,12 +2583,40 @@
                ["3 Sphere", 3, 40],
                ["3 Sabre", 3, 60],
                ["3 Schythe", 3]
-            ]
+            ],
+            "conditionalValue": {
+               "W1":  3.5,
+               "W2":  3.5,
+               "W3":  3.5,
+               "W4":  3.5,
+               "W5":  5,
+               "W6":  5,
+               "W7":  4.5,
+               "W8":  4.5,
+               "W9":  3,
+               "W10": 3,
+               "W11": 3,
+               "W12": 3,
+               "W13": 2.5,
+               "W14": 2.5,
+               "W15": 20,
+               "W16": 20,
+               "W17": 20,
+               "W18": 3,
+               "W19": 3,
+               "W20": 3,
+               "W21": 3,
+               "W22": 2.5,
+               "W23": 3,
+               "W24": 3,
+               "W25": 3
+            }
          },
          {
             "id": "minRange",
-            "label": "Min. Range:",
-            "type": "float",
+            "label": "M. Range:",
+            "type": "floatLE",
+            "flag": 6,
             "defaultValue": 0,
             "showInput": true,
             "render": "ComboSelect",
@@ -2430,30 +2625,35 @@
                ["5 Bow", 5],
                ["5.5 Crossbow", 5.5],
                ["4.5 Slingshot", 4.5]           
-            ]
+            ],
+            "conditionalValue": {
+               "W15": 5,
+               "W16": 5.5,
+               "W17": 4.5
+            }
          },
          {
             "id": "socket",
             "label": "Socket:",
-            "type": "int32",
-            "isArray": true,
+            "type": "int32LE",
+            "flag": 2,
             "render": "SocketSelect",
             "defaultValue": []
          },
          {
             "id": "addon",
             "label": "Addons:",
-            "type": "int32",
-            "isArray": true,
+            "type": "int32LE",
+            "flag": 5,
             "render": "AddonSelect",
             "defaultValue": []
          },
          {
             "id": "refine",
             "label": "Refine:",
-            "type": "int32",
+            "type": "int32LE",
             "defaultValue": 0,
-            "isVirtual": true,
+            "flag": 3,
             "render": "ComboSelect",
             "options": [
                ["Not refined", 0],
@@ -2475,111 +2675,124 @@
             "id": "crafter",
             "label": "Crafter:",
             "type": "text",
+            "flag": 6,
             "render": "TextSelect",
             "defaultValue": ""
          },
          {
             "id": "hp",
             "label": "HP:",
-            "type": "int32",
+            "type": "int32LE",
             "render": "NumberSelect",
             "defaultValue": 0
          },
          {
             "id": "mp",
             "label": "MP:",
-            "type": "int32",
+            "type": "int32LE",
             "render": "NumberSelect",
             "defaultValue": 0
          },
          {
             "id": "dodge",
             "label": "Dodge:",
-            "type": "int32",
+            "type": "int32LE",
             "render": "NumberSelect",
             "defaultValue": 0
          },
          {
             "id": "pDef",
             "label": "Phys. Def:",
-            "type": "int32",
+            "type": "int32LE",
             "render": "NumberSelect",
             "defaultValue": 0
          },
          {
             "id": "metalDef",
             "label": "Metal Def:",
-            "type": "int32",
+            "type": "int32LE",
             "render": "NumberSelect",
             "defaultValue": 0
          },
          {
             "id": "woodDef",
             "label": "Wood Def:",
-            "type": "int32",
+            "type": "int32LE",
             "render": "NumberSelect",
             "defaultValue": 0
          },
          {
             "id": "waterDef",
             "label": "Water Def:",
-            "type": "int32",
+            "type": "int32LE",
             "render": "NumberSelect",
             "defaultValue": 0
          },
          {
             "id": "fireDef",
             "label": "Fire Def:",
-            "type": "int32",
+            "type": "int32LE",
             "render": "NumberSelect",
             "defaultValue": 0
          },
          {
             "id": "earthDef",
             "label": "Earth Def:",
-            "type": "int32",
+            "type": "int32LE",
             "render": "NumberSelect",
             "defaultValue": 0
          },
          {
             "id": "itemType",
             "label": "Item Type:",
-            "type": "int16",
-            "isConstant": true,
+            "type": "int16LE",
+            "flag": 6,
+            "showInput": true,
             "conditionalValue": {
-               "W": 36,
-               "A": 44,
-               "J": 44,
-               "B": 44
-            }
+               "W": 44,
+               "A": 36,
+               "J": 36,
+               "B": 36
+            },
+            "render": "ComboSelect",
+            "options": [
+               ["Weapon", 44],
+               ["Armor & Jewel", 36]
+            ]
          },
          {
             "id": "itemFlag",
             "label": "Item Flag:",
             "type": "int8",
             "defaultValue": 3,
-            "isConstant": true
+            "render": "ComboSelect",
+            "showInput": true,
+            "options": [
+               ["Normal", 3],
+               ["Maybe the newer", 4]
+            ],
+            "flag": 6
          },
          {
             "id": "emptyInt32",
             "label": "Reserved:",
             "type": "int32",
             "defaultValue": 0,
-            "isConstant": true
+            "flag": 4
          },
          {
             "id": "emptyInt16",
             "label": "Reserved:",
             "type": "int16",
             "defaultValue": 0,
-            "isConstant": true
+            "flag": 4
          },
          {
             "id": "emptyInt8",
             "label": "Reserved:",
             "type": "int8",
             "defaultValue": 0,
-            "isConstant": true
+            "flag": 4
          }
       ],
       "profiles": [
@@ -2598,6 +2811,7 @@
                "durability",
                "itemType",
                "itemFlag",
+               "wStat",
                "wType",
                "aSpeed",
                "range",
@@ -2619,6 +2833,7 @@
                "itemType",
                "itemFlag",
                "crafter",
+               "wStat",
                "wType",
                "grade",
                "ammo",               
@@ -2711,8 +2926,8 @@
                "lvReq",
                "classReq",
                "strReq",
-               "agiReq",
                "conReq",
+               "agiReq",
                "intReq",
                "durability",
                "itemType",
@@ -2744,6 +2959,7 @@
                   "equipmentId": 1,
                   "label":"Polehammer",
                   "octetBuilderId": 1,
+                  "weaponType": 9,
                   "refineBaseId": 1
               },
               {
@@ -2751,6 +2967,7 @@
                   "equipmentId": 1,
                   "label":"Poleaxe",
                   "octetBuilderId": 1,
+                  "weaponType": 9,
                   "refineBaseId": 1
               },
               {
@@ -2758,6 +2975,7 @@
                   "equipmentId": 1,
                   "label":"Dual Hammer",
                   "octetBuilderId": 1,
+                  "weaponType": 9,
                   "refineBaseId": 1
               },
               {
@@ -2765,6 +2983,7 @@
                   "equipmentId": 1,
                   "label":"Dual Axe",
                   "octetBuilderId": 1,
+                  "weaponType": 9,
                   "refineBaseId": 1
               },
               {
@@ -2772,6 +2991,7 @@
                   "equipmentId": 1,
                   "label":"Spear",
                   "octetBuilderId": 1,
+                  "weaponType": 5,
                   "refineBaseId": 1
                },
                {
@@ -2779,6 +2999,7 @@
                   "equipmentId": 1,
                   "label":"Polearm",
                   "octetBuilderId": 1,
+                  "weaponType": 5,
                   "refineBaseId": 1
               },
               {
@@ -2786,14 +3007,15 @@
                   "equipmentId": 1,
                   "label":"Staff",
                   "octetBuilderId": 1,
+                  "weaponType": 5,
                   "refineBaseId": 1
-
               },
               {
                   "id":8,
                   "equipmentId": 1,
                   "label":"Mace",
                   "octetBuilderId": 1,
+                  "weaponType": 5,
                   "refineBaseId": 1
               },
               {
@@ -2801,6 +3023,7 @@
                   "equipmentId": 1,
                   "label":"Blade",
                   "octetBuilderId": 1,
+                  "weaponType": 1,
                   "refineBaseId": 1
               },
               {
@@ -2808,6 +3031,7 @@
                   "equipmentId": 1,
                   "label":"Sword",
                   "octetBuilderId": 1,
+                  "weaponType": 1,
                   "refineBaseId": 1
               },
               {
@@ -2815,6 +3039,7 @@
                   "equipmentId": 1,
                   "label":"Dual Blade",
                   "octetBuilderId": 1,
+                  "weaponType": 1,
                   "refineBaseId": 1
               },
               {
@@ -2822,6 +3047,7 @@
                   "equipmentId": 1,
                   "label":"Dual Sword",
                   "octetBuilderId": 1,
+                  "weaponType": 1,
                   "refineBaseId": 1
               },
               {
@@ -2829,6 +3055,7 @@
                   "equipmentId": 1,
                   "label":"Fist",
                   "octetBuilderId": 1,
+                  "weaponType": 182,
                   "refineBaseId": 2
               },
               {
@@ -2836,6 +3063,7 @@
                   "equipmentId": 1,
                   "label":"Claw",
                   "octetBuilderId": 1,
+                  "weaponType": 182,
                   "refineBaseId": 2
               },
               {
@@ -2843,6 +3071,7 @@
                   "equipmentId": 1,
                   "label":"Bow",
                   "octetBuilderId": 1,
+                  "weaponType": 13,
                   "refineBaseId": 3
               },
               {
@@ -2850,6 +3079,7 @@
                   "equipmentId": 1,
                   "label":"Crossbow",
                   "octetBuilderId": 1,
+                  "weaponType": 13,
                   "refineBaseId": 3
               },
               {
@@ -2857,6 +3087,7 @@
                   "equipmentId": 1,
                   "label":"Slingshot",
                   "octetBuilderId": 1,
+                  "weaponType": 13,
                   "refineBaseId": 3
               },
               {
@@ -2864,6 +3095,7 @@
                   "equipmentId": 1,
                   "label":"Magic Sword",
                   "octetBuilderId": 1,
+                  "weaponType": 292,
                   "refineBaseId": 4
               },
               {
@@ -2871,6 +3103,7 @@
                   "equipmentId": 1,
                   "label":"Wand",
                   "octetBuilderId": 1,
+                  "weaponType": 292,
                   "refineBaseId": 4
               },
               {
@@ -2878,6 +3111,7 @@
                   "equipmentId": 1,
                   "label":"Magic Quoit",
                   "octetBuilderId": 1,
+                  "weaponType": 292,
                   "refineBaseId": 4
               },
               {
@@ -2885,9 +3119,46 @@
                   "equipmentId": 1,
                   "label":"Magic Staff",
                   "octetBuilderId": 1,
+                  "weaponType": 292,
                   "refineBaseId": 4
-              }
-          ]
+              },
+              {
+                  "id":22,
+                  "equipmentId": 1,
+                  "label":"Dagger",
+                  "octetBuilderId": 1,
+                  "weaponType": 23749,
+                  "refineBaseId": 4,
+                  "version": 40
+               },              
+               {
+                  "id":23,
+                  "equipmentId": 1,
+                  "label":"Sphere",
+                  "octetBuilderId": 1,
+                  "weaponType": 25333,
+                  "version": 40,
+                  "refineBaseId": 4
+               },              
+               {
+                  "id":24,
+                  "equipmentId": 1,
+                  "label":"Sabre",
+                  "octetBuilderId": 1,
+                  "weaponType": 44878,
+                  "version": 79,
+                  "refineBaseId": 4
+               },              
+               {
+                  "id":25,
+                  "equipmentId": 1,
+                  "label":"Schythe",
+                  "octetBuilderId": 1,
+                  "weaponType": 44967,
+                  "version": 79,
+                  "refineBaseId": 4
+               }
+         ]
       },
       {
           "id":2,
@@ -3556,92 +3827,92 @@
         {
             "id": 0,
             "mask": 0,
-            "slot": 0,
+            "pos": 0,
             "name": "Cannot Equip"
         },
         {
             "id": 1,
             "mask": 1,
-            "slot": 0,
+            "pos": 0,
             "name": "Weapon"
         },
         {
             "id": 2,
             "mask": 16,
-            "slot": 4,
+            "pos": 4,
             "name": "Chest [Armor]"
         },
         {
             "id": 3,
             "mask": 64,
-            "slot": 6,
+            "pos": 6,
             "name": "Leg [Armor]"
         },
         {
             "id": 4,
             "mask": 128,
-            "slot": 7,
+            "pos": 7,
             "name": "Foot [Armor]"
         },
         {
             "id": 5,
             "mask": 256,
-            "slot": 8,
+            "pos": 8,
             "name": "Arm [Armor]"
         },
         {
             "id": 6,
             "mask": 2,
-            "slot": 1,
+            "pos": 1,
             "name": "Helm [Armor]"
         },
         {
             "id": 7,
             "mask": 8,
-            "slot": 3,
+            "pos": 3,
             "name": "Cloack [Armor]"
         },
         {
             "id": 8,
             "mask": 4,
-            "slot": 2,
+            "pos": 2,
             "name": "Necklace"
         },
         {
             "id": 9,
             "mask": 32,
-            "slot": 5,
+            "pos": 5,
             "name": "Belt"
         },
         {
             "id": 10,
             "mask": 1536,
-            "slot": 9,
+            "pos": 9,
             "name": "Ring 1"
         },
         {
             "id": 11,
             "mask": 1536,
-            "slot": 10,
+            "pos": 10,
             "name": "Ring 2"
         },
         {
             "id": 12,
             "mask": 262144,
-            "slot": 18,
+            "pos": 18,
             "name": "Heaven Book"
         },
         {
-         "id": 13,
-         "mask": 8388608,
-         "slot": 23,
-         "name": "Elemental Elf",
-         "version": 38
+            "id": 13,
+            "mask": 8388608,
+            "pos": 23,
+            "name": "Elemental Elf",
+            "version": 38
          },
          {
             "id": 14,
             "mask": 1077936128,
-            "slot": 22,
+            "pos": 22,
             "name": "Bless Box",
             "version": 30
          },
@@ -3649,144 +3920,144 @@
         {
             "id": 15,
             "mask": 4096,
-            "slot": 12,
+            "pos": 12,
             "name": "Flyer Mount"
         },
         {
             "id": 16,
             "mask": 8192,
-            "slot": 13,
+            "pos": 13,
             "name": "Chest [Fashion]"
         },
         {
             "id": 17,
             "mask": 16384,
-            "slot": 14,
+            "pos": 14,
             "name": "Leg [Fashion]"
         },
         {
             "id": 18,
             "mask": 65536,
-            "slot": 16,
+            "pos": 16,
             "name": "Arm [Fashion]"
         },
         {
             "id": 19,
             "mask": 32768,
-            "slot": 15,
+            "pos": 15,
             "name": "Foot [Fashion]"
         },
         {
             "id": 20,
             "mask": 524288,
-            "slot": 19,
+            "pos": 19,
             "name": "Chat Smiley"
         },
         {
             "id": 21,
             "mask": 131072,
-            "slot": 17,
+            "pos": 17,
             "name": "Att/Def Hiero"
         },
         {
             "id": 22,
             "mask": 1048576,
-            "slot": 20,
+            "pos": 20,
             "name": "HP Hiero"
         },
         {
             "id": 23,
             "mask": 2097152,
-            "slot": 21,
+            "pos": 21,
             "name": "MP Hiero"
         },
         {
             "id": 24,
             "mask": 2048,
-            "slot": 11,
+            "pos": 11,
             "name": "Ammo"
         },
         {
             "id": 25,
             "mask": 33554432,
-            "slot": 25,
+            "pos": 25,
             "version": 39,
             "name": "Hair [Fashion]"
         },
         {
             "id": 26,
             "mask": 16777216,
-            "slot": 24,
+            "pos": 24,
             "version": 39,
             "name": "Vendor Shop"
         },        
         {
             "id": 27,
             "mask": 536870912,
-            "slot": 29,
+            "pos": 29,
             "version": 49,
             "name": "Weapon [Fashion]"
         },
         {
             "id": 28,
             "mask": 67108864,
-            "slot": 26,
+            "pos": 26,
             "version": 49,
             "name": "Order Badge"
         },
         {
             "id": 29,
             "mask": 2147483585,
-            "slot": 33,
+            "pos": 33,
             "version": 79,
             "name": "Battle Card"
         },
         {
             "id": 30,
             "mask": 2147483585,
-            "slot": 32,
+            "pos": 32,
             "version": 79,
             "name": "Destroyer Card"
         },
         {
             "id": 31,
             "mask": 2147483585,
-            "slot": 37,
+            "pos": 37,
             "version": 79,
             "name": "Lifeprime Card"
         },
         {
             "id": 32,
             "mask": 2147483585,
-            "slot": 34,
+            "pos": 34,
             "version": 79,
             "name": "Longevity Card"
         },
         {
             "id": 33,
             "mask": 2147483585,
-            "slot": 36,
+            "pos": 36,
             "version": 79,
             "name": "Soulprime Card"
         },
         {
             "id": 34,
             "mask": 2147483585,
-            "slot": 35,
+            "pos": 35,
             "version": 79,
             "name": "Duratibility Card"
         },
         {
             "id": 35,
             "mask": 402653184,
-            "slot": 27,
+            "pos": 27,
             "version": 69,
             "name": "Mark of Might"
         },
         {
             "id": 36,
             "mask": -2147483584,
-            "slot": 38,
+            "pos": 38,
             "version": 79,
             "name": "Star Chart"
         }

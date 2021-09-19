@@ -17,7 +17,8 @@ import { Grid } from "@mui/material";
 
 const useStyles = makeStyles({
     root: {
-        padding: '0 16px'
+        padding: '0 16px',
+        maxWidth: '100%'
     },
 });
 
@@ -50,25 +51,30 @@ export const OctetBuilder = observer((props: OctetBuilderProps) => {
 
     const classes = useStyles();
     const iBStore = props.store;
-    const oFields = iBStore.octetBuilderData;
+    const oFields = iBStore.octetUIData;
     const [cat, subCat] = iBStore.getCategories();
+    const usedFields = oFields.filter(x => (
+        x.render && 
+        Boolean(RenderComponentMap[x.render]) && 
+        (x.flag !== 'advanced' || iBStore.showAdvancedUI)
+    ));
 
     return (
-        <Grid container direction='column' className={classes.root}>
+        <Grid container direction='column' className={classes.root}>     
+            {usedFields.map(x => {
+                const Cmp = RenderComponentMap[x.render!];
+                return (
+                    <Cmp 
+                        key={x.id}
+                        value={iBStore.itemOctetData[x.id]}
+                        onChange={(value: any) => iBStore.setOctet(x.id, value)}
+                        config={x}
+                        getOctetData={iBStore.getOctet}
+                        category={(subCat.shortId || cat.shortId) as IComplexOctetCategories}
+                    />
+                );
+            })}
             <Grid item>
-                {oFields.filter(x => x.render && Boolean(RenderComponentMap[x.render])).map(x => {
-                    const Cmp = RenderComponentMap[x.render!];
-                    return (
-                        <Cmp 
-                            key={x.id}
-                            value={iBStore.itemOctetData[x.id]}
-                            onChange={(value: any) => iBStore.setOctet(x.id, value)}
-                            config={x}
-                            getOctetData={iBStore.getOctet}
-                            category={(subCat.shortId || cat.shortId) as IComplexOctetCategories}
-                        />
-                    );
-                })}
                 <OctetPreview store={iBStore} />
             </Grid>
         </Grid>

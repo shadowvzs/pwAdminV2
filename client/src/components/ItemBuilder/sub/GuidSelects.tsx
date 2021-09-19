@@ -9,7 +9,7 @@ import { Grid, Typography } from "@mui/material";
 const useStyles = makeStyles({
     root: {
         fontSize: 12,
-        padding: '0 16px'
+        padding: '2px 16px'
     }
 });
 

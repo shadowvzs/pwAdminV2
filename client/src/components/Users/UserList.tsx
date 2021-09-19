@@ -77,6 +77,7 @@ export const UserList = observer((props: UserListProps) => {
             <Divider style={{ margin: '16px 0' }} />
             <TextField 
                 fullWidth
+                size='small'
                 placeholder='Search...'
                 value={store.searchTerm}
                 onChange={store.onSearch}
@@ -90,10 +91,17 @@ export const UserList = observer((props: UserListProps) => {
                     >
                         <ListItemAvatar>
                             <Avatar className={cn(classes.avatar, 'avatar')}>
-                                <img src={u.avatar || './images/avatar.png'} height="100%" alt={'User: ' + u.id} />
+                                <img 
+                                    src={u.avatar || './images/avatar.png'} 
+                                    height="100%" 
+                                    alt={'User: ' + u.id} 
+                                />
                             </Avatar>
                         </ListItemAvatar>
-                        <ListItemText primary={`${u.username} [${u.id}]`} />
+                        <ListItemText 
+                            primary={`${u.username} [${u.id}]`} 
+                            style={{ color: u.gm ? 'red' : 'inherit' }}
+                        />
                     </ListItem>
                 ))}
             </List>

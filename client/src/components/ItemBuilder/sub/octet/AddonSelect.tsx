@@ -186,6 +186,7 @@ export const AddAddon = observer((props: RenderComponentProps<string[]> & { onCl
                     </Grid>
                     <Grid item>
                         <NativeSelect
+                            size='small'
                             value={String(addon.id)}
                             onChange={ev => addon.setId(parseInt(ev.currentTarget.value, 10), true)}
                             style={{ fontSize: 12 }}
@@ -220,7 +221,7 @@ export const AddAddon = observer((props: RenderComponentProps<string[]> & { onCl
                         <Grid item>
                             <input
                                 type='number'
-                                max={65535}
+                                max={props.config.type.includes('int32') ? 65535 : 255}
                                 style={{ width: 60, textAlign: 'right' }}
                                 value={String(addon.value1)}
                                 disabled={addon.type === AddonType.Skill}
@@ -252,10 +253,12 @@ export const AddAddon = observer((props: RenderComponentProps<string[]> & { onCl
                                 onChange={ev => addon.setValue2(parseInt(ev.currentTarget.value, 10) * timeUnit)}
                                 style={{ width: 50, textAlign: 'right' }}
                                 disabled={addon.type !== AddonType.Rune}
+                                min='0'
                             />
                         </Grid>
                         <Grid item>
                             <NativeSelect
+                                size='small'
                                 value={String(timeUnit)}
                                 onChange={ev => setTimeUnit(parseInt(ev.currentTarget.value, 10))}
                                 disabled={addon.type !== AddonType.Rune}
@@ -297,6 +300,7 @@ export const AddAddon = observer((props: RenderComponentProps<string[]> & { onCl
                         </Grid>
                         <Grid item>
                             <Button 
+                                color='secondary'
                                 variant='contained'
                                 size='small'
                                 children='Cancel'

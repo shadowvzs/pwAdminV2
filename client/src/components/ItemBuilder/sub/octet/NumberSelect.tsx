@@ -19,13 +19,14 @@ const useStyles = makeStyles({
 export const NumberSelect = (props: RenderComponentProps<number | number[]>) => {
     const classes = useStyles();
     const { value, onChange, config } = props;
-    const value1 = config.isRange ? (value as number[])[0] : value as number;
-    const value2 = config.isRange ? (value as number[])[1] : value as number;
+    const isRange = config.flag === 'range' || config.flag === 'pair';
+    const value1 = isRange ? (value as number[])[0] : value as number;
+    const value2 = isRange ? (value as number[])[1] : value as number;
 
     const onChangeHandler = React.useCallback((ev: React.ChangeEvent<HTMLInputElement>) => {
         const { value, dataset: { index } } = ev.currentTarget
         const v = parseInt(value, 10);
-        if (config.isRange) {
+        if (isRange) {
             const finalValue = [value1, value2];
             finalValue[parseInt(index!, 10)] = v;
             if (finalValue[0] > finalValue[1]) { finalValue[0] = finalValue[1]; }
@@ -33,7 +34,7 @@ export const NumberSelect = (props: RenderComponentProps<number | number[]>) => 
         } else {
             onChange(v);
         }
-    }, [value1, value2, config, onChange]);
+    }, [isRange, value1, value2, onChange]);
 
     return (
         <Grid container className={classes.root} alignItems='center' justifyContent='space-between'>
@@ -52,9 +53,10 @@ export const NumberSelect = (props: RenderComponentProps<number | number[]>) => 
                             value={value1}
                             onChange={onChangeHandler}
                             className={classes.input}
+                            min='0'
                         />
                     </Grid>
-                    {config.isRange && (
+                    {isRange && (
                         <Grid item>
                             <input 
                                 data-index={1}
@@ -62,6 +64,7 @@ export const NumberSelect = (props: RenderComponentProps<number | number[]>) => 
                                 value={value2}
                                 onChange={onChangeHandler}
                                 className={classes.input}
+                                min='0'
                             />
                         </Grid>
                     )}

@@ -1,0 +1,34 @@
+0100 - lv
+db00 - class m
+0500 - str
+0000 - con
+0500 - agi
+0000 - int
+10270000 204e0000 - duratibility
+2c00
+03
+0a70006900730074006100 - pista
+00000000 - weapon stat
+09000000 - weapon type
+01000000 - item grade
+00000000 - ammo
+23000000 41000000 - pdmg
+00000000 00000000 - mdmg
+16000000 - att rate
+00006040 - range
+00000000 - min range
+04000000 - socket
+de070000 - jargoon
+de070000 - jargoon
+de070000 - jargoon
+de070000 - jargoon
+09000000 - addons
+ad250000 64000000 - 100 str
+49220000 1e000000 - 30 crit
+51210000 02000000 - interval 0.1
+c2410000 8c000000 01000000 - skill addon stun
+b0460000 06010000 0c000000 - refine id, amount, lv
+f3a10000 96000000 - socket jargoon id and value 499/150
+f3a10000 96000000
+f3a10000 96000000
+f3a10000 96000000

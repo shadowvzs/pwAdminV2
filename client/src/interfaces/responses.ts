@@ -37,6 +37,7 @@ export interface IMenuSubCategoryData {
     id: number;
     label: string;
     shortId?: 'B';
+    weaponType?: number;
     octetBuilderId?: number;
     equipmentId?: number;
     refineBaseId?: number;
@@ -81,6 +82,7 @@ export interface IAddonData {
     data?: string;
     stat?: IStatData;
     description?: string;
+    // multiplier?: number;
 
     // for others: normal addon, runes
     attributeId?: number;
@@ -102,13 +104,13 @@ export interface IOctetBuilderConfigsData {
     octetOrder: string[];
 }
 
+export type AddonFlags = 'normal' | 'pair' | 'array' | 'virtual' | 'constant' | 'special' | 'advanced';
+
 export interface IOctetBuilderFieldsData {
     id: IOctetKeys;
     label: string;
     type: 'int8' | 'int16' | 'int32' | 'text' | 'float';
-    isRange?: boolean;
-    isConstant?: boolean;
-    isVirtual?: boolean;
+    flag: number | string; // we got with number values then we replace it with string
     fields: string[];
     multiplier?: number;
     conditionalValue?: Record<string, any>;
@@ -117,15 +119,26 @@ export interface IOctetBuilderFieldsData {
     options?: [string, number, number][];
     render?: string;
 }
+
+export type IAddonIdModifier = Record<"normal" | "skill" | "rune" | "socket" | "refine", number>;
+
 export interface IOctetBuilderData {
+    addonIdModifier:IAddonIdModifier,
+    flags: AddonFlags[];
     fields: IOctetBuilderFieldsData[];
     profiles: IOctetBuilderConfigsData[];
 }
 
-export interface IOctetBuilderValueMapData extends IOctetBuilderData {
-    fields: IArrayValueMap<IOctetBuilderFieldsData>;
+export interface IOctetBuilderValueMapData extends IOctetBuilderData{
+    flags: AddonFlags[];
+    fields: IArrayValueMap<(Omit<IOctetBuilderFieldsData, 'flag'> & { flag: AddonFlags })>;
     profiles: IArrayValueMap<IOctetBuilderConfigsData>;
 }
+
+// export interface IOctetBuilderValueMapData extends IOctetBuilderData {
+//     fields: IArrayValueMap<IOctetBuilderValueMapData>;
+//     profiles: IArrayValueMap<IOctetBuilderConfigsData>;
+// }
 
 export interface IRefineBaseData { 
     id: number;
@@ -133,12 +146,12 @@ export interface IRefineBaseData {
 }
 
 export interface IRefineData {
-    levelMultiplier: number; // 0-12 index
+    levelMultiplier: number[]; // 0-12 index
     base: IRefineBaseData[];
 }
 
 export interface IRefineValueMapData {
-    levelMultiplier: number; // 0-12 index
+    levelMultiplier: number[]; // 0-12 index
     base: IArrayValueMap<IRefineBaseData>;
 }
 
@@ -156,7 +169,7 @@ export interface IItemExtraData {
     mapQuests: number[][];
     itemColor: IItemColorData[];
     fashionColors: string[];
-    equipments:IEquipmentData[];
+    equipments: IEquipmentData[];
     soulStones: {
         stat: number[];
         element: number[];
@@ -200,6 +213,8 @@ export interface IItemData {
     runeIds?: number[];
     category: string;
     attributes?: { attributeId: number; value: number }[];
+    armorData?: { id: number, value: number; attributeId: number; }
+    weaponData?: { id: number, value: number; attributeId: number; }
 }
 
 export interface IElfSkill {

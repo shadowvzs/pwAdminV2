@@ -2,7 +2,7 @@ import { IComplexOctetCategories, IOctetBuilderFieldsData } from "./responses";
 
 export type IOctetFields = 'lvReq' | 'grade'|'classReq'|'pDmgRange'|'mDmgRange'|'pAttack'|'mAttack'|'strReq'|
     'agiReq'|'intReq'|'conReq'|'durability'|'itemType'|'itemFlag'|'ammo'|'aSpeed'|'range'|'minRange'|'socket'|'addon'|'crafter'|
-    'hp'|'mp'|'hp'|'dodge'|'pDef'|'wType'|'metalDef'|'woodDef'|'waterDef'|'fireDef'|'earthDef'|'dodge' | 'emptyInt32';
+    'hp'|'mp'|'hp'|'dodge'|'pDef'|'wStat'|'wType'|'metalDef'|'woodDef'|'waterDef'|'fireDef'|'earthDef'|'dodge' | 'emptyInt32';
 
 export interface IWeaponOctet {
     lvReq: number;
@@ -15,6 +15,7 @@ export interface IWeaponOctet {
     itemType: number;
     itemFlag: number;
     crafter: string;
+    wStat: number;
     wType: number;
     grade: number;
     ammo: number;
@@ -25,6 +26,7 @@ export interface IWeaponOctet {
     minRange: number;
     socket: number[];
     addon: number[];
+    refine?: number;
 }
 
 export interface IArmorOctet {
@@ -72,10 +74,10 @@ export interface IJewelOctet {
     fireDef: number;
     earthDef: number;
     emptyInt32: number;
-    addon: number[];
+    addon: string[];
 }   
 
-export type IOctetData = IWeaponOctet | IArmorOctet | IJewelOctet;
+export type IOctetData = IWeaponOctet & IArmorOctet & IJewelOctet;
 export type IOctetKeys = keyof IOctetData;
 
 export interface RenderComponentProps<T = any> {

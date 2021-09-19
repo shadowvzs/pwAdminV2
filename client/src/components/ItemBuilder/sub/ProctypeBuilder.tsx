@@ -76,6 +76,7 @@ export const ProctypeBuilder = observer((props: ProctypeProps) => {
 
                 <Grid item key='select' xs={6}>
                     <NativeSelect 
+                        size='small'
                         value={props.value.toString()} 
                         onChange={onChange}
                         variant='standard'

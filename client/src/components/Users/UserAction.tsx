@@ -12,6 +12,7 @@ import { UserRoleItem } from "../../models/RoleBean";
 import { Link } from "react-router-dom";
 import { Button, Divider, Grid, Table, TableBody, TableCell, TableHead, TableRow, TextField, Typography } from "@mui/material";
 import { Visibility } from "@mui/icons-material";
+import { OptionsObject, SnackbarKey, SnackbarMessage, useSnackbar } from "notistack";
 
 const useStyles = makeStyles({
     root: {
@@ -65,18 +66,25 @@ class UserActionStore {
         return Boolean(this.users.find(x => this.selectedUserId === x.id)?.gm);
     }
 
-    public toggleGmRank = () => {
+    public toggleGmRank = async () => {
         if (!this.selectedUserId) { return null; }
         if (this.isGm) {
-            this.rootStore.userStore.demoteFromGM(this.selectedUserId);
+            await this.rootStore.userStore.demoteFromGM(this.selectedUserId);
+            this.notify('User not GM anymore', { variant: 'success' });
         } else {
-            this.rootStore.userStore.promoteToGM(this.selectedUserId);
+            await this.rootStore.userStore.promoteToGM(this.selectedUserId);
+            this.notify('User was promoted to GM', { variant: 'success' });
         }
     }
 
     public onDelete = async () => {
         if (!this.selectedUserId) { return null; }
-        await this.rootStore.userStore.delete(this.selectedUserId);
+        try {
+            await this.rootStore.userStore.delete(this.selectedUserId);
+            this.notify('User account was deleted', { variant: 'success' });
+        } catch (err) {
+            this.notify('Something went wrong', { variant: 'error' });
+        }
     }
 
     public onLoadRoles = async () => {
@@ -87,6 +95,7 @@ class UserActionStore {
 
     constructor(
         private rootStore: RootStore,
+        private notify: (message: SnackbarMessage, options?: OptionsObject | undefined) => SnackbarKey
     ) {
         makeObservable(this, {
             users: computed,
@@ -98,7 +107,14 @@ class UserActionStore {
 
 export const UserAction = observer((props: UserActionProps) => {
     const rootStore = React.useContext(RootStoreContext);
-    const store = React.useState(() => new UserActionStore(rootStore))[0];
+    const { enqueueSnackbar } = useSnackbar();    
+    // const onCopyToClipboard = React.useCallback(() => {
+    //     const i = inputRef.current!;
+    //     i.select();
+    //     i.setSelectionRange(0, 99999);
+    //     navigator.clipboard.writeText(i.value);
+    //     enqueueSnackbar('Octet was copied to clipboard!', { variant: 'success' })
+    const store = React.useState(() => new UserActionStore(rootStore, enqueueSnackbar))[0];
     store.selectedUserId = props.selectedUserId;
     const classes = useStyles();
 
@@ -129,6 +145,7 @@ export const UserAction = observer((props: UserActionProps) => {
                     >
                         <Grid item>
                             <TextField 
+                                size='small'
                                 type='number' 
                                 placeholder='Gold'
                             />

@@ -51,13 +51,14 @@ export const mainRoutes: IMainRoute[] = [
     {
         to: '/user-settings',
         label: 'User Settings',
-        visible: (user?: User) => Boolean(user && user.role === Role.Admin),
+        visible: (user?: User) => Boolean(user),
         PageCmp: UserSettingsPage
     },
     {
         to: '/server-settings',
         label: 'Server',
-        visible: (user?: User) => Boolean(user && user.role === Role.Admin),
+        visible: () => false,
+        // visible: (user?: User) => Boolean(user && user.role === Role.Admin),
         PageCmp: ServerPage
     },
     {
@@ -75,7 +76,7 @@ export const mainRoutes: IMainRoute[] = [
     {
         to: '/shop',
         label: 'Web Shop',
-        visible: (user?: User) => Boolean(user),
+        visible: () => false, // temporary disabled Boolean(user),
         PageCmp: RolePage
     },
     {

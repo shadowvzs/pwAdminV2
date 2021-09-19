@@ -82,6 +82,7 @@ export const PopoverWrapper = (props: PopoverWrapperProps<any>) => {
                                 onClick={handleClick} 
                                 title={tooltip}
                                 disabled={!editable}
+                                style={{ padding: 0 }}
                             >
                                 <Settings />
                             </IconButton>                        

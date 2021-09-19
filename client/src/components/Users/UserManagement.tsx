@@ -81,7 +81,7 @@ export const UserManagement = observer(() => {
                     </Grid>
                 </>
             )}
-            <Grid item xs={12} sm={12} md={6}>
+            <Grid item xs={12} sm={12} md={role === Role.User ? 12 : 6}>
                 <UserForm userId={store.selectedUserId} />
             </Grid>
         </Grid>

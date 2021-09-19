@@ -50,6 +50,7 @@ export const ExpireDateSelect = observer((props: ExpireDateSelectProps) => {
                 <Grid item xs={12}>
                     <Typography style={{ fontSize: 12 }} children={'Expire'} />
                     <TextField
+                        size='small'
                         label="Next appointment"
                         type="datetime-local"
                         defaultValue="2017-05-24T10:30"

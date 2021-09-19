@@ -10,8 +10,12 @@ export const RolePage = () => {
     const { authStore } = React.useContext(RootStoreContext);
     const params = useParams<{id: string }>();
     
-    if (!authStore.currentUser || isNaN(+params?.id)) {
+    if (!authStore.currentUser) {
         return <Redirect to='/login' />;
+    }
+
+    if (isNaN(+params?.id)) {
+        return <Redirect to='/user-settings' />;
     }
 
     return (
