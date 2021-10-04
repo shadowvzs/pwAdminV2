@@ -64,7 +64,11 @@ export const OctetPreview = observer((props: OctetPreviewProps) => {
                     )}
                 />
             </Grid>
-            <Grid item style={{ marginTop: 8, display: 'flex', flexWrap: 'wrap' }} xs={12}>
+            <Grid 
+                item 
+                style={{ marginTop: 8, display: 'flex', flexWrap: 'wrap' }} 
+                xs={12}
+            >
                 {store.finalOctetData.map((x, idx) => (
                     <span 
                         key={idx} 

@@ -1,4 +1,4 @@
-import { action, makeObservable, observable } from "mobx";
+import { action, makeObservable, observable, toJS } from "mobx";
 import { IArrayValueMap } from "../../helpers/arrayValueMap";
 import { Converter } from "../../helpers/converter";
 import { IOctetData, IOctetKeys } from "../../interfaces/builder";
@@ -47,15 +47,16 @@ export class ItemBuilderStore {
     }
 
     // set main category
-    public setCategoryId(id: string, subCategoryId?: number): void { 
+    public setCategoryId(id: string, subCategoryId?: number): void {
+        this.itemOctetData = {} as IOctetData & { refine: number };
         this.categoryId = id;
         this.setSubCategoryId(subCategoryId || this.category?.subCategory[0]?.id);
     }
 
     // set sub category id and set item id if exist any item in current subcategory, call side effects
     public setSubCategoryId(id: number): void { 
+        this.itemOctetData = {} as IOctetData & { refine: number };
         this.subCategoryId = id;
-        // call onMenuChange side effect
         this.onMenuChange();
         const item = this.menuSubCategoryItems[this.currentSubCatId][0];
         if (item) { this.set('id', item.id); }
@@ -71,18 +72,28 @@ export class ItemBuilderStore {
             const octetProfile = octetBuilder.profiles.valueMap[subCategory.octetBuilderId];
             this.octetUIData = octetProfile.uiOrder.map(id => fieldMap[id]);
             this.octetBuildData = octetProfile.octetOrder.map(id => fieldMap[id]);
+
+            const octetData: Record<IOctetKeys, any> = toJS(this.itemOctetData);
             this.octetUIData.forEach(v => {
                 const cv = v.conditionalValue;
                 if (typeof v.defaultValue !== 'undefined') { 
-                    this.setOctet(v.id, v.defaultValue);
+                    octetData[v.id] = v.defaultValue;
                 } 
                 if (cv) {
                     const cvValue = cv[this.categoryId] || cv[subCategory.shortId || (this.categoryId + this.subCategoryId)];
                     if (typeof cvValue !== 'undefined') {
-                        this.setOctet(v.id, cvValue);
+                        octetData[v.id] = cvValue;
                     }
                 }
             });
+
+            this.octetBuildData.filter(x => x.defaultValue !== undefined).forEach(v => {
+                octetData[v.id] = v.defaultValue;
+            })
+
+            this.setOctets(octetData);
+        } else {
+            this.octetBuildData = [];
         }
     }
 
@@ -103,7 +114,13 @@ export class ItemBuilderStore {
         this.calculateOctetString();
     }
 
-    private calculateOctetString() {
+    public setOctets(values: Record<IOctetKeys, any>): void {
+        this.itemOctetData = { ...values };
+        this.calculateOctetString();
+    }
+
+    public calculateOctetString() {
+        const octetFieldMap = this._data.item_extra.octetBuilder.fields.valueMap;
         const fieldsForBuild = this.octetBuildData;
         const octets: { label: string, value: string }[] = [];
         const values = this.itemOctetData;
@@ -117,7 +134,6 @@ export class ItemBuilderStore {
         const dbMap = this._data.item_db.valueMap;
         const socketDataKey = this.categoryId === 'W' ? 'weaponData' : 'armorData';
         const [, subCategory] = this.getCategories();
-    
         // till here, here we go over on all octet field which required for octet calculation
         for (const field of fieldsForBuild) {
             const methodName = `to${field.type[0].toUpperCase()}${field.type.substr(1)}` as 'toInt8' | 'toInt16LE' | 'toInt32LE' | 'toFloatLE';
@@ -131,7 +147,7 @@ export class ItemBuilderStore {
                     if (field.id === 'addon') {
                         // addon calculation is special
                         octets.push({ 
-                            label: `${field.id} length = socket(${sockets.length}) + refine(${refineLv > 0 ? 1 : 0}) + addon(${addonDataList.length})`, 
+                            label: `${octetFieldMap[field.id]?.label || field.id} length = socket(${sockets.length}) + refine(${refineLv > 0 ? 1 : 0}) + addon(${addonDataList.length})`,
                             value: converterMethod(addonCounter) 
                         });
                         addonDataList.forEach((addonData, idx) => {
@@ -160,14 +176,12 @@ export class ItemBuilderStore {
                                 }
                             }
                         });
-                        //     "id":577,
-                        //     "attributeId":4,
-                        //     "value":5
   
                         if (refineLv > 0) {
                             const refineInfo = refine
-                                .base.valueMap[subCategory.refineBaseId!]
-                                .grade[this.item.grade];
+                            .base.valueMap[subCategory.refineBaseId!]
+                            .grade[this.itemOctetData.grade32];
+
                             const refineValue = Math.floor(refine.levelMultiplier[refineLv] * refineInfo.value);
 
                             octets.push({ 
@@ -197,10 +211,6 @@ export class ItemBuilderStore {
                             });
                         });
                     }
-                    //  else if (field.id === 'wType') {
-                    //     const [, sub] = this.getCategories();
-                    //     octets.push({ label: `${field.id}`, value: converterMethod(sub.weaponType || 0) });
-                    // }
                     break;
                 case 'pair':
                     const [value1, value2] = values[field.id] as [number, number] || [0,0];
@@ -285,6 +295,7 @@ export class ItemBuilderStore {
         const mainMenuId = _item.category[0];
         const subMenuId = parseInt(_item.category.substr(1), 10);
         const eqId = menu.valueMap[mainMenuId]?.subCategory.valueMap[subMenuId]?.equipmentId;
+        let reqCalculation = false;
         if (eqId) {
             const eq = equipments.valueMap[eqId];
             this.item.set('mask', eq.mask);
@@ -298,6 +309,21 @@ export class ItemBuilderStore {
         this.item.set('count', 1);
         this.item.set('max_count', 1);
 
+        if (_item.grade) {
+            reqCalculation = true;
+            this.itemOctetData['grade32'] = _item.grade;
+        }
+
+        if (_item.octetData) {
+            reqCalculation = true;
+            Object.entries(_item.octetData).forEach(([octetName, value]) => {
+                (this.itemOctetData as Record<IOctetKeys, any>)[octetName as unknown as IOctetKeys] = value;
+            });
+        }
+
+        if (reqCalculation) {
+            this.calculateOctetString();
+        }
         // set max stack here
     }
 
@@ -338,9 +364,8 @@ export class ItemBuilderStore {
         const { menu, version } = this._data.item_extra;
         this.menuCategories = menu.filter(m => !m.version || m.version >= version);
         this.menuCategories.forEach(m => {
-            m.subCategory = m.subCategory.filter(m => !m.version || m.version >= version);
+            m.subCategory = m.subCategory.filter(m => !m.version || m.version <= version);
         });
-
         items.filter(item => !item.version || item.version <= version)
             .forEach(item => {
                 if (!this.menuSubCategoryItems[item.category]) {
@@ -366,7 +391,9 @@ export class ItemBuilderStore {
             itemOctetData: observable,
             showAdvancedUI: observable,
             setOctet: action.bound,
-            toggleAdvancedUI: action.bound
+            setOctets: action.bound,
+            toggleAdvancedUI: action.bound,
+            calculateOctetString: action.bound
         });
         this.item = new Item(initItemData);
         this.init();

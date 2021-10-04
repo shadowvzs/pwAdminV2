@@ -1,33 +1,44 @@
+import { action, IReactionDisposer, makeObservable, observable, reaction } from "mobx";
 import { Converter } from "../../helpers/converter";
-import { IOctetData } from "../../interfaces/builder";
-import { IMenuCategoryValueMapData, IMenuSubCategoryData, IPwStoreData } from "../../interfaces/responses";
+import { IOctetData, IOctetKeys } from "../../interfaces/builder";
+import { IMenuCategoryValueMapData, IMenuSubCategoryData, IPwStoreData, IRefineBaseData } from "../../interfaces/responses";
 import { Item } from "../../models/Item";
+
+interface IOctetDataUI extends IOctetData {
+    refine: number; 
+    refineValue: number;
+}
+
+interface IOctetDataUIV2 extends IOctetDataUI {
+    helper: Record<string, any>
+}
 
 export class ItemPreviewStore {
     private categoryIds: string | undefined;
     private converter: Converter;
     public item: Item;
-    public itemOctetData: IOctetData & { refine: number } = {} as IOctetData & { refine: number };
+    public itemOctetData: IOctetDataUI = {} as IOctetDataUI;
+    public itemOctetDataWithAddons: IOctetDataUIV2 = {} as IOctetDataUIV2;
 
     public setItem(item: Item) { 
         this.item = item; 
         this.categoryIds = '';
-        this.getItemProperties();
+        this.getItemProperties(item);
         this.calculateOctetString();
     }
 
-    private getItemProperties() {
-        this.categoryIds = this.idToCategory() || this.posToCategory() || this.maskToCategory();
+    private getItemProperties(item: Item) {
+        this.categoryIds = this.idToCategory(item) || this.posToCategory(item) || this.maskToCategory(item);
     }
 
-    private idToCategory(): string | undefined {
-        const item = this._data.item_db.valueMap[this.item.id];
-        if (!item) { return; }
-        return item.category;
+    private idToCategory(item: Item): string | undefined {
+        const itemData = this._data.item_db.valueMap[item.id];
+        if (!itemData) { return; }
+        return itemData.category;
     }
 
-    private posToCategory(): string | undefined {
-        const pos = this.item.pos;
+    private posToCategory(item: Item): string | undefined {
+        const pos = item.pos;
         if (!pos) { return; }
         const { menu, equipments } = this._data.item_extra;
         const equipment = equipments.find(x => x.pos === pos);
@@ -40,8 +51,8 @@ export class ItemPreviewStore {
         }
     }
 
-    private maskToCategory(): string | undefined {
-        const mask = this.item.mask;
+    private maskToCategory(item: Item): string | undefined {
+        const mask = item.mask;
         if (!mask) { return; }
         const { menu, equipments } = this._data.item_extra;
         const equipment = equipments.find(x => x.mask === mask);
@@ -54,43 +65,44 @@ export class ItemPreviewStore {
         }
     }
 
-    private getCategories() {
+    public getCategories(): [IMenuCategoryValueMapData, IMenuSubCategoryData] | undefined {
         if (!this.categoryIds) { return; }
         const menu = this._data.item_extra.menu.valueMap[this.categoryIds[0]];
         if (!menu) { return; }
-        return [menu, menu.subCategory.find(x => x.id === parseInt(this.categoryIds!.substr(1),10))];
+        return [menu, menu.subCategory.find(x => x.id === parseInt(this.categoryIds!.substr(1),10))!];
     }
 
-    private calculateOctetString() {
+    public getText = (fieldId: IOctetKeys): [string, string | number] => {
+        const octetFieldMap = this._data.item_extra.octetBuilder.fields.valueMap;
+        const value = this.itemOctetData[fieldId];
+        return [octetFieldMap[fieldId]?.label || fieldId, Array.isArray(value) ? value.join('-') : value];
+    }
+
+    public calculateOctetString(): void {
         const octetBuilder = this._data.item_extra.octetBuilder;
-        const fieldMap = this._data.item_extra.octetBuilder.fields.valueMap;
-        const [, subCategory] = (this.getCategories() || []) as [IMenuCategoryValueMapData, IMenuSubCategoryData];
-        if (!subCategory || !subCategory.octetBuilderId) { return console.info(this.item.id, ' has no data for decompose into data'); }
-        const fieldsForBuild = octetBuilder.profiles
-            .valueMap[subCategory.octetBuilderId]
-            .octetOrder.map(id => fieldMap[id]);
-
-        // const octets: { label: string, value: string }[] = [];
-        // const values = this.itemOctetData;
-        const converter = this.converter;
-
-        // hard coded part - complex calculation and variable settings
-        // const sockets = (values['socket'] as number[] || []).filter(Boolean);
-        // const refineLv = values['refine'] as number || 0;
-        // const addonDataList = values['addon'] as string[] || [] as string[];
-        // const addonCounter = sockets.length + addonDataList.length + (refineLv > 0 ? 1 : 0);
+        const fieldMap = octetBuilder.fields.valueMap;
+        const [mainCategory, subCategory] = (this.getCategories() || []);
+        if (!subCategory || !subCategory.octetBuilderId) { 
+            this.itemOctetData = {} as IOctetDataUI;
+            return console.info(this.item.id, ' has no data for decompose into data'); 
+        }
+        let refineOctetName: IRefineBaseData['octetName'] | '' = '';
+        const octetBuildProfile = octetBuilder.profiles.valueMap[subCategory.octetBuilderId];
+        const fieldsForBuild = octetBuildProfile.octetOrder.map(id => fieldMap[id]);
         const { octetBuilder: { addonIdModifier }, refine } = this._data.item_extra;
-        const dbMap = this._data.item_db.valueMap;
-        const socketDataKey = this.categoryIds![0] === 'W' ? 'weaponData' : 'armorData';
+        const finalData: Record<keyof IOctetDataUI, any> = {} as Record<keyof IOctetDataUI, any>;
+        const data = this.item.data;
+        if (!data) { 
+            this.itemOctetData = finalData;
+            return; 
+        }
 
-        const finalData: any = {};
-    
         // position where we work with octet string
         let pos = 0;
         // till here, here we go over on all octet field which required for octet calculation
         for (const field of fieldsForBuild) {
             const methodName = `from${field.type[0].toUpperCase()}${field.type.substr(1)}` as 'fromInt8' | 'fromInt16' | 'fromInt32' | 'fromFloat';
-            const converterMethod = converter[methodName];
+            const converterMethod = this.converter[methodName];
             const getNumberFromType = field.type.match(/\d+/);
             let len = 0;
             if (getNumberFromType) {
@@ -98,6 +110,7 @@ export class ItemPreviewStore {
             } else if (field.type.replace('LE', '') === 'float') {
                 len = 8;
             }
+
             switch (field.flag) {
                 case 'virtual':
                     // do nothing
@@ -105,111 +118,51 @@ export class ItemPreviewStore {
                 case 'special':
                     // non generic logic
                     if (field.id === 'addon') {
-                        const str = this.item.data.substr(pos, 8);
+                        const str = data.substr(pos, 8);
                         pos += 8;
                         const addonLen = this.converter.fromInt32LE(str);
                         const addons = new Array(addonLen);
-                        const socketCount = finalData['socket'].length;
-                        finalData['addon'] = addons;
+                        const socketCount = (finalData['socket'] || []).filter(Boolean).length;
+
                         for (let i = 0; i < addons.length; i++) {
-                            const str = this.item.data.substr(pos);
-                            const addonType = converter.getAddonType(str);
-                            const isSimpleAddon = [addonIdModifier['normal'], addonIdModifier['socket']].includes(addonType);
-                            const addon = this.converter.fromAddon(this.item.data.substr(pos), isSimpleAddon ? 1 : 2);
-                            const isRefine = refine.base.some(x => x.grade[finalData['grade']].addonId === addon[0]);
-                            console.log(i, addonLen - socketCount)
-                            if (isRefine) {
-                                finalData['refine'] = addon.pop();
-                            } else if (i > addonLen - socketCount) {
-                                // this is socket data
-                            } else {
-                                addons[i] = addon;
-                            }
-                            console.log(addon.length)
-                            pos += addon.length * 8;
+                            const str = data.substr(pos);
+                            const addonType = this.converter.getAddonType(str);
+                            const addonLen = [addonIdModifier['normal'], addonIdModifier['socket']].includes(addonType) ? 16 : 24;
+                            const addon = this.converter.fromAddon(data.substr(pos, addonLen));
+                            addons[i] = addon;
+                            pos += addonLen;
                         }
-                        // addon calculation is special
-                        // octets.push({ 
-                        //     label: `${field.id} length = socket(${sockets.length}) + refine(${refineLv > 0 ? 1 : 0}) + addon(${addonDataList.length})`, 
-                        //     value: converterMethod(addonCounter) 
-                        // });
-                        // addonDataList.forEach((addonData, idx) => {
-                        //     const [id, value1, value2] = addonData.split('#');
-                        //     const addon = new Addon(parseInt(id, 10));
-                        //     addon.setValue1(parseInt(value1, 10));
-                        //     addon.setValue2(parseInt(value2, 10));
 
-                        //     if (addon.type === AddonType.Rune) {
-                        //         // calculate duration with timestamp
-                        //     } else {
-                        //         const modifier = addon.isSkill ? addonIdModifier['skill'] : addonIdModifier['normal'];
-                        //         octets.push({ 
-                        //             label: `addon ${idx} - id: ${id}`, 
-                        //             value: this.converter.toAddon(addon.id, modifier)
-                        //         });
-                        //         octets.push({ 
-                        //             label: `addon ${idx} - value1: ${value1}`, 
-                        //             value: converterMethod(addon.value1) 
-                        //         });
-                        //         if (addon.value2) {
-                        //             octets.push({ 
-                        //                 label: `addon value ${idx} - value2: ${field.id}`, 
-                        //                 value: converterMethod(addon.value2) 
-                        //             });
-                        //         }
-                        //     }
-                        // });
-                        //     "id":577,
-                        //     "attributeId":4,
-                        //     "value":5
-  
-                        // if (refineLv > 0) {
-                        //     const refineInfo = refine
-                        //         .base.valueMap[subCategory.refineBaseId!]
-                        //         .grade[this.item.grade];
-                        //     const refineValue = Math.floor(refine.levelMultiplier[refineLv] * refineInfo.value);
+                        // remove sockets
+                        if (socketCount) { addons.splice(-socketCount); }
 
-                        //     octets.push({ 
-                        //         label: `refine addon id: +${refineInfo.addonId}`, 
-                        //         value: converterMethod(refineInfo.addonId) 
-                        //     });
-                        //     octets.push({ 
-                        //         label: `refine value: +${refineValue}`, 
-                        //         value: converterMethod(refineValue) 
-                        //     });
-                        //     octets.push({ 
-                        //         label: `refine lv: +${refineLv}`, 
-                        //         value: converterMethod(refineLv) 
-                        //     });
-                        // }
-
-                        // sockets.forEach((socket, idx) => {
-                        //     const statData = dbMap[socket][socketDataKey];
-                        //     if (!statData) { return; }
-                        //     octets.push({ 
-                        //         label: `socket #1${idx} - id: ${statData.id}`, 
-                        //         value: this.converter.toAddon(statData.id, addonIdModifier['socket']) 
-                        //     });
-                        //     octets.push({ 
-                        //         label: `socket #1${idx} - value: ${statData.value}`, 
-                        //         value: converterMethod(statData.value) 
-                        //     });
-                        // });
+                        if (addons.length) {
+                            const idx = addons.length - 1;
+                            const [ addonId ] = addons[idx];
+                            for (const { grade, octetName } of refine.base) {
+                                const grIdx = grade.findIndex(x => x.addonId === addonId);
+                                if (grIdx >= 0) {
+                                    const [, refineValue, refineLv] = addons.pop();
+                                    refineOctetName = octetName;
+                                    finalData['grade32'] = grIdx;
+                                    finalData['refineValue'] = refineValue;
+                                    finalData['refine'] = refineLv;
+                                    break;
+                                }
+                            }
+                        }
+                        finalData['addon'] = addons;
                     }
-                    //  else if (field.id === 'wType') {
-                    //     const [, sub] = this.getCategories();
-                    //     octets.push({ label: `${field.id}`, value: converterMethod(sub.weaponType || 0) });
-                    // }
                     break;
                 case 'pair':
-                    const value1 = converterMethod(this.item.data.substr(pos, len));
+                    const value1 = converterMethod(data.substr(pos, len));
                     pos += len;
-                    const value2 = converterMethod(this.item.data.substr(pos, len));
+                    const value2 = converterMethod(data.substr(pos, len));
                     pos += len;
                     finalData[field.id] = [value1, value2];
                     break;
                 case 'array':
-                    const arr = this.converter.fromArray(this.item.data.substr(pos), len);
+                    const arr = this.converter.fromArray(data.substr(pos), len);
                     finalData[field.id] = arr;
                     pos += (arr.length + 1) * len;
                     break;
@@ -218,11 +171,11 @@ export class ItemPreviewStore {
                 case 'normal':
                     // if integer values
                     if (len) {
-                        finalData[field.id] = converterMethod(this.item.data.substr(pos, len));
+                        finalData[field.id] = converterMethod(data.substr(pos, len));
                         pos += len;
                     } else {
-                        finalData[field.id] = this.converter.fromText(this.item.data.substr(pos));
-                        pos += finalData[field.id] * 4 + 2;
+                        finalData[field.id] = this.converter.fromText(data.substr(pos));
+                        pos += finalData[field.id].length * 4 + 2;
                     }
                     break;
                 default:
@@ -230,14 +183,117 @@ export class ItemPreviewStore {
                     break;
             }
         }
-        // this.finalData = octets;
-        // this.set('data', octets.map(x => x.value).join(''));
-        console.log(finalData)
+
+        this.itemOctetData = finalData;
+
+        const ammoName = finalData.ammo && octetBuilder.fields.valueMap['ammo']
+            .options?.find(([, id]) => id === finalData.ammo)![1];
+
+        this.itemOctetDataWithAddons = {...finalData, helper: {
+            ammo: ammoName
+        } };
+        
+        if (finalData['refine'] && refineOctetName !== '') {
+            const refineValue = finalData['refineValue'];
+            const iOD = this.itemOctetDataWithAddons;
+            if (refineOctetName === 'mDef') {
+                iOD['metalDef'] += refineValue;
+                iOD['woodDef'] += refineValue;
+                iOD['waterDef'] += refineValue;
+                iOD['fireDef'] += refineValue;
+                iOD['earthDef'] += refineValue;
+            } else {
+                if (Array.isArray(iOD[refineOctetName])) {
+                    iOD[refineOctetName as 'pDmg'] = iOD[refineOctetName as 'pDmg']
+                        .map(x => x + refineValue) as [number, number];
+                } else {
+                    iOD[refineOctetName] += refineValue;
+                }
+            }
+        }
+    }
+
+    public getAddonText(id: number, value: number): string {
+        const { addons, stats, statType } = this._data.item_extra;
+        const addon = addons.valueMap[id];
+
+        if (addon.isSkill) {
+            return `${addon.description}`;
+        }
+
+        const stat = stats.valueMap[addon?.attributeId!];
+        if (!addon || !stat) { return ''; }
+
+        switch (statType[stat.type]) {
+            case 'flat':
+                return `${stat.name}: ${stat.isNegative ? '-' : '+'} ${value}`;
+            case 'percentage':
+                return `${stat.name}: ${stat.isNegative ? '-' : '+'} ${value}%`;
+            case 'period':
+                return `${stat.name}: ${stat.isNegative ? '-' : '+'} ${value}/sec`;
+            case 'range':
+                return `${stat.name}: ${stat.isNegative ? '-' : '+'} ${value}m`;
+            case 'speed':
+                return `${stat.name}: ${stat.isNegative ? '-' : '+'} ${value}m/sec`;
+            case 'interval':
+                return `${stat.name}: ${stat.isNegative ? '-' : '+'} ${value / 20}`;
+            case 'no-value':
+                return `${stat.name}`;
+            default:
+                console.warn('missing addon data', addon, stat);
+                return `Addon [${addon.id}] - value ${value}`;
+        }
+    }
+
+    public get isPhysicalWeapon(): boolean {
+        const mDmg = this.itemOctetData['mDmg'] || [];
+        return !mDmg[0];
+    }
+
+    public itemClassReq = (cMask: number) => {
+        const { classes, maxMask } = this._data.classes;
+        if (maxMask === this.item.mask){
+            return "All Class";
+        } else {
+            const classNames: string[] = classes
+                .filter(cls => Boolean(cls.mask & cMask))
+                .map(cls => cls.name);
+    
+            return classNames.join(', ') || 'Not useable';
+        }
+    }
+
+    private disposers: IReactionDisposer[] = [];
+
+    public dispose = () => {
+        this.disposers.forEach(x => x());
     }
 
     constructor(
-        private _data: IPwStoreData
+        private _data: IPwStoreData,
+        _item: Item
     ) {
         this.converter = new Converter();
+        makeObservable(this, {
+            itemOctetDataWithAddons: observable,
+            calculateOctetString: action.bound
+        });
+
+        this.setItem(_item);
+
+        this.disposers = [
+            reaction(() => _item.id, (next: number, prev: number) => {
+                if (next === prev) { return; }
+                this.setItem(_item);
+            }),
+            reaction(() => _item.data, (next: string, prev: string) => {
+                if (next === prev) { return; }
+                try {
+                    this.setItem(_item);
+                } catch (err) {
+                    console.warn('octet issue');
+                }
+            })
+        ];
     }
 }

@@ -27,6 +27,8 @@ export class Converter {
         return dv.getUint32(0).toString(16).padStart(8, "0");
     }
 
+    public toInt8LE = (n: number): string => this.toInt8(n);
+
     public toInt16LE = (n: number): string => {
         const result = this.toInt16(n);
         return this.byteReverse(result);
@@ -56,6 +58,8 @@ export class Converter {
         return parseInt(value, 16);
     }
 
+    public fromInt8LE = (value: string): number => this.fromInt8(value);
+
     public fromInt16 = (value: string): number => {
         return parseInt(value, 16);
     }
@@ -77,12 +81,12 @@ export class Converter {
     public fromText = (str: string): string => {
         const result: string[] = [];
         const len = this.fromInt8(str.substr(0, 2));
-        if (len) { return ''; }
-        // str = str.substr(0, 2);
+        if (!len) { return ''; }
+        const utf16Len = len / 2;
         
-        for (let i = 0; i < len; i++) {
+        for (let i = 0; i < utf16Len; i++) {
             const char = str.substr(i * 4 + 2, 4);
-            result.push(String.fromCharCode(this.fromInt16(char)));
+            result.push(String.fromCharCode(this.fromInt16LE(char)));
         }
         return result.join('');
     }
@@ -121,14 +125,12 @@ export class Converter {
         return this.fromFloat(str);
     }
 
-    public fromAddon(str: string, valueLen: number): number[] {
-        console.log(str, valueLen)
-        if (!str || str.length !== (8 + valueLen * 8)) { throw new Error('invalid addon string'); }
+    public fromAddon(str: string): number[] {
+        if (!str || ![16, 24].includes(str.length)) { throw new Error('invalid addon string'); }
         const int32AddonId = this.byteReverse(str.substr(0, 8)).replace(/^0+/, '').substr(1);
-        console.log(int32AddonId)
         const result: number[] = [parseInt(int32AddonId, 16)];
+        const valueLen = str.length / 8 -1;
         for (let i = 0; i < valueLen; i++) {
-            console.log(str.substr((i + 1) * 8, 8))
             result.push(this.fromInt32LE(str.substr((i + 1) * 8, 8)));
         }
         return result;
@@ -139,6 +141,7 @@ export class Converter {
     }
 
     public fromArray(str: string, len: number): number[] {
+        if (!str) { return []; }
         const countStr = str.substr(0, len);
         const methodName = `fromInt${len*4}LE` as 'fromInt32LE';
         const count = this[methodName](countStr);

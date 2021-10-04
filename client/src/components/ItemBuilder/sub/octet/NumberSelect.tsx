@@ -25,16 +25,22 @@ export const NumberSelect = (props: RenderComponentProps<number | number[]>) => 
 
     const onChangeHandler = React.useCallback((ev: React.ChangeEvent<HTMLInputElement>) => {
         const { value, dataset: { index } } = ev.currentTarget
-        const v = parseInt(value, 10);
+        const v = parseFloat(value) / (config.multiplier || 1);
         if (isRange) {
             const finalValue = [value1, value2];
-            finalValue[parseInt(index!, 10)] = v;
+            finalValue[parseFloat(index!)] = v;
             if (finalValue[0] > finalValue[1]) { finalValue[0] = finalValue[1]; }
             onChange(finalValue);
         } else {
-            onChange(v);
+            if (config.min && !v && v < config.min) {
+                onChange(config.min);    
+            } else if (config.max && v > config.max) {
+                onChange(config.max);    
+            } else {
+                onChange(v);    
+            }
         }
-    }, [isRange, value1, value2, onChange]);
+    }, [isRange, value1, value2, config, onChange]);
 
     return (
         <Grid container className={classes.root} alignItems='center' justifyContent='space-between'>
@@ -50,10 +56,11 @@ export const NumberSelect = (props: RenderComponentProps<number | number[]>) => 
                         <input 
                             data-index={0}
                             type='number'
-                            value={value1}
+                            value={value1 * (config.multiplier || 1)}
                             onChange={onChangeHandler}
                             className={classes.input}
-                            min='0'
+                            max={config.id.startsWith('grade') ? 20 : undefined}
+                            min={config.id.startsWith('grade') ? 1 : 0}
                         />
                     </Grid>
                     {isRange && (
@@ -61,7 +68,7 @@ export const NumberSelect = (props: RenderComponentProps<number | number[]>) => 
                             <input 
                                 data-index={1}
                                 type='number'
-                                value={value2}
+                                value={value2 * (config.multiplier || 1)}
                                 onChange={onChangeHandler}
                                 className={classes.input}
                                 min='0'

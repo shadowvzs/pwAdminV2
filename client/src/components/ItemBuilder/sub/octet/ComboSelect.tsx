@@ -23,7 +23,6 @@ export const ComboSelect = (props: RenderComponentProps<number>) => {
     const onChangeHandler = React.useCallback((ev: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         const { value } = ev.currentTarget
         onChange(config.type.includes('float') ? parseFloat(value) : parseInt(value, 10));
-        console.log(config.type, value, config.type === 'float' ? parseFloat(value) : parseInt(value, 10))
     }, [onChange, config]);
 
     return (

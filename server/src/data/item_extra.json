@@ -33,6 +33,7 @@
       "base": [
          {
             "id": 1,
+            "octetName": "pDmg",
             "grade": [
                { "value": 0,  "addonId": 0 },
                { "value": 7,  "addonId": 1712 },
@@ -59,6 +60,7 @@
          },
          {
             "id": 2,
+            "octetName": "pDmg",
             "grade": [
                { "value": 0,  "addonId": 0 },
                { "value": 5,  "addonId": 1692 },
@@ -85,6 +87,7 @@
          },
          {
             "id": 3,
+            "octetName": "pDmg",
             "grade": [
                { "value": 0,  "addonId": 0 },
                { "value": 8,  "addonId": 1732 },
@@ -111,6 +114,7 @@
          },
          {
             "id": 4,
+            "octetName": "mDmg",
             "grade": [
                { "value": 0,  "addonId": 0 },
                { "value": 7,  "addonId": 1752 },
@@ -137,6 +141,7 @@
          },
          {
             "id": 5,
+            "octetName": "hp",
             "grade": [
                { "value": 0,  "addonId": 0 },
                { "value": 14, "addonId": 1772 },
@@ -163,6 +168,7 @@
          },
          {
             "id": 6,
+            "octetName": "hp",
             "grade": [
                { "value": 0,  "addonId": 0 },
                { "value": 10, "addonId": 1792 },
@@ -189,6 +195,7 @@
          },
          {
             "id": 7,
+            "octetName": "hp",
             "grade": [
                { "value": 0,  "addonId": 0 },
                { "value": 8,  "addonId": 1812 },
@@ -215,6 +222,7 @@
          },
          {
             "id": 8,
+            "octetName": "pDef",
             "grade": [
                { "value": 0,  "addonId": 0 },
                { "value": 10, "addonId": 1832 },
@@ -241,6 +249,7 @@
          },
          {
             "id": 9,
+            "octetName": "mDef",
             "grade": [
                { "value": 0,  "addonId": 0 },
                { "value": 8,  "addonId": 1852 },
@@ -266,7 +275,8 @@
             ]
          },
          {
-            "id": 10,
+            "id": 10,            
+            "octetName": "dodge",
             "grade": [
                { "value": 0,  "addonId": 0 },
                { "value": 10, "addonId": 1872 },
@@ -2273,7 +2283,7 @@
       ],
       "fields": [
          {
-            "id": "lvReq",
+            "id": "lvReq16",
             "label": "Level Req.:",
             "type": "int16LE",
             "defaultValue": 1,
@@ -2281,16 +2291,18 @@
          },
          {
             "id": "classReq",
-            "label": "Grade:",
+            "label": "class Req.:",
             "type": "int16LE",
             "render": "ClassMaskSelect",
             "defaultValue": 219
          },
          {
-            "id": "grade",
+            "id": "grade32",
             "label": "Grade:",
             "type": "int32LE",
             "defaultValue": 1,
+            "min": 1,
+            "max": 20,
             "render": "NumberSelect"
          },
          {
@@ -2336,7 +2348,7 @@
             "render": "NumberSelect",
             "defaultValue": [0,0],
             "conditionalValue": {
-               "W18": [23,35],
+               "W18": [41,50],
                "W19": [39,40],
                "W20": [47,70],
                "W21": [37,68],
@@ -2363,7 +2375,10 @@
             "label": "STR Req.:",
             "type": "int16LE",
             "render": "NumberSelect",
-            "defaultValue": 5
+            "defaultValue": 5,
+            "conditionalValue": {
+               "O3": 0
+            }
          },
          {
             "id": "agiReq",
@@ -2381,7 +2396,8 @@
                "A6": 0,
                "A9": 0,
                "A12": 0,
-               "A14": 0
+               "A14": 0,
+               "O3": 0
             },
             "defaultValue": 5
          },
@@ -2419,8 +2435,8 @@
             "type": "int32LE",
             "flag": 1,
             "render": "NumberSelect",
-            "multiplier": 100,
-            "defaultValue": [100, 200]
+            "multiplier": 0.01,
+            "defaultValue": [10000, 20000]
          },
          {
             "id": "wStat",
@@ -2684,63 +2700,170 @@
             "label": "HP:",
             "type": "int32LE",
             "render": "NumberSelect",
-            "defaultValue": 0
+            "defaultValue": 0,
+            "conditionalValue": {
+               "A13": 20
+            }
          },
          {
             "id": "mp",
             "label": "MP:",
             "type": "int32LE",
             "render": "NumberSelect",
-            "defaultValue": 0
+            "defaultValue": 0,
+            "conditionalValue": {
+               "A14": 20
+            }
          },
          {
             "id": "dodge",
             "label": "Dodge:",
             "type": "int32LE",
             "render": "NumberSelect",
-            "defaultValue": 0
+            "defaultValue": 0,
+            "conditionalValue": {
+               "A15": 20,
+               "J2": 12,
+               "J5": 13
+            }
          },
          {
             "id": "pDef",
             "label": "Phys. Def:",
             "type": "int32LE",
             "render": "NumberSelect",
-            "defaultValue": 0
+            "defaultValue": 0,
+            "conditionalValue": {
+               "A1":  90,
+               "A2":  39,
+               "A3":  10,
+               "A4":  89,
+               "A5":  38,
+               "A6":  10,
+               "A7":  75,
+               "A8":  33,
+               "A9":  9,
+               "A10": 51,
+               "A11": 22,
+               "A12": 6,
+               "J1":  17,
+               "J4":  20
+            }
          },
          {
             "id": "metalDef",
             "label": "Metal Def:",
             "type": "int32LE",
             "render": "NumberSelect",
-            "defaultValue": 0
+            "defaultValue": 0,
+            "conditionalValue": {
+               "A1":  40,
+               "A2":  60,
+               "A3":  90,
+               "A4":  40,
+               "A5":  60,
+               "A6":  90,
+               "A7":  30,
+               "A8":  50,
+               "A9":  75,
+               "A10": 20,
+               "A11": 35,
+               "A12": 50,
+               "J3": 17,
+               "J6": 20
+            }
          },
          {
             "id": "woodDef",
             "label": "Wood Def:",
             "type": "int32LE",
             "render": "NumberSelect",
-            "defaultValue": 0
+            "defaultValue": 0,
+            "conditionalValue": {
+               "A1":  40,
+               "A2":  60,
+               "A3":  90,
+               "A4":  40,
+               "A5":  60,
+               "A6":  90,
+               "A7":  30,
+               "A8":  50,
+               "A9":  75,
+               "A10": 20,
+               "A11": 35,
+               "A12": 50,
+               "J3": 17,
+               "J6": 20
+            }
          },
          {
             "id": "waterDef",
             "label": "Water Def:",
             "type": "int32LE",
             "render": "NumberSelect",
-            "defaultValue": 0
+            "defaultValue": 0,
+            "conditionalValue": {
+               "A1":  40,
+               "A2":  60,
+               "A3":  90,
+               "A4":  40,
+               "A5":  60,
+               "A6":  90,
+               "A7":  30,
+               "A8":  50,
+               "A9":  75,
+               "A10": 20,
+               "A11": 35,
+               "A12": 50,
+               "J3":  17,
+               "J6":  20
+            }
          },
          {
             "id": "fireDef",
             "label": "Fire Def:",
             "type": "int32LE",
             "render": "NumberSelect",
-            "defaultValue": 0
+            "defaultValue": 0,
+            "conditionalValue": {
+               "A1":  40,
+               "A2":  60,
+               "A3":  90,
+               "A4":  40,
+               "A5":  60,
+               "A6":  90,
+               "A7":  30,
+               "A8":  50,
+               "A9":  75,
+               "A10": 20,
+               "A11": 35,
+               "A12": 50,
+               "J3":  17,
+               "J6":  20
+            }
          },
          {
             "id": "earthDef",
             "label": "Earth Def:",
             "type": "int32LE",
             "render": "NumberSelect",
-            "defaultValue": 0
+            "defaultValue": 0,
+            "conditionalValue": {
+               "A1":  40,
+               "A2":  60,
+               "A3":  90,
+               "A4":  40,
+               "A5":  60,
+               "A6":  90,
+               "A7":  30,
+               "A8":  50,
+               "A9":  75,
+               "A10": 20,
+               "A11": 35,
+               "A12": 50,
+               "J3":  17,
+               "J6":  20
+            }
          },
          {
             "id": "itemType",
@@ -2793,6 +2916,85 @@
             "type": "int8",
             "defaultValue": 0,
             "flag": 4
+         },
+
+         {
+            "id": "flyerFuel",
+            "label": "Fuel:",
+            "type": "int32LE",
+            "flag": 1,
+            "render": "NumberSelect",
+            "defaultValue": [300,900]
+         },
+         {
+            "id": "flyerSpeed",
+            "label": "Speed:",
+            "type": "floatLE",
+            "flag": 1,
+            "render": "NumberSelect",
+            "defaultValue": [0.5,2.5]
+         },
+         {
+            "id": "grade16",
+            "label": "Grade:",
+            "type": "int16LE",
+            "flag": 0,
+            "render": "NumberSelect",
+            "defaultValue": 1
+         },
+         {
+            "id": "flyerRace",
+            "label": "Race:",
+            "type": "int32LE",
+            "flag": 6,
+            "defaultValue": 219,
+            "showInput": true,
+            "render": "ComboSelect",
+            "options": [
+               ["All class", 219, 0],
+               ["Human", 3, 0],
+               ["Beastkind", 24, 0],
+               ["Wing Elf", 192, 0],
+               ["Tideborn", 36, 40],
+               ["Earthguard", 768, 69],
+               ["Nightshade", 3072, 79]
+            ]
+         },
+         {
+            "id": "flyerUnknown1",
+            "label": "Reserved:",
+            "type": "int32LE",
+            "defaultValue": 15,
+            "flag": 4
+         },
+         {
+            "id": "flyerUnknown2",
+            "label": "Reserved:",
+            "type": "int16LE",
+            "defaultValue": 3,
+            "flag": 4
+         },
+         {
+            "id": "flyerUnknown3",
+            "label": "Reserved:",
+            "type": "int8LE",
+            "defaultValue": 155,
+            "flag": 4
+         },
+         {
+            "id": "flyerUnknown4",
+            "label": "Reserved:",
+            "type": "int8LE",
+            "defaultValue": 195,
+            "flag": 4
+         },
+
+         {
+            "id": "lvReq32",
+            "label": "Reserved:",
+            "type": "int8LE",
+            "defaultValue": 195,
+            "flag": 4
          }
       ],
       "profiles": [
@@ -2800,8 +3002,8 @@
             "id": 1,
             "uiOrder": [
                "classReq",
-               "lvReq",
-               "grade",
+               "lvReq16",
+               "grade32",
                "strReq",
                "conReq",
                "agiReq",
@@ -2823,7 +3025,7 @@
                "crafter"
             ],
             "octetOrder": [
-               "lvReq",
+               "lvReq16",
                "classReq",
                "strReq",
                "conReq",
@@ -2835,7 +3037,7 @@
                "crafter",
                "wStat",
                "wType",
-               "grade",
+               "grade32",
                "ammo",               
                "pDmg",
                "mDmg",
@@ -2849,8 +3051,9 @@
          {
             "id": 2,
             "uiOrder": [
-               "lvReq",
+               "lvReq16",
                "classReq",
+               "grade32",
                "strReq",
                "conReq",
                "agiReq",
@@ -2873,7 +3076,7 @@
                "addon"
             ],
             "octetOrder": [
-               "lvReq",
+               "lvReq16",
                "classReq",
                "strReq",
                "conReq",
@@ -2899,8 +3102,9 @@
          {
             "id": 3,
             "uiOrder": [
-               "lvReq",
+               "lvReq16",
                "classReq",
+               "grade32",
                "strReq",
                "agiReq",
                "conReq",
@@ -2923,7 +3127,7 @@
                "addon"           
             ],
             "octetOrder": [
-               "lvReq",
+               "lvReq16",
                "classReq",
                "strReq",
                "conReq",
@@ -2945,7 +3149,28 @@
                "emptyInt32",
                "addon"           
             ]
-         }    
+         },
+         {
+            "id": 4,
+            "uiOrder": [
+               "lvReq16",
+               "flyerRace",
+               "grade16",
+               "flyerFuel",
+               "flyerSpeed"   
+            ],
+            "octetOrder": [
+               "flyerFuel",
+               "lvReq16",
+               "grade16",
+               "flyerRace",
+               "flyerUnknown1",
+               "flyerSpeed",
+               "flyerUnknown2",
+               "flyerUnknown3",
+               "flyerUnknown4"        
+            ]
+         }         
       ]
    },
    "menu": [
@@ -3342,12 +3567,14 @@
           "subCategory":[
               {
                   "id":1,
-             "equipmentId": 15,
-                  "label":"Flyer"
+                  "equipmentId": 15,
+                  "label":"Flyer",
+                  "octetBuilderId": 4
               },
               {
                   "id":2,
-                  "label":"Pet Egg"
+                  "label":"Pet Egg",
+                  "octetBuilderId": 5
               },
               {
                   "id":3,

@@ -1,6 +1,6 @@
 import { IComplexOctetCategories, IOctetBuilderFieldsData } from "./responses";
 
-export type IOctetFields = 'lvReq' | 'grade'|'classReq'|'pDmgRange'|'mDmgRange'|'pAttack'|'mAttack'|'strReq'|
+export type IOctetFields = 'lvReq16'|'lvReq32'|'grade16'|'grade32'|'classReq'|'pDmgRange'|'mDmgRange'|'pAttack'|'mAttack'|'strReq'|
     'agiReq'|'intReq'|'conReq'|'durability'|'itemType'|'itemFlag'|'ammo'|'aSpeed'|'range'|'minRange'|'socket'|'addon'|'crafter'|
     'hp'|'mp'|'hp'|'dodge'|'pDef'|'wStat'|'wType'|'metalDef'|'woodDef'|'waterDef'|'fireDef'|'earthDef'|'dodge' | 'emptyInt32';
 
@@ -17,7 +17,7 @@ export interface IWeaponOctet {
     crafter: string;
     wStat: number;
     wType: number;
-    grade: number;
+    grade32: number;
     ammo: number;
     pDmg: [number, number];
     mDmg: [number, number];
@@ -75,9 +75,23 @@ export interface IJewelOctet {
     earthDef: number;
     emptyInt32: number;
     addon: string[];
-}   
+}
 
-export type IOctetData = IWeaponOctet & IArmorOctet & IJewelOctet;
+export interface IBlessBoxOctet extends IArmorOctet {}
+
+export interface IFlyerOctet {
+    flyerFuel: [number, number];
+    lvReq16: number;
+    grade16: number;
+    flyerRace: number;
+    flyerUnknown1: number;
+    flyerSpeed: [number, number];
+    flyerUnknown2: number;
+    flyerUnknown3: number;
+    flyerUnknown4: number;  
+}
+
+export type IOctetData = IWeaponOctet & IArmorOctet & IJewelOctet & IBlessBoxOctet;
 export type IOctetKeys = keyof IOctetData;
 
 export interface RenderComponentProps<T = any> {

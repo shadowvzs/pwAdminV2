@@ -11,7 +11,6 @@ import { ComboSelect } from "./octet/ComboSelect";
 import { SocketSelectCollapse } from "./octet/SocketSelect";
 import { IComplexOctetCategories } from "../../../interfaces/responses";
 import { AddonSelectCollapse } from "./octet/AddonSelect";
-import { OctetPreview } from "./octet/OctetPreview";
 import { makeStyles } from "@mui/styles";
 import { Grid } from "@mui/material";
 
@@ -67,16 +66,13 @@ export const OctetBuilder = observer((props: OctetBuilderProps) => {
                     <Cmp 
                         key={x.id}
                         value={iBStore.itemOctetData[x.id]}
-                        onChange={(value: any) => iBStore.setOctet(x.id, value)}
+                        onChange={(value: number | string) => iBStore.setOctet(x.id, value)}
                         config={x}
                         getOctetData={iBStore.getOctet}
                         category={(subCat.shortId || cat.shortId) as IComplexOctetCategories}
                     />
                 );
             })}
-            <Grid item>
-                <OctetPreview store={iBStore} />
-            </Grid>
         </Grid>
     );
 });

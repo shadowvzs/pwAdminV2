@@ -116,6 +116,8 @@ export interface IOctetBuilderFieldsData {
     conditionalValue?: Record<string, any>;
     defaultValue?: (number | string) | (number | string)[];
     showInput?: boolean;
+    min?: number;
+    max?: number;
     options?: [string, number, number][];
     render?: string;
 }
@@ -142,6 +144,7 @@ export interface IOctetBuilderValueMapData extends IOctetBuilderData{
 
 export interface IRefineBaseData { 
     id: number;
+    octetName: 'pDmg' | 'mDmg' | 'hp' | 'pDef' | 'mDef' | 'dodge';
     grade: { value: number; addonId: number; }[]; // 0-20 (gr0-20)
 }
 
@@ -202,6 +205,7 @@ export interface IItemExtraValueMapData extends IItemExtraData {
 export interface IItemData {
     id: number;
     color: number;
+    octetData?: Record<IOctetKeys, any>;
     data1?: string;
     data2?: string;
     grade: number;
